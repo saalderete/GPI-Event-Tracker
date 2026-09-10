@@ -7,10 +7,11 @@ next-env.d.ts
 .env
 .env.*
 
-# Generated at build. The deploy workflow regenerates both from the source
-# documents; committing them would let the PDF drift from the page.
+# Generated at build from the source documents; committing PDFs would let
+# them drift from the page. app/accents.css is generated too, but it is
+# committed so a fresh clone runs with any package manager; the build
+# regenerates it from content/accents.json every time.
 public/pdf/*.pdf
-app/accents.css
 
 # Sprint retrospectives and peer evaluations are private and go to
 # Blackboard only. Keep working copies here if you like: nothing in this

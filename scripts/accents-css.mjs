@@ -1,5 +1,6 @@
 // Generates app/accents.css from content/accents.json so the picker, the
-// contrast check and the stylesheet all read one source. Runs before build.
+// contrast check and the stylesheet all read one source. Runs before build
+// and dev; the output is committed as well so a fresh clone works without it.
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
