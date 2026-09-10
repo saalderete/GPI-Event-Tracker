@@ -1,0 +1,65 @@
+# Builds the portal, prints every document to PDF from the same source,
+# runs the compliance checks, and publishes to GitHub Pages.
+#
+# Setup, once: Settings -> Pages -> Source: "GitHub Actions".
+# The base path is the repository name, so renaming the repo needs no edit.
+name: Build and deploy
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+      - name: Build
+        env:
+          PORTAL_BASE: /${{ github.event.repository.name }}
+          PORTAL_URL: ${{ steps.pages.outputs.base_url }}
+        run: npm run build
+      - name: Install Chromium for the PDF step
+        run: npx playwright install --with-deps chromium
+      - name: Generate PDFs
+        env:
+          PORTAL_BASE: /${{ github.event.repository.name }}
+        run: npm run pdf
+      - name: Emit corpus
+        run: npm run corpus
+      - name: Validate
+        run: npm run validate
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

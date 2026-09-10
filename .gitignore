@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env
+.env.*
+
+# Generated at build. The deploy workflow regenerates both from the source
+# documents; committing them would let the PDF drift from the page.
+public/pdf/*.pdf
+app/accents.css
+
+# Sprint retrospectives and peer evaluations are private and go to
+# Blackboard only. Keep working copies here if you like: nothing in this
+# folder can be committed, and the validator refuses a build that mentions
+# its sentinel.
+content/private/

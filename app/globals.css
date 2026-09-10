@@ -1,0 +1,817 @@
+@import "tailwindcss";
+@import "@fontsource-variable/archivo/wdth.css";
+@import "@fontsource-variable/source-serif-4/opsz.css";
+@import "@fontsource-variable/source-serif-4/opsz-italic.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "./accents.css";
+
+/* Dark mode is a per-visitor choice stored on <html data-theme>, set before
+   first paint by the inline script in app/layout.tsx. The variant follows
+   that attribute, never the OS preference alone, so the toggle always wins. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ============ TOKENS ============
+   The neutrals are KasaPro's warm palette; the accent comes from the picker
+   (app/accents.css). Paper is the accent mixed faintly into a base off-white,
+   so choosing an accent tints the whole page, not only the links. */
+:root {
+  color-scheme: light;
+
+  --paper: color-mix(in srgb, var(--accent) var(--tint), var(--paper-base));
+  --surface: #ffffff;
+  --surface-subtle: #fdfcfa;
+  --surface-muted: #f3f0ea;
+  --ink: #17140f;
+  --ink-soft: #57534e;
+  --label-ink: #44403c;
+  --muted: #6b6560;
+  --border: #e7e2d9;
+  --hover-border: #d3ccc0;
+
+  --rail-bg: #17140f;
+  --rail-text: #b5afa7;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --shadow-card: 0 1px 2px rgba(23, 20, 15, 0.04), 0 8px 20px rgba(23, 20, 15, 0.06);
+  --shadow-pop: 0 2px 6px rgba(23, 20, 15, 0.08), 0 18px 40px rgba(23, 20, 15, 0.16);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --surface: #25211c;
+  --surface-subtle: #211d18;
+  --surface-muted: #2c2820;
+  --ink: #f4f0ea;
+  --ink-soft: #c4bdb2;
+  --label-ink: #d6d0c7;
+  --muted: #a39c92;
+  --border: #38332b;
+  --hover-border: #4a443b;
+
+  --rail-bg: #0f0d0b;
+  --rail-text: #a8a29e;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.4);
+  --shadow-pop: 0 2px 6px rgba(0, 0, 0, 0.4), 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-surface-muted: var(--surface-muted);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-label: var(--label-ink);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-hover-border: var(--hover-border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-on-accent: var(--on-accent);
+  --color-rail: var(--rail-bg);
+  --color-rail-text: var(--rail-text);
+
+  --font-display: "Archivo Variable", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --shadow-card: var(--shadow-card);
+  --shadow-pop: var(--shadow-pop);
+}
+
+/* ============ BASE ============ */
+html {
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 100dvh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+a {
+  color: inherit;
+  text-underline-offset: 0.18em;
+}
+
+/* Display type: Archivo, a grotesk with a width axis. Headings sit slightly
+   extended; the name on Home goes wider and heavier, the way an event poster
+   sets its title. Reading text stays in Source Serif. */
+.display {
+  font-family: var(--font-display);
+  font-stretch: 106%;
+  font-weight: 640;
+  letter-spacing: -0.022em;
+  line-height: 1.04;
+}
+.display-wide {
+  font-stretch: 118%;
+  font-weight: 760;
+  letter-spacing: -0.035em;
+  line-height: 0.96;
+}
+/* Small labels that are not eyebrows: definition-list keys, table heads. */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+/* Mono eyebrows and metadata: the record's typewriter. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ============ FLUID RAIL ============
+   KasaPro's desktop nav, ported. A column of circles that unfolds from the
+   mark; each circle stretches into a filled pill on hover that names where it
+   goes. Here the circles are the semester itself: Home and About, then one
+   per sprint, filled as each sprint goes live. One accent instead of a
+   gradient per section. Open by default so the record is never hidden; the
+   mark folds it away for a wider read. */
+.rail {
+  --circle: 52px;
+  --step: 44px;
+  --gap: 30px;
+  width: 92px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 16px 20px;
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  z-index: 45;
+}
+.rail-stack {
+  position: relative;
+  width: var(--circle);
+  height: var(--circle);
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.rail[data-expanded="true"] .rail-stack { height: var(--stack-h); }
+
+.rail-item {
+  position: relative;
+  width: var(--circle);
+  height: var(--circle);
+  border: 0;
+  padding: 0;
+  border-radius: 999px;
+  background: var(--rail-bg);
+  color: var(--rail-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-card);
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, color 0.2s ease;
+}
+:root[data-theme="dark"] .rail-item {
+  box-shadow: inset 0 0 0 1px var(--border), var(--shadow-card);
+}
+.rail-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: calc(40 - var(--i));
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease,
+    width 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.3s;
+}
+.rail[data-expanded="true"] .rail-link {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(var(--y));
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease,
+    width 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s;
+}
+.rail-link:hover, .rail-link:focus-visible,
+.rail-static:hover, .rail-static:focus-visible {
+  width: 236px;
+  z-index: 60;
+}
+.rail-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(45deg, var(--accent-hover), var(--accent));
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+.rail-glow {
+  position: absolute;
+  inset: 10px 0 -10px;
+  border-radius: inherit;
+  z-index: -1;
+  background: var(--accent);
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+.rail-item:hover .rail-fill, .rail-item:focus-visible .rail-fill { opacity: 1; }
+.rail-item:hover .rail-glow, .rail-item:focus-visible .rail-glow { opacity: 0.45; }
+.rail-icon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.rail-icon svg { width: 100%; height: 100%; }
+.rail-item:hover .rail-icon, .rail-item:focus-visible .rail-icon { transform: scale(0); }
+.rail-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  color: var(--on-accent);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform 0.3s ease 0.1s;
+}
+.rail-label small {
+  font-size: 10px;
+  opacity: 0.78;
+  letter-spacing: 0.06em;
+}
+.rail-item:hover .rail-label, .rail-item:focus-visible .rail-label { transform: scale(1); }
+
+/* Sprint circles carry their number. A live sprint wears the accent at rest;
+   an upcoming one is hollow, a promise rather than a page. */
+.rail-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-stretch: 112%;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.rail-item:hover .rail-num, .rail-item:focus-visible .rail-num { transform: scale(0); }
+.rail-link.is-live {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.rail-link.is-upcoming {
+  background: transparent;
+  color: var(--muted);
+  box-shadow: inset 0 0 0 1.5px var(--hover-border);
+}
+.rail-link.is-upcoming .rail-fill { background: var(--surface); }
+.rail-link.is-upcoming .rail-label { color: var(--ink); }
+.rail-link.is-upcoming .rail-glow { display: none; }
+.rail-link.active {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--accent);
+}
+
+.rail-toggle {
+  z-index: 70;
+  background: var(--rail-bg);
+  color: #fff;
+  position: relative;
+}
+.rail-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.rail-face svg { width: 22px; height: 22px; }
+.rail-face-mark {
+  font-family: var(--font-display);
+  font-weight: 760;
+  font-stretch: 112%;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+}
+.rail-face-mark { z-index: 1; }
+.rail-toggle:hover .rail-face-mark, .rail-toggle:focus-visible .rail-face-mark { transform: scale(0); }
+
+.rail-foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 18px;
+}
+.rail-fineprint {
+  width: var(--circle);
+  margin-top: 6px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.rail-fineprint span, .rail-fineprint a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.rail-fineprint a:hover { color: var(--ink); text-decoration: underline; }
+
+@media (max-width: 860px) {
+  .rail { display: none; }
+}
+
+/* ============ MOBILE BAR ============ */
+.mobile-nav {
+  display: none;
+}
+@media (max-width: 860px) {
+  .mobile-nav {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 200;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    background: color-mix(in srgb, var(--surface) 90%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border);
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom));
+  }
+  .mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 6px 2px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .mobile-nav a svg { width: 20px; height: 20px; }
+  .mobile-nav a.active { color: var(--accent); }
+}
+
+/* ============ ACTION MENU ============
+   KasaPro's row dropdown, ported. The closed state is visibility+opacity so
+   the exit animates; items slide in from the right with a stagger. */
+.action-menu { position: relative; display: inline-block; }
+.action-menu .menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.action-menu .menu-toggle:hover { border-color: var(--hover-border); background: var(--surface); }
+.action-chevron {
+  display: inline-flex;
+  transition: transform 0.4s cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+.action-chevron svg { width: 14px; height: 14px; }
+.action-menu.open .action-chevron { transform: rotate(180deg); }
+
+.action-menu .menu-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  z-index: 120;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-5px) scale(0.95);
+  filter: blur(10px);
+  transition:
+    opacity 0.28s ease,
+    transform 0.34s cubic-bezier(0.34, 1.3, 0.64, 1),
+    filter 0.28s ease,
+    visibility 0s linear 0.34s;
+  min-width: 244px;
+  padding: 6px;
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-pop);
+  border-radius: var(--radius-md);
+}
+.action-menu .menu-list.align-right { right: 0; }
+.action-menu .menu-list.align-left { left: 0; }
+.action-menu .menu-list.align-up { top: auto; bottom: calc(100% + 6px); }
+.action-menu.open .menu-list {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  transition:
+    opacity 0.28s ease,
+    transform 0.34s cubic-bezier(0.34, 1.3, 0.64, 1),
+    filter 0.28s ease;
+}
+.action-menu .menu-list > * {
+  opacity: 0;
+  transform: translateX(10px) scale(0.97);
+  filter: blur(6px);
+  transition: opacity 0.22s ease, transform 0.26s ease, filter 0.22s ease;
+}
+.action-menu.open .menu-list > * {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  filter: blur(0);
+}
+.action-menu.open .menu-list > *:nth-child(1) { transition-delay: 0.03s; }
+.action-menu.open .menu-list > *:nth-child(2) { transition-delay: 0.09s; }
+.action-menu.open .menu-list > *:nth-child(3) { transition-delay: 0.15s; }
+.action-menu.open .menu-list > *:nth-child(4) { transition-delay: 0.21s; }
+.action-menu.open .menu-list > *:nth-child(5) { transition-delay: 0.27s; }
+.action-menu.open .menu-list > *:nth-child(6) { transition-delay: 0.33s; }
+.action-menu.open .menu-list > *:nth-child(7) { transition-delay: 0.39s; }
+.action-menu.open .menu-list > *:nth-child(n + 8) { transition-delay: 0.45s; }
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu-item:hover, .menu-item:focus-visible { background: var(--surface-muted); }
+.menu-item[aria-checked="true"] { color: var(--accent); }
+.menu-item svg { width: 15px; height: 15px; flex: 0 0 auto; }
+.menu-item .swatch {
+  width: 14px; height: 14px; border-radius: 999px; flex: 0 0 auto;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
+}
+.menu-item .hint { margin-left: auto; color: var(--muted); font-size: 11px; }
+.menu-sep { height: 1px; margin: 5px 4px; background: var(--border); }
+
+@media (prefers-reduced-motion: reduce) {
+  .rail-stack, .rail-item, .rail-link, .rail-fill, .rail-glow, .rail-icon, .rail-num, .rail-label, .rail-face,
+  .action-menu .menu-list, .action-menu .menu-list > *, .action-chevron {
+    transition: none !important;
+  }
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 15px; height: 15px; }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-ghost { border-color: var(--border); color: var(--ink); background: transparent; }
+.btn-ghost:hover { border-color: var(--hover-border); background: var(--surface); }
+
+/* ============ DOCUMENT ROWS ============
+   Documents are listed as rows on a rule, the way a register lists its
+   entries. Cards are kept for things that need to sit above the page. */
+.doc-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px 24px;
+  padding: 22px 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+}
+.doc-row:last-child { border-bottom: 1px solid var(--border); }
+.doc-row .doc-title { transition: color 0.2s ease; }
+.doc-row:hover .doc-title { color: var(--accent); }
+@media (max-width: 640px) { .doc-row { grid-template-columns: 1fr; } }
+
+/* ============ CARDS AND BADGES ============ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.card-link { transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; }
+.card-link:hover { border-color: var(--hover-border); transform: translateY(-2px); box-shadow: var(--shadow-pop); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.badge-accent { background: var(--accent-soft); color: var(--accent-ink); }
+.badge-muted { background: var(--surface-muted); color: var(--label-ink); }
+.badge-live { background: var(--accent); color: var(--on-accent); }
+.badge-outline { box-shadow: inset 0 0 0 1px var(--border); color: var(--muted); }
+.badge .dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; }
+
+/* ============ DOCUMENT PROSE ============
+   Long-form reading in Source Serif 4. The measure is capped so a charter
+   reads like a document, not a web page that happens to contain one. */
+.prose-doc {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.68;
+  color: var(--ink);
+  max-width: 68ch;
+}
+@media (min-width: 1100px) { .prose-doc { font-size: 1.125rem; } }
+.prose-doc > * + * { margin-top: 1.1em; }
+.prose-doc h2, .prose-doc h3 {
+  font-family: var(--font-display);
+  font-stretch: 106%;
+  font-weight: 640;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  scroll-margin-top: 24px;
+}
+.prose-doc h2 { font-size: 1.7rem; margin-top: 2.4em; padding-top: 1.2em; border-top: 1px solid var(--border); }
+.prose-doc h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.prose-doc h3 { font-size: 1.22rem; margin-top: 1.9em; }
+.prose-doc h4 { font-family: var(--font-mono); font-weight: 500; font-size: 0.8rem; margin-top: 1.5em; color: var(--label-ink); scroll-margin-top: 24px; }
+.prose-doc p { margin-top: 1em; }
+.prose-doc h2 + p, .prose-doc h3 + p, .prose-doc h4 + p { margin-top: 0.7em; }
+.prose-doc a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.prose-doc a:hover { color: var(--accent-hover); }
+.prose-doc strong { font-weight: 650; }
+.prose-doc em { font-style: italic; }
+.prose-doc ul, .prose-doc ol { padding-left: 1.4em; margin-top: 0.8em; }
+.prose-doc ul { list-style: disc; }
+.prose-doc ol { list-style: decimal; }
+.prose-doc ul ul { list-style: circle; }
+.prose-doc li { margin-top: 0.4em; padding-left: 0.2em; }
+.prose-doc li::marker { color: var(--muted); font-family: var(--font-mono); font-size: 0.85em; }
+.prose-doc blockquote {
+  margin: 1.4em 0;
+  padding: 0.2em 0 0.2em 1.2em;
+  border-left: 2px solid var(--accent);
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.98em;
+}
+.prose-doc blockquote p { margin-top: 0.5em; }
+.prose-doc blockquote p:first-child { margin-top: 0; }
+.prose-doc hr { border: 0; border-top: 1px solid var(--border); margin: 2.4em 0; }
+.prose-doc code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--surface-muted);
+  padding: 0.12em 0.4em;
+  border-radius: 5px;
+}
+.prose-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86em;
+  line-height: 1.45;
+  margin-top: 1.2em;
+  display: block;
+  overflow-x: auto;
+}
+.prose-doc thead th {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--label-ink);
+  text-align: left;
+  padding: 8px 10px 8px 0;
+  border-bottom: 1px solid var(--ink);
+  vertical-align: bottom;
+}
+.prose-doc tbody td {
+  padding: 9px 10px 9px 0;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.prose-doc tbody tr:last-child td { border-bottom: 0; }
+.prose-doc td:first-child, .prose-doc th:first-child { padding-left: 0; }
+
+/* A document's own callouts, exported from components/mdx.tsx. */
+.callout {
+  margin: 1.6em 0;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: var(--surface-subtle);
+  border: 1px solid var(--border);
+  font-size: 0.94em;
+}
+.callout .callout-title {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: var(--label-ink);
+}
+.callout-draft { background: var(--accent-soft); border-color: transparent; color: var(--accent-ink); }
+.callout-draft .callout-title { color: var(--accent-ink); }
+.callout-draft a { color: inherit; }
+.callout p + p { margin-top: 0.6em; }
+
+/* ============ HOME SPINE ============
+   The semester as a line. Live sprints are filled and connected; upcoming
+   ones are hollow. Draws once on first view. */
+.spine { position: relative; }
+.spine-track {
+  position: absolute;
+  left: 0; right: 0;
+  top: 17px;
+  height: 2px;
+  background: var(--border);
+}
+.spine-progress {
+  position: absolute;
+  left: 0;
+  top: 17px;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left;
+  animation: spine-draw 0.9s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.spine-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  animation: spine-pop 0.45s cubic-bezier(0.34, 1.3, 0.64, 1) both;
+}
+.spine-node .node {
+  width: 36px; height: 36px;
+  border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-stretch: 112%;
+  font-size: 15px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1.5px var(--hover-border);
+  color: var(--muted);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.spine-node.is-live .node { background: var(--accent); color: var(--on-accent); box-shadow: none; }
+.spine-node.is-live:hover .node { transform: scale(1.08); }
+.spine-node:hover .node { box-shadow: inset 0 0 0 1.5px var(--accent); }
+@keyframes spine-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes spine-pop { from { opacity: 0; transform: translateY(6px) scale(0.9); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .spine-progress, .spine-node { animation: none; }
+}
+
+/* ============ EVIDENCE ============ */
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 6px 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+}
+.chip button {
+  width: 18px; height: 18px; border-radius: 999px; border: 0;
+  background: transparent; color: inherit; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 14px; line-height: 1;
+}
+.chip button:hover { background: color-mix(in srgb, var(--accent-ink) 14%, transparent); }
+.field {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  width: 100%;
+}
+.field::placeholder { color: var(--muted); }
+.field:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+
+/* ============ PRINT ============
+   The print route renders the same document on white, then Playwright
+   prints it. These rules also apply if a visitor prints any page. */
+.print-root {
+  --paper: #ffffff;
+  --surface: #ffffff;
+  --ink: #111111;
+  --ink-soft: #333333;
+  --label-ink: #333333;
+  --muted: #555555;
+  --border: #d4d4d4;
+  background: #fff;
+  color: #111;
+}
+.print-root .prose-doc { max-width: none; font-size: 10.5pt; line-height: 1.5; }
+.print-root .prose-doc h2 { font-size: 16pt; break-after: avoid; }
+.print-root .prose-doc h3 { font-size: 12.5pt; break-after: avoid; }
+.print-root .prose-doc table { display: table; font-size: 9pt; break-inside: auto; }
+.print-root .prose-doc tr { break-inside: avoid; }
+.print-root .prose-doc blockquote { break-inside: avoid; }
+.print-root .callout { break-inside: avoid; }
+.print-root a { color: #111; text-decoration: none; }
+@page { size: Letter; margin: 0.8in 0.75in 0.85in; }
+@media print {
+  .rail, .mobile-nav, .no-print { display: none !important; }
+  body { background: #fff; color: #111; }
+  .prose-doc { max-width: none; }
+}

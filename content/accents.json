@@ -1,0 +1,49 @@
+{
+  "paper": { "light": "#fbfaf7", "dark": "#1b1815" },
+  "tint": 4,
+  "default": "bugambilia",
+  "accents": [
+    {
+      "id": "bugambilia",
+      "label": "Bugambilia",
+      "hint": "Magenta, after the bougainvillea on half the blocks in town",
+      "light": { "accent": "#b3156c", "hover": "#8c1054", "soft": "#fbe3f0", "ink": "#7a0e49", "on": "#ffffff" },
+      "dark":  { "accent": "#ff7fc8", "hover": "#ff9ad4", "soft": "#3a1a2d", "ink": "#ffb8de", "on": "#1b1815" }
+    },
+    {
+      "id": "chile",
+      "label": "Chile",
+      "hint": "Red-orange, the roasting-season one",
+      "light": { "accent": "#b93a0c", "hover": "#8f2c08", "soft": "#fbe6da", "ink": "#7c2606", "on": "#ffffff" },
+      "dark":  { "accent": "#ff8a5b", "hover": "#ffa17b", "soft": "#3b2119", "ink": "#ffb897", "on": "#1b1815" }
+    },
+    {
+      "id": "sol",
+      "label": "Sol",
+      "hint": "Ochre, three hundred days of it a year",
+      "light": { "accent": "#8f5a06", "hover": "#6f4504", "soft": "#fbeccc", "ink": "#6a4204", "on": "#ffffff" },
+      "dark":  { "accent": "#f2b63b", "hover": "#f6c65f", "soft": "#382a12", "ink": "#f8d27f", "on": "#1b1815" }
+    },
+    {
+      "id": "nopal",
+      "label": "Nopal",
+      "hint": "Green, the cactus in every yard",
+      "light": { "accent": "#1f7a3a", "hover": "#175c2c", "soft": "#dcf3e3", "ink": "#155429", "on": "#ffffff" },
+      "dark":  { "accent": "#5fd58a", "hover": "#7ee0a1", "soft": "#173424", "ink": "#9ae9b8", "on": "#1b1815" }
+    },
+    {
+      "id": "turquesa",
+      "label": "Turquesa",
+      "hint": "Teal, the stone in the market stalls",
+      "light": { "accent": "#0f6f76", "hover": "#0b555a", "soft": "#d8f1f2", "ink": "#0a4b50", "on": "#ffffff" },
+      "dark":  { "accent": "#4fd1d9", "hover": "#74dbe1", "soft": "#12333a", "ink": "#93e3e8", "on": "#1b1815" }
+    },
+    {
+      "id": "cielo",
+      "label": "Cielo",
+      "hint": "Blue, the sky over the Franklins",
+      "light": { "accent": "#2352c7", "hover": "#1b3f9b", "soft": "#e0e8fb", "ink": "#1a3b8f", "on": "#ffffff" },
+      "dark":  { "accent": "#86a8ff", "hover": "#a2bcff", "soft": "#1c2540", "ink": "#b7c9ff", "on": "#1b1815" }
+    }
+  ]
+}
