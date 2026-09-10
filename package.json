@@ -5,6 +5,7 @@
   "description": "Living Project Portal for Gracias Por Invitar, the CS 4390/5388 semester project at UTEP.",
   "scripts": {
     "prebuild": "node scripts/accents-css.mjs && node scripts/contrast.mjs",
+    "predev": "node scripts/accents-css.mjs",
     "dev": "next dev",
     "build": "next build",
     "pdf": "node scripts/pdf.mjs",
@@ -13,7 +14,8 @@
     "corpus": "node scripts/corpus.mjs",
     "ship": "npm run build && npm run pdf && npm run corpus && npm run validate",
     "serve": "node scripts/serve.mjs",
-    "shots": "node scripts/shots.mjs"
+    "shots": "node scripts/shots.mjs",
+    "postinstall": "node scripts/accents-css.mjs"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",
