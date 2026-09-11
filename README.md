@@ -21,6 +21,9 @@ npm run shots        # screenshots of the export into shots/
 
 PDFs need Chromium for Playwright: `npx playwright install chromium` once.
 
+If `npm run dev` shows an error that no longer matches the files on disk,
+delete Next's cache and start again: `rm -rf .next && npm run dev`.
+
 ## How it is put together
 
 - **Next.js, static export, Tailwind 4.** No server. The site builds to
