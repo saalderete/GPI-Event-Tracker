@@ -24,6 +24,11 @@ PDFs need Chromium for Playwright: `npx playwright install chromium` once.
 If `npm run dev` shows an error that no longer matches the files on disk,
 delete Next's cache and start again: `rm -rf .next && npm run dev`.
 
+The PDFs are printed from the pages by `npm run ship`, not by the dev
+server. Until ship has run once, the PDF buttons in `npm run dev` open the
+print view instead; after it, the dev server serves the copies ship leaves
+in `public/pdf/` (gitignored, regenerated on every ship).
+
 ## How it is put together
 
 - **Next.js, static export, Tailwind 4.** No server. The site builds to

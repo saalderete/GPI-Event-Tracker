@@ -1,7 +1,8 @@
 // Prints every document in the registry to out/pdf/<name>.pdf from its
 // /print route, so the PDF is a render of the same source as the page. Runs
-// after `next build`; the deploy workflow runs it before publishing.
-import { mkdir, readFile } from "node:fs/promises";
+// after `next build`; the deploy workflow runs it before publishing. A copy
+// goes to public/pdf/ (gitignored) so `next dev` serves the PDFs too.
+import { copyFile, mkdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
@@ -13,6 +14,7 @@ const manifest = JSON.parse(await readFile(join(out, "portal-manifest.json"), "u
 const { server, origin } = await startServer();
 
 await mkdir(join(out, "pdf"), { recursive: true });
+await mkdir(join(root, "public", "pdf"), { recursive: true });
 // PW_EXECUTABLE points Playwright at an already-installed Chromium (this
 // sandbox ships one); CI installs the matching browser and leaves it unset.
 const browser = await chromium.launch(process.env.PW_EXECUTABLE ? { executablePath: process.env.PW_EXECUTABLE } : {});
@@ -38,10 +40,11 @@ for (const d of manifest.documents) {
     footerTemplate: `<div style="${style} display:flex; justify-content:space-between;"><span>Built ${esc(manifest.build.at.slice(0, 10))}${manifest.build.commit ? ", commit " + esc(manifest.build.commit.slice(0, 7)) : ""}</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>`,
     margin: { top: "0.8in", bottom: "0.85in", left: "0.75in", right: "0.75in" }
   });
+  await copyFile(file, join(root, "public", "pdf", `${d.pdf}.pdf`));
   n++;
   console.log(`pdf  ${d.pdf}.pdf  <- ${d.print}`);
 }
 
 await browser.close();
 server.close();
-console.log(`${n} PDF(s) written to out/pdf/.`);
+console.log(`${n} PDF(s) written to out/pdf/ and copied to public/pdf/.`);

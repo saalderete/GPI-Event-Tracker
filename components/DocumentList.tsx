@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { StatusBadge } from "./StatusBadge";
-import { IconDownload } from "./Icons";
+import { IconDownload, IconPrint } from "./Icons";
 import { fmtDate } from "@/lib/format";
 import { withBase } from "@/lib/base";
+import { pdfLink, pdfTitle } from "@/lib/pdf";
 import type { PortalDocument } from "@/lib/registry";
 import type { Sprint } from "@/lib/sprints";
 
@@ -11,7 +12,9 @@ import type { Sprint } from "@/lib/sprints";
 export function DocumentList({ sprint, docs }: { sprint: Sprint; docs: PortalDocument[] }) {
   return (
     <ul>
-      {docs.map((d) => (
+      {docs.map((d) => {
+        const link = pdfLink(d.pdf, withBase(`/print/${sprint.slug}/${d.slug}/`));
+        return (
         <li key={d.slug} className="doc-row" data-reveal>
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
@@ -29,12 +32,13 @@ export function DocumentList({ sprint, docs }: { sprint: Sprint; docs: PortalDoc
             <Link href={`/${sprint.slug}/${d.slug}/`} className="btn btn-ghost">
               Read
             </Link>
-            <a className="btn btn-ghost" href={withBase(`/pdf/${d.pdf}.pdf`)} download title={`Download ${d.title} as PDF`}>
-              <IconDownload /> PDF
+            <a className="btn btn-ghost" href={link.href} download={link.file ? `${d.pdf}.pdf` : undefined} target={link.file ? undefined : "_blank"} title={pdfTitle(link, d.title)}>
+              {link.file ? <IconDownload /> : <IconPrint />} {link.file ? "PDF" : "Print"}
             </a>
           </div>
         </li>
-      ))}
+        );
+      })}
     </ul>
   );
 }

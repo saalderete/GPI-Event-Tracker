@@ -2,13 +2,14 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { Spine } from "./Spine";
 import { StatusBadge } from "./StatusBadge";
-import { IconDownload } from "./Icons";
 import { site } from "@/lib/site";
-import { documents, type PortalDocument } from "@/lib/registry";
+import type { PortalDocument } from "@/lib/registry";
 import type { Sprint } from "@/lib/sprints";
 import { interviews, candidates } from "@/lib/evidence";
 import { fmtDate } from "@/lib/format";
 import { withBase } from "@/lib/base";
+import { pdfLink, pdfTitle } from "@/lib/pdf";
+import { PdfButtons } from "./PdfButtons";
 
 // Home written on the whiteboard the clip holds on: headings in marker, the
 // problem on a printed sheet under a magnet, the semester as a line, one
@@ -60,7 +61,9 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
           <span className="badge badge-live">Live</span>
         </div>
         <ul className="notes mt-6">
-          {docs.map((d, i) => (
+          {docs.map((d, i) => {
+            const link = pdfLink(d.pdf, withBase(`/print/${latest.slug}/${d.slug}/`));
+            return (
             <li key={d.slug} className="note" style={{ "--tilt": tilts[i % tilts.length] } as CSSProperties} data-reveal>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <h3 className="note-title">
@@ -74,12 +77,13 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
               </p>
               <div className="note-links">
                 <Link href={`/${latest.slug}/${d.slug}/`}>Read</Link>
-                <a href={withBase(`/pdf/${d.pdf}.pdf`)} download title={`Download ${d.title} as PDF`}>
-                  PDF
+                <a href={link.href} download={link.file ? `${d.pdf}.pdf` : undefined} target={link.file ? undefined : "_blank"} title={pdfTitle(link, d.title)}>
+                  {link.file ? "PDF" : "Print"}
                 </a>
               </div>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </section>
 
@@ -90,15 +94,7 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
         <p className="board-lede mt-3" data-reveal>
           Each public document exists twice: as the page you read here and as a PDF generated from the same source at build time.
         </p>
-        <ul className="mt-5 flex flex-wrap gap-2" data-reveal>
-          {documents.map((d) => (
-            <li key={d.pdf}>
-              <a className="btn btn-ghost" href={withBase(`/pdf/${d.pdf}.pdf`)} download>
-                <IconDownload /> {d.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <PdfButtons />
       </section>
     </>
   );

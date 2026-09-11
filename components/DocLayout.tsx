@@ -8,6 +8,7 @@ import { Toc } from "./Toc";
 import { PdfMenu } from "./PdfMenu";
 import { StatusBadge } from "./StatusBadge";
 import { withBase } from "@/lib/base";
+import { pdfLink } from "@/lib/pdf";
 
 interface Props {
   sprint: Sprint;
@@ -24,6 +25,8 @@ interface Props {
 // hang off that history.
 export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
   const owner = memberById(doc.owner);
+  const printHref = withBase(`/print/${sprint.slug}/${doc.slug}/`);
+  const link = pdfLink(doc.pdf, printHref);
   return (
     <article>
       <header className="mb-10 border-b border-border pb-8" data-reveal>
@@ -49,7 +52,7 @@ export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
             </div>
           </dl>
           <div className="sm:ml-auto">
-            <PdfMenu pdf={doc.pdf} printHref={withBase(`/print/${sprint.slug}/${doc.slug}/`)} title={doc.title} />
+            <PdfMenu link={link} file={`${doc.pdf}.pdf`} printHref={printHref} title={doc.title} />
           </div>
         </div>
       </header>

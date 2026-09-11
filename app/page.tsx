@@ -6,12 +6,11 @@ import { HeroVideo } from "@/components/HeroVideo";
 import { ScrollHero, HeroWords } from "@/components/ScrollHero";
 import { BoardHero } from "@/components/BoardHero";
 import { BoardHome } from "@/components/BoardHome";
-import { IconDownload } from "@/components/Icons";
+import { PdfButtons } from "@/components/PdfButtons";
 import { site } from "@/lib/site";
 import { sprints } from "@/lib/sprints";
 import { documents } from "@/lib/registry";
 import { interviews, candidates } from "@/lib/evidence";
-import { withBase } from "@/lib/base";
 
 export default function Home() {
   const live = sprints.filter((s) => s.status === "live");
@@ -91,15 +90,7 @@ export default function Home() {
         <p className="mt-2 max-w-[60ch] text-[1rem] text-ink-soft">
           Each public document exists twice: as the page you read here and as a PDF generated from the same source at build time.
         </p>
-        <ul className="mt-5 flex flex-wrap gap-2">
-          {documents.map((d) => (
-            <li key={d.pdf}>
-              <a className="btn btn-ghost" href={withBase(`/pdf/${d.pdf}.pdf`)} download>
-                <IconDownload /> {d.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <PdfButtons />
       </section>
     </Shell>
   );
