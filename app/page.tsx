@@ -3,7 +3,8 @@ import { Shell } from "@/components/Shell";
 import { Spine } from "@/components/Spine";
 import { DocumentList } from "@/components/DocumentList";
 import { HeroVideo } from "@/components/HeroVideo";
-import { IconArrow, IconDownload } from "@/components/Icons";
+import { ScrollHero, HeroWords } from "@/components/ScrollHero";
+import { IconDownload } from "@/components/Icons";
 import { site } from "@/lib/site";
 import { sprints } from "@/lib/sprints";
 import { documents } from "@/lib/registry";
@@ -15,36 +16,29 @@ export default function Home() {
   const latest = live.at(-1) ?? sprints[0];
   const docs = documents.filter((d) => d.sprint === latest.number);
 
+  const words = (
+    <HeroWords eyebrow={site.courseLine} name={site.name} tagline={site.tagline} primaryHref={`/${latest.slug}/`} primaryLabel={`Open Sprint ${latest.number}`} />
+  );
+
   return (
-    <Shell>
-      {/* Hero: the name, set like the title of a poster, beside the record
-          settling into a stack. */}
-      <section className="grid gap-10 pt-2 md:pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-center lg:gap-14">
-        <div>
-          <p className="eyebrow">{site.courseLine}</p>
-          <h1 className="display display-wide mt-5 max-w-[10ch] text-[clamp(3rem,7.4vw,5.6rem)]">{site.name}</h1>
-          <p className="mt-7 max-w-[30ch] font-serif text-[1.3rem] leading-[1.4] text-ink sm:text-[1.45rem]">{site.tagline}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={`/${latest.slug}/`} className="btn btn-primary">
-              Open Sprint {latest.number} <IconArrow />
-            </Link>
-            <Link href="/about/" className="btn btn-ghost">
-              About the team
-            </Link>
+    <Shell hero={site.heroMode === "scroll" ? <ScrollHero>{words}</ScrollHero> : undefined}>
+      {site.heroMode === "card" ? (
+        /* The clip plays once in a frame beside the name. */
+        <section className="grid gap-10 pt-2 md:pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-center lg:gap-14">
+          <div>{words}</div>
+          <div className="card overflow-hidden p-0">
+            <HeroVideo className="block aspect-video h-auto w-full object-cover" />
           </div>
-        </div>
-        <div className="card overflow-hidden p-0">
-          <HeroVideo className="block aspect-video h-auto w-full object-cover" />
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       {/* The business problem, the one sentence the guidelines ask for on Home. */}
-      <section className="mt-16 card p-6 sm:p-8" aria-labelledby="problem">
+      <section className={`card p-6 sm:p-8 ${site.heroMode === "card" ? "mt-16" : ""}`} aria-labelledby="problem">
         <h2 id="problem" className="display text-[1.15rem] text-muted">
           The business problem
         </h2>
         <p className="mt-3 max-w-[58ch] font-serif text-[1.25rem] leading-[1.5] sm:text-[1.4rem]">{site.problem}</p>
-        <p className="mt-4 max-w-[62ch] text-[1rem] leading-relaxed text-ink-soft">{site.nameNote}</p>
+        <p className="hand mt-4 max-w-[36ch] text-ink-soft">{site.nameNote}</p>
         <p className="meta mt-5">
           Tested in Sprint 1 with {interviews.length} customer interviews across {candidates.length} candidate problems.{" "}
           <Link href={`/${latest.slug}/market-research/`} className="underline hover:text-ink">

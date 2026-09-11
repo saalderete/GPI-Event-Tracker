@@ -40,7 +40,10 @@ delete Next's cache and start again: `rm -rf .next && npm run dev`.
   its page or PDF, if the output contains the private-content sentinel, if a
   referral name from the interview sheets appears anywhere, or if visible copy
   contains an em dash.
-- **The hero clip.** `public/media/hero.*` is a generated illustration
+- **The hero clip.** `lib/site.ts` picks the Home hero: `scroll` fills the
+  first screen with the clip and scrubs it by scroll position
+  (`hero-scrub.*`, encoded with a keyframe every four frames), `card` plays
+  it once in a frame beside the name. `public/media/hero.*` is a generated illustration
   (Seedance 2.0 through Monid; see `AI-LOG.md`): paper settling into a
   stack. It plays once and rests; phones and reduced-motion visitors get
   the final frame as a still. To replace it, drop a new source MP4 and run
@@ -53,8 +56,9 @@ delete Next's cache and start again: `rm -rf .next && npm run dev`.
   as a PDF. Referral names were removed.
 - **Design.** KasaPro's warm neutrals with a visitor-chosen accent
   (`content/accents.json`, six presets, each contrast-checked in both themes
-  by `scripts/contrast.mjs`). Fraunces for display, Source Serif 4 for
-  reading, IBM Plex Mono for the record's metadata. The rail navigation is
+  by `scripts/contrast.mjs`). Montserrat for display, Montserrat Alternates for the
+  name, Caveat for one handwritten aside, Source Serif 4 for reading, IBM
+  Plex Mono for the record's metadata. The rail navigation is
   KasaPro's fluid rail with the sprints as its circles.
 
 ## Adding a sprint

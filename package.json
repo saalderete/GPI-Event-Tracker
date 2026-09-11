@@ -18,10 +18,12 @@
     "postinstall": "node scripts/accents-css.mjs"
   },
   "dependencies": {
-    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/caveat": "^5.3.0",
     "@fontsource-variable/fraunces": "^5.2.6",
+    "@fontsource-variable/montserrat": "^5.3.0",
     "@fontsource-variable/source-serif-4": "^5.2.6",
     "@fontsource/ibm-plex-mono": "^5.2.6",
+    "@fontsource/montserrat-alternates": "^5.3.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^16.3.4",

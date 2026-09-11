@@ -19,7 +19,10 @@ const types = {
   ".svg": "image/svg+xml",
   ".png": "image/png",
   ".ico": "image/x-icon",
-  ".txt": "text/plain"
+  ".txt": "text/plain",
+  ".jpg": "image/jpeg",
+  ".mp4": "video/mp4",
+  ".webm": "video/webm"
 };
 
 export function startServer(port = 0) {
@@ -53,7 +56,21 @@ export function startServer(port = 0) {
         return;
       }
       const body = await readFile(file);
-      res.writeHead(200, { "content-type": types[extname(file)] ?? "application/octet-stream" }).end(body);
+      const type = types[extname(file)] ?? "application/octet-stream";
+      // Byte ranges, so video seeking behaves as it does on a real host.
+      const range = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range ?? "");
+      if (range && (range[1] || range[2])) {
+        const start = range[1] ? Number(range[1]) : Math.max(0, body.length - Number(range[2]));
+        const end = range[1] && range[2] ? Math.min(Number(range[2]), body.length - 1) : body.length - 1;
+        res.writeHead(206, {
+          "content-type": type,
+          "content-range": `bytes ${start}-${end}/${body.length}`,
+          "content-length": end - start + 1,
+          "accept-ranges": "bytes"
+        }).end(body.subarray(start, end + 1));
+        return;
+      }
+      res.writeHead(200, { "content-type": type, "content-length": body.length, "accept-ranges": "bytes" }).end(body);
     } catch (e) {
       res.writeHead(500).end(String(e));
     }
