@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Shell } from "@/components/Shell";
 import { Spine } from "@/components/Spine";
 import { DocumentList } from "@/components/DocumentList";
+import { HeroVideo } from "@/components/HeroVideo";
 import { IconArrow, IconDownload } from "@/components/Icons";
 import { site } from "@/lib/site";
 import { sprints } from "@/lib/sprints";
@@ -16,24 +17,25 @@ export default function Home() {
 
   return (
     <Shell>
-      {/* Hero: the name, set like the title of a poster. */}
-      <section className="pt-2 md:pt-8">
-        <p className="eyebrow">{site.courseLine}</p>
-        <h1 className="display display-wide mt-5 max-w-[10ch] text-[clamp(3rem,9.4vw,7rem)]">{site.name}</h1>
-        <p className="mt-7 max-w-[30ch] font-serif text-[1.3rem] leading-[1.4] text-ink sm:text-[1.45rem]">{site.tagline}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link href={`/${latest.slug}/`} className="btn btn-primary">
-            Open Sprint {latest.number} <IconArrow />
-          </Link>
-          <Link href="/about/" className="btn btn-ghost">
-            About the team
-          </Link>
+      {/* Hero: the name, set like the title of a poster, beside the record
+          settling into a stack. */}
+      <section className="grid gap-10 pt-2 md:pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-center lg:gap-14">
+        <div>
+          <p className="eyebrow">{site.courseLine}</p>
+          <h1 className="display display-wide mt-5 max-w-[10ch] text-[clamp(3rem,7.4vw,5.6rem)]">{site.name}</h1>
+          <p className="mt-7 max-w-[30ch] font-serif text-[1.3rem] leading-[1.4] text-ink sm:text-[1.45rem]">{site.tagline}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href={`/${latest.slug}/`} className="btn btn-primary">
+              Open Sprint {latest.number} <IconArrow />
+            </Link>
+            <Link href="/about/" className="btn btn-ghost">
+              About the team
+            </Link>
+          </div>
         </div>
-        {site.heroImage ? (
-          // Optional: drop a real photo at public/images/hero.jpg and set
-          // site.heroImage. Nothing renders until then; no placeholder art.
-          <img src={withBase(site.heroImage.src)} alt={site.heroImage.alt} className="mt-12 w-full rounded-[var(--radius-lg)]" />
-        ) : null}
+        <div className="card overflow-hidden p-0">
+          <HeroVideo className="block aspect-video h-auto w-full object-cover" />
+        </div>
       </section>
 
       {/* The business problem, the one sentence the guidelines ask for on Home. */}

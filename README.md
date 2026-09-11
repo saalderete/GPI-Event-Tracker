@@ -40,6 +40,14 @@ delete Next's cache and start again: `rm -rf .next && npm run dev`.
   its page or PDF, if the output contains the private-content sentinel, if a
   referral name from the interview sheets appears anywhere, or if visible copy
   contains an em dash.
+- **The hero clip.** `public/media/hero.*` is a generated illustration
+  (Seedance 2.0 through Monid; see `AI-LOG.md`): paper settling into a
+  stack. It plays once and rests; phones and reduced-motion visitors get
+  the final frame as a still. To replace it, drop a new source MP4 and run
+  `scripts/hero-media.sh <source.mp4>`, which writes the MP4, WebM, poster
+  and still. `public/media/hero-alt.mp4` is the alternate 1080p take (a
+  stack that settles rather than builds); `scripts/hero-media.sh
+  public/media/hero-alt.mp4` switches to it.
 - **Evidence as data.** The 51 interview sheets live in
   `content/evidence/interviews.json` and render as a filterable appendix and
   as a PDF. Referral names were removed.

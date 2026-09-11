@@ -6,9 +6,6 @@ export const site = {
   nameNote:
     "“Thanks for the invite” is what you say when the photos show up and nobody told you. The name is the problem.",
   tagline: "One hub for everything happening in El Paso, from arena concerts to farmers markets and car meets.",
-  // Set to { src: "/images/hero.jpg", alt: "..." } once the team has a real
-  // photo. Home renders nothing in its place until then.
-  heroImage: null as { src: string; alt: string } | null,
   courseLine: "CS 4390/5388 Software Project Management, UTEP, Fall 2026",
   // The one-sentence business problem the guidelines ask for on Home.
   problem:
