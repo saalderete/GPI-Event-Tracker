@@ -5,7 +5,10 @@ export const site = {
   // and nobody told you. The name is the problem.
   nameNote:
     "“Thanks for the invite” is what you say when the photos show up and nobody told you. The name is the problem.",
+  // What the app is, in one line: the page description and the board use it.
   tagline: "One hub for everything happening in El Paso, from arena concerts to farmers markets and car meets.",
+  // What this site is, in one line: the cover uses it.
+  portalTagline: "The living record of how the team is managing Gracias Por Invitar, one sprint at a time.",
   // The cover title: the team's portal, with the short name beside it. The
   // full name stays in the browser title, the footer and the board.
   portalTitle: "Team 9 Project Portal",
