@@ -19,11 +19,11 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
   return (
     <>
       <section className="board-row" aria-labelledby="problem">
-        <h2 id="problem" className="marker">
+        <h2 id="problem" className="marker" data-reveal>
           The business problem
         </h2>
         <div className="mt-7 grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,4fr)] lg:items-start">
-          <div className="pinned">
+          <div className="pinned" data-reveal>
             <span className="magnet" aria-hidden />
             <p className="max-w-[58ch] font-serif text-[1.2rem] leading-[1.5] sm:text-[1.35rem]">{site.problem}</p>
             <p className="meta mt-5">
@@ -34,20 +34,24 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
               .
             </p>
           </div>
-          <p className="marker-note max-w-[26ch] lg:pt-3">{site.nameNote}</p>
+          <p className="marker-note max-w-[26ch] lg:pt-3" data-reveal>
+            {site.nameNote}
+          </p>
         </div>
       </section>
 
       <section className="board-row" aria-labelledby="semester">
-        <h2 id="semester" className="marker">
+        <h2 id="semester" className="marker" data-reveal>
           Six sprints. One record.
         </h2>
-        <p className="board-lede mt-3 mb-9">Each sprint adds a page and its documents. Earlier pages stay live; nothing is replaced, only added to.</p>
+        <p className="board-lede mt-3 mb-9" data-reveal>
+          Each sprint adds a page and its documents. Earlier pages stay live; nothing is replaced, only added to.
+        </p>
         <Spine />
       </section>
 
       <section className="board-row" aria-labelledby="live-now">
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2" data-reveal>
           <h2 id="live-now" className="marker">
             <Link href={`/${latest.slug}/`}>
               Sprint {latest.number}: {latest.title}
@@ -57,7 +61,7 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
         </div>
         <ul className="notes mt-6">
           {docs.map((d, i) => (
-            <li key={d.slug} className="note" style={{ "--tilt": tilts[i % tilts.length] } as CSSProperties}>
+            <li key={d.slug} className="note" style={{ "--tilt": tilts[i % tilts.length] } as CSSProperties} data-reveal>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <h3 className="note-title">
                   <Link href={`/${latest.slug}/${d.slug}/`}>{d.title}</Link>
@@ -80,11 +84,13 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
       </section>
 
       <section className="board-row" aria-labelledby="pdfs">
-        <h2 id="pdfs" className="marker">
+        <h2 id="pdfs" className="marker" data-reveal>
           Every document, as a PDF
         </h2>
-        <p className="board-lede mt-3">Each public document exists twice: as the page you read here and as a PDF generated from the same source at build time.</p>
-        <ul className="mt-5 flex flex-wrap gap-2">
+        <p className="board-lede mt-3" data-reveal>
+          Each public document exists twice: as the page you read here and as a PDF generated from the same source at build time.
+        </p>
+        <ul className="mt-5 flex flex-wrap gap-2" data-reveal>
           {documents.map((d) => (
             <li key={d.pdf}>
               <a className="btn btn-ghost" href={withBase(`/pdf/${d.pdf}.pdf`)} download>

@@ -30,7 +30,7 @@ export function SprintOneOverview({ sprint, docs }: { sprint: Sprint; docs: Port
     <>
       <section className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]" aria-labelledby="what">
         <div>
-          <h2 id="what" className={`${h2} mb-4`}>
+          <h2 id="what" className={`${h2} mb-4`} data-reveal>
             What this sprint was
           </h2>
           <div className="prose-doc">
@@ -50,10 +50,12 @@ export function SprintOneOverview({ sprint, docs }: { sprint: Sprint; docs: Port
           </div>
         </div>
         <div>
-          <h2 className={`${h2} mb-4`}>Timeline</h2>
+          <h2 className={`${h2} mb-4`} data-reveal>
+            Timeline
+          </h2>
           <ol className="relative border-l border-border">
             {timeline.map((t) => (
-              <li key={t.date + t.what} className="relative pb-5 pl-6 last:pb-0">
+              <li key={t.date + t.what} className="relative pb-5 pl-6 last:pb-0" data-reveal>
                 <span className="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full bg-accent" aria-hidden />
                 <p className="meta">{fmtDate(t.date)}</p>
                 <p className="mt-0.5 text-[0.95rem] leading-relaxed text-ink-soft">{t.what}</p>
@@ -64,13 +66,13 @@ export function SprintOneOverview({ sprint, docs }: { sprint: Sprint; docs: Port
       </section>
 
       <section className="mt-16" aria-labelledby="documents">
-        <h2 id="documents" className={`${h2} mb-5`}>
+        <h2 id="documents" className={`${h2} mb-5`} data-reveal>
           Documents
         </h2>
         <DocumentList sprint={sprint} docs={docs} />
       </section>
 
-      <section className="mt-16" aria-labelledby="candidates">
+      <section className="mt-16" aria-labelledby="candidates" data-reveal>
         <h2 id="candidates" className={`${h2} mb-5`}>
           The five candidates
         </h2>
@@ -110,7 +112,7 @@ export function SprintOneOverview({ sprint, docs }: { sprint: Sprint; docs: Port
         </div>
       </section>
 
-      <section className="mt-16" aria-labelledby="contributions">
+      <section className="mt-16" aria-labelledby="contributions" data-reveal>
         <h2 id="contributions" className={h2}>
           Contribution statement
         </h2>
@@ -144,7 +146,7 @@ export function SprintOneOverview({ sprint, docs }: { sprint: Sprint; docs: Port
         </div>
       </section>
 
-      <section className="mt-16" aria-labelledby="ai">
+      <section className="mt-16" aria-labelledby="ai" data-reveal>
         <h2 id="ai" className={h2}>
           AI use disclosure
         </h2>
@@ -188,7 +190,7 @@ export function SprintOneOverview({ sprint, docs }: { sprint: Sprint; docs: Port
         </dl>
       </section>
 
-      <section className="mt-12 max-w-[72ch]">
+      <section className="mt-12 max-w-[72ch]" data-reveal>
         <Callout title="Private, by design">
           <p className="flex items-start gap-2">
             <IconLock className="mt-1 h-4 w-4 shrink-0" />

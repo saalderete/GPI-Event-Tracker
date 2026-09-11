@@ -26,7 +26,9 @@ for (const vp of viewports) {
       if (vp.name === "phone" && t.startsWith("/print")) continue;
       await page.goto(`${origin}${t}`, { waitUntil: "networkidle" });
       await page.evaluate(() => document.fonts.ready);
-      await page.waitForTimeout(700);
+      // Full-page captures do not scroll, so reveal everything up front.
+      await page.evaluate(() => document.querySelectorAll("[data-reveal], .prose-doc > *").forEach((el) => el.classList.add("is-in")));
+      await page.waitForTimeout(900);
       const name = `${vp.name}-${theme}${t.replace(/\//g, "_") || "_home"}.png`;
       await page.screenshot({ path: join(dir, name), fullPage: process.env.FULL !== "0" });
       console.log("shot", name);

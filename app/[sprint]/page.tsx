@@ -36,7 +36,7 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: `Sprint ${s.number}` }]} />
       {live ? <SprintSubnav sprint={s} docs={docs} /> : null}
 
-      <header className="mb-12">
+      <header className="mb-12" data-reveal>
         <div className="flex flex-wrap items-center gap-3">
           <p className="eyebrow">Sprint {s.number}</p>
           <span className={`badge ${live ? "badge-live" : "badge-outline"}`}>{live ? "Live" : "Upcoming"}</span>
@@ -92,7 +92,7 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
         </section>
       )}
 
-      <nav className="mt-16 flex flex-wrap justify-between gap-3 border-t border-border pt-6 no-print" aria-label="Sprint navigation">
+      <nav className="mt-16 flex flex-wrap justify-between gap-3 border-t border-border pt-6 no-print" aria-label="Sprint navigation" data-reveal>
         {previous ? (
           <Link href={`/${previous.slug}/`} className="btn btn-ghost">
             <IconArrow className="rotate-180" /> Sprint {previous.number}

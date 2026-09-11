@@ -40,6 +40,10 @@ honest.
   for the name only, Caveat for the marker writing on the Home board and
   one handwritten aside elsewhere), Source Serif 4 for
   reading, IBM Plex Mono for metadata, Phosphor icons only.
+- Reveal on scroll: put `data-reveal` on a block to have it rise into view;
+  the direct children of a `.prose-doc` column do it on their own. Never put
+  it on an ancestor of something fixed or sticky, and never in the print
+  views, which have no reveal scope by design.
 - Adding a sprint: MDX under `content/sprint-N/`, register the documents,
   flip the sprint to `live` in `lib/sprints.ts`, write the change log, run
   `npm run ship`, push to `main`.

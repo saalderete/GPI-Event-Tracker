@@ -358,8 +358,8 @@ a {
 .rail-face-mark {
   font-family: var(--font-name);
   font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  letter-spacing: 0.02em;
 }
 .rail-face-mark { z-index: 1; }
 .rail-toggle:hover .rail-face-mark, .rail-toggle:focus-visible .rail-face-mark { transform: scale(0); }
@@ -939,6 +939,33 @@ a {
   .note, .note:hover, .pinned, .marker, .marker-note { transform: none; }
 }
 @media (max-width: 860px) { .board { padding-bottom: 88px; } }
+
+/* ============ REVEAL ============
+   Blocks marked data-reveal, and the direct children of a reading column,
+   rise into place as they enter the viewport (components/Reveal.tsx adds
+   .is-in). The hidden start applies only with scripts running and inside
+   the site shell, so print views, no-script visitors and reduced motion all
+   get the page in full. `translate` is used rather than `transform` so a
+   block's own rotation (the marker, the notes) is left alone. */
+html[data-js] .reveal-scope [data-reveal],
+html[data-js] .reveal-scope .prose-doc > * {
+  opacity: 0;
+  translate: 0 14px;
+  transition: opacity 0.7s ease, translate 0.7s cubic-bezier(0.2, 0.65, 0.2, 1);
+}
+html[data-js] .reveal-scope [data-reveal].is-in,
+html[data-js] .reveal-scope .prose-doc > .is-in {
+  opacity: 1;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: reduce), print {
+  html[data-js] .reveal-scope [data-reveal],
+  html[data-js] .reveal-scope .prose-doc > * {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+}
 
 /* ============ HOME SPINE ============
    The semester as a line. Live sprints are filled and connected; upcoming

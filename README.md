@@ -60,7 +60,9 @@ delete Next's cache and start again: `rm -rf .next && npm run dev`.
   by `scripts/contrast.mjs`). Montserrat for display, Jura for the
   name, Caveat for one handwritten aside, Source Serif 4 for reading, IBM
   Plex Mono for the record's metadata. The rail navigation is
-  KasaPro's fluid rail with the sprints as its circles.
+  KasaPro's fluid rail with the sprints as its circles. Blocks rise into
+  place as they scroll into view (`components/Reveal.tsx`); the print views,
+  no-script visitors and reduced motion get every page in full.
 
 ## Adding a sprint
 

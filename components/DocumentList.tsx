@@ -12,7 +12,7 @@ export function DocumentList({ sprint, docs }: { sprint: Sprint; docs: PortalDoc
   return (
     <ul>
       {docs.map((d) => (
-        <li key={d.slug} className="doc-row">
+        <li key={d.slug} className="doc-row" data-reveal>
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
               <h3 className="display doc-title text-[1.35rem]">

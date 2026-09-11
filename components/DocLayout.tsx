@@ -26,7 +26,7 @@ export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
   const owner = memberById(doc.owner);
   return (
     <article>
-      <header className="mb-10 border-b border-border pb-8">
+      <header className="mb-10 border-b border-border pb-8" data-reveal>
         <p className="eyebrow mb-3">
           Sprint {sprint.number} · {doc.kind === "appendix" ? "Appendix" : "Document"}
         </p>
@@ -67,7 +67,7 @@ export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
         </div>
       )}
 
-      <section className="mt-16 border-t border-border pt-8" aria-labelledby="revisions">
+      <section className="mt-16 border-t border-border pt-8" aria-labelledby="revisions" data-reveal>
         <h2 id="revisions" className="display mb-4 text-[1.4rem]">
           Revision history
         </h2>

@@ -10,7 +10,7 @@ export function Spine() {
   // The accent line reaches the last live node.
   const progress = n > 1 ? (Math.max(liveCount - 1, 0) / (n - 1)) * 100 : 0;
   return (
-    <div className="spine">
+    <div className="spine" data-reveal>
       <div className="spine-track" aria-hidden />
       <div className="spine-progress" style={{ width: `${progress}%` }} aria-hidden />
       <ol className="relative grid grid-cols-6 gap-2">

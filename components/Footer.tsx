@@ -6,7 +6,7 @@ import { IconExternal, IconLock } from "./Icons";
 
 export function Footer() {
   return (
-    <footer className="mt-20 border-t border-border pt-8 pb-28 md:pb-10 no-print">
+    <footer className="mt-20 border-t border-border pt-8 pb-28 md:pb-10 no-print" data-reveal>
       <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
         <div className="space-y-3">
           <p className="meta">

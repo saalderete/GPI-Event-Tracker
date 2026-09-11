@@ -128,13 +128,17 @@ export function ScrollHero({ children }: { children: ReactNode }) {
 export function HeroWords({ eyebrow, name, mark, tagline, primaryHref, primaryLabel }: { eyebrow: string; name: string; mark?: string; tagline: string; primaryHref: string; primaryLabel: string }) {
   return (
     <>
-      <p className="eyebrow">{eyebrow}</p>
-      <h1 className="display display-wide mt-4 max-w-[15ch] text-[clamp(2.6rem,6vw,5rem)]">
+      <p className="eyebrow" data-reveal>
+        {eyebrow}
+      </p>
+      <h1 className="display display-wide mt-4 max-w-[15ch] text-[clamp(2.6rem,6vw,5rem)]" data-reveal>
         {name}
         {mark ? <span className="mark"> ({mark})</span> : null}
       </h1>
-      <p className="mt-5 max-w-[34ch] font-serif text-[1.15rem] leading-[1.45] text-ink sm:text-[1.3rem]">{tagline}</p>
-      <div className="mt-6 flex flex-wrap gap-3">
+      <p className="mt-5 max-w-[34ch] font-serif text-[1.15rem] leading-[1.45] text-ink sm:text-[1.3rem]" data-reveal>
+        {tagline}
+      </p>
+      <div className="mt-6 flex flex-wrap gap-3" data-reveal>
         <Link href={primaryHref} className="btn btn-primary">
           {primaryLabel} <IconArrow />
         </Link>

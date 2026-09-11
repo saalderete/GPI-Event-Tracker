@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Rail } from "./Rail";
 import { MobileNav } from "./MobileNav";
 import { Footer } from "./Footer";
+import { Reveal } from "./Reveal";
 
 // Rail on the left, the page on the right, the phone bar underneath. A
 // `hero` renders full-bleed above the padded column; with `board` the column
@@ -15,7 +16,8 @@ export function Shell({ children, hero, board = false }: { children: ReactNode; 
     </>
   );
   return (
-    <div className="flex min-h-dvh">
+    <div className="reveal-scope flex min-h-dvh">
+      <Reveal />
       <Rail />
       <div className="min-w-0 flex-1">
         {hero}

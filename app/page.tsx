@@ -19,7 +19,7 @@ export default function Home() {
   const docs = documents.filter((d) => d.sprint === latest.number);
 
   const words = (
-    <HeroWords eyebrow={site.courseLine} name={site.portalTitle} mark={site.mark} tagline={site.tagline} primaryHref={`/${latest.slug}/`} primaryLabel={`Open Sprint ${latest.number}`} />
+    <HeroWords eyebrow={site.courseLine} name={site.portalTitle} mark={site.short} tagline={site.tagline} primaryHref={`/${latest.slug}/`} primaryLabel={`Open Sprint ${latest.number}`} />
   );
 
   // One shot: the desk, then the whiteboard the rest of Home is written on.

@@ -5,7 +5,7 @@ import { fmtDate } from "@/lib/format";
 export function InterviewCard({ i, compact = false }: { i: Interview; compact?: boolean }) {
   const who = memberById(i.interviewer);
   return (
-    <article className="card flex flex-col gap-3 p-5" id={i.id} aria-labelledby={`${i.id}-role`}>
+    <article className="card flex flex-col gap-3 p-5" id={i.id} aria-labelledby={`${i.id}-role`} data-reveal>
       <div className="meta flex items-center justify-between gap-3">
         <span className="text-ink">{i.id}</span>
         <span>{i.date ? fmtDate(i.date) : "Date not recorded"}</span>

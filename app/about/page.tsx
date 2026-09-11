@@ -13,7 +13,7 @@ export default function About() {
   return (
     <Shell>
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "About us" }]} />
-      <header className="mb-10">
+      <header className="mb-10" data-reveal>
         <h1 className="display text-[2.4rem] sm:text-[3rem]">The team behind {site.short}</h1>
         <p className="mt-4 max-w-[60ch] font-serif text-[1.1rem] leading-relaxed text-ink-soft">
           Five students in {site.course} at {site.university}, running one project across a semester and keeping this portal as the
@@ -25,7 +25,7 @@ export default function About() {
         {team.map((m) => {
           const n = m.interviews.phase1 + m.interviews.phase2;
           return (
-            <li key={m.id} className="grid gap-5 border-b border-border py-7 md:grid-cols-[220px_minmax(0,1fr)]">
+            <li key={m.id} className="grid gap-5 border-b border-border py-7 md:grid-cols-[220px_minmax(0,1fr)]" data-reveal>
               <div>
                 {m.photo ? (
                   // Portraits go in public/images/team/ and are set in lib/team.ts.
@@ -56,7 +56,7 @@ export default function About() {
           );
         })}
       </ul>
-      <p className="meta mt-6 max-w-[70ch]">
+      <p className="meta mt-6 max-w-[70ch]" data-reveal>
         Interview counts come from the sheets on record. {unattributedPhase1} of the {phase1} Phase 1 sheets were captured in a grid without an
         interviewer name and are not attributed to anyone above.
       </p>
