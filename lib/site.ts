@@ -6,6 +6,10 @@ export const site = {
   nameNote:
     "“Thanks for the invite” is what you say when the photos show up and nobody told you. The name is the problem.",
   tagline: "One hub for everything happening in El Paso, from arena concerts to farmers markets and car meets.",
+  // The cover title: the team's portal, with the project's initials beside
+  // it. The full name stays in the browser title, the footer and the board.
+  portalTitle: "Team 9 Project Portal",
+  mark: "G.P.I",
   courseLine: "CS 4390/5388 Software Project Management, UTEP, Fall 2026",
   // "board": Home is one shot, the desk then the whiteboard, scrubbed by the
   // scroll and holding on the board the page is written on. "scroll": the

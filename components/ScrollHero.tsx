@@ -125,11 +125,14 @@ export function ScrollHero({ children }: { children: ReactNode }) {
 
 // The words that sit on the stage. Kept separate so Home can pass the same
 // content to either hero layout.
-export function HeroWords({ eyebrow, name, tagline, primaryHref, primaryLabel }: { eyebrow: string; name: string; tagline: string; primaryHref: string; primaryLabel: string }) {
+export function HeroWords({ eyebrow, name, mark, tagline, primaryHref, primaryLabel }: { eyebrow: string; name: string; mark?: string; tagline: string; primaryHref: string; primaryLabel: string }) {
   return (
     <>
       <p className="eyebrow">{eyebrow}</p>
-      <h1 className="display display-wide mt-4 max-w-[12ch] text-[clamp(2.6rem,6vw,5rem)]">{name}</h1>
+      <h1 className="display display-wide mt-4 max-w-[15ch] text-[clamp(2.6rem,6vw,5rem)]">
+        {name}
+        {mark ? <span className="mark"> ({mark})</span> : null}
+      </h1>
       <p className="mt-5 max-w-[34ch] font-serif text-[1.15rem] leading-[1.45] text-ink sm:text-[1.3rem]">{tagline}</p>
       <div className="mt-6 flex flex-wrap gap-3">
         <Link href={primaryHref} className="btn btn-primary">

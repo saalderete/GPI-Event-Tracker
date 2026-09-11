@@ -142,6 +142,11 @@ a {
   letter-spacing: 0.015em;
   line-height: 1.02;
 }
+/* The initials beside the cover title: same face, lighter, stepped back. */
+.display-wide .mark {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
 /* One handwritten aside on the site: the sarcastic remark the name is. */
 .hand {
   font-family: var(--font-hand);
