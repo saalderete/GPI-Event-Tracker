@@ -321,7 +321,9 @@ a {
   color: var(--on-accent);
 }
 .rail-link.is-upcoming {
-  background: transparent;
+  /* A faint paper fill: invisible on the page, and the number still reads
+     when the rail sits over the Home clip. */
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
   color: var(--muted);
   box-shadow: inset 0 0 0 1.5px var(--hover-border);
 }
