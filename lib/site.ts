@@ -7,10 +7,10 @@ export const site = {
     "“Thanks for the invite” is what you say when the photos show up and nobody told you. The name is the problem.",
   tagline: "One hub for everything happening in El Paso, from arena concerts to farmers markets and car meets.",
   courseLine: "CS 4390/5388 Software Project Management, UTEP, Fall 2026",
-  // "page": the clip is the background of the whole Home page and the
-  // scroll position through the page scrubs it. "scroll": the clip fills
-  // the first screen only. "card": it plays once in a frame beside the name.
-  heroMode: "page" as "page" | "scroll" | "card",
+  // "board": Home is one shot, the desk then the whiteboard, scrubbed by the
+  // scroll and holding on the board the page is written on. "scroll": the
+  // clip fills the first screen only. "card": it plays once beside the name.
+  heroMode: "board" as "board" | "scroll" | "card",
   // The one-sentence business problem the guidelines ask for on Home.
   problem:
     "People in El Paso find out about events after they have already happened, because announcements are scattered across dozens of social accounts and only reach the people already following the right ones.",

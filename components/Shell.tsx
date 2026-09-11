@@ -4,9 +4,10 @@ import { MobileNav } from "./MobileNav";
 import { Footer } from "./Footer";
 
 // Rail on the left, the page on the right, the phone bar underneath. A
-// `hero` renders full-bleed above the padded column; with `sheet` the column
-// becomes one paper sheet riding over a fixed background (the desk page).
-export function Shell({ children, hero, sheet = false }: { children: ReactNode; hero?: ReactNode; sheet?: boolean }) {
+// `hero` renders full-bleed above the padded column; with `board` the column
+// is written straight onto the whiteboard the Home clip holds on, above the
+// fixed layer that carries it.
+export function Shell({ children, hero, board = false }: { children: ReactNode; hero?: ReactNode; board?: boolean }) {
   const body = (
     <>
       {children}
@@ -18,9 +19,9 @@ export function Shell({ children, hero, sheet = false }: { children: ReactNode; 
       <Rail />
       <div className="min-w-0 flex-1">
         {hero}
-        {sheet ? (
-          <main className="relative z-[1] mx-auto w-full max-w-[1180px] px-3 sm:px-6 md:px-8">
-            <div className="sheet">{body}</div>
+        {board ? (
+          <main className="relative z-[1] mx-auto w-full max-w-[1180px] px-5 sm:px-8 md:px-10">
+            <div className="board">{body}</div>
           </main>
         ) : (
           <main className={`mx-auto w-full max-w-[1180px] px-5 pb-8 sm:px-8 md:px-10 ${hero ? "pt-12 md:pt-16" : "pt-8 md:pt-10"}`}>{body}</main>

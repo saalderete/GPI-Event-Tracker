@@ -761,35 +761,55 @@ a {
   .scroll-hero .panel-card { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
 
-/* ============ DESK PAGE ============
-   The clip behind the whole Home page. A fixed layer carries the video and
-   the scrim; the first screen is an empty cover with the name's panel; the
-   content that follows rides over the desk on one paper sheet. */
-.desk-video {
+/* ============ BOARD PAGE ============
+   Home as one shot. A fixed layer carries the clip (or a still); the runway
+   above the content is the cover plus two empty screens where the sheets land
+   and the camera tilts up; what follows is written on the whiteboard the clip
+   holds on. --wash, set each frame by BoardHero, brings a paper tint over the
+   board during the tilt so the marker and the notes keep their contrast. */
+.board-bg {
+  --wash: 0;
   position: fixed;
   inset: 0;
   z-index: 0;
   background: var(--paper);
 }
-.desk-video video, .desk-video .still {
+.board-bg video, .board-bg .still {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.desk-video .scrim {
+.board-bg .scrim {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 40%, transparent) 0%, transparent 35%, color-mix(in srgb, var(--paper) 25%, transparent) 100%);
 }
-:root[data-theme="dark"] .desk-video .scrim {
+.board-bg .wash {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--paper) 58%, transparent);
+  opacity: var(--wash);
+}
+.board-bg[data-mode="still"] .wash { opacity: 1; }
+:root[data-theme="dark"] .board-bg .scrim {
   background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.45) 100%);
 }
+:root[data-theme="dark"] .board-bg .wash { background: rgba(0, 0, 0, 0.58); }
+
+.board-runway { position: relative; z-index: 1; }
 .desk-cover {
   position: relative;
-  z-index: 1;
   height: 100dvh;
+  overflow: hidden;
+}
+.desk-cover .cover-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .desk-cover .panel {
   position: absolute;
@@ -809,18 +829,109 @@ a {
 @media (prefers-reduced-transparency: reduce) {
   .desk-cover .panel-card { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
-/* The sheet: opaque enough to read on, no blur (a blur over a video that
-   changes every frame is the expensive part), rounded like a page corner. */
-.sheet {
+
+/* The board itself: the page, written on it. Headings are marker in the
+   accent (the visitor's marker color); the problem is a printed sheet under
+   a magnet; documents are sticky notes. */
+.board {
   position: relative;
   z-index: 1;
-  background: color-mix(in srgb, var(--paper) 96%, transparent);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  box-shadow: 0 -1px 0 color-mix(in srgb, var(--border) 60%, transparent), 0 -24px 60px rgba(23, 20, 15, 0.12);
-  padding: clamp(28px, 5vh, 56px) clamp(20px, 3.5vw, 48px) 32px;
+  padding: clamp(28px, 5vh, 56px) 0 24px;
 }
-:root[data-theme="dark"] .sheet { box-shadow: 0 -1px 0 var(--border), 0 -24px 60px rgba(0, 0, 0, 0.5); }
-@media (max-width: 860px) { .sheet { padding-bottom: 88px; } }
+.board-row + .board-row { margin-top: clamp(64px, 10vh, 104px); }
+.marker {
+  font-family: var(--font-hand);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 3.8vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: var(--accent-ink);
+  transform: rotate(-0.6deg);
+  transform-origin: left bottom;
+}
+.marker a { text-decoration: none; }
+.marker a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
+.marker-note {
+  font-family: var(--font-hand);
+  font-weight: 500;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  color: var(--ink-soft);
+  transform: rotate(0.8deg);
+}
+.board-lede { max-width: 60ch; font-size: 1rem; color: var(--ink-soft); }
+.pinned {
+  position: relative;
+  padding: 28px 30px 26px;
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 1px 1px rgba(23, 20, 15, 0.06), 0 14px 30px rgba(23, 20, 15, 0.16);
+  transform: rotate(-0.5deg);
+}
+.magnet {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 20px; height: 20px;
+  margin-left: -10px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--accent) 65%, white) 0%, var(--accent) 55%, color-mix(in srgb, var(--accent) 65%, black) 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px 20px;
+  padding-top: 10px;
+}
+.note {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 220px;
+  padding: 26px 20px 18px;
+  background: var(--accent-soft);
+  color: var(--ink);
+  box-shadow: 0 1px 1px rgba(23, 20, 15, 0.05), 0 12px 26px rgba(23, 20, 15, 0.16);
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.note::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.06);
+}
+.note:hover { transform: rotate(0deg) translateY(-3px); box-shadow: var(--shadow-pop); }
+.note-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.note-title a { text-decoration: none; }
+.note-title a:hover { text-decoration: underline; text-underline-offset: 0.15em; }
+.note > p { font-size: 0.95rem; line-height: 1.45; }
+.note .meta { margin-top: 2px; }
+.note-links {
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+}
+.note-links a { text-decoration: underline; text-underline-offset: 0.2em; }
+.note-links a:hover { color: var(--accent-ink); }
+@media (prefers-reduced-motion: reduce) {
+  .note, .note:hover, .pinned, .marker, .marker-note { transform: none; }
+}
+@media (max-width: 860px) { .board { padding-bottom: 88px; } }
 
 /* ============ HOME SPINE ============
    The semester as a line. Live sprints are filled and connected; upcoming

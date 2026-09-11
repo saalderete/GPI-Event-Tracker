@@ -37,7 +37,8 @@ honest.
 - Design tokens are KasaPro's neutrals plus a visitor-chosen accent from
   `content/accents.json`; `scripts/contrast.mjs` must pass for every preset
   in both themes. One accent at a time, Montserrat for display (Montserrat Alternates
-  for the name only, Caveat for one handwritten aside), Source Serif 4 for
+  for the name only, Caveat for the marker writing on the Home board and
+  one handwritten aside elsewhere), Source Serif 4 for
   reading, IBM Plex Mono for metadata, Phosphor icons only.
 - Adding a sprint: MDX under `content/sprint-N/`, register the documents,
   flip the sprint to `live` in `lib/sprints.ts`, write the change log, run

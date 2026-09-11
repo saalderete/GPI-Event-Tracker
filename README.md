@@ -40,18 +40,18 @@ delete Next's cache and start again: `rm -rf .next && npm run dev`.
   its page or PDF, if the output contains the private-content sentinel, if a
   referral name from the interview sheets appears anywhere, or if visible copy
   contains an em dash.
-- **The hero clip.** `lib/site.ts` picks the Home hero: `page` puts the clip
-  behind the whole Home page and scrubs it by the scroll position through
-  the page, with the content riding over it on one paper sheet; `scroll`
-  fills the first screen only (`hero-scrub.*`, encoded with a keyframe every
-  four frames); `card` plays it once in a frame beside the name. `public/media/hero.*` is a generated illustration
-  (Seedance 2.0 through Monid; see `AI-LOG.md`): paper settling into a
-  stack. It plays once and rests; phones and reduced-motion visitors get
-  the final frame as a still. To replace it, drop a new source MP4 and run
-  `scripts/hero-media.sh <source.mp4>`, which writes the MP4, WebM, poster
-  and still. `public/media/hero-alt.mp4` is the alternate 1080p take (a
-  stack that settles rather than builds); `scripts/hero-media.sh
-  public/media/hero-alt.mp4` switches to it.
+- **The hero clip.** `lib/site.ts` picks the Home hero. `board` (the
+  default) makes Home one shot: the clip sits fixed behind the page, the
+  scroll position through the cover and two empty screens scrubs it (the
+  sheets land, the camera tilts up to a whiteboard), and the rest of Home is
+  written on the board the clip holds on. `scroll` scrubs the desk clip over
+  the first screen only; `card` plays it once in a frame beside the name.
+  Phones and reduced-motion visitors get stills. The clips are generated
+  illustrations (Seedance 2.0 through Monid; see `AI-LOG.md`): the takes the
+  encodes are built from live in `media-src/`, and
+  `scripts/hero-media.sh media-src/desk-1080p.mp4 media-src/board-1080p.mp4`
+  writes everything in `public/media/`: the joined scrub encodes (a keyframe
+  every four frames), the play-once desk clip, the poster and the stills.
 - **Evidence as data.** The 51 interview sheets live in
   `content/evidence/interviews.json` and render as a filterable appendix and
   as a PDF. Referral names were removed.

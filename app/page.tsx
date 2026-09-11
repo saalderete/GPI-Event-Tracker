@@ -4,7 +4,8 @@ import { Spine } from "@/components/Spine";
 import { DocumentList } from "@/components/DocumentList";
 import { HeroVideo } from "@/components/HeroVideo";
 import { ScrollHero, HeroWords } from "@/components/ScrollHero";
-import { DeskHero } from "@/components/DeskHero";
+import { BoardHero } from "@/components/BoardHero";
+import { BoardHome } from "@/components/BoardHome";
 import { IconDownload } from "@/components/Icons";
 import { site } from "@/lib/site";
 import { sprints } from "@/lib/sprints";
@@ -21,11 +22,17 @@ export default function Home() {
     <HeroWords eyebrow={site.courseLine} name={site.name} tagline={site.tagline} primaryHref={`/${latest.slug}/`} primaryLabel={`Open Sprint ${latest.number}`} />
   );
 
+  // One shot: the desk, then the whiteboard the rest of Home is written on.
+  if (site.heroMode === "board") {
+    return (
+      <Shell hero={<BoardHero>{words}</BoardHero>} board>
+        <BoardHome latest={latest} docs={docs} />
+      </Shell>
+    );
+  }
+
   return (
-    <Shell
-      hero={site.heroMode === "page" ? <DeskHero>{words}</DeskHero> : site.heroMode === "scroll" ? <ScrollHero>{words}</ScrollHero> : undefined}
-      sheet={site.heroMode === "page"}
-    >
+    <Shell hero={site.heroMode === "scroll" ? <ScrollHero>{words}</ScrollHero> : undefined}>
       {site.heroMode === "card" ? (
         /* The clip plays once in a frame beside the name. */
         <section className="grid gap-10 pt-2 md:pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-center lg:gap-14">
