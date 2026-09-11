@@ -57,7 +57,7 @@ delete Next's cache and start again: `rm -rf .next && npm run dev`.
   as a PDF. Referral names were removed.
 - **Design.** KasaPro's warm neutrals with a visitor-chosen accent
   (`content/accents.json`, six presets, each contrast-checked in both themes
-  by `scripts/contrast.mjs`). Montserrat for display, Montserrat Alternates for the
+  by `scripts/contrast.mjs`). Montserrat for display, Jura for the
   name, Caveat for one handwritten aside, Source Serif 4 for reading, IBM
   Plex Mono for the record's metadata. The rail navigation is
   KasaPro's fluid rail with the sprints as its circles.

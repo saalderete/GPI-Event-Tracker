@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@fontsource-variable/montserrat/wght.css";
-@import "@fontsource/montserrat-alternates/800.css";
+@import "@fontsource-variable/jura/wght.css";
 @import "@fontsource-variable/caveat/wght.css";
 @import "@fontsource-variable/source-serif-4/opsz.css";
 @import "@fontsource-variable/source-serif-4/opsz-italic.css";
@@ -83,7 +83,7 @@
   --color-rail-text: var(--rail-text);
 
   --font-display: "Montserrat Variable", "Helvetica Neue", Arial, sans-serif;
-  --font-name: "Montserrat Alternates", "Montserrat Variable", "Helvetica Neue", Arial, sans-serif;
+  --font-name: "Jura Variable", "Montserrat Variable", "Helvetica Neue", Arial, sans-serif;
   --font-hand: "Caveat Variable", "Segoe Print", "Bradley Hand", cursive;
   --font-serif: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -125,9 +125,10 @@ a {
   text-underline-offset: 0.18em;
 }
 
-/* Display type: Montserrat for headings; the name on Home is set in
-   Montserrat Alternates, the same skeleton with the quirky letterforms, so
-   the title has a personality the section headings don't compete with.
+/* Display type: Montserrat for headings; the name is set in Jura, a wide
+   geometric with open, slightly squared letterforms, so the title has a
+   personality the section headings don't compete with. Jura wants a little
+   air between letters rather than the tight tracking Montserrat takes.
    Reading text stays in Source Serif. */
 .display {
   font-family: var(--font-display);
@@ -137,9 +138,9 @@ a {
 }
 .display-wide {
   font-family: var(--font-name);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  line-height: 1.02;
 }
 /* One handwritten aside on the site: the sarcastic remark the name is. */
 .hand {
@@ -351,9 +352,9 @@ a {
 .rail-face svg { width: 22px; height: 22px; }
 .rail-face-mark {
   font-family: var(--font-name);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 14px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.03em;
 }
 .rail-face-mark { z-index: 1; }
 .rail-toggle:hover .rail-face-mark, .rail-toggle:focus-visible .rail-face-mark { transform: scale(0); }
@@ -818,18 +819,17 @@ a {
   left: 0; right: 0; bottom: 0;
   padding: 0 clamp(20px, 4vw, 56px) clamp(28px, 6vh, 64px);
 }
+/* Clear the phone bar. */
+@media (max-width: 860px) { .desk-cover .panel { padding-bottom: 112px; } }
+/* The words sit straight on the picture, no card. The desk is light and
+   even, so the ink reads on its own; in dark mode the scrim carries a soft
+   shadow under the type instead. */
 .desk-cover .panel-card {
   display: inline-block;
   max-width: 44rem;
-  padding: 22px 26px 24px;
-  border-radius: var(--radius-lg);
-  background: color-mix(in srgb, var(--paper) 82%, transparent);
-  backdrop-filter: blur(14px) saturate(120%);
-  -webkit-backdrop-filter: blur(14px) saturate(120%);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--border) 70%, transparent), var(--shadow-card);
 }
-@media (prefers-reduced-transparency: reduce) {
-  .desk-cover .panel-card { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
+:root[data-theme="dark"] .desk-cover .panel-card {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* The board itself: the page, written on it. Headings are marker in the
