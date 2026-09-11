@@ -40,10 +40,11 @@ delete Next's cache and start again: `rm -rf .next && npm run dev`.
   its page or PDF, if the output contains the private-content sentinel, if a
   referral name from the interview sheets appears anywhere, or if visible copy
   contains an em dash.
-- **The hero clip.** `lib/site.ts` picks the Home hero: `scroll` fills the
-  first screen with the clip and scrubs it by scroll position
-  (`hero-scrub.*`, encoded with a keyframe every four frames), `card` plays
-  it once in a frame beside the name. `public/media/hero.*` is a generated illustration
+- **The hero clip.** `lib/site.ts` picks the Home hero: `page` puts the clip
+  behind the whole Home page and scrubs it by the scroll position through
+  the page, with the content riding over it on one paper sheet; `scroll`
+  fills the first screen only (`hero-scrub.*`, encoded with a keyframe every
+  four frames); `card` plays it once in a frame beside the name. `public/media/hero.*` is a generated illustration
   (Seedance 2.0 through Monid; see `AI-LOG.md`): paper settling into a
   stack. It plays once and rests; phones and reduced-motion visitors get
   the final frame as a still. To replace it, drop a new source MP4 and run

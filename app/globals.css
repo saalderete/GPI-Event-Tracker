@@ -761,6 +761,67 @@ a {
   .scroll-hero .panel-card { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
 
+/* ============ DESK PAGE ============
+   The clip behind the whole Home page. A fixed layer carries the video and
+   the scrim; the first screen is an empty cover with the name's panel; the
+   content that follows rides over the desk on one paper sheet. */
+.desk-video {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--paper);
+}
+.desk-video video, .desk-video .still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.desk-video .scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 40%, transparent) 0%, transparent 35%, color-mix(in srgb, var(--paper) 25%, transparent) 100%);
+}
+:root[data-theme="dark"] .desk-video .scrim {
+  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.45) 100%);
+}
+.desk-cover {
+  position: relative;
+  z-index: 1;
+  height: 100dvh;
+}
+.desk-cover .panel {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 0 clamp(20px, 4vw, 56px) clamp(28px, 6vh, 64px);
+}
+.desk-cover .panel-card {
+  display: inline-block;
+  max-width: 44rem;
+  padding: 22px 26px 24px;
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--paper) 82%, transparent);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--border) 70%, transparent), var(--shadow-card);
+}
+@media (prefers-reduced-transparency: reduce) {
+  .desk-cover .panel-card { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+/* The sheet: opaque enough to read on, no blur (a blur over a video that
+   changes every frame is the expensive part), rounded like a page corner. */
+.sheet {
+  position: relative;
+  z-index: 1;
+  background: color-mix(in srgb, var(--paper) 96%, transparent);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: 0 -1px 0 color-mix(in srgb, var(--border) 60%, transparent), 0 -24px 60px rgba(23, 20, 15, 0.12);
+  padding: clamp(28px, 5vh, 56px) clamp(20px, 3.5vw, 48px) 32px;
+}
+:root[data-theme="dark"] .sheet { box-shadow: 0 -1px 0 var(--border), 0 -24px 60px rgba(0, 0, 0, 0.5); }
+@media (max-width: 860px) { .sheet { padding-bottom: 88px; } }
+
 /* ============ HOME SPINE ============
    The semester as a line. Live sprints are filled and connected; upcoming
    ones are hollow. Draws once on first view. */

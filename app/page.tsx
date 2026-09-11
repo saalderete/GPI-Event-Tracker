@@ -4,6 +4,7 @@ import { Spine } from "@/components/Spine";
 import { DocumentList } from "@/components/DocumentList";
 import { HeroVideo } from "@/components/HeroVideo";
 import { ScrollHero, HeroWords } from "@/components/ScrollHero";
+import { DeskHero } from "@/components/DeskHero";
 import { IconDownload } from "@/components/Icons";
 import { site } from "@/lib/site";
 import { sprints } from "@/lib/sprints";
@@ -21,7 +22,10 @@ export default function Home() {
   );
 
   return (
-    <Shell hero={site.heroMode === "scroll" ? <ScrollHero>{words}</ScrollHero> : undefined}>
+    <Shell
+      hero={site.heroMode === "page" ? <DeskHero>{words}</DeskHero> : site.heroMode === "scroll" ? <ScrollHero>{words}</ScrollHero> : undefined}
+      sheet={site.heroMode === "page"}
+    >
       {site.heroMode === "card" ? (
         /* The clip plays once in a frame beside the name. */
         <section className="grid gap-10 pt-2 md:pt-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-center lg:gap-14">
