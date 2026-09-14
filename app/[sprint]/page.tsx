@@ -41,7 +41,7 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
           <p className="eyebrow">Sprint {s.number}</p>
           <span className={`badge ${live ? "badge-live" : "badge-outline"}`}>{live ? "Live" : "Upcoming"}</span>
         </div>
-        <h1 className="display mt-3 text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem]">{s.title}</h1>
+        <h1 className="display mt-3 text-[2.15rem] sm:text-[3rem] lg:text-[3.4rem]">{s.title}</h1>
         <dl className="meta mt-5 flex flex-wrap gap-x-6 gap-y-1">
           <div className="flex gap-1.5">
             <dt>Block</dt>

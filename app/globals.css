@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "@fontsource-variable/montserrat/wght.css";
 @import "@fontsource-variable/jura/wght.css";
 @import "@fontsource-variable/caveat/wght.css";
 @import "@fontsource-variable/source-serif-4/opsz.css";
@@ -82,8 +81,8 @@
   --color-rail: var(--rail-bg);
   --color-rail-text: var(--rail-text);
 
-  --font-display: "Montserrat Variable", "Helvetica Neue", Arial, sans-serif;
-  --font-name: "Jura Variable", "Montserrat Variable", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Jura Variable", "Helvetica Neue", Arial, sans-serif;
+  --font-name: var(--font-display);
   --font-hand: "Caveat Variable", "Segoe Print", "Bradley Hand", cursive;
   --font-serif: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -125,16 +124,15 @@ a {
   text-underline-offset: 0.18em;
 }
 
-/* Display type: Montserrat for headings; the name is set in Jura, a wide
-   geometric with open, slightly squared letterforms, so the title has a
-   personality the section headings don't compete with. Jura wants a little
-   air between letters rather than the tight tracking Montserrat takes.
-   Reading text stays in Source Serif. */
+/* Display type: Jura for every heading and the name, a wide geometric with
+   open, slightly squared letterforms. It wants a little air between letters
+   rather than tight tracking, and a touch more leading than a grotesque.
+   Reading text stays in Source Serif, metadata in Plex Mono. */
 .display {
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.06;
+  letter-spacing: 0.005em;
+  line-height: 1.08;
 }
 .display-wide {
   font-family: var(--font-name);
@@ -647,8 +645,8 @@ a {
 .prose-doc h2, .prose-doc h3 {
   font-family: var(--font-display);
   font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  line-height: 1.14;
+  letter-spacing: 0;
   scroll-margin-top: 24px;
 }
 .prose-doc h2 { font-size: 1.7rem; margin-top: 2.4em; padding-top: 1.2em; border-top: 1px solid var(--border); }
@@ -941,8 +939,8 @@ a {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.15rem;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.18;
+  letter-spacing: 0;
 }
 .note-title a { text-decoration: none; }
 .note-title a:hover { text-decoration: underline; text-underline-offset: 0.15em; }
