@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "@fontsource-variable/jura/wght.css";
-@import "@fontsource-variable/caveat/wght.css";
 @import "@fontsource-variable/source-serif-4/opsz.css";
 @import "@fontsource-variable/source-serif-4/opsz-italic.css";
 @import "@fontsource/ibm-plex-mono/400.css";
@@ -83,7 +82,6 @@
 
   --font-display: "Jura Variable", "Helvetica Neue", Arial, sans-serif;
   --font-name: var(--font-display);
-  --font-hand: "Caveat Variable", "Segoe Print", "Bradley Hand", cursive;
   --font-serif: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
@@ -144,14 +142,6 @@ a {
 .display-wide .mark {
   font-weight: 400;
   color: var(--ink-soft);
-}
-/* One handwritten aside on the site: the sarcastic remark the name is. */
-.hand {
-  font-family: var(--font-hand);
-  font-weight: 500;
-  font-size: 1.35em;
-  line-height: 1.25;
-  letter-spacing: 0;
 }
 /* Small labels that are not eyebrows: definition-list keys, table heads. */
 .label {
@@ -859,7 +849,7 @@ a {
   -webkit-backdrop-filter: blur(8px);
 }
 
-/* The board itself: the page, written on it. Headings are marker in the
+/* The board itself: the page, written on it. Headings are Jura in the
    accent (the visitor's marker color); the problem is a printed sheet under
    a magnet; documents are sticky notes. */
 .board {
@@ -869,24 +859,21 @@ a {
 }
 .board-row + .board-row { margin-top: clamp(64px, 10vh, 104px); }
 .marker {
-  font-family: var(--font-hand);
-  font-weight: 600;
-  font-size: clamp(2.1rem, 3.8vw, 3rem);
-  line-height: 1.05;
-  letter-spacing: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.85rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: 0.005em;
   color: var(--accent-ink);
-  transform: rotate(-0.6deg);
-  transform-origin: left bottom;
 }
 .marker a { text-decoration: none; }
 .marker a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
 .marker-note {
-  font-family: var(--font-hand);
+  font-family: var(--font-display);
   font-weight: 500;
-  font-size: 1.55rem;
-  line-height: 1.2;
+  font-size: 1.1rem;
+  line-height: 1.45;
   color: var(--ink-soft);
-  transform: rotate(0.8deg);
 }
 .board-lede { max-width: 60ch; font-size: 1rem; color: var(--ink-soft); }
 .pinned {
@@ -958,7 +945,7 @@ a {
 .note-links a { text-decoration: underline; text-underline-offset: 0.2em; }
 .note-links a:hover { color: var(--accent-ink); }
 @media (prefers-reduced-motion: reduce) {
-  .note, .note:hover, .pinned, .marker, .marker-note { transform: none; }
+  .note, .note:hover, .pinned { transform: none; }
 }
 @media (max-width: 860px) { .board { padding-bottom: 88px; } }
 
@@ -968,7 +955,7 @@ a {
    .is-in). The hidden start applies only with scripts running and inside
    the site shell, so print views, no-script visitors and reduced motion all
    get the page in full. `translate` is used rather than `transform` so a
-   block's own rotation (the marker, the notes) is left alone. */
+   block's own rotation (the sheet, the notes) is left alone. */
 html[data-js] .reveal-scope [data-reveal],
 html[data-js] .reveal-scope .prose-doc > * {
   opacity: 0;

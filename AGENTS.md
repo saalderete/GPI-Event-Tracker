@@ -36,9 +36,8 @@ honest.
   reasoning.
 - Design tokens are KasaPro's neutrals plus a visitor-chosen accent from
   `content/accents.json`; `scripts/contrast.mjs` must pass for every preset
-  in both themes. One accent at a time, Jura for display and the name
-  (Caveat for the marker writing on the Home board and one handwritten
-  aside elsewhere), Source Serif 4 for reading, IBM Plex Mono for metadata, Phosphor icons only.
+  in both themes. One accent at a time, Jura for display, the name and
+  the writing on the Home board, Source Serif 4 for reading, IBM Plex Mono for metadata, Phosphor icons only.
 - Reveal on scroll: put `data-reveal` on a block to have it rise into view;
   the direct children of a `.prose-doc` column do it on their own. Never put
   it on an ancestor of something fixed or sticky, and never in the print

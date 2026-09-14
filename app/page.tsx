@@ -48,7 +48,7 @@ export default function Home() {
           The business problem
         </h2>
         <p className="mt-3 max-w-[58ch] font-serif text-[1.25rem] leading-[1.5] sm:text-[1.4rem]">{site.problem}</p>
-        <p className="hand mt-4 max-w-[36ch] text-ink-soft">{site.nameNote}</p>
+        <p className="mt-4 max-w-[36ch] font-serif italic text-ink-soft">{site.nameNote}</p>
         <p className="meta mt-5">
           Tested in Sprint 1 with {interviews.length} customer interviews across {candidates.length} candidate problems.{" "}
           <Link href={`/${latest.slug}/market-research/`} className="underline hover:text-ink">
