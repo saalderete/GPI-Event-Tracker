@@ -117,9 +117,13 @@ body {
   outline-offset: 2px;
   border-radius: 4px;
 }
-a {
-  color: inherit;
-  text-underline-offset: 0.18em;
+/* Inside Tailwind's base layer on purpose: an unlayered rule here would
+   beat every text-* utility on a link, whatever its specificity. */
+@layer base {
+  a {
+    color: inherit;
+    text-underline-offset: 0.18em;
+  }
 }
 
 /* Display type: Jura for every heading and the name, a wide geometric with
