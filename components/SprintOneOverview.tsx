@@ -3,7 +3,7 @@ import { DocumentList } from "./DocumentList";
 import { Callout } from "./mdx";
 import { IconLock } from "./Icons";
 import { contributions, aiDisclosure } from "@/content/sprint-1/contributions";
-import { memberById } from "@/lib/team";
+import { memberById, interviewCounts } from "@/lib/team";
 import { fmtDate } from "@/lib/format";
 import { interviews, candidates } from "@/lib/evidence";
 import type { PortalDocument } from "@/lib/registry";
@@ -137,7 +137,7 @@ export function SprintOneOverview({ sprint, docs }: { sprint: Sprint; docs: Port
                     <td className="py-3 pr-6 font-semibold">{m.name}</td>
                     <td className={`py-3 pr-6 ${c.owned ? "" : "italic text-muted"}`}>{c.owned ?? "To be added"}</td>
                     <td className={`py-3 pr-6 ${c.reviewed ? "" : "italic text-muted"}`}>{c.reviewed ?? "To be added"}</td>
-                    <td className="py-3 text-right font-mono text-[12.5px]">{m.interviews.phase1 + m.interviews.phase2}</td>
+                    <td className="py-3 text-right font-mono text-[12.5px]">{interviewCounts(c.member).total}</td>
                   </tr>
                 );
               })}

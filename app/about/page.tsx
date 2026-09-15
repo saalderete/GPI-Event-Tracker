@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Shell } from "@/components/Shell";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { team, unattributedPhase1 } from "@/lib/team";
+import { team, interviewCounts, unattributed } from "@/lib/team";
 import { site } from "@/lib/site";
 import { interviews } from "@/lib/evidence";
 import { withBase } from "@/lib/base";
@@ -23,7 +23,8 @@ export default function About() {
 
       <ul className="border-t border-border">
         {team.map((m) => {
-          const n = m.interviews.phase1 + m.interviews.phase2;
+          const c = interviewCounts(m.id);
+          const n = c.total;
           return (
             <li key={m.id} className="grid gap-5 border-b border-border py-7 md:grid-cols-[220px_minmax(0,1fr)]" data-reveal>
               <div>
@@ -47,7 +48,7 @@ export default function About() {
                   <div>
                     <dt className="label">Sprint 1 interviews</dt>
                     <dd className="mt-1 font-mono text-[12.5px]">
-                      {n} recorded{n ? ` (Phase 1: ${m.interviews.phase1}, Phase 2: ${m.interviews.phase2})` : ""}
+                      {n} recorded{n ? ` (Phase 1: ${c.phase1}, Phase 2: ${c.phase2})` : ""}
                     </dd>
                   </div>
                 </div>
@@ -57,8 +58,10 @@ export default function About() {
         })}
       </ul>
       <p className="meta mt-6 max-w-[70ch]" data-reveal>
-        Interview counts come from the sheets on record. {unattributedPhase1} of the {phase1} Phase 1 sheets were captured in a grid without an
-        interviewer name and are not attributed to anyone above.
+        Interview counts come from the sheets on record.
+        {unattributed.phase1
+          ? ` ${unattributed.phase1} of the ${phase1} Phase 1 sheets were captured in a grid without an interviewer name and are not attributed to anyone above.`
+          : ""}
       </p>
     </Shell>
   );

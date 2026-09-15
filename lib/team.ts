@@ -1,5 +1,9 @@
+import { interviews } from "./evidence";
+
 // Roles, ownership and bios are placeholders until the team fills them in.
-// Interview counts are real, taken from the Sprint 1 interview sheets.
+// Interview counts are not stored here: they are counted from the sheets in
+// content/evidence/interviews.json, so the About page and the contribution
+// statement can never disagree with the evidence.
 export interface Member {
   id: string;
   name: string;
@@ -8,7 +12,6 @@ export interface Member {
   bio: string | null;
   /** Path under /public once a real photo exists, e.g. "/images/team/samuel.jpg". */
   photo: string | null;
-  interviews: { phase1: number; phase2: number };
 }
 
 export const team: Member[] = [
@@ -18,8 +21,7 @@ export const team: Member[] = [
     role: null,
     owns: null,
     bio: null,
-    photo: null,
-    interviews: { phase1: 5, phase2: 5 }
+    photo: null
   },
   {
     id: "jazmin",
@@ -27,8 +29,7 @@ export const team: Member[] = [
     role: null,
     owns: null,
     bio: null,
-    photo: null,
-    interviews: { phase1: 0, phase2: 4 }
+    photo: null
   },
   {
     id: "christian",
@@ -36,8 +37,7 @@ export const team: Member[] = [
     role: null,
     owns: null,
     bio: null,
-    photo: null,
-    interviews: { phase1: 0, phase2: 5 }
+    photo: null
   },
   {
     id: "emmanuel",
@@ -45,8 +45,7 @@ export const team: Member[] = [
     role: null,
     owns: null,
     bio: null,
-    photo: null,
-    interviews: { phase1: 5, phase2: 6 }
+    photo: null
   },
   {
     id: "oscar",
@@ -54,14 +53,22 @@ export const team: Member[] = [
     role: null,
     owns: null,
     bio: null,
-    photo: null,
-    interviews: { phase1: 0, phase2: 5 }
+    photo: null
   }
 ];
 
-// Sixteen Phase 1 sheets (candidates 3, 4 and 5) were recorded in a grid
-// without an interviewer name, so per-person Phase 1 counts above only cover
-// the sheets that carry one. The team can attribute the rest here.
-export const unattributedPhase1 = 16;
-
 export const memberById = (id: string | null) => (id ? team.find((m) => m.id === id) ?? null : null);
+
+/** Sheets on record for a member, by phase, counted from the evidence. */
+export function interviewCounts(memberId: string) {
+  const mine = interviews.filter((i) => i.interviewer === memberId);
+  const phase1 = mine.filter((i) => i.phase === 1).length;
+  const phase2 = mine.filter((i) => i.phase === 2).length;
+  return { phase1, phase2, total: phase1 + phase2 };
+}
+
+/** Sheets that carry no interviewer, by phase. Zero once every sheet is attributed. */
+export const unattributed = {
+  phase1: interviews.filter((i) => i.phase === 1 && !i.interviewer).length,
+  phase2: interviews.filter((i) => i.phase === 2 && !i.interviewer).length
+};
