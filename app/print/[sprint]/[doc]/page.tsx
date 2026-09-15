@@ -66,7 +66,7 @@ export default async function PrintPage({ params }: { params: Promise<{ sprint: 
                   </h2>
                   <p className="meta mt-1">
                     {rows.length} interview{rows.length === 1 ? "" : "s"}
-                    {phase === 1 && [3, 4, 5].includes(c.number) ? " · captured in a grid sheet; interviewer, date and role were not recorded per interview" : ""}
+                    {phase === 1 && [3, 4, 5].includes(c.number) ? " · captured in a grid sheet; date and role were not recorded per interview" : ""}
                   </p>
                   <div className="mt-4 grid grid-cols-2 gap-3">
                     {rows.map((i) => (

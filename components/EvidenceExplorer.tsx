@@ -23,7 +23,7 @@ export function EvidenceExplorer({ data }: { data: Interview[] }) {
     return data.filter((i) => {
       if (cands.length && !cands.includes(i.candidate)) return false;
       if (phases.length && !phases.includes(i.phase)) return false;
-      if (people.length && !people.includes(i.interviewer ?? "unrecorded")) return false;
+      if (people.length && (!i.interviewer || !people.includes(i.interviewer))) return false;
       if (needle) {
         const hay = [i.role, i.experience ?? "", i.takeaway ?? "", i.location ?? "", ...i.quotes].join(" ").toLowerCase();
         if (!hay.includes(needle)) return false;
@@ -37,7 +37,7 @@ export function EvidenceExplorer({ data }: { data: Interview[] }) {
     ...phases.map((p) => ({ key: `p${p}`, label: `Phase ${p}`, clear: () => toggle(phases, p, setPhases) })),
     ...people.map((p) => ({
       key: `i${p}`,
-      label: p === "unrecorded" ? "Interviewer not recorded" : team.find((m) => m.id === p)?.name ?? p,
+      label: team.find((m) => m.id === p)?.name ?? p,
       clear: () => toggle(people, p, setPeople)
     }))
   ];
@@ -78,10 +78,7 @@ export function EvidenceExplorer({ data }: { data: Interview[] }) {
           role="listbox"
           closeOnSelect={false}
           align="right"
-          items={[
-            ...team.map((m) => ({ label: m.name, checked: people.includes(m.id), onSelect: () => toggle(people, m.id, setPeople) })),
-            { label: "Not recorded", checked: people.includes("unrecorded"), separatorAbove: true, onSelect: () => toggle(people, "unrecorded", setPeople) }
-          ]}
+          items={team.map((m) => ({ label: m.name, checked: people.includes(m.id), onSelect: () => toggle(people, m.id, setPeople) }))}
         />
       </div>
 
