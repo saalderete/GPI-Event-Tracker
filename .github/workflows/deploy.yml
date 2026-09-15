@@ -1,8 +1,10 @@
-# Builds the portal, prints every document to PDF from the same source,
-# runs the compliance checks, and publishes to GitHub Pages.
+# Builds the portal, prints every document to PDF from the same source, runs
+# the compliance checks, and publishes the built site to the `render` branch.
+# The Render static site serves that branch as it is (see render.yaml), so
+# Render never builds anything: Chromium for the PDF step lives here.
 #
-# Setup, once: Settings -> Pages -> Source: "GitHub Actions".
-# The base path is the repository name, so renaming the repo needs no edit.
+# Setup, once: Render dashboard -> New -> Blueprint -> this repository. The
+# `render` branch exists after the first run of this workflow on main.
 name: Build and deploy
 
 on:
@@ -12,13 +14,17 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: false
+
+env:
+  # The site's public URL, for the footer and the manifest. Override with a
+  # PORTAL_URL repository variable (Settings -> Secrets and variables ->
+  # Actions -> Variables) if the Render name changes or a domain is added.
+  PORTAL_URL: ${{ vars.PORTAL_URL || 'https://gpi-portal.onrender.com' }}
 
 jobs:
   build:
@@ -30,36 +36,22 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Configure Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        continue-on-error: true
       - name: Build
-        env:
-          PORTAL_BASE: /${{ github.event.repository.name }}
-          PORTAL_URL: ${{ steps.pages.outputs.base_url }}
         run: npm run build
       - name: Install Chromium for the PDF step
         run: npx playwright install --with-deps chromium
       - name: Generate PDFs
-        env:
-          PORTAL_BASE: /${{ github.event.repository.name }}
         run: npm run pdf
       - name: Emit corpus
         run: npm run corpus
       - name: Validate
         run: npm run validate
-      - uses: actions/upload-pages-artifact@v3
+      - name: Publish the built site to the render branch
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: out
-
-  deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: render
+          publish_dir: ./out
+          force_orphan: true
+          commit_message: "Site built from ${{ github.sha }}"

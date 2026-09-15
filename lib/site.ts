@@ -28,6 +28,6 @@ export const site = {
   university: "The University of Texas at El Paso",
   term: "Fall 2026",
   timezone: "America/Denver",
-  repo: "https://github.com/saalderete/GPI-Event-Tracker-",
-  hosting: "GitHub Pages"
+  repo: "https://github.com/saalderete/GPI-Event-Tracker",
+  hosting: "Render"
 } as const;

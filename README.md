@@ -32,8 +32,10 @@ in `public/pdf/` (gitignored, regenerated on every ship).
 ## How it is put together
 
 - **Next.js, static export, Tailwind 4.** No server. The site builds to
-  `out/` and deploys to GitHub Pages from `.github/workflows/deploy.yml`.
-  The base path comes from the repository name, so a rename needs no edit.
+  `out/`, and `.github/workflows/deploy.yml` publishes that folder to the
+  `render` branch, which a Render static site serves as it is (see
+  `render.yaml`). Render builds nothing; the PDFs need a headless browser,
+  and that lives in the workflow.
 - **One source, two renders.** Every document is an MDX file under
   `content/`. The web page renders it, and `scripts/pdf.mjs` prints the
   `/print/...` route of the same file to `out/pdf/` at build time. The PDF
@@ -76,6 +78,24 @@ in `public/pdf/` (gitignored, regenerated on every ship).
 2. Flip the sprint to `status: "live"` in `lib/sprints.ts`.
 3. Write the change log for anything revised from the prior sprint.
 4. `npm run ship`, commit, push to `main`. The workflow deploys.
+
+## Deploying
+
+Every push to `main` runs the workflow: build, PDFs, corpus, validate, then
+the built `out/` folder is force-pushed to the `render` branch as a single
+commit. Render watches that branch and serves it from its CDN, so the
+deployment time Render shows is the moment the workflow finished.
+
+One-time setup:
+
+1. Push `main` once so the `render` branch exists.
+2. Render dashboard, New, Blueprint, pick this repository. It reads
+   `render.yaml` and creates the static site named there.
+3. If the site gets a different name or a custom domain, set a `PORTAL_URL`
+   repository variable in GitHub (Settings, Secrets and variables, Actions)
+   so the footer and the manifest carry the right address.
+
+Nothing in `out/` or on the `render` branch is edited by hand.
 
 ## What never goes here
 

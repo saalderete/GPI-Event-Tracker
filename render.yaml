@@ -1,0 +1,24 @@
+# Render Blueprint: one static site that serves the `render` branch, which
+# the GitHub workflow publishes after every push to main. Render builds
+# nothing here; the build, the PDFs and the checks all run in GitHub Actions.
+# Setup, once: Render dashboard -> New -> Blueprint -> this repository.
+services:
+  - type: web
+    name: gpi-portal
+    runtime: static
+    branch: render
+    buildCommand: echo "Built by GitHub Actions; nothing to do here"
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    headers:
+      # Hashed bundles never change under the same name.
+      - path: /_next/static/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      # Media and PDFs keep their names when they change: a day of caching.
+      - path: /media/*
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /pdf/*
+        name: Cache-Control
+        value: public, max-age=3600
