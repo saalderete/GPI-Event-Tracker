@@ -360,6 +360,26 @@ body {
   .rail { display: none; }
 }
 
+/* ============ READING LINE ============
+   A hairline along the top that fills as the page is read, scaled by the
+   script from 0 to 1. Above the rail and the cover, under the phone bar's
+   layer, and never in print. */
+.read-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  z-index: 150;
+  pointer-events: none;
+}
+@media print {
+  .read-line { display: none; }
+}
+
 /* ============ MOBILE BAR ============ */
 .mobile-nav {
   display: none;

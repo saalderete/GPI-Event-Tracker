@@ -3,8 +3,10 @@ import { Rail } from "./Rail";
 import { MobileNav } from "./MobileNav";
 import { Footer } from "./Footer";
 import { Reveal } from "./Reveal";
+import { ReadingProgress } from "./ReadingProgress";
 
-// Rail on the left, the page on the right, the phone bar underneath. A
+// Rail on the left, the page on the right, the phone bar underneath and the
+// reading line along the top. A
 // `hero` renders full-bleed above the padded column; with `board` the column
 // is written straight onto the whiteboard the Home clip holds on, above the
 // fixed layer that carries it.
@@ -17,6 +19,7 @@ export function Shell({ children, hero, board = false }: { children: ReactNode; 
   );
   return (
     <div className="reveal-scope flex min-h-dvh">
+      <ReadingProgress />
       <Reveal />
       <Rail />
       <div className="min-w-0 flex-1">

@@ -69,8 +69,10 @@ in `public/pdf/` (gitignored, regenerated on every ship).
   name, Source Serif 4 for reading, IBM
   Plex Mono for the record's metadata. The rail navigation is
   KasaPro's fluid rail with the sprints as its circles. Blocks rise into
-  place as they scroll into view (`components/Reveal.tsx`); the print views,
-  no-script visitors and reduced motion get every page in full.
+  place as they scroll into view (`components/Reveal.tsx`) and a hairline
+  along the top fills as the page is read
+  (`components/ReadingProgress.tsx`); the print views, no-script visitors
+  and reduced motion get every page in full.
 
 ## Adding a sprint
 
