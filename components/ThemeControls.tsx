@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ActionMenu } from "./ActionMenu";
 import { IconMoon, IconPalette, IconSun } from "./Icons";
-import { accents, defaultAccent } from "@/lib/accents";
+import { accents, chip, defaultAccent } from "@/lib/accents";
 
 const THEME_KEY = "gpi-theme";
 const ACCENT_KEY = "gpi-accent";
@@ -15,9 +15,11 @@ function readAccent(): string {
   return document.documentElement.getAttribute("data-accent") || defaultAccent;
 }
 
-// Dark mode and the accent picker. Both write to <html> and localStorage;
-// app/layout.tsx restores them before first paint. The accent presets live in
+// Dark mode and the palette picker. Both write to <html> and localStorage;
+// app/layout.tsx restores them before first paint. The palettes live in
 // content/accents.json and are contrast-checked by scripts/contrast.mjs.
+// A chip shows each palette's paper and accent together, since a palette
+// changes the whole page and not only the links.
 export function ThemeControls({ variant }: { variant: "rail" | "inline" }) {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [accent, setAccent] = useState(defaultAccent);
@@ -44,7 +46,7 @@ export function ThemeControls({ variant }: { variant: "rail" | "inline" }) {
 
   const items = accents.map((a) => ({
     label: a.label,
-    swatch: theme === "dark" ? a.dark.accent : a.light.accent,
+    swatch: chip(theme === "dark" ? a.dark : a.light),
     checked: a.id === accent,
     hint: a.id === accent ? "current" : undefined,
     onSelect: () => applyAccent(a.id)
@@ -71,13 +73,13 @@ export function ThemeControls({ variant }: { variant: "rail" | "inline" }) {
           align="left"
           items={items}
           trigger={(open, props) => (
-            <button {...props} className="rail-item rail-static" aria-label="Choose the site accent">
+            <button {...props} className="rail-item rail-static" aria-label="Choose the site palette">
               <span className="rail-glow" aria-hidden />
               <span className="rail-fill" aria-hidden />
               <span className="rail-icon">
                 <IconPalette />
               </span>
-              <span className="rail-label">Accent</span>
+              <span className="rail-label">Palette</span>
             </button>
           )}
         />
@@ -100,10 +102,11 @@ export function ThemeControls({ variant }: { variant: "rail" | "inline" }) {
         </button>
       </div>
       <div className="flex items-center gap-2">
-        <span className="label">Accent</span>
-        <div className="flex items-center gap-1.5" role="radiogroup" aria-label="Site accent">
+        <span className="label">Palette</span>
+        <div className="flex items-center gap-1.5" role="radiogroup" aria-label="Site palette">
           {accents.map((a) => {
-            const color = theme === "dark" ? a.dark.accent : a.light.accent;
+            const p = theme === "dark" ? a.dark : a.light;
+            const color = p.accent;
             const on = a.id === accent;
             return (
               <button
@@ -116,8 +119,8 @@ export function ThemeControls({ variant }: { variant: "rail" | "inline" }) {
                 onClick={() => applyAccent(a.id)}
                 className="h-5 w-5 rounded-full transition-transform hover:scale-110"
                 style={{
-                  background: color,
-                  boxShadow: on ? `0 0 0 2px var(--paper), 0 0 0 4px ${color}` : "inset 0 0 0 1px rgba(0,0,0,0.12)"
+                  background: chip(p),
+                  boxShadow: on ? `0 0 0 2px var(--paper), 0 0 0 4px ${color}` : "inset 0 0 0 1px rgba(0,0,0,0.18)"
                 }}
               />
             );

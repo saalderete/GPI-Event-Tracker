@@ -62,9 +62,10 @@ in `public/pdf/` (gitignored, regenerated on every ship).
 - **Evidence as data.** The 51 interview sheets live in
   `content/evidence/interviews.json` and render as a filterable appendix and
   as a PDF. Referral names were removed.
-- **Design.** KasaPro's warm neutrals with a visitor-chosen accent
-  (`content/accents.json`, six presets, each contrast-checked in both themes
-  by `scripts/contrast.mjs`). Jura for display and the
+- **Design.** A visitor-chosen palette (`content/accents.json`, seven of
+  them, each a whole scheme in a light and a dark version, contrast-checked
+  on twelve pairs by `scripts/contrast.mjs`). The default is the warm paper
+  the site started with. Jura for display and the
   name, Source Serif 4 for reading, IBM
   Plex Mono for the record's metadata. The rail navigation is
   KasaPro's fluid rail with the sprints as its circles. Blocks rise into

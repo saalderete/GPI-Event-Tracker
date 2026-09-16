@@ -34,9 +34,10 @@ honest.
   sprint page (`content/sprint-N/contributions.ts`). AI is not used for the
   individual reflections, the individual estimation memo, or go/no-go
   reasoning.
-- Design tokens are KasaPro's neutrals plus a visitor-chosen accent from
-  `content/accents.json`; `scripts/contrast.mjs` must pass for every preset
-  in both themes. One accent at a time, Jura for display, the name and
+- Every colour comes from a visitor-chosen palette in `content/accents.json`
+  (paper, surfaces, ink, borders, rail and accent, light and dark each);
+  `scripts/contrast.mjs` must pass for every palette in both themes. One
+  palette at a time, Jura for display, the name and
   the writing on the Home board, Source Serif 4 for reading, IBM Plex Mono for metadata, Phosphor icons only.
 - Reveal on scroll: put `data-reveal` on a block to have it rise into view;
   the direct children of a `.prose-doc` column do it on their own. Never put

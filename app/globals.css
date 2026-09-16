@@ -13,25 +13,13 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 /* ============ TOKENS ============
-   The neutrals are KasaPro's warm palette; the accent comes from the picker
-   (app/accents.css). Paper is the accent mixed faintly into a base off-white,
-   so choosing an accent tints the whole page, not only the links. */
+   Every colour token comes from app/accents.css, generated from the palettes
+   in content/accents.json: paper, surfaces, ink, borders, the rail and the
+   accent, in a light and a dark version each. The visitor's pick sets
+   data-accent on <html>; the default palette also applies on bare :root.
+   Only shape and shadow live here. */
 :root {
   color-scheme: light;
-
-  --paper: color-mix(in srgb, var(--accent) var(--tint), var(--paper-base));
-  --surface: #ffffff;
-  --surface-subtle: #fdfcfa;
-  --surface-muted: #f3f0ea;
-  --ink: #17140f;
-  --ink-soft: #57534e;
-  --label-ink: #44403c;
-  --muted: #6b6560;
-  --border: #e7e2d9;
-  --hover-border: #d3ccc0;
-
-  --rail-bg: #17140f;
-  --rail-text: #b5afa7;
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -43,19 +31,6 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-
-  --surface: #25211c;
-  --surface-subtle: #211d18;
-  --surface-muted: #2c2820;
-  --ink: #f4f0ea;
-  --ink-soft: #c4bdb2;
-  --label-ink: #d6d0c7;
-  --muted: #a39c92;
-  --border: #38332b;
-  --hover-border: #4a443b;
-
-  --rail-bg: #0f0d0b;
-  --rail-text: #a8a29e;
 
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.4);
   --shadow-pop: 0 2px 6px rgba(0, 0, 0, 0.4), 0 18px 40px rgba(0, 0, 0, 0.55);

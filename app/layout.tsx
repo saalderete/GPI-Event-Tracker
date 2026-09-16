@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 // Restores the visitor's theme and accent before first paint. Kept inline
 // and tiny so there is no flash of the wrong theme.
-const themeInit = `(function(){try{var d=document.documentElement;d.setAttribute("data-js","");var t=localStorage.getItem("gpi-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}d.setAttribute("data-theme",t);var a=localStorage.getItem("gpi-accent");if(a){d.setAttribute("data-accent",a)}}catch(e){}})();`;
+const themeInit = `(function(){try{var d=document.documentElement;d.setAttribute("data-js","");var t=localStorage.getItem("gpi-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}d.setAttribute("data-theme",t);var a=localStorage.getItem("gpi-accent");var m={chile:"adobe",sol:"desierto",turquesa:"cielo"};if(a){a=m[a]||a;d.setAttribute("data-accent",a)}}catch(e){}})();`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
