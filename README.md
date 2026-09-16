@@ -49,16 +49,19 @@ in `public/pdf/` (gitignored, regenerated on every ship).
   contains an em dash.
 - **The hero clip.** `lib/site.ts` picks the Home hero. `board` (the
   default) makes Home one shot: the clip sits fixed behind the page, the
-  scroll position through the cover and two empty screens scrubs it (the
-  sheets land, the camera tilts up to a whiteboard), and the rest of Home is
-  written on the board the clip holds on. `scroll` scrubs the desk clip over
-  the first screen only; `card` plays it once in a frame beside the name.
-  Phones and reduced-motion visitors get stills. The clips are generated
-  illustrations (Seedance 2.0 through Monid; see `AI-LOG.md`): the takes the
-  encodes are built from live in `media-src/`, and
-  `scripts/hero-media.sh media-src/desk-1080p.mp4 media-src/board-1080p.mp4`
-  writes everything in `public/media/`: the joined scrub encodes (a keyframe
-  every four frames), the play-once desk clip, the poster and the stills.
+  scroll position through the cover and the empty screens after it scrubs
+  it (a cat gets up and walks off the desk, the sheets land, the camera
+  tilts up to a whiteboard), and the rest of Home is written on the board
+  the clip holds on. While the cover rests at the top a short loop of the
+  cat blinking plays over the clip's first frame and dissolves into it on
+  the first scroll. `scroll` scrubs the desk clip over the first screen
+  only; `card` plays it once in a frame beside the name. Phones and
+  reduced-motion visitors get stills. The clips are generated illustrations
+  (Seedance 2.0 and 2.5 and Wan 2.7 through Monid; see `AI-LOG.md`): the
+  takes the encodes are built from live in `media-src/`, and the command in
+  `media-src/README.md` runs `scripts/hero-media.sh` to write everything in
+  `public/media/`: the joined scrub encodes (a keyframe every four frames),
+  the idle loop, the play-once desk clip, the poster and the stills.
 - **Evidence as data.** The 51 interview sheets live in
   `content/evidence/interviews.json` and render as a filterable appendix and
   as a PDF. Referral names were removed.

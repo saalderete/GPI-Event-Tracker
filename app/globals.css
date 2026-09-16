@@ -795,6 +795,16 @@ body {
   height: 100%;
   object-fit: cover;
 }
+/* The loop sits over the clip's first frame while the cover rests; data-idle,
+   set each frame by BoardHero, dissolves it away on the first scroll. */
+.board-bg .idle {
+  transition: opacity 0.35s ease;
+}
+.board-bg[data-idle="off"] .idle {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+}
 .board-bg .scrim {
   position: absolute;
   inset: 0;
