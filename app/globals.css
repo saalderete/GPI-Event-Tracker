@@ -818,11 +818,20 @@ body {
 :root[data-theme="dark"] .board-bg .wash { background: rgba(0, 0, 0, 0.58); }
 
 .board-runway { position: relative; z-index: 1; }
+/* The cover is pinned for the length of the runway, so the words dissolve
+   where they stand instead of riding off the top; --cover-fade is set each
+   frame by BoardHero. Phones and reduced motion keep a plain scrolling cover. */
 .desk-cover {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 100dvh;
   overflow: hidden;
 }
+.desk-cover .panel {
+  opacity: var(--cover-fade, 1);
+  translate: 0 calc((1 - var(--cover-fade, 1)) * -14px);
+}
+.board-runway[data-cover-hidden="true"] .panel { visibility: hidden; }
 .desk-cover .cover-still {
   position: absolute;
   inset: 0;

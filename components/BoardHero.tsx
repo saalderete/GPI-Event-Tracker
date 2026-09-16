@@ -8,7 +8,8 @@ import { withBase } from "@/lib/base";
 // tilting up to a whiteboard until the board fills the frame. The scroll
 // position through the runway (the cover plus two empty screens) is the
 // playhead; past the runway the clip holds on the board and the rest of the
-// page is written on it. Same engine as ScrollHero: rAF, eased seeks, a
+// page is written on it. The cover stays pinned while the clip plays and its
+// words dissolve in place over the first stretch of scrolling. Same engine as ScrollHero: rAF, eased seeks, a
 // dense-keyframe encode, no scroll listener and no React state on the hot
 // path. Phones and reduced-motion visitors get stills: the stack on the
 // cover, the board behind everything else.
@@ -19,6 +20,8 @@ const MIN_STEP = 1 / 48;
 const BOARD_AT = 8 / 13;
 // How much of a screen the content is already showing when the clip ends.
 const LEAD = 0.12;
+// The cover words dissolve in place over this much of a screen of scrolling.
+const FADE_OVER = 0.4;
 
 export function BoardHero({ children }: { children: ReactNode }) {
   const layer = useRef<HTMLDivElement>(null);
@@ -73,11 +76,19 @@ export function BoardHero({ children }: { children: ReactNode }) {
     // The paper wash over the board comes up during the tilt.
     const wash = (p: number) => Math.min(1, Math.max(0, (p - BOARD_AT) / (1 - BOARD_AT)));
 
+    let lastFade = -1;
     const tick = () => {
       if (!running) return;
       raf = requestAnimationFrame(tick);
       const p = progress();
       bg.style.setProperty("--wash", wash(p).toFixed(3));
+      // The words fade as the scroll begins; once gone they stop taking clicks.
+      const fade = Math.min(1, Math.max(0, 1 - window.scrollY / (window.innerHeight * FADE_OVER)));
+      if (fade !== lastFade) {
+        lastFade = fade;
+        r.style.setProperty("--cover-fade", fade.toFixed(3));
+        r.dataset.coverHidden = fade === 0 ? "true" : "false";
+      }
       if (!ready || !v.duration || v.seeking) return;
       const target = p * end();
       current += (target - current) * EASE;
