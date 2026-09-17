@@ -74,8 +74,11 @@ in `public/pdf/` (gitignored, regenerated on every ship).
   KasaPro's fluid rail with the sprints as its circles. Blocks rise into
   place as they scroll into view (`components/Reveal.tsx`) and a hairline
   along the top fills as the page is read
-  (`components/ReadingProgress.tsx`); the print views, no-script visitors
-  and reduced motion get every page in full.
+  (`components/ReadingProgress.tsx`). A full load opens on the mark for a
+  moment (`components/Loader.tsx`), and the first screen rises in as it
+  lifts; in-site navigation never shows it. The print views, no-script
+  visitors and reduced motion get every page in full, with no loading
+  screen.
 
 ## Adding a sprint
 

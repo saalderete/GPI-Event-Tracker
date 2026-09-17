@@ -360,6 +360,80 @@ body {
   .rail { display: none; }
 }
 
+/* ============ LOADING SCREEN ============
+   The mark on paper, over everything, from the first paint of a full load
+   (html[data-loading] is set by the theme script before first paint, never
+   on print routes or for reduced motion) until Loader lifts it: the line
+   fills over the minimum stay, then the screen dissolves and the page
+   underneath, which had waited, rises into view. The page cannot scroll
+   while it shows. */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  color: var(--ink);
+}
+html[data-loading="true"] .loader, .loader[data-state="done"] { display: flex; }
+html[data-loading="true"] { overflow: hidden; }
+.loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  transition: transform 0.65s ease;
+}
+.loader-mark {
+  font-family: var(--font-name);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: 0.06em;
+  animation: loader-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.loader-line {
+  width: 148px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--border);
+  overflow: hidden;
+}
+.loader-line span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  animation: loader-fill 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+}
+.loader-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  animation: loader-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+}
+.loader[data-state="done"] {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.65s ease, visibility 0s linear 0.65s;
+}
+.loader[data-state="done"] .loader-inner { transform: translateY(-10px); }
+@keyframes loader-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes loader-fill {
+  to { transform: scaleX(1); }
+}
+@media print {
+  .loader { display: none !important; }
+}
+
 /* ============ READING LINE ============
    A hairline along the top that fills as the page is read, scaled by the
    script from 0 to 1. Above the rail and the cover, under the phone bar's

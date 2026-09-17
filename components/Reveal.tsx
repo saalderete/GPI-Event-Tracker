@@ -49,8 +49,6 @@ export function Reveal() {
         io.observe(el);
       });
     };
-    scan();
-
     let queued = 0;
     const mo = new MutationObserver(() => {
       if (queued) return;
@@ -59,9 +57,17 @@ export function Reveal() {
         scan();
       });
     });
-    mo.observe(scope, { childList: true, subtree: true });
+    // On a full load the first screen waits for the loading screen to lift,
+    // so it rises into view as the page appears.
+    const start = () => {
+      scan();
+      mo.observe(scope, { childList: true, subtree: true });
+    };
+    if (document.documentElement.dataset.loading === "true") window.addEventListener("gpi:loaded", start, { once: true });
+    else start();
 
     return () => {
+      window.removeEventListener("gpi:loaded", start);
       mo.disconnect();
       io.disconnect();
       if (queued) cancelAnimationFrame(queued);
