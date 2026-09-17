@@ -13,8 +13,9 @@ import { withBase } from "@/lib/base";
 // over the first frame: the cat blinking and breathing, first and last
 // frames the same picture as the clip's first frame, so the loop repeats
 // without a seam and dissolves into the clip on the first scroll. The cover
-// stays pinned while the clip plays and its words dissolve in place over
-// the first stretch of scrolling. Same engine as ScrollHero: rAF, eased
+// stays pinned while the clip plays; its words hold through the cat's exit
+// and dissolve in place over its last second, gone as the desk clears for
+// the first sheet. Same engine as ScrollHero: rAF, eased
 // seeks, a dense-keyframe encode, no scroll listener and no React state on
 // the hot path. Phones and reduced-motion visitors get stills: the stack on
 // the cover, the board behind everything else.
@@ -28,8 +29,11 @@ const BOARD_AT = 314 / 435;
 const IDLE_BELOW = 2;
 // How much of a screen the content is already showing when the clip ends.
 const LEAD = 0.12;
-// The cover words dissolve in place over this much of a screen of scrolling.
-const FADE_OVER = 0.4;
+// Where the cat's exit ends and the desk clip begins, as a fraction of the
+// clip; the cover words are gone by then, dissolving over the stretch of the
+// clip before it (about a second).
+const EXIT_AT = 121 / 435;
+const FADE_OVER = 0.055;
 
 export function BoardHero({ children }: { children: ReactNode }) {
   const layer = useRef<HTMLDivElement>(null);
@@ -106,8 +110,9 @@ export function BoardHero({ children }: { children: ReactNode }) {
       const p = progress();
       bg.style.setProperty("--wash", wash(p).toFixed(3));
       setIdle(window.scrollY < IDLE_BELOW);
-      // The words fade as the scroll begins; once gone they stop taking clicks.
-      const fade = Math.min(1, Math.max(0, 1 - window.scrollY / (window.innerHeight * FADE_OVER)));
+      // The words hold while the cat leaves and dissolve just before the first
+      // sheet lands; once gone they stop taking clicks.
+      const fade = Math.min(1, Math.max(0, (EXIT_AT - p) / FADE_OVER));
       if (fade !== lastFade) {
         lastFade = fade;
         r.style.setProperty("--cover-fade", fade.toFixed(3));
