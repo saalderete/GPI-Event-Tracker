@@ -1,0 +1,3 @@
+:HL["/_next/static/chunks/32l0o_40u-5a1.css","style"]
+:HC["/",""]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"print","param":null,"prefetchHints":4160,"slots":{"children":{"name":"sprint","param":{"type":"d","key":"sprint-1","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"doc","param":{"type":"d","key":"project-charter","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"EzZJ758qFLuIlQvGRL87O"}
