@@ -20,7 +20,7 @@ export const team: Member[] = [
     name: "Samuel Alderete",
     role: "Portal lead",
     owns: "The portal itself: the site and its design, the Home board, the palettes, the PDF pipeline and the deployment to Render.",
-    bio: "Samuel, 25, is a computer science student at UTEP, graduating in December 2026. His contractor platform, KasaPro, is in daily use at two businesses and lent this portal its rail and its neutrals. He works in TypeScript, React and Node, and speaks English and Spanish.",
+    bio: "Samuel, 25, is a computer science student at UTEP, graduating in December 2026.",
     photo: null
   },
   {
