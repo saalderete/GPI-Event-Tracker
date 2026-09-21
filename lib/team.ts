@@ -10,7 +10,8 @@ export interface Member {
   role: string | null;
   owns: string | null;
   bio: string | null;
-  /** Path under /public once a real photo exists, e.g. "/images/team/samuel.jpg". */
+  /** Path under /public once a real photo exists, e.g. "/images/team/samuel.jpg";
+   *  a square crop works best. Until then the About page shows initials. */
   photo: string | null;
 }
 
@@ -56,6 +57,15 @@ export const team: Member[] = [
     photo: null
   }
 ];
+
+/** Two letters for the portrait placeholder: first name and last name. */
+export const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w[0].toUpperCase())
+    .filter((_, i, all) => i === 0 || i === all.length - 1)
+    .join("");
 
 export const memberById = (id: string | null) => (id ? team.find((m) => m.id === id) ?? null : null);
 

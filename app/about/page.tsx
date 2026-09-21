@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Shell } from "@/components/Shell";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { team, interviewCounts, unattributed } from "@/lib/team";
+import { team, interviewCounts, unattributed, initials } from "@/lib/team";
 import { site } from "@/lib/site";
 import { interviews } from "@/lib/evidence";
 import { withBase } from "@/lib/base";
@@ -28,10 +28,11 @@ export default function About() {
           return (
             <li key={m.id} className="grid gap-5 border-b border-border py-7 md:grid-cols-[220px_minmax(0,1fr)]" data-reveal>
               <div>
-                {m.photo ? (
-                  // Portraits go in public/images/team/ and are set in lib/team.ts.
-                  <img src={withBase(m.photo)} alt={m.name} className="mb-3 aspect-square w-32 rounded-[var(--radius-md)] object-cover" />
-                ) : null}
+                {/* Portraits go in public/images/team/ and are set in lib/team.ts;
+                    until one exists the member's initials hold the place. */}
+                <div className="portrait mb-4">
+                  {m.photo ? <img src={withBase(m.photo)} alt={`Portrait of ${m.name}`} width={128} height={128} /> : <span aria-hidden="true">{initials(m.name)}</span>}
+                </div>
                 <h2 className="display text-[1.45rem]">{m.name}</h2>
                 <p className={`mt-1 text-[0.95rem] ${m.role ? "text-ink-soft" : "italic text-muted"}`}>{m.role ?? "Role to be added"}</p>
               </div>

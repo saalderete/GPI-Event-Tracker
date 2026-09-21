@@ -434,6 +434,32 @@ html[data-loading="true"] { overflow: hidden; }
   .loader { display: none !important; }
 }
 
+/* ============ PORTRAITS ============
+   Each member's photo on the About page, or their initials in the accent
+   until there is one; a photo drops into the same footprint. */
+.portrait {
+  width: 128px;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-family: var(--font-name);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ============ READING LINE ============
    A hairline along the top that fills as the page is read, scaled by the
    script from 0 to 1. Above the rail and the cover, under the phone bar's
