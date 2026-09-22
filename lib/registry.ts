@@ -36,14 +36,15 @@ export const documents: PortalDocument[] = [
     kind: "document",
     summary:
       "Five candidate problems, 51 customer interviews in two phases, and how the team narrowed to one.",
-    version: "1.1",
-    status: "draft",
+    version: "1.2",
+    status: "final",
     owner: null,
     reviewers: [],
-    revised: "2026-09-15",
+    revised: "2026-09-22",
     revisions: [
       { version: "1.0", date: "2026-09-10", note: "First synthesis of both interview phases, for team review." },
-      { version: "1.1", date: "2026-09-15", note: "Phase 1 interviewers for Candidates 3, 4 and 5 added from the team's record; the grid sheets did not carry them." }
+      { version: "1.1", date: "2026-09-15", note: "Phase 1 interviewers for Candidates 3, 4 and 5 added from the team's record; the grid sheets did not carry them." },
+      { version: "1.2", date: "2026-09-22", note: "Reviewed and approved by the team as written; the review notes come off the page." }
     ],
     pdf: "sprint-1-market-research"
   },
@@ -81,14 +82,15 @@ export const documents: PortalDocument[] = [
     title: "Interview Evidence",
     kind: "appendix",
     summary: "All 51 interview sheets from both phases, as structured records: role, date, takeaway and quotes.",
-    version: "1.1",
-    status: "review",
+    version: "1.2",
+    status: "final",
     owner: null,
     reviewers: [],
-    revised: "2026-09-15",
+    revised: "2026-09-22",
     revisions: [
       { version: "1.0", date: "2026-09-10", note: "Transcribed from the Phase 1 and Phase 2 interview sheets. Referral names removed." },
-      { version: "1.1", date: "2026-09-15", note: "Interviewer attributed on the sixteen Phase 1 grid sheets (Candidates 3, 4 and 5) from the team's record." }
+      { version: "1.1", date: "2026-09-15", note: "Interviewer attributed on the sixteen Phase 1 grid sheets (Candidates 3, 4 and 5) from the team's record." },
+      { version: "1.2", date: "2026-09-22", note: "Reviewed and approved by the team as written." }
     ],
     pdf: "sprint-1-interview-evidence"
   }

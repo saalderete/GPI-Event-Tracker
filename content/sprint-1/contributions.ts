@@ -35,5 +35,6 @@ export const aiDisclosure = {
     "Conducting or writing up interviews; every response is the participant's, recorded by a team member.",
     "The individual reflections, the individual estimation memo, or any go/no-go reasoning (not permitted under §10)."
   ],
-  changedOrRejected: null as string | null
+  changedOrRejected:
+    "The team reviewed the Market Research synthesis and the interview evidence appendix and approved both as written on 2026-09-22. The Business Strategy and Project Charter drafts are still under team review." as string | null
 };
