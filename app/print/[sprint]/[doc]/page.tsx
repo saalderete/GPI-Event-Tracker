@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { OriginalSheets } from "@/components/OriginalSheets";
 import { InterviewCard } from "@/components/InterviewCard";
 import { sprints, sprintBySlug } from "@/lib/sprints";
 import { documents, findDocument, statusLabel } from "@/lib/registry";
@@ -27,6 +28,7 @@ export default async function PrintPage({ params }: { params: Promise<{ sprint: 
   if (d.slug === "evidence") {
     body = (
       <div className="space-y-10">
+        <OriginalSheets print />
         <section>
           <h2 className="display text-[16pt]">The five candidates</h2>
           <table className="mt-3 w-full text-[9.5pt]">

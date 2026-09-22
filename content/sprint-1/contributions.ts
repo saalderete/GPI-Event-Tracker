@@ -32,7 +32,7 @@ export const aiDisclosure = {
     },
     {
       stage: "Summarizing or restructuring content the team produced (§10, permitted)",
-      use: "Transcribed the 51 interview sheets into the structured evidence appendix, removing referral names. No interview content was generated or altered."
+      use: "Transcribed the 51 interview sheets into the structured evidence appendix, removing referral names. No interview content was generated or altered. The original sheets are linked from the appendix, with the referral names redacted."
     },
     {
       stage: "Suggesting stakeholder types the team then evaluates, and grammar and clarity checks (§10, permitted)",

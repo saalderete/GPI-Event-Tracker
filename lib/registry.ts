@@ -101,7 +101,7 @@ export const documents: PortalDocument[] = [
     title: "Interview Evidence",
     kind: "appendix",
     summary: "All 51 interview sheets from both phases, as structured records: role, date, takeaway and quotes.",
-    version: "1.2",
+    version: "1.3",
     status: "final",
     owner: "christian",
     reviewers: [],
@@ -109,7 +109,8 @@ export const documents: PortalDocument[] = [
     revisions: [
       { version: "1.0", date: "2026-09-10", note: "Transcribed from the Phase 1 and Phase 2 interview sheets. Referral names removed." },
       { version: "1.1", date: "2026-09-15", note: "Interviewer attributed on the sixteen Phase 1 grid sheets (Candidates 3, 4 and 5) from the team's record." },
-      { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written." }
+      { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written." },
+      { version: "1.3", date: "2026-09-21", note: "The team's original Phase 1 and Phase 2 interview sheets are linked from the page as PDFs, with the referral names redacted." }
     ],
     pdf: "sprint-1-interview-evidence"
   }
