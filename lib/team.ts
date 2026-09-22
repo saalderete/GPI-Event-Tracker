@@ -44,17 +44,17 @@ export const team: Member[] = [
     id: "emmanuel",
     name: "Emmanuel Saenz",
     role: "Project Manager",
-    owns: "The Project Charter.",
-    bio: null,
-    photo: null
+    owns: "The project charter and the team’s internal communications.",
+    bio: "Emmanuel, 24, is a Software Developer Intern currently pursuing a Master’s degree in Software Engineering, with an expected graduation in Fall 2026.",
+    photo: "/images/team/emmanuel.jpg"
   },
   {
     id: "oscar",
     name: "Oscar Vargas",
     role: "Business Strategy Lead",
     owns: "The Business Strategy.",
-    bio: null,
-    photo: null
+    bio: "Oscar Vargas is a computer science student at UTEP, graduating in December 2026.",
+    photo: "/images/team/oscar.jpg"
   }
 ];
 
