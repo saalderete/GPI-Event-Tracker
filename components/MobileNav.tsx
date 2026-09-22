@@ -3,23 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconFile, IconGrid, IconHome, IconUsers } from "./Icons";
-import { sprints, isPublished } from "@/lib/sprints";
+import { sprints, isPublished, currentSprint } from "@/lib/sprints";
 import { documents } from "@/lib/registry";
 
 // The phone bar: a fixed strip of the four places a visitor goes most.
 export function MobileNav() {
   const pathname = usePathname() || "/";
-  // The latest sprint with documents on its page; the evidence link needs one.
-  const latest = [...sprints].reverse().find((s) => isPublished(s) && documents.some((d) => d.sprint === s.number));
+  // The sprint in progress, and the latest sprint with an evidence appendix.
+  const current = currentSprint();
+  const latest = [...sprints].reverse().find((s) => isPublished(s) && documents.some((d) => d.sprint === s.number && d.slug === "evidence"));
   const items = [
     { href: "/", label: "Home", icon: <IconHome /> },
     { href: "/about/", label: "About", icon: <IconUsers /> },
-    ...(latest
-      ? [
-          { href: `/${latest.slug}/`, label: `Sprint ${latest.number}`, icon: <IconFile /> },
-          { href: `/${latest.slug}/evidence/`, label: "Evidence", icon: <IconGrid /> }
-        ]
-      : [])
+    { href: `/${current.slug}/`, label: `Sprint ${current.number}`, icon: <IconFile /> },
+    ...(latest ? [{ href: `/${latest.slug}/evidence/`, label: "Evidence", icon: <IconGrid /> }] : [])
   ];
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : href.endsWith("/evidence/") ? pathname.startsWith(href) : pathname.startsWith(href) && !pathname.includes("/evidence/");

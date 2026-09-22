@@ -278,9 +278,9 @@ body {
 }
 .rail-item:hover .rail-label, .rail-item:focus-visible .rail-label { transform: scale(1); }
 
-/* Sprint circles carry their number. A delivered sprint wears the accent at
-   rest, a live one an accent ring while its block runs, and an upcoming one
-   is hollow, a promise rather than a page. */
+/* Sprint circles carry their number. The live sprint wears the accent at
+   rest, a delivered one its tint (the same pair as its badge), and an
+   upcoming one is hollow, a promise rather than a page. */
 .rail-num {
   font-family: var(--font-display);
   font-weight: 700;
@@ -290,14 +290,13 @@ body {
   transition: transform 0.3s ease;
 }
 .rail-item:hover .rail-num, .rail-item:focus-visible .rail-num { transform: scale(0); }
-.rail-link.is-delivered {
+.rail-link.is-live {
   background: var(--accent);
   color: var(--on-accent);
 }
-.rail-link.is-live {
-  background: color-mix(in srgb, var(--paper) 72%, transparent);
+.rail-link.is-delivered {
+  background: var(--accent-soft);
   color: var(--accent-ink);
-  box-shadow: inset 0 0 0 2px var(--accent);
 }
 .rail-link.is-upcoming {
   /* A faint paper fill: invisible on the page, and the number still reads
@@ -1211,8 +1210,8 @@ html[data-js] .reveal-scope .prose-doc > .is-in {
   color: var(--muted);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.spine-node.is-delivered .node { background: var(--accent); color: var(--on-accent); box-shadow: none; }
-.spine-node.is-live .node { color: var(--accent-ink); box-shadow: inset 0 0 0 2px var(--accent); }
+.spine-node.is-live .node { background: var(--accent); color: var(--on-accent); box-shadow: none; }
+.spine-node.is-delivered .node { background: var(--accent-soft); color: var(--accent-ink); box-shadow: none; }
 .spine-node.is-delivered:hover .node, .spine-node.is-live:hover .node { transform: scale(1.08); }
 .spine-node:hover .node { box-shadow: inset 0 0 0 1.5px var(--accent); }
 @keyframes spine-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
