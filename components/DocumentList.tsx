@@ -13,7 +13,7 @@ export function DocumentList({ sprint, docs }: { sprint: Sprint; docs: PortalDoc
   return (
     <ul>
       {docs.map((d) => {
-        const link = pdfLink(d.pdf, withBase(`/print/${sprint.slug}/${d.slug}/`));
+        const link = pdfLink(d, withBase(`/print/${sprint.slug}/${d.slug}/`));
         return (
         <li key={d.slug} className="doc-row" data-reveal>
           <div className="min-w-0">

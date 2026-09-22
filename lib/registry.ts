@@ -2,6 +2,11 @@
 // the PDF generator and the validator all read this list, which is how a
 // document can't exist on the web without its PDF, or the other way round.
 export type DocStatus = "draft" | "review" | "final";
+/** Where a document lives. "site": written here as MDX and printed to its
+ *  PDF by the ship step. "upload": delivered by its owner as a PDF in
+ *  public/docs/; its MDX is a cover, and the ship step copies the file into
+ *  place instead of printing. */
+export type DocSource = "site" | "upload";
 
 export interface Revision {
   version: string;
@@ -26,6 +31,10 @@ export interface PortalDocument {
   revisions: Revision[];
   /** File name under /pdf, without extension. */
   pdf: string;
+  /** Defaults to "site". */
+  source?: DocSource;
+  /** For a delivered document: the file name under public/docs/. */
+  file?: string;
 }
 
 export const documents: PortalDocument[] = [
@@ -54,12 +63,15 @@ export const documents: PortalDocument[] = [
     title: "Business Strategy",
     kind: "document",
     summary: "The strategy-to-project chain: why this project earns the right to exist and what objective it serves.",
-    version: "0.1",
-    status: "draft",
+    version: "1.0",
+    status: "final",
     owner: null,
     reviewers: [],
-    revised: "2026-09-10",
-    revisions: [{ version: "0.1", date: "2026-09-10", note: "Structure and research-backed sections drafted; business objective pending team input." }],
+    revised: "2026-09-22",
+    revisions: [
+      { version: "0.1", date: "2026-09-10", note: "Structure and research-backed sections drafted; business objective pending team input." },
+      { version: "1.0", date: "2026-09-22", note: "Reviewed and approved by the team. The review notes come off the page, the candidate objective stands as the objective, and the measures' targets are set in the Sprint 2 business case." }
+    ],
     pdf: "sprint-1-business-strategy"
   },
   {
@@ -67,14 +79,19 @@ export const documents: PortalDocument[] = [
     sprint: 1,
     title: "Project Charter",
     kind: "document",
-    summary: "Scope boundary, assumptions, constraints, milestones and the stakeholder register.",
-    version: "0.1",
-    status: "draft",
-    owner: null,
+    summary: "Business objectives, scope boundary, constraints, assumptions and success criteria, as set by the project manager. Delivered as a PDF; this page is its cover.",
+    version: "1.0",
+    status: "final",
+    owner: "emmanuel",
     reviewers: [],
-    revised: "2026-09-10",
-    revisions: [{ version: "0.1", date: "2026-09-10", note: "Structure drafted with the facts on record; sections needing team decisions are marked." }],
-    pdf: "sprint-1-project-charter"
+    revised: "2026-09-22",
+    revisions: [
+      { version: "0.1", date: "2026-09-10", note: "Structure drafted with the facts on record; sections needing team decisions are marked." },
+      { version: "1.0", date: "2026-09-22", note: "The team's own charter, written by the project manager and dated 10 September 2026, replaces the drafted structure. Published as delivered, as a PDF." }
+    ],
+    pdf: "sprint-1-project-charter",
+    source: "upload",
+    file: "sprint-1-project-charter.pdf"
   },
   {
     slug: "evidence",

@@ -36,5 +36,5 @@ export const aiDisclosure = {
     "The individual reflections, the individual estimation memo, or any go/no-go reasoning (not permitted under §10)."
   ],
   changedOrRejected:
-    "The team reviewed the Market Research synthesis and the interview evidence appendix and approved both as written on 2026-09-22. The Business Strategy and Project Charter drafts are still under team review." as string | null
+    "On 2026-09-22 the team reviewed and approved the Market Research synthesis and the interview evidence appendix as written, and the Business Strategy with its review notes removed, the candidate objective adopted as the objective, and the measures' targets deferred to the Sprint 2 business case. The drafted Project Charter was replaced by the team's own charter, written by the project manager and published as delivered." as string | null
 };

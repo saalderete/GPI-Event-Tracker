@@ -24,6 +24,8 @@ export function GET() {
       status: d.status,
       revised: d.revised,
       pdf: d.pdf,
+      source: d.source ?? "site",
+      file: d.file ?? null,
       page: `/${slugOf(d.sprint)}/${d.slug}/`,
       print: `/print/${slugOf(d.sprint)}/${d.slug}/`
     })),

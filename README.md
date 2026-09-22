@@ -38,7 +38,7 @@ in `public/pdf/` (gitignored, regenerated on every ship).
   and that lives in the workflow.
 - **One source, two renders.** Every document is an MDX file under
   `content/`. The web page renders it, and `scripts/pdf.mjs` prints the
-  `/print/...` route of the same file to `out/pdf/` at build time. The PDF
+  `/print/...` route of the same file to `out/pdf/` at build time. A document the team delivers as a PDF is the exception: registered with `source: "upload"`, its file lives in `public/docs/`, its page is a thin cover with a viewer, and the ship step copies the file into place instead of printing it. The PDF
   cannot drift from the page because it is the page.
 - **The registry is the law.** `lib/registry.ts` lists every public document
   with its version, status, owner and revision history. Pages, the rail, the

@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { withBase } from "./base";
+import type { PortalDocument } from "./registry";
 
 // Where a document's PDF button points. The PDFs are printed from the pages
 // by `npm run ship`, after the build, so on the published site the file is
@@ -15,10 +16,12 @@ export interface PdfLink {
   file: boolean;
 }
 
-export function pdfLink(pdf: string, printHref: string): PdfLink {
-  const href = withBase(`/pdf/${pdf}.pdf`);
+export function pdfLink(doc: Pick<PortalDocument, "pdf" | "source" | "file">, printHref: string): PdfLink {
+  // A delivered document is its own file, committed under public/docs/.
+  if (doc.source === "upload" && doc.file) return { href: withBase(`/docs/${doc.file}`), file: true };
+  const href = withBase(`/pdf/${doc.pdf}.pdf`);
   if (process.env.NODE_ENV !== "development") return { href, file: true };
-  const built = existsSync(join(process.cwd(), "public", "pdf", `${pdf}.pdf`));
+  const built = existsSync(join(process.cwd(), "public", "pdf", `${doc.pdf}.pdf`));
   return built ? { href, file: true } : { href: printHref, file: false };
 }
 

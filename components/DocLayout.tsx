@@ -6,6 +6,7 @@ import type { Sprint } from "@/lib/sprints";
 import type { TocEntry } from "@/lib/toc";
 import { Toc } from "./Toc";
 import { PdfMenu } from "./PdfMenu";
+import { DocViewer } from "./DocViewer";
 import { StatusBadge } from "./StatusBadge";
 import { withBase } from "@/lib/base";
 import { pdfLink } from "@/lib/pdf";
@@ -26,7 +27,8 @@ interface Props {
 export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
   const owner = memberById(doc.owner);
   const printHref = withBase(`/print/${sprint.slug}/${doc.slug}/`);
-  const link = pdfLink(doc.pdf, printHref);
+  const link = pdfLink(doc, printHref);
+  const upload = doc.source === "upload";
   return (
     <article>
       <header className="mb-10 border-b border-border pb-8" data-reveal>
@@ -50,9 +52,16 @@ export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
               <dt>Owner</dt>
               <dd className="text-ink">{owner ? owner.name : "To be assigned"}</dd>
             </div>
+            {upload ? (
+              <div className="flex gap-1.5">
+                <dt>Delivered as</dt>
+                <dd className="text-ink">PDF</dd>
+              </div>
+            ) : null}
           </dl>
-          <div className="sm:ml-auto">
-            <PdfMenu link={link} file={`${doc.pdf}.pdf`} printHref={printHref} title={doc.title} />
+          <div className="flex flex-wrap items-center gap-2 sm:ml-auto">
+            {upload ? <DocViewer href={link.href} title={doc.title} label="Open the PDF" download={`${doc.pdf}.pdf`} /> : null}
+            <PdfMenu link={link} file={`${doc.pdf}.pdf`} printHref={printHref} title={doc.title} upload={upload} />
           </div>
         </div>
       </header>

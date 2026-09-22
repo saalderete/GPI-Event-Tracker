@@ -5,11 +5,13 @@ import { ActionMenu } from "./ActionMenu";
 import { IconCheck, IconDownload, IconLink, IconPrint } from "./Icons";
 import type { PdfLink } from "@/lib/pdf";
 
-// Download is the primary action; the menu holds the rest. The PDF is
-// generated from the same source as this page, so the two cannot differ.
-// Under `next dev` before a ship run there is no PDF yet, and the primary
-// action opens the print view instead (see lib/pdf.ts).
-export function PdfMenu({ link, file, printHref, title }: { link: PdfLink; file: string; printHref: string; title: string }) {
+// Download is the primary action; the menu holds the rest. For a document
+// written on the site the PDF is printed from this same page, so the two
+// cannot differ, and under `next dev` before a ship run the primary action
+// opens the print view instead (see lib/pdf.ts). For a delivered document
+// the PDF is the document itself: the viewer beside this is the primary
+// action, download goes quiet, and there is no print view to offer.
+export function PdfMenu({ link, file, printHref, title, upload = false }: { link: PdfLink; file: string; printHref: string; title: string; upload?: boolean }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     try {
@@ -18,10 +20,14 @@ export function PdfMenu({ link, file, printHref, title }: { link: PdfLink; file:
       setTimeout(() => setCopied(false), 1800);
     } catch {}
   };
+  const items = [
+    ...(upload ? [] : [{ label: "Open print view", icon: <IconPrint />, href: printHref, external: true }]),
+    { label: copied ? "Link copied" : "Copy link to this page", icon: copied ? <IconCheck /> : <IconLink />, onSelect: copy }
+  ];
   return (
     <div className="flex items-center gap-2 no-print">
       {link.file ? (
-        <a className="btn btn-primary" href={link.href} download={file} title={`Download ${title} as PDF`}>
+        <a className={`btn ${upload ? "btn-ghost" : "btn-primary"}`} href={link.href} download={file} title={`Download ${title} as PDF`}>
           <IconDownload />
           Download PDF
         </a>
@@ -31,14 +37,7 @@ export function PdfMenu({ link, file, printHref, title }: { link: PdfLink; file:
           Print view
         </a>
       )}
-      <ActionMenu
-        label="More"
-        align="right"
-        items={[
-          { label: "Open print view", icon: <IconPrint />, href: printHref, external: true },
-          { label: copied ? "Link copied" : "Copy link to this page", icon: copied ? <IconCheck /> : <IconLink />, onSelect: copy }
-        ]}
-      />
+      <ActionMenu label="More" align="right" items={items} />
     </div>
   );
 }

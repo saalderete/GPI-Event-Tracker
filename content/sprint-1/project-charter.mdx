@@ -1,148 +1,32 @@
-<Draft title="Draft for team review">
-  The charter is the anchor document for every sprint after this one. The sections below carry the facts on record (team, dates, problem statement, research findings). Sections marked for team input need decisions only the team can make. Nothing marked as a draft should survive to the final version.
-</Draft>
+<Sheet
+  rows={[
+    ["Project title", "GPI – Gracias Por Invitar"],
+    ["Project sponsor", "UTEP Computer Science Department"],
+    ["Project manager", "Emmanuel Saenz"],
+    ["Team members", "Jazmin Huerta, Samuel Alderete, Christian Lopez-Matulessy, Oscar Vargas"],
+    ["Date prepared", "10 September 2026"],
+    ["Version", "1.0"]
+  ]}
+/>
 
-## Project purpose
+The charter was written by the project manager and is published here as delivered. This page is its cover: the objectives in the charter's own words, what the document contains, and the document itself.
 
-Gracias Por Invitar is a centralized hub for events in El Paso, from official events such as concerts and festivals to local ones such as farmers markets, car meets and card shows. Its purpose is that people find out about events before they happen instead of after. The name is the problem: "thanks for the invite" is what you say when the photos show up and nobody told you.
+## Business objectives
 
-The project exists to satisfy the business objective set out in the [Business Strategy](../business-strategy/), and it is being managed and documented sprint by sprint on this portal for CS 4390/5388 at The University of Texas at El Paso.
+Phase 2 showcased a repeatable problem: El Paso / Juarez residents missing out on events due to scattered listing across multiple platforms. GPI – Gracias Por Invitar will help solve this problem by providing a centralized event discovery across both sides of the border to give event goers advance notice to plan and attend.
 
-## Problem statement
+- **Centralize events.** Create a centralized platform for event promoters to publish events, removing the need for users to scatter across multiple platforms to stay informed.
+- **Monetize on event publications.** Offer paid featured/promoted listings to venues and organizers, offering an extra channel to reach users and generate recurring platform revenue.
+- **Promote marketing on events.** Give organizers and small businesses a low effort way to market their events.
 
-As tested in Sprint 1: *people find it hard to find events and places to go to in El Paso/Juárez, often finding out after the events have already happened.*
+## Inside the charter
 
-As refined by the research: people in El Paso find out about events after they have already happened, because announcements are scattered across dozens of social accounts and only reach the people already following the right ones. The [Market Research](../market-research/) holds the evidence.
+1. Business objectives
+2. Scope boundary: what is in scope and what is out
+3. Constraints
+4. Assumptions
+5. Success criteria: each criterion with its target or measure
 
-## Objectives
+The charter closes with an approval block for the sponsor and the project manager.
 
-<Draft title="Team decision">
-  Draft objectives for the team to confirm, cut or replace. They mirror the success measures in the Business Strategy.
-</Draft>
-
-1. Publish a public listing of events in El Paso, by date and category, that is more complete within its chosen categories than any single social account.
-2. Give organizers a way to submit events directly, so the listing does not depend on the team's own curation.
-3. Reach the two underserved groups the research identified: people who rely on word of mouth, and people with little or no social media.
-4. Keep a complete, public record of how the project is managed, on this portal, every sprint.
-
-## Scope boundary
-
-### In scope
-
-- Events in El Paso, Texas.
-- Both official and local events: concerts, festivals, sports, markets, car meets, card shows, comedy, races, trivia nights, kermeses and similar public gatherings.
-- A date-first view: what is happening today, this weekend, this week.
-- Categories and interest-based filtering, since three Phase 2 participants asked for it.
-- A way for organizers to submit events.
-- Lead time: events listed at least about a week ahead where the organizer's own announcement allows it.
-
-### Out of scope
-
-- Ticketing, payments, or reselling.
-- Social features: comments, RSVPs visible to friends, messaging.
-- Private events and invitations.
-- Organizer tooling beyond submission (no CRM, no analytics dashboards) in the first version.
-- Recommendation or personalization engines. Filters are in scope; prediction is not.
-
-### Open scoping questions
-
-<Draft title="Team decision">
-  These came out of the research and need a decision before Sprint 2 estimates anything.
-
-  1. **Juárez.** Participants split: one wants both sides in one place, one does not cross at all, and most described El Paso only. The current boundary is El Paso; Juárez is a decision, not an assumption.
-  2. **Sourcing.** Organizer submissions, team curation, public posts, or a mix. This decides the product's effort profile more than any feature.
-  3. **First categories.** Which categories the listing is complete in on day one.
-  4. **First group served.** Word-of-mouth dependents or people without social media.
-</Draft>
-
-## Deliverables
-
-**Management record (this portal), every sprint.** Sprint 1: Market Research, Business Strategy, Project Charter, interview evidence. Sprint 2: business case, estimation appendix, ROI analysis, change log. Later sprints as released by the course. Every public document exists as a web page and as a PDF, and the private retrospective goes to Blackboard only.
-
-**Product.**
-
-<Draft title="Team decision">
-  Define the product deliverable for the semester: a working web application, a prototype, or a plan and estimate only. The course guidelines describe the portal as the major deliverable; what the team commits to building is the team's call and drives every estimate in Sprint 2.
-</Draft>
-
-## Assumptions
-
-<Draft title="Team review">
-  Drafted from the research. Each one is a thing the project will be wrong about if it is false; keep the ones the team believes and add the rest.
-</Draft>
-
-1. Event information for El Paso is publicly available (organizer posts, venue pages, city listings) and can be collected legitimately.
-2. Organizers want more reach than their own followers and will submit events to a listing that gives it to them.
-3. A weekly habit is possible: people will check one place for what is happening, as they once did with the listing page that stopped.
-4. About a week of lead time is enough for most participants' planning, per Phase 2.
-5. The team can build and run the listing on free or already-available hosting for the length of the semester.
-6. The five team members remain available for the semester at the effort the course expects.
-
-## Constraints
-
-- **Schedule.** Six sprints, each two weeks, deadlines fixed by the course (see milestones). Nothing slips.
-- **Team.** Five students, part time, with other coursework.
-- **Budget.** No project budget. Hosting for the portal must be free; product infrastructure is limited to free tiers and what the team already has.
-- **Public record.** Everything except the retrospective and peer evaluations is public, sprint by sprint, and earlier pages are never replaced.
-- **AI use.** Permitted for the website and for drafts the team reviews; not permitted for the individual reflections, the estimation memo, or any go/no-go reasoning. Every sprint carries a disclosure.
-
-## Stakeholder register
-
-| Stakeholder | Type | Interest | Influence | How they are engaged |
-| --- | --- | --- | --- | --- |
-| Samuel Alderete | Team | Delivery of the project and the portal | High | Team member; role to be added |
-| Jazmin Huerta | Team | Delivery of the project and the portal | High | Team member; role to be added |
-| Christian Lopez-Matulessy | Team | Delivery of the project and the portal | High | Team member; role to be added |
-| Emmanuel Saenz | Team | Delivery of the project and the portal | High | Team member; role to be added |
-| Oscar Vargas | Team | Delivery of the project and the portal | High | Team member; role to be added |
-| Course instructor, CS 4390/5388 | Sponsor and evaluator | A well-managed project with a complete, defensible record | High | Sprint demos, portal reviews, Blackboard submissions |
-| Peer teams | Reviewers | Gallery-walk feedback on Sprint 1 | Low | Portal Debut Day feedback and the team's written response |
-| Event-goers who rely on word of mouth | Customer | Finding out before, not after | Medium | Interviewed in Sprint 1; follow-up consent on record |
-| Event-goers with little or no social media | Customer | A source that does not require an account | Medium | Interviewed in Sprint 1; follow-up consent on record |
-| Organizers and venues | Supplier and customer | Reach beyond their own followers | High | Not yet engaged; sourcing decision pending |
-| Incumbent channels (Instagram, TikTok, Facebook, FitFam, Google, Ticketmaster) | Environment | None in the project | High on the market | Understood through the research; possible distribution partners |
-| City of El Paso and its tourism accounts | Environment, possible partner | Visibility of official events | Medium | Not yet engaged |
-
-<Draft title="Team input needed">
-  Add roles for each team member, and any stakeholder the team knows of that the research did not surface (a faculty advisor, a venue contact, a student organization).
-</Draft>
-
-## Milestones
-
-| Sprint | Block | Due | Contents |
-| --- | --- | --- | --- |
-| 1 | Aug 25 to Sep 21 | Mon, Sep 21, 2026, 11:59 PM | Market Research, Business Strategy, Project Charter, evidence |
-| 2 | Sep 22 to Oct 5 | Mon, Oct 5, 2026, 11:59 PM | Business case, estimation appendix, ROI, change log |
-| 3 | Oct 6 to Oct 19 | Mon, Oct 19, 2026, 11:59 PM | To be released |
-| 4 | Oct 20 to Nov 2 | Mon, Nov 2, 2026, 11:59 PM | To be released |
-| 5 | Nov 3 to Nov 16 | Mon, Nov 16, 2026, 11:59 PM | To be released |
-| 6 | Nov 17 to Nov 30 | Mon, Nov 30, 2026, 11:59 PM | To be released |
-
-Portal Debut Day is Tuesday, September 22. The final class session is Tuesday, December 1.
-
-## Initial risks
-
-<Draft title="Team review">
-  A starting register, drafted from the research and the constraints. The full risk register is developed in later sprints.
-</Draft>
-
-| Risk | Likelihood | Impact | Response |
-| --- | --- | --- | --- |
-| Events cannot be sourced completely enough to beat a curated feed | High | High | Decide sourcing first; start narrow and be complete in a few categories |
-| Nobody finds the hub (the discovery problem, one level up) | High | High | Distribution through organizers and the accounts people already follow |
-| Scope grows toward Juárez, notifications, personalization | Medium | High | Hold the scope boundary; changes go through the change log |
-| Uneven contribution across five members | Medium | Medium | Ownership named per page and per document; contribution statements every sprint |
-| Sprint deadlines are fixed and short | Certain | Medium | Publish early; the portal is live before the deadline, not at it |
-
-## Roles and responsibilities
-
-<Draft title="Team input needed">
-  Name who owns the portal, each document, the product work, and the Blackboard submissions. The guidelines require that every member can explain every page.
-</Draft>
-
-## Approval
-
-| Role | Name | Date |
-| --- | --- | --- |
-| Project team | *All five members* | *Pending* |
-| Instructor acknowledgement | | *Pending* |
+<OpenDocument file="sprint-1-project-charter.pdf" title="Project Charter" label="Open the charter (PDF, 2 pages)" />

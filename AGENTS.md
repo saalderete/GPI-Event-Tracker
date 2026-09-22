@@ -19,7 +19,13 @@ honest.
   `content/<sprint>/` and is registered in `lib/registry.ts` and
   `lib/docs.tsx`. The page renders it; `scripts/pdf.mjs` prints the
   `/print/...` route of the same file to `out/pdf/`. Never hand-maintain a
-  PDF, and never add a document without registering it.
+  PDF, and never add a document without registering it. The one exception
+  is a document the team delivers as a PDF: register it with
+  `source: "upload"` and its file name, put the file in `public/docs/`, and
+  keep its MDX to a cover (the sheet, the document's own words, what it
+  contains, the open button). The ship step copies the file into place
+  instead of printing. Never restate a delivered document's content on its
+  cover; the PDF is the document.
 - `npm run ship` is what CI runs: build, PDFs, corpus, validate. The
   validator (`scripts/validate.mjs`) fails on a document without page or
   PDF, on the private-content sentinel, on a referral name from the

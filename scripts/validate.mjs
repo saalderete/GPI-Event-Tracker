@@ -35,6 +35,11 @@ for (const d of manifest.documents) {
   pdfs.delete(`${d.pdf}.pdf`);
 }
 for (const stray of pdfs) problems.push(`parity: /pdf/${stray} is not in the registry`);
+// A delivered document's file must be in the output where its cover points.
+for (const d of manifest.documents) {
+  if (d.source !== "upload") continue;
+  if (!d.file || !(await stat(join(out, "docs", d.file)).catch(() => null))) problems.push(`parity: ${d.title} is delivered as a PDF but /docs/${d.file} is not in the output`);
+}
 
 // 2 and 3. Sentinel and referral names, across every text file in the output.
 const SENTINEL = "PRIVATE-DO-NOT-PUBLISH";

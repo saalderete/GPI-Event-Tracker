@@ -62,7 +62,7 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
         </div>
         <ul className="notes mt-6">
           {docs.map((d, i) => {
-            const link = pdfLink(d.pdf, withBase(`/print/${latest.slug}/${d.slug}/`));
+            const link = pdfLink(d, withBase(`/print/${latest.slug}/${d.slug}/`));
             return (
             <li key={d.slug} className="note" style={{ "--tilt": tilts[i % tilts.length] } as CSSProperties} data-reveal>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">

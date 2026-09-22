@@ -1,7 +1,10 @@
 // Prints every document in the registry to out/pdf/<name>.pdf from its
 // /print route, so the PDF is a render of the same source as the page. Runs
 // after `next build`; the deploy workflow runs it before publishing. A copy
-// goes to public/pdf/ (gitignored) so `next dev` serves the PDFs too.
+// goes to public/pdf/ (gitignored) so `next dev` serves the PDFs too. A
+// document delivered as a PDF (source "upload") is not printed: its file is
+// copied from public/docs/ into the same place, so every document has its
+// PDF under /pdf either way.
 import { copyFile, mkdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -25,6 +28,14 @@ const style = `font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 7.5pt;
 
 let n = 0;
 for (const d of manifest.documents) {
+  if (d.source === "upload") {
+    const file = join(out, "pdf", `${d.pdf}.pdf`);
+    await copyFile(join(root, "public", "docs", d.file), file);
+    await copyFile(file, join(root, "public", "pdf", `${d.pdf}.pdf`));
+    n++;
+    console.log(`copy ${d.pdf}.pdf  <- public/docs/${d.file}`);
+    continue;
+  }
   const url = `${origin}${d.print}`;
   const resp = await page.goto(url, { waitUntil: "networkidle" });
   if (!resp || !resp.ok()) throw new Error(`${url} returned ${resp?.status()}`);

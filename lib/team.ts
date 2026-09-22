@@ -43,8 +43,8 @@ export const team: Member[] = [
   {
     id: "emmanuel",
     name: "Emmanuel Saenz",
-    role: null,
-    owns: null,
+    role: "Project Manager",
+    owns: "The Project Charter.",
     bio: null,
     photo: null
   },

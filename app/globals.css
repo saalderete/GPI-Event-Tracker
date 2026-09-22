@@ -460,6 +460,74 @@ html[data-loading="true"] { overflow: hidden; }
   object-fit: cover;
 }
 
+/* ============ DELIVERED DOCUMENTS ============
+   A document the team delivers as a PDF: the sheet at the top of its cover
+   (label and value rows, as the team's own templates lay them out) and the
+   viewer that opens the PDF over the page on wide screens; phones open the
+   file in a new tab instead. */
+.sheet {
+  width: 100%;
+  max-width: 44rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.prose-doc .sheet { min-width: 0; }
+.sheet th, .sheet td {
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+.sheet th {
+  width: 11rem;
+  background: var(--surface-muted);
+  color: var(--label-ink);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.doc-open { margin-top: 2rem; }
+.viewer {
+  width: min(96vw, 1100px);
+  height: 92vh;
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.viewer::backdrop { background: color-mix(in srgb, var(--ink) 55%, transparent); }
+.viewer-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.viewer-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.viewer-actions { display: flex; gap: 6px; }
+.viewer-frame {
+  display: block;
+  width: 100%;
+  height: calc(92vh - 58px);
+  border: 0;
+  background: var(--surface-muted);
+}
+html[data-viewer="open"] { overflow: hidden; }
+
 /* ============ READING LINE ============
    A hairline along the top that fills as the page is read, scaled by the
    script from 0 to 1. Above the rail and the cover, under the phone bar's
