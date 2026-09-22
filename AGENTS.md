@@ -24,7 +24,11 @@ honest.
   `source: "upload"` and its file name, put the file in `public/docs/`, and
   keep its MDX to a cover (the sheet, the document's own words, what it
   contains, the open button). The ship step copies the file into place
-  instead of printing. Never restate a delivered document's content on its
+  instead of printing. A file the team delivered
+  alongside a document (a signed copy, the owner's own PDF, the interview
+  sheets) also goes in `public/docs/` and is listed in the document's
+  `delivered` entries; the page offers it as a Team's PDF button that opens
+  the viewer, and the validator checks the file exists. Never restate a delivered document's content on its
   cover; the PDF is the document.
 - `npm run ship` is what CI runs: build, PDFs, corpus, validate. The
   validator (`scripts/validate.mjs`) fails on a document without page or
@@ -50,5 +54,6 @@ honest.
   it on an ancestor of something fixed or sticky, and never in the print
   views, which have no reveal scope by design.
 - Adding a sprint: MDX under `content/sprint-N/`, register the documents,
-  flip the sprint to `live` in `lib/sprints.ts`, write the change log, run
+  set the sprint to `live` in `lib/sprints.ts` when its block starts and to
+  `delivered` once its deadline has passed with its documents on the page, write the change log, run
   `npm run ship`, push to `main`.

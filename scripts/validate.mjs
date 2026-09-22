@@ -33,6 +33,9 @@ for (const d of manifest.documents) {
   if (!(await stat(page).catch(() => null))) problems.push(`parity: ${d.title} has no rendered page at ${d.page}`);
   if (!pdfs.has(`${d.pdf}.pdf`)) problems.push(`parity: ${d.title} has no PDF at /pdf/${d.pdf}.pdf`);
   pdfs.delete(`${d.pdf}.pdf`);
+  for (const f of d.delivered ?? []) {
+    if (!(await stat(join(out, "docs", f)).catch(() => null))) problems.push(`delivered: ${d.title} lists /docs/${f} but the file is not in the output`);
+  }
 }
 for (const stray of pdfs) problems.push(`parity: /pdf/${stray} is not in the registry`);
 // A delivered document's file must be in the output where its cover points.

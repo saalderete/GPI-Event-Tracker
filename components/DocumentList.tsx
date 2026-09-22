@@ -28,13 +28,18 @@ export function DocumentList({ sprint, docs }: { sprint: Sprint; docs: PortalDoc
               {d.kind === "appendix" ? "Appendix" : "Document"}, version {d.version}, revised {fmtDate(d.revised)}
             </p>
           </div>
-          <div className="flex items-start gap-2 sm:justify-end">
+          <div className="flex flex-wrap items-start gap-2 sm:justify-end">
             <Link href={`/${sprint.slug}/${d.slug}/`} className="btn btn-ghost">
               Read
             </Link>
             <a className="btn btn-ghost" href={link.href} download={link.file ? `${d.pdf}.pdf` : undefined} target={link.file ? undefined : "_blank"} title={pdfTitle(link, d.title)}>
               {link.file ? <IconDownload /> : <IconPrint />} {link.file ? "PDF" : "Print"}
             </a>
+            {(d.delivered ?? []).map((f) => (
+              <a key={f.file} className="btn btn-ghost" href={withBase(`/docs/${f.file}`)} download={f.file} title={f.title}>
+                <IconDownload /> {f.label}
+              </a>
+            ))}
           </div>
         </li>
         );
