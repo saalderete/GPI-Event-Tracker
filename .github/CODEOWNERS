@@ -1,0 +1,14 @@
+# Who reviews what. GitHub requests these reviewers automatically on a pull
+# request that touches the path, and the ruleset on main requires one of
+# them to approve before the merge. The last matching line wins, so a
+# document's line replaces the catch-all for that file: its owner or the
+# portal lead can approve it. Nobody can approve their own pull request.
+
+# The portal itself: the site, its scripts, the registry and the team.
+*                                          @saalderete
+
+# Each Sprint 1 document, its owner, with the portal lead alongside.
+/content/sprint-1/market-research.mdx      @jmhuerta3 @saalderete
+/content/sprint-1/business-strategy.mdx    @MrOscarVargas @saalderete
+/content/sprint-1/project-charter.mdx      @esaenz517 @saalderete
+/content/evidence/                         @christianlopezjoshua-tech @saalderete

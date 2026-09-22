@@ -53,6 +53,10 @@ honest.
   the direct children of a `.prose-doc` column do it on their own. Never put
   it on an ancestor of something fixed or sticky, and never in the print
   views, which have no reveal scope by design.
+- `main` is protected. A change arrives as a pull request, the build
+  check must pass, and a reviewer named in `.github/CODEOWNERS` must
+  approve: the portal lead for the site, the document's owner or the
+  portal lead for a document. Nobody merges their own pull request.
 - Adding a sprint: MDX under `content/sprint-N/`, register the documents,
   set the sprint to `live` in `lib/sprints.ts` when its block starts and to
   `delivered` once its deadline has passed with its documents on the page, write the change log, run
