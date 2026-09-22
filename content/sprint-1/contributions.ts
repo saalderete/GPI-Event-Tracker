@@ -10,7 +10,11 @@ export interface Contribution {
 export const contributions: Contribution[] = [
   { member: "samuel", owned: null, reviewed: null },
   { member: "jazmin", owned: null, reviewed: null },
-  { member: "christian", owned: null, reviewed: null },
+  {
+  member: "christian",
+  owned: "Interview Evidence appendix and validation of supporting project data.",
+  reviewed: "Market Research and Business Strategy for consistency with the interview evidence."
+  },
   { member: "emmanuel", owned: null, reviewed: null },
   { member: "oscar", owned: null, reviewed: null }
 ];
