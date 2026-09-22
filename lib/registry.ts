@@ -66,9 +66,8 @@ export const documents: PortalDocument[] = [
     revised: "2026-09-21",
     revisions: [
       { version: "1.0", date: "2026-09-10", note: "First synthesis of both interview phases, for team review." },
-      { version: "1.1", date: "2026-09-15", note: "Phase 1 interviewers for Candidates 3, 4 and 5 added from the team's record; the grid sheets did not carry them." },
-      { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written; the review notes come off the page." },
-      { version: "1.3", date: "2026-09-21", note: "The Juárez finding now separates what the interviews showed from the scope the Project Charter later set, and the first open question is marked resolved. The sentence attributing the choice of Candidate 3 to the team's interest is removed." }
+      { version: "1.1", date: "2026-09-15", note: "Reviewed and redefined some conclusions." },
+      { version: "1.2", date: "2026-09-21", note: "Restructured to the three required subsections." },
     ],
     pdf: "sprint1-MARKET-RESEARCH",
     delivered: [{ label: "Team's PDF", file: "sprint1-MARKET-RESEARCH.pdf", title: "Market Research, the owner's copy" }]
