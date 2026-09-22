@@ -29,6 +29,10 @@ export const aiDisclosure = {
     {
       stage: "Summarizing or restructuring content the team produced (§10, permitted)",
       use: "Transcribed the 51 interview sheets into the structured evidence appendix, removing referral names. No interview content was generated or altered."
+    },
+    {
+      stage: "Suggesting stakeholder types the team then evaluates, and grammar and clarity checks (§10, permitted)",
+      use: "On the project manager's charter: drafted the stakeholder register from the groups the charter and the research already name, for the project manager to confirm, and corrected wording. The charter as delivered is kept as version 1.0."
     }
   ],
   notUsedFor: [
@@ -36,5 +40,5 @@ export const aiDisclosure = {
     "The individual reflections, the individual estimation memo, or any go/no-go reasoning (not permitted under §10)."
   ],
   changedOrRejected:
-    "On 2026-09-22 the team reviewed and approved the Market Research synthesis and the interview evidence appendix as written, and the Business Strategy with its review notes removed, the candidate objective adopted as the objective, and the measures' targets deferred to the Sprint 2 business case. The drafted Project Charter was replaced by the team's own charter, written by the project manager and published as delivered." as string | null
+    "On 2026-09-21 the team reviewed and approved the Market Research synthesis and the interview evidence appendix as written, and the Business Strategy with its review notes removed, the candidate objective adopted as the objective, and the measures' targets deferred to the Sprint 2 business case. The drafted Project Charter was replaced by the team's own charter, written by the project manager and published as delivered." as string | null
 };

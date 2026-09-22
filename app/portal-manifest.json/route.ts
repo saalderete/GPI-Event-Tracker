@@ -11,7 +11,7 @@ export const dynamic = "force-static";
 export function GET() {
   const slugOf = (n: number) => sprints.find((s) => s.number === n)?.slug ?? `sprint-${n}`;
   const body = {
-    site: { name: site.name, short: site.short, repo: site.repo },
+    site: { name: site.name, short: site.short, repo: site.repo, timezone: site.timezone },
     build: { at: build.at, commit: build.commit },
     sprints: sprints.map((s) => ({ number: s.number, slug: s.slug, status: s.status, due: s.due })),
     documents: documents.map((d) => ({

@@ -24,6 +24,18 @@ const browser = await chromium.launch(process.env.PW_EXECUTABLE ? { executablePa
 const page = await browser.newPage({ colorScheme: "light", viewport: { width: 1100, height: 1400 } });
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+// The build stamp in the site's own timezone (the footer on the web does the
+// same), so a build late on the due date does not read as the day after.
+const stamp = (iso) =>
+  new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZone: manifest.site.timezone ?? "America/Denver",
+    timeZoneName: "short"
+  }).format(new Date(iso));
 const style = `font-family: 'IBM Plex Mono', Menlo, monospace; font-size: 7.5pt; color: #666; width: 100%; padding: 0 0.75in;`;
 
 let n = 0;
@@ -48,7 +60,7 @@ for (const d of manifest.documents) {
     preferCSSPageSize: true,
     displayHeaderFooter: true,
     headerTemplate: `<div style="${style} display:flex; justify-content:space-between;"><span>${esc(manifest.site.name)}, Sprint ${d.sprint}: ${esc(d.title)}, v${esc(d.version)}</span><span>Revised ${esc(d.revised)}</span></div>`,
-    footerTemplate: `<div style="${style} display:flex; justify-content:space-between;"><span>Built ${esc(manifest.build.at.slice(0, 10))}${manifest.build.commit ? ", commit " + esc(manifest.build.commit.slice(0, 7)) : ""}</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>`,
+    footerTemplate: `<div style="${style} display:flex; justify-content:space-between;"><span>Built ${esc(stamp(manifest.build.at))}${manifest.build.commit ? ", commit " + esc(manifest.build.commit.slice(0, 7)) : ""}</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>`,
     margin: { top: "0.8in", bottom: "0.85in", left: "0.75in", right: "0.75in" }
   });
   await copyFile(file, join(root, "public", "pdf", `${d.pdf}.pdf`));

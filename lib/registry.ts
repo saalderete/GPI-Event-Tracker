@@ -47,13 +47,13 @@ export const documents: PortalDocument[] = [
       "Five candidate problems, 51 customer interviews in two phases, and how the team narrowed to one.",
     version: "1.2",
     status: "final",
-    owner: null,
+    owner: "jazmin",
     reviewers: [],
-    revised: "2026-09-22",
+    revised: "2026-09-21",
     revisions: [
       { version: "1.0", date: "2026-09-10", note: "First synthesis of both interview phases, for team review." },
       { version: "1.1", date: "2026-09-15", note: "Phase 1 interviewers for Candidates 3, 4 and 5 added from the team's record; the grid sheets did not carry them." },
-      { version: "1.2", date: "2026-09-22", note: "Reviewed and approved by the team as written; the review notes come off the page." }
+      { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written; the review notes come off the page." }
     ],
     pdf: "sprint-1-market-research"
   },
@@ -67,10 +67,10 @@ export const documents: PortalDocument[] = [
     status: "final",
     owner: null,
     reviewers: [],
-    revised: "2026-09-22",
+    revised: "2026-09-21",
     revisions: [
       { version: "0.1", date: "2026-09-10", note: "Structure and research-backed sections drafted; business objective pending team input." },
-      { version: "1.0", date: "2026-09-22", note: "Reviewed and approved by the team. The review notes come off the page, the candidate objective stands as the objective, and the measures' targets are set in the Sprint 2 business case." }
+      { version: "1.0", date: "2026-09-21", note: "Reviewed and approved by the team. The review notes come off the page, the candidate objective stands as the objective, and the measures' targets are set in the Sprint 2 business case." }
     ],
     pdf: "sprint-1-business-strategy"
   },
@@ -79,19 +79,18 @@ export const documents: PortalDocument[] = [
     sprint: 1,
     title: "Project Charter",
     kind: "document",
-    summary: "Business objectives, scope boundary, constraints, assumptions and success criteria, as set by the project manager. Delivered as a PDF; this page is its cover.",
-    version: "1.0",
+    summary: "Business objectives, scope boundary, constraints, assumptions, stakeholder register and success criteria, as set by the project manager.",
+    version: "1.1",
     status: "final",
     owner: "emmanuel",
     reviewers: [],
-    revised: "2026-09-22",
+    revised: "2026-09-21",
     revisions: [
       { version: "0.1", date: "2026-09-10", note: "Structure drafted with the facts on record; sections needing team decisions are marked." },
-      { version: "1.0", date: "2026-09-22", note: "The team's own charter, written by the project manager and dated 10 September 2026, replaces the drafted structure. Published as delivered, as a PDF." }
+      { version: "1.0", date: "2026-09-21", note: "The team's own charter, written by the project manager and dated 10 September 2026, replaces the drafted structure. Published as delivered, as a PDF." },
+      { version: "1.1", date: "2026-09-21", note: "The full text moves onto the page and the PDF is printed from it, as the guidelines require. A stakeholder register is added, drafted from the groups the charter already names, for the project manager to confirm. Wording corrected. The charter as delivered stays linked as version 1.0." }
     ],
-    pdf: "sprint-1-project-charter",
-    source: "upload",
-    file: "sprint-1-project-charter.pdf"
+    pdf: "sprint-1-project-charter"
   },
   {
     slug: "evidence",
@@ -101,13 +100,13 @@ export const documents: PortalDocument[] = [
     summary: "All 51 interview sheets from both phases, as structured records: role, date, takeaway and quotes.",
     version: "1.2",
     status: "final",
-    owner: null,
+    owner: "samuel",
     reviewers: [],
-    revised: "2026-09-22",
+    revised: "2026-09-21",
     revisions: [
       { version: "1.0", date: "2026-09-10", note: "Transcribed from the Phase 1 and Phase 2 interview sheets. Referral names removed." },
       { version: "1.1", date: "2026-09-15", note: "Interviewer attributed on the sixteen Phase 1 grid sheets (Candidates 3, 4 and 5) from the team's record." },
-      { version: "1.2", date: "2026-09-22", note: "Reviewed and approved by the team as written." }
+      { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written." }
     ],
     pdf: "sprint-1-interview-evidence"
   }
