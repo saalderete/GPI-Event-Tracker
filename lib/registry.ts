@@ -101,7 +101,7 @@ export const documents: PortalDocument[] = [
     summary: "All 51 interview sheets from both phases, as structured records: role, date, takeaway and quotes.",
     version: "1.2",
     status: "final",
-    owner: null,
+    owner: "christian",
     reviewers: [],
     revised: "2026-09-22",
     revisions: [
