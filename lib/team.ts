@@ -33,12 +33,12 @@ export const team: Member[] = [
     photo: null
   },
   {
-    id: "christian",
-    name: "Christian Lopez-Matulessy",
-    role: null,
-    owns: null,
-    bio: "Christian, 21, is a computer science student at UTEP, graduating in December 2026.",
-    photo: null
+  id: "christian",
+  name: "Christian Lopez-Matulessy",
+  role: "Evidence & Validation Lead",
+  owns: "The Interview Evidence appendix and the project's evidence trail: interview records, attribution, privacy, and traceability into downstream project decisions.",
+  bio: "Christian, 21, is a computer science student at UTEP, graduating in December 2026.",
+  photo: null
   },
   {
     id: "emmanuel",
