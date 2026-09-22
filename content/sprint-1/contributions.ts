@@ -12,7 +12,7 @@ export const contributions: Contribution[] = [
   { member: "jazmin", owned: "The Market Research. Phase 1 Candidate 3 interviews and Phase 2 Candidate 2 and Candidate 3 interviews.", reviewed: "Interview Evidence for consistency with the Market Research findings, interview counts, and supporting evidence." },
   {
   member: "christian",
-  owned: "Interview Evidence appendix and validation of supporting project data.",
+  owned: "Interview Evidence appendix and validation of supporting project data. Phase 1 Candidate 5 interviews and Phase 2 Candidate 2 interviews.",
   reviewed: "Market Research and Business Strategy for consistency with the interview evidence."
   },
   { member: "emmanuel", owned: "The Project Charter. Phase 1 Candidate 1 interviews and Phase 2 Candidate 3 interviews.", reviewed: "Market Research and Business Strategy for consistency with the Project Charter and final scope decisions." },
