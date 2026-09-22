@@ -61,6 +61,9 @@ export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
           </dl>
           <div className="flex flex-wrap items-center gap-2 sm:ml-auto">
             {upload ? <DocViewer href={link.href} title={doc.title} label="Open the PDF" download={`${doc.pdf}.pdf`} /> : null}
+            {(doc.delivered ?? []).map((f) => (
+              <DocViewer key={f.file} href={withBase(`/docs/${f.file}`)} title={f.title} label={f.label} download={f.file} variant="ghost" />
+            ))}
             <PdfMenu link={link} file={`${doc.pdf}.pdf`} printHref={printHref} title={doc.title} upload={upload} />
           </div>
         </div>

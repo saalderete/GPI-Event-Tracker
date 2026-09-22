@@ -6,7 +6,6 @@ import { SprintSubnav } from "@/components/SprintSubnav";
 import { DocLayout } from "@/components/DocLayout";
 import { EvidenceExplorer } from "@/components/EvidenceExplorer";
 import { CandidateLegend } from "@/components/CandidateLegend";
-import { OriginalSheets } from "@/components/OriginalSheets";
 import { sprints, sprintBySlug } from "@/lib/sprints";
 import { documents, documentsForSprint, findDocument } from "@/lib/registry";
 import { docModules } from "@/lib/docs";
@@ -41,9 +40,6 @@ export default async function DocumentPage({ params }: { params: Promise<{ sprin
         <SprintSubnav sprint={s} docs={docs} />
         <DocLayout sprint={s} doc={d} toc={[]} wide>
           <CandidateLegend />
-          <div className="mt-6">
-            <OriginalSheets />
-          </div>
           <div className="mt-10">
             <EvidenceExplorer data={interviews} />
           </div>

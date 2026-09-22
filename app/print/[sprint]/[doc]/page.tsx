@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { OriginalSheets } from "@/components/OriginalSheets";
 import { InterviewCard } from "@/components/InterviewCard";
 import { sprints, sprintBySlug } from "@/lib/sprints";
 import { documents, findDocument, statusLabel } from "@/lib/registry";
@@ -28,7 +27,6 @@ export default async function PrintPage({ params }: { params: Promise<{ sprint: 
   if (d.slug === "evidence") {
     body = (
       <div className="space-y-10">
-        <OriginalSheets print />
         <section>
           <h2 className="display text-[16pt]">The five candidates</h2>
           <table className="mt-3 w-full text-[9.5pt]">
@@ -120,6 +118,11 @@ export default async function PrintPage({ params }: { params: Promise<{ sprint: 
         </dl>
       </header>
       {body}
+      {d.delivered?.length ? (
+        <p className="meta mt-8 text-[8.5pt]">
+          Delivered by the team: {d.delivered.map((f) => `${f.title} (${publicUrl ? `${publicUrl}/docs/${f.file}` : `/docs/${f.file}`})`).join("; ")}.
+        </p>
+      ) : null}
       <footer className="mt-10 border-t border-border pt-3">
         <p className="meta text-[8pt]">
           Generated from the portal source at build time. The web page and this PDF are two renders of the same document.

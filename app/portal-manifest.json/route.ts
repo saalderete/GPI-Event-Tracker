@@ -26,6 +26,7 @@ export function GET() {
       pdf: d.pdf,
       source: d.source ?? "site",
       file: d.file ?? null,
+      delivered: (d.delivered ?? []).map((f) => f.file),
       page: `/${slugOf(d.sprint)}/${d.slug}/`,
       print: `/print/${slugOf(d.sprint)}/${d.slug}/`
     })),

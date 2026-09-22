@@ -14,6 +14,18 @@ export interface Revision {
   note: string;
 }
 
+/** A file the team delivered alongside a document: the owner's own PDF, a
+ *  signed copy, the interview sheets. It lives in public/docs/ and the page
+ *  offers it as a "Team's PDF" button that opens the viewer. */
+export interface DeliveredFile {
+  /** Button label on the page. */
+  label: string;
+  /** File name under public/docs/. */
+  file: string;
+  /** What the viewer calls it. */
+  title: string;
+}
+
 export interface PortalDocument {
   /** URL segment under the sprint, e.g. market-research */
   slug: string;
@@ -35,6 +47,8 @@ export interface PortalDocument {
   source?: DocSource;
   /** For a delivered document: the file name under public/docs/. */
   file?: string;
+  /** Files the team delivered alongside the document, shown as Team's PDF buttons. */
+  delivered?: DeliveredFile[];
 }
 
 export const documents: PortalDocument[] = [
@@ -56,7 +70,8 @@ export const documents: PortalDocument[] = [
       { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written; the review notes come off the page." },
       { version: "1.3", date: "2026-09-21", note: "The Juárez finding now separates what the interviews showed from the scope the Project Charter later set, and the first open question is marked resolved. The sentence attributing the choice of Candidate 3 to the team's interest is removed." }
     ],
-    pdf: "sprint-1-market-research"
+    pdf: "sprint-1-market-research",
+    delivered: [{ label: "Team's PDF", file: "sprint-1-market-research-team.pdf", title: "Market Research, the owner's copy" }]
   },
   {
     slug: "business-strategy",
@@ -93,7 +108,8 @@ export const documents: PortalDocument[] = [
       { version: "1.1", date: "2026-09-21", note: "The full text moves onto the page and the PDF is printed from it, as the guidelines require. A stakeholder register is added, drafted from the groups the charter already names, for the project manager to confirm. Wording corrected. The charter as delivered stays linked as version 1.0." },
       { version: "1.2", date: "2026-09-21", note: "The project manager's final charter, signed 21 September: his own stakeholder table replaces the drafted register, the sections follow his order, and the signed file is linked alongside version 1.0." }
     ],
-    pdf: "sprint-1-project-charter"
+    pdf: "sprint-1-project-charter",
+    delivered: [{ label: "Team's PDF", file: "sprint-1-project-charter-signed.pdf", title: "Project Charter, signed by the project manager on Sep 21, 2026" }]
   },
   {
     slug: "evidence",
@@ -112,7 +128,11 @@ export const documents: PortalDocument[] = [
       { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written." },
       { version: "1.3", date: "2026-09-21", note: "The team's original Phase 1 and Phase 2 interview sheets are linked from the page as PDFs, with the referral names redacted." }
     ],
-    pdf: "sprint-1-interview-evidence"
+    pdf: "sprint-1-interview-evidence",
+    delivered: [
+      { label: "Team's PDF: Phase 1", file: "sprint-1-phase-1-interviews.pdf", title: "Phase 1 interview sheets, referral names redacted" },
+      { label: "Team's PDF: Phase 2", file: "sprint-1-phase-2-interviews.pdf", title: "Phase 2 interview sheets, referral names redacted" }
+    ]
   }
 ];
 

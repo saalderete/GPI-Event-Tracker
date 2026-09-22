@@ -10,7 +10,7 @@ import { IconDownload, IconExternal, IconFile } from "./Icons";
 // on iPhones and downloads on Android). Without scripts it is that link
 // everywhere. The frame is mounted only while the dialog is open, so the
 // PDF is not fetched until asked for.
-export function DocViewer({ href, title, label, download }: { href: string; title: string; label: string; download: string }) {
+export function DocViewer({ href, title, label, download, variant = "primary" }: { href: string; title: string; label: string; download: string; variant?: "primary" | "ghost" }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const opener = useRef<HTMLAnchorElement>(null);
   const [open, setOpen] = useState(false);
@@ -36,7 +36,7 @@ export function DocViewer({ href, title, label, download }: { href: string; titl
 
   return (
     <>
-      <a ref={opener} className="btn btn-primary" href={href} target="_blank" rel="noopener" onClick={show} title={`Open ${title}`}>
+      <a ref={opener} className={`btn ${variant === "ghost" ? "btn-ghost" : "btn-primary"}`} href={href} target="_blank" rel="noopener" onClick={show} title={`Open ${title}`}>
         <IconFile />
         {label}
       </a>
