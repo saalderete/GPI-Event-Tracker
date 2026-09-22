@@ -15,7 +15,9 @@ export const contributions: Contribution[] = [
   owned: "Interview Evidence appendix and validation of supporting project data.",
   reviewed: "Market Research and Business Strategy for consistency with the interview evidence."
   },
-  { member: "emmanuel", owned: null, reviewed: null },
+  { member: "emmanuel", 
+    owned: "The Project Charter written as the project manager and delivered to the team.", 
+    reviewed: "Interview evidence appendix and Market Research" },
   { member: "oscar", owned: null, reviewed: null }
 ];
 

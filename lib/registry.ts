@@ -84,10 +84,10 @@ export const documents: PortalDocument[] = [
     status: "final",
     owner: "emmanuel",
     reviewers: [],
-    revised: "2026-09-22",
+    revised: "2026-09-21",
     revisions: [
-      { version: "0.1", date: "2026-09-10", note: "Structure drafted with the facts on record; sections needing team decisions are marked." },
-      { version: "1.0", date: "2026-09-22", note: "The team's own charter, written by the project manager and dated 10 September 2026, replaces the drafted structure. Published as delivered, as a PDF." }
+      { version: "1.0", date: "2026-09-10", note: "Structure drafted with the facts on record; sections needing team decisions are marked." },
+      { version: "1.0", date: "2026-09-19", note: "The team's own charter, written by the project manager and dated 10 September 2026, replaces the drafted structure. Published as delivered, as a PDF." }
     ],
     pdf: "sprint-1-project-charter",
     source: "upload",
