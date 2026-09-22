@@ -29,7 +29,7 @@ export const team: Member[] = [
     name: "Jazmin Huerta",
     role: "Market Research Lead",
     owns: "The Market Research.",
-    bio: null,
+    bio: "Jazmin, 23, is a masters in software engineering student at UTEP, graduating in December 2026.",
     photo: null
   },
   {

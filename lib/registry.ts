@@ -70,8 +70,8 @@ export const documents: PortalDocument[] = [
       { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written; the review notes come off the page." },
       { version: "1.3", date: "2026-09-21", note: "The Juárez finding now separates what the interviews showed from the scope the Project Charter later set, and the first open question is marked resolved. The sentence attributing the choice of Candidate 3 to the team's interest is removed." }
     ],
-    pdf: "sprint-1-market-research",
-    delivered: [{ label: "Team's PDF", file: "sprint-1-market-research-team.pdf", title: "Market Research, the owner's copy" }]
+    pdf: "sprint1-MARKET-RESEARCH",
+    delivered: [{ label: "Team's PDF", file: "sprint1-MARKET-RESEARCH.pdf", title: "Market Research, the owner's copy" }]
   },
   {
     slug: "business-strategy",
