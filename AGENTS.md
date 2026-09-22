@@ -54,5 +54,6 @@ honest.
   it on an ancestor of something fixed or sticky, and never in the print
   views, which have no reveal scope by design.
 - Adding a sprint: MDX under `content/sprint-N/`, register the documents,
-  flip the sprint to `live` in `lib/sprints.ts`, write the change log, run
+  set the sprint to `live` in `lib/sprints.ts` when its block starts and to
+  `delivered` once its deadline has passed with its documents on the page, write the change log, run
   `npm run ship`, push to `main`.

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { sprints } from "@/lib/sprints";
+import { sprints, statusWord, type SprintStatus } from "@/lib/sprints";
 import { site } from "@/lib/site";
 import { fmtDay } from "@/lib/format";
 import { ThemeControls } from "./ThemeControls";
@@ -57,7 +57,7 @@ export function Rail() {
     sub?: string;
     icon?: React.ReactNode;
     num?: number;
-    live?: boolean;
+    state?: SprintStatus;
     gapBefore?: boolean;
   };
   const items: Item[] = [
@@ -67,9 +67,9 @@ export function Rail() {
       key: s.slug,
       href: `/${s.slug}/`,
       label: `Sprint ${s.number}`,
-      sub: s.status === "live" ? "Live" : `Due ${fmtDay(s.due)}`,
+      sub: s.status === "upcoming" ? `Due ${fmtDay(s.due)}` : statusWord[s.status],
       num: s.number,
-      live: s.status === "live",
+      state: s.status,
       gapBefore: i === 0
     }))
   ];
@@ -106,7 +106,7 @@ export function Rail() {
 
         {placed.map((it) => {
           const active = isActive(it.href);
-          const cls = ["rail-item", "rail-link", active ? "active" : "", it.num ? (it.live ? "is-live" : "is-upcoming") : ""]
+          const cls = ["rail-item", "rail-link", active ? "active" : "", it.num && it.state ? `is-${it.state}` : ""]
             .filter(Boolean)
             .join(" ");
           return (

@@ -4,7 +4,7 @@ import { Spine } from "./Spine";
 import { StatusBadge } from "./StatusBadge";
 import { site } from "@/lib/site";
 import type { PortalDocument } from "@/lib/registry";
-import type { Sprint } from "@/lib/sprints";
+import { statusWord, type Sprint } from "@/lib/sprints";
 import { interviews, candidates } from "@/lib/evidence";
 import { fmtDate } from "@/lib/format";
 import { withBase } from "@/lib/base";
@@ -16,7 +16,7 @@ import { PdfButtons } from "./PdfButtons";
 // sticky note per document, and every PDF along the bottom.
 const tilts = ["-1.3deg", "0.9deg", "-0.6deg", "1.1deg"];
 
-export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocument[] }) {
+export function BoardHome({ current, latest, docs }: { current: Sprint; latest: Sprint; docs: PortalDocument[] }) {
   return (
     <>
       <section className="board-row" aria-labelledby="problem">
@@ -51,6 +51,23 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
         <Spine />
       </section>
 
+      {current.number !== latest.number ? (
+        <section className="board-row" aria-labelledby="now">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2" data-reveal>
+            <h2 id="now" className="marker">
+              <Link href={`/${current.slug}/`}>
+                Sprint {current.number}: {current.title}
+              </Link>
+            </h2>
+            <span className="badge badge-live">{statusWord[current.status]}</span>
+          </div>
+          <p className="board-lede mt-3" data-reveal>
+            In progress, due {fmtDate(current.due)}.{current.planned.length ? ` Planned: ${current.planned.join("; ")}.` : ""}
+            {current.plannedNote ? ` ${current.plannedNote}` : ""}
+          </p>
+        </section>
+      ) : null}
+
       <section className="board-row" aria-labelledby="live-now">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2" data-reveal>
           <h2 id="live-now" className="marker">
@@ -58,7 +75,7 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
               Sprint {latest.number}: {latest.title}
             </Link>
           </h2>
-          <span className="badge badge-live">Live</span>
+          <span className={`badge ${latest.status === "live" ? "badge-live" : "badge-accent"}`}>{statusWord[latest.status]}</span>
         </div>
         <ul className="notes mt-6">
           {docs.map((d, i) => {
@@ -80,6 +97,11 @@ export function BoardHome({ latest, docs }: { latest: Sprint; docs: PortalDocume
                 <a href={link.href} download={link.file ? `${d.pdf}.pdf` : undefined} target={link.file ? undefined : "_blank"} title={pdfTitle(link, d.title)}>
                   {link.file ? "PDF" : "Print"}
                 </a>
+                {(d.delivered ?? []).map((f) => (
+                  <a key={f.file} href={withBase(`/docs/${f.file}`)} download={f.file} title={f.title}>
+                    {f.label}
+                  </a>
+                ))}
               </div>
             </li>
             );

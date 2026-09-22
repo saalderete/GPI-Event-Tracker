@@ -1,6 +1,8 @@
-// The semester, from the Blackboard schedule. A sprint's page goes live when
-// the team publishes it; until then its circle on the rail is hollow.
-export type SprintStatus = "live" | "upcoming";
+// The semester, from the Blackboard schedule. A sprint is upcoming until its
+// block starts, live while the team works in it (its page carries the plan
+// and fills as documents are published), and delivered once its deadline has
+// passed with its documents on the page. Earlier pages never close.
+export type SprintStatus = "delivered" | "live" | "upcoming";
 
 export interface Sprint {
   number: number;
@@ -24,7 +26,7 @@ export const sprints: Sprint[] = [
     number: 1,
     slug: "sprint-1",
     title: "Market research, business strategy, project charter",
-    status: "live",
+    status: "delivered",
     start: "2026-08-25",
     due: "2026-09-21T23:59:00-06:00",
     demo: "2026-09-22",
@@ -35,7 +37,7 @@ export const sprints: Sprint[] = [
     number: 2,
     slug: "sprint-2",
     title: "Business case, estimation, ROI",
-    status: "upcoming",
+    status: "live",
     start: "2026-09-22",
     due: "2026-10-05T23:59:00-06:00",
     demo: "2026-10-06",
@@ -95,4 +97,10 @@ export const sprints: Sprint[] = [
 
 export const sprintBySlug = (slug: string) => sprints.find((s) => s.slug === slug);
 export const sprintByNumber = (n: number) => sprints.find((s) => s.number === n);
-export const liveSprints = () => sprints.filter((s) => s.status === "live");
+/** Delivered or live: the page exists and is linked. */
+export const isPublished = (s: Sprint) => s.status !== "upcoming";
+export const liveSprints = () => sprints.filter(isPublished);
+/** The sprint in progress, or the last delivered one between blocks. */
+export const currentSprint = () =>
+  sprints.find((s) => s.status === "live") ?? [...sprints].reverse().find((s) => s.status === "delivered") ?? sprints[0];
+export const statusWord: Record<SprintStatus, string> = { delivered: "Delivered", live: "Live", upcoming: "Upcoming" };

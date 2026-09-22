@@ -5,8 +5,9 @@ import { Shell } from "@/components/Shell";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SprintSubnav } from "@/components/SprintSubnav";
 import { SprintOneOverview } from "@/components/SprintOneOverview";
+import { DocumentList } from "@/components/DocumentList";
 import { IconArrow } from "@/components/Icons";
-import { sprints, sprintBySlug } from "@/lib/sprints";
+import { sprints, sprintBySlug, isPublished, statusWord } from "@/lib/sprints";
 import { documentsForSprint } from "@/lib/registry";
 import { fmtDate, fmtDateTime } from "@/lib/format";
 
@@ -27,19 +28,19 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
   const s = sprintBySlug(sprint);
   if (!s) notFound();
   const docs = documentsForSprint(s.number);
-  const live = s.status === "live";
+  const published = isPublished(s);
   const previous = sprints.find((x) => x.number === s.number - 1);
   const next = sprints.find((x) => x.number === s.number + 1);
 
   return (
     <Shell>
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: `Sprint ${s.number}` }]} />
-      {live ? <SprintSubnav sprint={s} docs={docs} /> : null}
+      {published && docs.length ? <SprintSubnav sprint={s} docs={docs} /> : null}
 
       <header className="mb-12" data-reveal>
         <div className="flex flex-wrap items-center gap-3">
           <p className="eyebrow">Sprint {s.number}</p>
-          <span className={`badge ${live ? "badge-live" : "badge-outline"}`}>{live ? "Live" : "Upcoming"}</span>
+          <span className={`badge ${s.status === "live" ? "badge-live" : s.status === "delivered" ? "badge-accent" : "badge-outline"}`}>{statusWord[s.status]}</span>
         </div>
         <h1 className="display mt-3 text-[2.15rem] sm:text-[3rem] lg:text-[3.4rem]">{s.title}</h1>
         <dl className="meta mt-5 flex flex-wrap gap-x-6 gap-y-1">
@@ -60,16 +61,16 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
         </dl>
       </header>
 
-      {live ? (
-        s.number === 1 ? (
-          <SprintOneOverview sprint={s} docs={docs} />
-        ) : null
+      {published && s.number === 1 ? (
+        <SprintOneOverview sprint={s} docs={docs} />
       ) : (
         <section className="max-w-[64ch]">
+          {published && docs.length ? <DocumentList sprint={s} docs={docs} /> : null}
           <div className="prose-doc">
             <p>
-              This sprint has not started. Its page goes live when the sprint concludes, and everything published before it stays
-              exactly where it is.
+              {s.status === "live"
+                ? "This sprint is in progress. Its documents are published here as the sprint concludes, and everything published before it stays exactly where it is."
+                : "This sprint has not started. Its page goes live when the sprint concludes, and everything published before it stays exactly where it is."}
             </p>
             {s.planned.length ? (
               <>

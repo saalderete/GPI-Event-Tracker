@@ -8,13 +8,14 @@ import { BoardHero } from "@/components/BoardHero";
 import { BoardHome } from "@/components/BoardHome";
 import { PdfButtons } from "@/components/PdfButtons";
 import { site } from "@/lib/site";
-import { sprints } from "@/lib/sprints";
+import { sprints, currentSprint, isPublished, statusWord } from "@/lib/sprints";
 import { documents } from "@/lib/registry";
 import { interviews, candidates } from "@/lib/evidence";
 
 export default function Home() {
-  const live = sprints.filter((s) => s.status === "live");
-  const latest = live.at(-1) ?? sprints[0];
+  // The sprint in progress, and the latest sprint with documents on its page.
+  const current = currentSprint();
+  const latest = [...sprints].reverse().find((s) => isPublished(s) && documents.some((d) => d.sprint === s.number)) ?? current;
   const docs = documents.filter((d) => d.sprint === latest.number);
 
   const words = (
@@ -25,7 +26,7 @@ export default function Home() {
   if (site.heroMode === "board") {
     return (
       <Shell hero={<BoardHero>{words}</BoardHero>} board>
-        <BoardHome latest={latest} docs={docs} />
+        <BoardHome current={current} latest={latest} docs={docs} />
       </Shell>
     );
   }
@@ -77,7 +78,7 @@ export default function Home() {
               Sprint {latest.number}: {latest.title}
             </Link>
           </h2>
-          <span className="badge badge-live">Live</span>
+          <span className={`badge ${latest.status === "live" ? "badge-live" : "badge-accent"}`}>{statusWord[latest.status]}</span>
         </div>
         <DocumentList sprint={latest} docs={docs} />
       </section>
