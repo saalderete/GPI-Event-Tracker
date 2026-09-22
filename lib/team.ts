@@ -37,7 +37,7 @@ export const team: Member[] = [
     name: "Christian Lopez-Matulessy",
     role: null,
     owns: null,
-    bio: null,
+    bio: "Christian, 21, is a computer science student at UTEP, graduating in December 2026.",
     photo: null
   },
   {
