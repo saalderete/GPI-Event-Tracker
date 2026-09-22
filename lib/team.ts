@@ -53,8 +53,8 @@ export const team: Member[] = [
     name: "Oscar Vargas",
     role: "Business Strategy Lead",
     owns: "The Business Strategy.",
-    bio: null,
-    photo: null
+    bio: "Oscar Vargas, is a computer science student at UTEP, graduating in Decemeber 2026",
+    photo: "/images/team/oscar.jpg"
   }
 ];
 
