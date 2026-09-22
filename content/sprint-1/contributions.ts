@@ -12,7 +12,7 @@ export const contributions: Contribution[] = [
   { member: "jazmin", owned: null, reviewed: null },
   {
   member: "christian",
-  owned: "Interview Evidence appendix and validation of supporting project data.",
+  owned: "Interview Evidence appendix and validation of supporting project data. Phase 1 Candidate 5 interviews and Phase 2 Candidate 2 interviews.",
   reviewed: "Market Research and Business Strategy for consistency with the interview evidence."
   },
   { member: "emmanuel", owned: null, reviewed: null },
