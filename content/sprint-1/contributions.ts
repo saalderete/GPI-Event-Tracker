@@ -1,6 +1,6 @@
 // Sprint 1 contribution statement (guidelines §9) and AI use disclosure
-// (§10). Owned/reviewed entries are placeholders until each member fills
-// theirs in; interview counts are from the sheets.
+// (§10). Owned/reviewed entries are as supplied by the team; interview
+// counts are from the sheets.
 export interface Contribution {
   member: string;
   owned: string | null;
@@ -8,15 +8,15 @@ export interface Contribution {
 }
 
 export const contributions: Contribution[] = [
-  { member: "samuel", owned: "Built and maintained the Living Project Portal, including site structure, visual design, document integration, PDF generation, and Render deployment.", reviewed: null },
-  { member: "jazmin", owned: "The Market Research. Phase 1 Candidate 3 interviews and Phase 2 Candidate 2 and Candidate 3 interviews.", reviewed: null },
+  { member: "samuel", owned: "Built and maintained the Living Project Portal, including site structure, visual design, document integration, PDF generation, and Render deployment.", reviewed: "Project Charter and Business Strategy for consistency with the Living Project Portal, final scope, and published document versions." },
+  { member: "jazmin", owned: "The Market Research. Phase 1 Candidate 3 interviews and Phase 2 Candidate 2 and Candidate 3 interviews.", reviewed: "Interview Evidence for consistency with the Market Research findings, interview counts, and supporting evidence." },
   {
   member: "christian",
   owned: "Interview Evidence appendix and validation of supporting project data.",
   reviewed: "Market Research and Business Strategy for consistency with the interview evidence."
   },
-  { member: "emmanuel", owned: "The Project Charter. Phase 1 Candidate 1 interviews and Phase 2 Candidate 3 interviews.", reviewed: null },
-  { member: "oscar", owned: "The Business Strategy. Phase 1 Candidate 4 interviews and Phase 2 Candidate 2 interviews.", reviewed: null }
+  { member: "emmanuel", owned: "The Project Charter. Phase 1 Candidate 1 interviews and Phase 2 Candidate 3 interviews.", reviewed: "Market Research and Business Strategy for consistency with the Project Charter and final scope decisions." },
+  { member: "oscar", owned: "The Business Strategy. Phase 1 Candidate 4 interviews and Phase 2 Candidate 2 interviews.", reviewed: "Project Charter and Market Research for alignment with the Business Strategy, success measures, and project objectives." }
 ];
 
 export const aiDisclosure = {

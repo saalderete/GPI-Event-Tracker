@@ -19,7 +19,7 @@ export const team: Member[] = [
   {
     id: "samuel",
     name: "Samuel Alderete",
-    role: "Portal lead",
+    role: "Portal Lead",
     owns: "The portal itself: the site and its design, the Home board, the palettes, the PDF pipeline and the deployment to Render.",
     bio: "Samuel, 25, is a computer science student at UTEP, graduating in December 2026.",
     photo: "/images/team/samuel.jpg"
@@ -27,7 +27,7 @@ export const team: Member[] = [
   {
     id: "jazmin",
     name: "Jazmin Huerta",
-    role: null,
+    role: "Market Research Lead",
     owns: "The Market Research.",
     bio: null,
     photo: null
@@ -35,7 +35,7 @@ export const team: Member[] = [
   {
   id: "christian",
   name: "Christian Lopez-Matulessy",
-  role: "Evidence & Validation Lead",
+  role: "Research Documentation Lead",
   owns: "The Interview Evidence appendix and validation of the project’s supporting data.",
   bio: "Christian, 21, is a computer science student at UTEP, graduating in December 2026.",
   photo: null
@@ -51,7 +51,7 @@ export const team: Member[] = [
   {
     id: "oscar",
     name: "Oscar Vargas",
-    role: null,
+    role: "Business Strategy Lead",
     owns: "The Business Strategy.",
     bio: null,
     photo: null
