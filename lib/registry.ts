@@ -45,7 +45,7 @@ export const documents: PortalDocument[] = [
     kind: "document",
     summary:
       "Five candidate problems, 51 customer interviews in two phases, and how the team narrowed to one.",
-    version: "1.2",
+    version: "1.3",
     status: "final",
     owner: "jazmin",
     reviewers: [],
@@ -53,7 +53,8 @@ export const documents: PortalDocument[] = [
     revisions: [
       { version: "1.0", date: "2026-09-10", note: "First synthesis of both interview phases, for team review." },
       { version: "1.1", date: "2026-09-15", note: "Phase 1 interviewers for Candidates 3, 4 and 5 added from the team's record; the grid sheets did not carry them." },
-      { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written; the review notes come off the page." }
+      { version: "1.2", date: "2026-09-21", note: "Reviewed and approved by the team as written; the review notes come off the page." },
+      { version: "1.3", date: "2026-09-21", note: "The Juárez finding now separates what the interviews showed from the scope the Project Charter later set, and the first open question is marked resolved. The sentence attributing the choice of Candidate 3 to the team's interest is removed." }
     ],
     pdf: "sprint-1-market-research"
   },
@@ -63,14 +64,15 @@ export const documents: PortalDocument[] = [
     title: "Business Strategy",
     kind: "document",
     summary: "The strategy-to-project chain: why this project earns the right to exist and what objective it serves.",
-    version: "1.0",
+    version: "1.1",
     status: "final",
-    owner: null,
+    owner: "oscar",
     reviewers: [],
     revised: "2026-09-21",
     revisions: [
       { version: "0.1", date: "2026-09-10", note: "Structure and research-backed sections drafted; business objective pending team input." },
-      { version: "1.0", date: "2026-09-21", note: "Reviewed and approved by the team. The review notes come off the page, the candidate objective stands as the objective, and the measures' targets are set in the Sprint 2 business case." }
+      { version: "1.0", date: "2026-09-21", note: "Reviewed and approved by the team. The review notes come off the page, the candidate objective stands as the objective, and the measures' targets are set in the Sprint 2 business case." },
+      { version: "1.1", date: "2026-09-21", note: "Owner assigned. Brought in line with the Project Charter: El Paso and Juárez, a feed personalized by interests, and paid featured listings as the monetization hypothesis. The charter's success criteria carried over as the first targets, with the business-case measures still set in Sprint 2. The scope risk reworded." }
     ],
     pdf: "sprint-1-business-strategy"
   },

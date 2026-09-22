@@ -8,15 +8,15 @@ export interface Contribution {
 }
 
 export const contributions: Contribution[] = [
-  { member: "samuel", owned: null, reviewed: null },
-  { member: "jazmin", owned: null, reviewed: null },
+  { member: "samuel", owned: "The portal: the site, its build and PDF pipeline, and the deployment. Phase 1 Candidate 2 interviews and Phase 2 Candidate 3 interviews.", reviewed: null },
+  { member: "jazmin", owned: "The Market Research. Phase 1 Candidate 3 interviews and Phase 2 Candidate 2 and Candidate 3 interviews.", reviewed: null },
   {
   member: "christian",
   owned: "Interview Evidence appendix and validation of supporting project data.",
   reviewed: "Market Research and Business Strategy for consistency with the interview evidence."
   },
-  { member: "emmanuel", owned: null, reviewed: null },
-  { member: "oscar", owned: null, reviewed: null }
+  { member: "emmanuel", owned: "The Project Charter. Phase 1 Candidate 1 interviews and Phase 2 Candidate 3 interviews.", reviewed: null },
+  { member: "oscar", owned: "The Business Strategy. Phase 1 Candidate 4 interviews and Phase 2 Candidate 2 interviews.", reviewed: null }
 ];
 
 export const aiDisclosure = {
@@ -44,5 +44,5 @@ export const aiDisclosure = {
     "The individual reflections, the individual estimation memo, or any go/no-go reasoning (not permitted under §10)."
   ],
   changedOrRejected:
-    "On 2026-09-21 the team reviewed and approved the Market Research synthesis and the interview evidence appendix as written, and the Business Strategy with its review notes removed, the candidate objective adopted as the objective, and the measures' targets deferred to the Sprint 2 business case. The drafted Project Charter was replaced by the team's own charter, written by the project manager and published as delivered." as string | null
+    "On 2026-09-21 the team reviewed and approved the Market Research synthesis and the interview evidence appendix as written, and the Business Strategy with its review notes removed, the candidate objective adopted as the objective, and the measures' targets deferred to the Sprint 2 business case. The drafted Project Charter was replaced by the team's own charter, written by the project manager and published as delivered. Later the same evening the Business Strategy was revised to version 1.1 to follow the scope the Project Charter sets: El Paso and Juárez, a feed personalized by interests, and paid featured listings as the monetization hypothesis, with the charter's success criteria carried over as the first targets. In the Market Research (version 1.3) the sentence attributing the choice of Candidate 3 to the team's interest was removed, and the Juárez finding now separates what the interviews showed from what the charter later decided." as string | null
 };

@@ -28,7 +28,7 @@ export const team: Member[] = [
     id: "jazmin",
     name: "Jazmin Huerta",
     role: null,
-    owns: null,
+    owns: "The Market Research.",
     bio: null,
     photo: null
   },
@@ -52,7 +52,7 @@ export const team: Member[] = [
     id: "oscar",
     name: "Oscar Vargas",
     role: null,
-    owns: null,
+    owns: "The Business Strategy.",
     bio: null,
     photo: null
   }
