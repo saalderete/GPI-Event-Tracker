@@ -36,7 +36,7 @@ export const team: Member[] = [
   id: "christian",
   name: "Christian Lopez-Matulessy",
   role: "Evidence & Validation Lead",
-  owns: "The Interview Evidence appendix and the project's evidence trail: interview records, attribution, privacy, and traceability into downstream project decisions.",
+  owns: "The Interview Evidence appendix and validation of the project’s supporting data.",
   bio: "Christian, 21, is a computer science student at UTEP, graduating in December 2026.",
   photo: null
   },
