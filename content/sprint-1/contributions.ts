@@ -8,7 +8,7 @@ export interface Contribution {
 }
 
 export const contributions: Contribution[] = [
-  { member: "samuel", owned: "The portal: the site, its build and PDF pipeline, and the deployment. Phase 1 Candidate 2 interviews and Phase 2 Candidate 3 interviews.", reviewed: null },
+  { member: "samuel", owned: "Built and maintained the Living Project Portal, including site structure, visual design, document integration, PDF generation, and Render deployment.", reviewed: null },
   { member: "jazmin", owned: "The Market Research. Phase 1 Candidate 3 interviews and Phase 2 Candidate 2 and Candidate 3 interviews.", reviewed: null },
   {
   member: "christian",
