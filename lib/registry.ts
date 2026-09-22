@@ -81,8 +81,8 @@ export const documents: PortalDocument[] = [
     sprint: 1,
     title: "Project Charter",
     kind: "document",
-    summary: "Business objectives, scope boundary, constraints, assumptions, stakeholder register and success criteria, as set by the project manager.",
-    version: "1.1",
+    summary: "Business objectives, scope boundary, constraints, assumptions, success criteria and stakeholders, as set and signed by the project manager.",
+    version: "1.2",
     status: "final",
     owner: "emmanuel",
     reviewers: [],
@@ -90,7 +90,8 @@ export const documents: PortalDocument[] = [
     revisions: [
       { version: "0.1", date: "2026-09-10", note: "Structure drafted with the facts on record; sections needing team decisions are marked." },
       { version: "1.0", date: "2026-09-21", note: "The team's own charter, written by the project manager and dated 10 September 2026, replaces the drafted structure. Published as delivered, as a PDF." },
-      { version: "1.1", date: "2026-09-21", note: "The full text moves onto the page and the PDF is printed from it, as the guidelines require. A stakeholder register is added, drafted from the groups the charter already names, for the project manager to confirm. Wording corrected. The charter as delivered stays linked as version 1.0." }
+      { version: "1.1", date: "2026-09-21", note: "The full text moves onto the page and the PDF is printed from it, as the guidelines require. A stakeholder register is added, drafted from the groups the charter already names, for the project manager to confirm. Wording corrected. The charter as delivered stays linked as version 1.0." },
+      { version: "1.2", date: "2026-09-21", note: "The project manager's final charter, signed 21 September: his own stakeholder table replaces the drafted register, the sections follow his order, and the signed file is linked alongside version 1.0." }
     ],
     pdf: "sprint-1-project-charter"
   },

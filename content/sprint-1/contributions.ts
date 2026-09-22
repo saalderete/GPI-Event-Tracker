@@ -36,7 +36,7 @@ export const aiDisclosure = {
     },
     {
       stage: "Suggesting stakeholder types the team then evaluates, and grammar and clarity checks (§10, permitted)",
-      use: "On the project manager's charter: drafted the stakeholder register from the groups the charter and the research already name, for the project manager to confirm, and corrected wording. The charter as delivered is kept as version 1.0."
+      use: "On the project manager's charter: drafted a stakeholder register from the groups the charter and the research already name, for the project manager to confirm, and corrected wording. The project manager replaced the draft with his own stakeholder table in the signed charter of 21 September (version 1.2); the wording corrections stand. Both delivered files are kept."
     }
   ],
   notUsedFor: [
