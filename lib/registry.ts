@@ -132,6 +132,23 @@ export const documents: PortalDocument[] = [
       { label: "Team's PDF: Phase 1", file: "sprint-1-phase-1-interviews.pdf", title: "Phase 1 interview sheets, referral names redacted" },
       { label: "Team's PDF: Phase 2", file: "sprint-1-phase-2-interviews.pdf", title: "Phase 2 interview sheets, referral names redacted" }
     ]
+  },
+  {
+    slug: "estimation-appendix",
+    sprint: 2,
+    title: "Estimation Appendix",
+    kind: "appendix",
+    summary: "How the team is sizing Release 1: the methods, the ranges and the reasoning. Part 1 takes the outside view, from the team's own experience and three similar products.",
+    version: "0.1",
+    status: "draft",
+    owner: null,
+    reviewers: [],
+    revised: "2026-09-24",
+    revisions: [
+      { version: "0.1", date: "2026-09-24", note: "Part 1, the team's completed worksheet 'A First Look at Your Project's Size', carried onto the page as written. The evidence column cites the interview records each capability rests on, and each comparator date is matched to the listed source that states it. Part 2, the two estimates, to follow." }
+    ],
+    pdf: "sprint-2-estimation-appendix",
+    delivered: [{ label: "Team's PDF", file: "sprint-2-estimation-starter.pdf", title: "Project Estimation Starter, Part 1: the team's worksheet as completed" }]
   }
 ];
 

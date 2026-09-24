@@ -1,0 +1,98 @@
+## What this appendix is
+
+The course asks for the estimation methods used, the ranges produced and the reasoning behind them. This page records them in the order the team produced them. Part 1, below, is the team's completed worksheet, "A First Look at Your Project's Size", which takes the outside view: the team's own experience and three similar products, as comparators for analogous estimation. Part 2, the two estimates, follows when the team completes it.
+
+The worksheet's entries are carried here as the team wrote them. Two columns were tightened for the page: the evidence column cites the records in the [interview evidence](/sprint-1/evidence/) that each capability rests on, and each date in the comparators is matched to the listed source that states it, with the gaps marked. The worksheet as delivered is the Team's PDF above.
+
+## Step 1: what Release 1 must do
+
+Written as what the system must do, not how, from the charter's in-scope items and the strongest needs from the interviews. The hidden-work key: T, testing; S, security or privacy; I, integration with other systems; D, data (collection, cleaning, migration); H, hosting and deployment; U, usability and accessibility; O, documentation or training.
+
+| # | Capability (what, not how) | Evidence (charter or interview) | Hidden work |
+| --- | --- | --- | --- |
+| 1 | An event organizer can upload events on the online platform | [Project Charter](/sprint-1/project-charter/), objective 1 (centralize events) and the in-scope calendar; [P2-C3-10](/sprint-1/evidence/#P2-C3-10) | U, O, D |
+| 2 | An event organizer can pay for featured events on the online platform by day and time. | [Project Charter](/sprint-1/project-charter/), objective 2 (monetize on event publications) and the in-scope monetization of published events | U, O, D, H |
+| 3 | Show a unified event calendar | Interviews (Phase 2): [P2-C3-01](/sprint-1/evidence/#P2-C3-01), [P2-C3-07](/sprint-1/evidence/#P2-C3-07), [P2-C3-10](/sprint-1/evidence/#P2-C3-10), [P2-C3-12](/sprint-1/evidence/#P2-C3-12); [Project Charter](/sprint-1/project-charter/), the in-scope centralized event calendar | T, D, H, U |
+| 4 | Events goers will be able to subscribe to events based on categories | Interviews: [P2-C3-11](/sprint-1/evidence/#P2-C3-11), [P2-C3-05](/sprint-1/evidence/#P2-C3-05) | D, U, I |
+| 5 | The system will show a personalized feed that shows events based on the user's interests | [Project Charter](/sprint-1/project-charter/), the in-scope feed personalized by interests; interviews [P2-C3-06](/sprint-1/evidence/#P2-C3-06), [P2-C3-11](/sprint-1/evidence/#P2-C3-11), [P2-C3-03](/sprint-1/evidence/#P2-C3-03), [P1-C3-02](/sprint-1/evidence/#P1-C3-02) | T, D, S |
+| 6 | The system will show an event feed listed by date | [Project Charter](/sprint-1/project-charter/), the in-scope event feed listed by date; interview [P2-C3-04](/sprint-1/evidence/#P2-C3-04) | D, U, T |
+| 7 | A user can save events they want to attend | Interview [P2-C3-02](/sprint-1/evidence/#P2-C3-02) | S, D, U |
+| 8 | An administrator can review and approve a submitted event before it appears publicly | [Project Charter](/sprint-1/project-charter/), constraints: uneven data availability, and event planners | S, D, T, O |
+
+## Step 2: the outside view, the team's own experience
+
+The most similar thing anyone on the team has built before.
+
+| Question | Answer |
+| --- | --- |
+| What was it? | KASAPro, the internal operations app Samuel built for KASA Contractors: job scheduling, route planning, and pricing. It is the closest match anyone on the team has built, a database-backed web app whose usefulness depends entirely on its records staying accurate and current, which is the same bet GPI is making on event data. |
+| How long was it expected to take? | One month |
+| How long did it take? | Three months |
+| What took longer than expected? | The pricing and routing comparison: the dual unload-site cost comparison with load-type filtering, which carries more rules than anything else in the app. Every new load type changed the comparison, so the logic kept being reworked after it was supposedly done. |
+
+## Step 3: the outside view, similar products
+
+Three real products that solve a problem close to GPI's, at least one small and at least one big, measured from the start of development to the first public release. Under each entry, a source check notes which of the listed sources states each figure.
+
+### Product A, small: Upcoming.org
+
+| Field | Entry |
+| --- | --- |
+| Product and company | Upcoming.org, a community event calendar started by Andy Baio as a side project. Bought by Yahoo! in 2005. |
+| Why it is similar to GPI | A city-by-city listing of what is happening, so people hear about events before they happen. The same job as GPI, built by one person with no budget. |
+| Development started | January 2003 (notes from Baio's talk "A Tale of Three .Orgs," PDX Web Innovators, 4 June 2008; no Baio-written source for the start date, so treat it as secondhand) |
+| First public release | 19 September 2003 (Baio's own launch post on waxy.org) |
+| Time to first release | About 9 months, worked nights and mornings around a full-time job. Baio's own verdict: "Rough site launched. Barely functional." |
+| What the first release included | Anyone could add events they were going to, in fixed categories; see who else was going; browse by metro area; a friends list; RSS feeds. No API, tagging, email or SMS until March 2005. |
+| Team size | One at launch. Baio kept his day job until the acquisition; two partners joined later. |
+| What worked | Supply came from attendees posting what they were going to, not from promoters. Self-promotion was "banned entirely for its first two years." A city did not need broad coverage to be useful: "only 2 or 3 individuals" were enough to make a college town work. |
+| What did not work | After the founders left Yahoo! at the end of 2007, "the social features that made Upcoming unique were minimized, or removed entirely," and "spam, like creeping kudzu, was left unchecked." By 2009 "the only people using Upcoming were event promoters and spammers." A Kickstarter-funded rebuild funded 30 May 2014 did not relaunch until March 2017, about 34 months. |
+| Sources | [waxy.org/2003/09/upcomingorg_lau/](https://waxy.org/2003/09/upcomingorg_lau/); [waxy.org/2013/04/the_death_of_upcomingorg/](https://waxy.org/2013/04/the_death_of_upcomingorg/); [stubborndreams.me/2008/07/31/a-brief-history-of-upcoming-dot-org-by-andy-baio/](https://stubborndreams.me/2008/07/31/a-brief-history-of-upcoming-dot-org-by-andy-baio/); [en.wikipedia.org/wiki/Upcoming](https://en.wikipedia.org/wiki/Upcoming) |
+
+**Source check.** The January 2003 start, the nine months, the nights and mornings around a day job, "only 2 or 3 individuals" and the October 2005 acquisition are in the 2008 write-up of Baio's talk. The 19 September 2003 launch is Baio's own launch post, confirmed by Wikipedia. The end-of-2007 departure, the minimized social features, the spam and the 2009 line are in Baio's 2013 post. Wikipedia dates the Kickstarter campaign's launch to 7 May 2014. Not stated in any listed source: the "banned entirely for its first two years" quote, "Rough site launched. Barely functional.", the March 2005 feature dates, the 30 May 2014 funding date and the March 2017 relaunch.
+
+### Product B, big: Do512
+
+| Field | Entry |
+| --- | --- |
+| Product and company | Do512.com is the Austin event discovery platform created by the DoStuff media network, run by local teams in 20 cities. |
+| Why it is similar to GPI | It serves as a discovery platform that helps people stay up to date with local events and places, which is what GPI will try to achieve. |
+| Development started | It started in Austin, TX, in 2006. ("Meet Courtney Goforth of Do512", Voyage Houston) |
+| First public release | 2006 ("The Story", Do512.com). They founded DoStuff in 2010, which let them expand to more cities. ("Innovation Nation: DoStuff Media", Austin Monthly) |
+| Time to first release | Do512's first release took 1 month after they first came up with the idea. ("Innovation Nation: DoStuff Media", Austin Monthly) |
+| What the first release included | It started as a website that listed all happy hours around Austin, but it then expanded to include all sorts of events. ("The Story", Do512.com) |
+| Team size | Two people at first (Jimmy Stewart and Scott Owens). Soon after, they recruited their girlfriends, so it became a team of 4. |
+| What worked | Broadening the scope of the website (including all types of events, not just happy hours). Dynamic listings. Adding more people to the team. External users (venues, artists, event organizers) could upload and update their own events, that ensured the list was accurate and exhaustive. Partnered with local venues to offer free tickets to users who would rsvp to their events, creating a lot of engagement. Creating their media DoStuff label to be able to use the same technology in other cities. |
+| What did not work | Having a smaller team of people. Having the scope of the site be so narrow. Static website, because it led to inaccuracy and outdated data. The first few years the business was not making money, it took them a few years to gain revenue. |
+| Sources | [crunchbase.com/organization/dostuff-media](https://www.crunchbase.com/organization/dostuff-media); [voyagehouston.com/interview/meet-courtney-goforth-do512-austin-texas/](https://voyagehouston.com/interview/meet-courtney-goforth-do512-austin-texas/); [austinmonthly.com/innovation-nation-dostuff-media/](https://www.austinmonthly.com/innovation-nation-dostuff-media/); [do512.com/p/do512s-10-year-anniversary-the-story](https://do512.com/p/do512s-10-year-anniversary-the-story) |
+
+**Source check.** The Voyage Houston interview states the 2006 start in Austin, the founders Jimmy Stewart and Scott Owens, and the happy-hours catalogue the site began as. The Austin Monthly article, Do512's own story page and Crunchbase refuse automated reading, so the one-month build, the team of four, the 2010 founding of DoStuff, the free-ticket partnerships and the revenue statement could not be checked from the portal; they stand on the worksheet's attribution to those pages.
+
+### Product C, big: Fever
+
+| Field | Entry |
+| --- | --- |
+| Product and company | Fever, founder by 4 individuals, is a personalized event discover web platform |
+| Why it is similar to GPI | Initially started as a event discovery for two cities, quickly grew into hundredths of cities/categories/events, matching out interest-based feed. |
+| Development started | 2012, New York, NY |
+| First public release | Released in 2014 simultaneously in New York and Madrid |
+| Time to first release | About 2 years. |
+| What the first release included | Personalized recommendations for entertainment, dining, and cultural events, live in two cities. |
+| Team size | 4 co-founders at launch |
+| What worked | Launching in two major cities (New York & Madrid) |
+| What did not work | Not documentation in the sources found. |
+| Sources | [feverup.com/en/mexico-city](https://feverup.com/en/mexico-city); [newsroom.feverup.com/en-AU/about/](https://newsroom.feverup.com/en-AU/about/); [preqin.com/data/profile/asset/fever-labs--inc-/140163](https://www.preqin.com/data/profile/asset/fever-labs--inc-/140163) |
+
+**Source check.** The Preqin profile states that Fever Labs was founded in 2014, is headquartered in New York, and has four founders (Pep Gomez, Alexandre Perez Casares, Francisco Hein and Ignacio Bachiller Strohlein). The two Fever pages state no dates, founders, cities or team size. Not stated in any listed source: the 2012 start, the Madrid launch, the two years to first release, and what the first release included.
+
+## Step 4: what the comparison says
+
+1. **Which hidden-work letter appears most often, and did the similar products struggle with it?** Data (D) appears the most often, which can be seen in all 8 capabilities. Do512 also struggled with static data which led to inaccurate and outdated listings. Upcoming.org also struggled with data quality and moderation, eventually dying out when unmoderated spam ruined the listings.
+2. **How long did the similar products take, with how many people, and what does that suggest?** Upcoming.org took roughly 9 months for a first release, with only one person. Do512.com took 1 month for the first release; initially it was two people, they then recruited two more people. Fever took about two years for the first release; there were four co-founders for the first release. Although we deployed a functional baseline website in one week after doing research, our comparables indicate that developing a production-ready first release would take about 6 to 12 months.
+3. **One practice to copy and one mistake to avoid.** Practice to copy: allow external users and organizers to directly submit and manage event content. Mistake to avoid: avoid static listings since it leads to inaccuracy and outdated data.
+
+**Our comparables suggest a first release would take 6 to 12 months with a team of 5.**
+
+## What comes next
+
+Part 2 of the estimation produces the two estimates. Step 1 becomes the user stories, and Steps 2 and 3 are the comparators for the analogous estimate. The ranges, and the reasoning behind them, are added to this page when the team has them.
