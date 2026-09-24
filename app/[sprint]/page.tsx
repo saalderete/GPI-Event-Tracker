@@ -66,8 +66,16 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
       {published && s.number === 1 ? (
         <SprintOneOverview sprint={s} docs={docs} />
       ) : (
+        <>
+          {published && docs.length ? (
+            <section className="mb-14" aria-labelledby="documents" data-reveal>
+              <h2 id="documents" className="display mb-5 text-[1.6rem] sm:text-[1.9rem]">
+                Documents
+              </h2>
+              <DocumentList sprint={s} docs={docs} />
+            </section>
+          ) : null}
         <section className="max-w-[64ch]">
-          {published && docs.length ? <DocumentList sprint={s} docs={docs} /> : null}
           <div className="prose-doc">
             <p>
               {s.status === "live"
@@ -93,6 +101,7 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
             ) : null}
           </div>
         </section>
+        </>
       )}
       {published && s.number === 2 ? <AiDisclosure disclosure={sprintTwoDisclosure} /> : null}
 
