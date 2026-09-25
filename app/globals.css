@@ -1278,3 +1278,75 @@ html[data-js] .reveal-scope .prose-doc > .is-in {
   body { background: #fff; color: #111; }
   .prose-doc { max-width: none; }
 }
+
+/* ============ EASTER EGG: TETRIS ============
+   Five quick clicks on nothing open it (components/Tetris.tsx). Drawn in
+   the visitor's palette: ink for what has landed, the accent for what is
+   falling. */
+.tetris {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  border: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  width: min(96vw, 520px);
+  max-height: 96vh;
+  overflow: auto;
+}
+.tetris::backdrop { background: rgba(0, 0, 0, 0.55); }
+.tetris-inner { padding: 18px 20px 20px; display: grid; gap: 16px; }
+.tetris-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.tetris-title { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.1; }
+.tetris-sub { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+.tetris-body { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: start; }
+.tetris-stage { position: relative; }
+.tetris-board {
+  display: block;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+}
+.tetris-board:focus-visible { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--accent); }
+.tetris-over {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  background: color-mix(in srgb, var(--paper) 78%, transparent);
+  border-radius: 6px;
+  text-align: center;
+}
+.tetris-over-title { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
+.tetris-side { font-family: var(--font-mono); display: grid; gap: 12px; align-content: start; margin: 0; }
+.tetris-side dt { color: var(--label-ink); text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px; }
+.tetris-side dd { font-size: 19px; line-height: 1.2; margin: 2px 0 0; }
+.tetris-next { display: block; margin-top: 4px; }
+.tetris-keys { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); line-height: 1.55; max-width: 22ch; }
+.tetris-pad { display: none; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.tetris-pad button {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 12px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  touch-action: manipulation;
+  user-select: none;
+}
+.tetris-pad button:active { background: var(--accent-soft); color: var(--accent-ink); }
+@media (pointer: coarse) {
+  .tetris-pad { display: grid; }
+  .tetris-side .tetris-keys { display: none; }
+}
+@media (max-width: 420px) {
+  .tetris-inner { padding: 14px; }
+  .tetris-body { gap: 14px; }
+}

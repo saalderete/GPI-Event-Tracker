@@ -4,9 +4,11 @@ import { MobileNav } from "./MobileNav";
 import { Footer } from "./Footer";
 import { Reveal } from "./Reveal";
 import { ReadingProgress } from "./ReadingProgress";
+import { Tetris } from "./Tetris";
 
-// Rail on the left, the page on the right, the phone bar underneath and the
-// reading line along the top. A
+// Rail on the left, the page on the right, the phone bar underneath, the
+// reading line along the top, and one hidden game (five quick clicks on
+// nothing). A
 // `hero` renders full-bleed above the padded column; with `board` the column
 // is written straight onto the whiteboard the Home clip holds on, above the
 // fixed layer that carries it.
@@ -33,6 +35,7 @@ export function Shell({ children, hero, board = false }: { children: ReactNode; 
         )}
       </div>
       <MobileNav />
+      <Tetris />
     </div>
   );
 }
