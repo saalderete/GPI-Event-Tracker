@@ -1279,11 +1279,11 @@ html[data-js] .reveal-scope .prose-doc > .is-in {
   .prose-doc { max-width: none; }
 }
 
-/* ============ EASTER EGG: TETRIS ============
-   Five quick clicks on nothing open it (components/Tetris.tsx). Drawn in
-   the visitor's palette: ink for what has landed, the accent for what is
-   falling. */
-.tetris {
+/* ============ EASTER EGG: THE ARCADE ============
+   Five quick clicks on nothing open it (components/Arcade.tsx): Tetris,
+   Pong and Flappy Bird, drawn in the visitor's palette. Ink for what
+   stands, the accent for what moves. */
+.arcade {
   position: fixed;
   inset: 0;
   margin: auto;
@@ -1297,22 +1297,43 @@ html[data-js] .reveal-scope .prose-doc > .is-in {
   max-height: 96vh;
   overflow: auto;
 }
-.tetris::backdrop { background: rgba(0, 0, 0, 0.55); }
-.tetris-inner { padding: 18px 20px 20px; display: grid; gap: 16px; }
-.tetris-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-.tetris-title { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.1; }
-.tetris-sub { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-top: 4px; }
-.tetris-body { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: start; }
-.tetris-stage { position: relative; }
-.tetris-board {
+.arcade[data-wide="true"] { width: min(96vw, 760px); }
+.arcade::backdrop { background: rgba(0, 0, 0, 0.55); }
+.arcade-inner { padding: 18px 20px 20px; display: grid; gap: 16px; }
+.arcade-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.arcade-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.arcade-title { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.1; }
+.arcade-sub { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+.arcade-menu { display: grid; gap: 10px; }
+.arcade-card {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.arcade-card:hover, .arcade-card:focus-visible { border-color: var(--accent); background: var(--surface-muted); outline: none; }
+.arcade-card-name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+.arcade-card-blurb { font-family: var(--font-serif, Georgia, serif); font-size: 0.95rem; color: var(--ink-soft); }
+.arcade-card-best { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.arcade-body { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: start; }
+.arcade-stage { position: relative; }
+.arcade-board {
   display: block;
+  max-width: 100%;
   background: var(--surface-muted);
   border: 1px solid var(--border);
   border-radius: 6px;
   outline: none;
+  touch-action: none;
 }
-.tetris-board:focus-visible { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--accent); }
-.tetris-over {
+.arcade-board:focus-visible { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--accent); }
+.arcade-over {
   position: absolute;
   inset: 0;
   display: grid;
@@ -1323,14 +1344,15 @@ html[data-js] .reveal-scope .prose-doc > .is-in {
   border-radius: 6px;
   text-align: center;
 }
-.tetris-over-title { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
-.tetris-side { font-family: var(--font-mono); display: grid; gap: 12px; align-content: start; margin: 0; }
-.tetris-side dt { color: var(--label-ink); text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px; }
-.tetris-side dd { font-size: 19px; line-height: 1.2; margin: 2px 0 0; }
-.tetris-next { display: block; margin-top: 4px; }
-.tetris-keys { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); line-height: 1.55; max-width: 22ch; }
-.tetris-pad { display: none; grid-template-columns: repeat(5, 1fr); gap: 8px; }
-.tetris-pad button {
+.arcade-over-title { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
+.arcade-over-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.arcade-side { font-family: var(--font-mono); display: grid; gap: 12px; align-content: start; margin: 0; }
+.arcade-side dt { color: var(--label-ink); text-transform: uppercase; letter-spacing: 0.08em; font-size: 10.5px; }
+.arcade-side dd { font-size: 19px; line-height: 1.2; margin: 2px 0 0; }
+.arcade-next { display: block; margin-top: 4px; }
+.arcade-keys { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); line-height: 1.55; max-width: 24ch; }
+.arcade-pad { display: none; gap: 8px; }
+.arcade-pad button {
   font-family: var(--font-mono);
   font-size: 12.5px;
   padding: 12px 0;
@@ -1340,13 +1362,15 @@ html[data-js] .reveal-scope .prose-doc > .is-in {
   color: var(--ink);
   touch-action: manipulation;
   user-select: none;
+  -webkit-user-select: none;
 }
-.tetris-pad button:active { background: var(--accent-soft); color: var(--accent-ink); }
+.arcade-pad button:active { background: var(--accent-soft); color: var(--accent-ink); }
 @media (pointer: coarse) {
-  .tetris-pad { display: grid; }
-  .tetris-side .tetris-keys { display: none; }
+  .arcade-pad { display: grid; }
+  .arcade-side .arcade-keys { display: none; }
 }
-@media (max-width: 420px) {
-  .tetris-inner { padding: 14px; }
-  .tetris-body { gap: 14px; }
+@media (max-width: 560px) {
+  .arcade-body { grid-template-columns: 1fr; }
+  .arcade-side { grid-template-columns: repeat(3, auto); justify-content: start; gap: 8px 20px; }
+  .arcade-inner { padding: 14px; }
 }
