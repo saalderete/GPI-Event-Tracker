@@ -1,10 +1,14 @@
 ## What this appendix is
 
-The course asks for the estimation methods used, the ranges produced and the reasoning behind them. This page records them in the order the team produced them. Part 1, below, is the team's completed worksheet, "A First Look at Your Project's Size", which takes the outside view: the team's own experience and three similar products, as comparators for analogous estimation. Part 2, the two estimates, follows when the team completes it.
+The course asks for the estimation methods used, the ranges produced and the reasoning behind them. This page records them in the order the team produced them. Part 1 is the team's completed worksheet, "A First Look at Your Project's Size", which takes the outside view: the team's own experience and three similar products, as comparators for analogous estimation. Part 2 is the team's completed activity "Estimate One Slice of Your Project": one slice of the product, estimated by function points and by analogy, with story points as a cross-check, and the range a sponsor reads.
 
-The worksheet's entries are carried here as the team wrote them. Two columns were tightened for the page: the evidence column cites the records in the [interview evidence](/sprint-1/evidence/) that each capability rests on, and each date in the comparators is matched to the listed source that states it, with the gaps marked. The worksheet as delivered is the Team's PDF above.
+The entries are carried here as the team wrote them. In Part 1, two columns were tightened for the page: the evidence column cites the records in the [interview evidence](/sprint-1/evidence/) that each capability rests on, and each date in the comparators is matched to the listed source that states it, with the gaps marked. In Part 2, the edits from the team's alignment review of 29 September 2026 are in the text and listed in the revision history below. The worksheet and the activity as delivered are the Team's PDFs above.
 
-## Step 1: what Release 1 must do
+## Part 1: a first look at the project's size
+
+The outside view, before any counting: what Release 1 must do, the closest thing anyone on the team has built, and three real products that solve a problem close to GPI's.
+
+### Step 1: what Release 1 must do
 
 Written as what the system must do, not how, from the charter's in-scope items and the strongest needs from the interviews. The hidden-work key: T, testing; S, security or privacy; I, integration with other systems; D, data (collection, cleaning, migration); H, hosting and deployment; U, usability and accessibility; O, documentation or training.
 
@@ -19,7 +23,7 @@ Written as what the system must do, not how, from the charter's in-scope items a
 | 7 | A user can save events they want to attend | Interview [P2-C3-02](/sprint-1/evidence/#P2-C3-02) | S, D, U |
 | 8 | An administrator can review and approve a submitted event before it appears publicly | [Project Charter](/sprint-1/project-charter/), constraints: uneven data availability, and event planners | S, D, T, O |
 
-## Step 2: the outside view, the team's own experience
+### Step 2: the outside view, the team's own experience
 
 The most similar thing anyone on the team has built before.
 
@@ -30,11 +34,11 @@ The most similar thing anyone on the team has built before.
 | How long did it take? | Three months |
 | What took longer than expected? | The pricing and routing comparison: the dual unload-site cost comparison with load-type filtering, which carries more rules than anything else in the app. Every new load type changed the comparison, so the logic kept being reworked after it was supposedly done. |
 
-## Step 3: the outside view, similar products
+### Step 3: the outside view, similar products
 
 Three real products that solve a problem close to GPI's, at least one small and at least one big, measured from the start of development to the first public release. Under each entry, a source check notes which of the listed sources states each figure.
 
-### Product A, small: Upcoming.org
+#### Product A, small: Upcoming.org
 
 | Field | Entry |
 | --- | --- |
@@ -51,7 +55,7 @@ Three real products that solve a problem close to GPI's, at least one small and 
 
 **Source check.** The January 2003 start, the nine months, the nights and mornings around a day job, "only 2 or 3 individuals" and the October 2005 acquisition are in the 2008 write-up of Baio's talk. The 19 September 2003 launch is Baio's own launch post, confirmed by Wikipedia. The end-of-2007 departure, the minimized social features, the spam and the 2009 line are in Baio's 2013 post. Wikipedia dates the Kickstarter campaign's launch to 7 May 2014. Not stated in any listed source: the "banned entirely for its first two years" quote, "Rough site launched. Barely functional.", the March 2005 feature dates, the 30 May 2014 funding date and the March 2017 relaunch.
 
-### Product B, big: Do512
+#### Product B, big: Do512
 
 | Field | Entry |
 | --- | --- |
@@ -68,7 +72,7 @@ Three real products that solve a problem close to GPI's, at least one small and 
 
 **Source check.** The Voyage Houston interview states the 2006 start in Austin, the founders Jimmy Stewart and Scott Owens, and the happy-hours catalogue the site began as. The Austin Monthly article, Do512's own story page and Crunchbase refuse automated reading, so the one-month build, the team of four, the 2010 founding of DoStuff, the free-ticket partnerships and the revenue statement could not be checked from the portal; they stand on the worksheet's attribution to those pages.
 
-### Product C, big: Fever
+#### Product C, big: Fever
 
 | Field | Entry |
 | --- | --- |
@@ -85,7 +89,7 @@ Three real products that solve a problem close to GPI's, at least one small and 
 
 **Source check.** The Preqin profile states that Fever Labs was founded in 2014, is headquartered in New York, and has four founders (Pep Gomez, Alexandre Perez Casares, Francisco Hein and Ignacio Bachiller Strohlein). The two Fever pages state no dates, founders, cities or team size. Not stated in any listed source: the 2012 start, the Madrid launch, the two years to first release, and what the first release included.
 
-## Step 4: what the comparison says
+### Step 4: what the comparison says
 
 1. **Which hidden-work letter appears most often, and did the similar products struggle with it?** Data (D) appears the most often, which can be seen in all 8 capabilities. Do512 also struggled with static data which led to inaccurate and outdated listings. Upcoming.org also struggled with data quality and moderation, eventually dying out when unmoderated spam ruined the listings.
 2. **How long did the similar products take, with how many people, and what does that suggest?** Upcoming.org took roughly 9 months for a first release, with only one person. Do512.com took 1 month for the first release; initially it was two people, they then recruited two more people. Fever took about two years for the first release; there were four co-founders for the first release. Although we deployed a functional baseline website in one week after doing research, our comparables indicate that developing a production-ready first release would take about 6 to 12 months.
@@ -93,6 +97,136 @@ Three real products that solve a problem close to GPI's, at least one small and 
 
 **Our comparables suggest a first release would take 6 to 12 months with a team of 5.**
 
-## What comes next
+## Part 2: one slice, estimated two ways
 
-Part 2 of the estimation produces the two estimates. Step 1 becomes the user stories, and Steps 2 and 3 are the comparators for the analogous estimate. The ranges, and the reasoning behind them, are added to this page when the team has them.
+The team's completed activity "Estimate One Slice of Your Project" (Lesson 9, Part 2), carried here as the team wrote it after its alignment review of 29 September 2026. One slice of the product is estimated twice, with two methods that start from different information; the two answers are compared, and a range is presented. Every figure is provisional: the team has not yet decided how Release 1 gets its event data, and Step 6 records what that decision changes.
+
+### Step 1: the slice
+
+| Question | Our slice |
+| --- | --- |
+| Slice name (one or two major parts) | User and event-goer features |
+| Why we chose it | Event discovery is the central user experience. This coherent slice covers the calendar, date views, category preferences, saved events and search; organizer and admin flows are separate. |
+| Screens or forms where users enter data | Log in and user registration; the account settings page; the category ("interest") selection screen; the save event button |
+| Reports, results or lookups users see | Outputs: a unified calendar of El Paso and Juárez events merged from different sources, and a feed ranked by the user's chosen categories. Personalization in this slice filters or orders events by user-selected categories; machine-learning and predictive recommendations are not included. Lookups: events listed by date; the event details page (time, place, details); search results from the search bar; the saved events list; my account and chosen categories. |
+| Data the slice stores | Users; the user's preferences; events |
+| Other systems it connects to | External event sources the unified calendar pulls events from. Source of events: this slice consumes a common GPI events catalogue. For Release 1 the [Project Charter](/sprint-1/project-charter/) and the [Business Strategy](/sprint-1/business-strategy/) have organizers posting events, with the team curating at first; this estimate also assumes one outside source read by the unified calendar, counted as one external interface file. Organizer-management screens are excluded, and any other ingestion is excluded. How many outside sources Release 1 reads, if any, is not yet decided (Step 4 and Step 6). |
+| Out of the slice | Organizers uploading or editing events; paid featured listings for organizers; admin review and approval of submitted events; ticketing and payment processing (out of scope in the charter); email or push notifications about new events; social features, like a friends list or seeing who else is going |
+
+**Stories in the slice.**
+
+| User story | MoSCoW | Points |
+| --- | --- | --- |
+| As an event goer, I can see a unified calendar of events across El Paso and Juárez. | Must | 8 |
+| As an event goer, I can browse upcoming events listed by date so I know what is on this weekend. | Must | 5 |
+| As an event goer, I can open an event and see its time, place and details. | Must | 3 |
+| As an event goer, I can create an account and subscribe to the event categories I care about. | Must | 8 |
+| As an event goer, I can see a feed ranked to the categories I chose. | Should | 5 |
+| As an event goer, I can save an event so I can come back to it later. | Could | 3 |
+| As an event goer, I can search for an event by name or keyword. | Should | 5 |
+| Total points | | 37 |
+
+Points: the seven values were drafted for this activity rather than sized in a planning poker session by the whole team, and are to be confirmed by the team. Search was added to the story table in this revision; it was among the slice's screens before but had no story. Capabilities 5 and 7 of the Part 1 list, the personalized feed and saved events, are Should and Could here: both are in scope for Release 1, and the Business Strategy sequences personalization after the core listing.
+
+### Step 2: the two methods
+
+Analogous and function points. In the team's words: "Analogous method begins at the market research level where we identify facts such as failures and successes of a product. We can prove through research and facts about how an organization might have shipped a similar product and succeeded or failed. Function points, on the other hand, start from one's own design indicating count of inputs, results, lookups and data in our slices. Neither method uses the other's numbers, so if they agree, the agreement means something." Use-case points were not used. Story points (3C) were completed as a cross-check, not as a declared method.
+
+### Step 3A: function points
+
+| Category | Count | Weight | Points |
+| --- | --- | --- | --- |
+| External inputs (EI) | 4 | 4 | 16 |
+| External outputs (EO) | 2 | 5 | 10 |
+| External inquiries (EQ) | 5 | 4 | 20 |
+| Internal logical files (ILF) | 3 | 10 | 30 |
+| External interface files (EIF) | 1 | 7 | 7 |
+| Total function points | | | 83 |
+
+Rate: low 6 and high 12 hours per function point, the range from Part 2, Slide 15, since the team has no productivity history (assumption). Effort: 83 × 6 = 498 hours (low); 83 × 12 = 996 hours (high).
+
+**The counts, itemized.** External inputs (4): user registration, account settings update, category interest selection, and save event. Log in is listed as a screen in Step 1 but is not counted as an input, because it stores no business data of its own. External outputs (2): the unified calendar, which merges events from outside sources and resolves the straightforward duplicates, and the category-ranked feed, which orders events against stored preferences. Both derive data rather than return it as stored, which is what separates an output from an inquiry on Slide 13. External inquiries (5): events listed by date, the event detail page, search results, the saved events list, and the account and chosen categories view. Internal logical files (3): users, user preferences, and events. External interface file (1): the outside event source the unified calendar reads and does not maintain, counted as one logical source; Step 6 records what changes if Release 1 reads none or several. Every item appears once and none is counted in two categories.
+
+### Step 3C: story points, as a cross-check
+
+| Input | Value | Note |
+| --- | --- | --- |
+| Slice points | 37 | From the Step 1 story table |
+| Team size | 5 | Five or six at most |
+| Hours per person per sprint | 20 | Assumption |
+| Velocity: low, middle, high | 4, 6, 8 | Assumptions until there is sprint data |
+| Sprints needed (high to low velocity) | 4.6, 6.2, 9.3 | Slice points ÷ velocity |
+| Effort in hours (low to high) | 463 to 925 | Sprints × team size × hours per person per sprint |
+
+Our assumptions: twenty hours per person per sprint is a two-week sprint at 10 productive hours a week each, alongside coursework. The velocities of 4, 6 and 8 points per sprint have nothing behind them: Slide 26 says real velocity needs at least three completed sprints by the same team, and we have run none. Effort is sprints × 5 people × 20 hours, so 100 team hours a sprint, giving 463 hours at the high velocity, 617 at the middle and 925 at the low. Low effort corresponds to the highest velocity.
+
+### Step 3D: analogous
+
+| Question | Answer |
+| --- | --- |
+| Comparable product, team size, and time to first release | [Upcoming.org](#product-a-small-upcomingorg). One person (Andy Baio), about 9 months to first public release, 19 September 2003 (waxy.org launch post). |
+| Person-months (team size × months) | 1 × 9 = 9 person-months. Baio built it nights and mornings around a full-time job, so we assume 70 hours per person-month rather than 160 (assumption). That puts their first release at roughly 630 hours. |
+| Fraction of their release our slice matches (low to high), and why | 50 to 70 percent. Their first release was browse-by-metro listings in fixed categories, user-added events, attendee lists, a friends list and RSS. Our slice takes the browsing and listing side: their metro browse against our calendar and date list, their event page against ours, and their events-you-are-going-to list against our saved events. We add account preferences and a category-ranked feed, which their first release did not have. Later updates added an API, tagging, email and SMS (the sources we listed do not date them), and we found no source showing it ever carried a ranked feed, so we do not claim one. We leave out their event entry, attendee lists and friends list, which sit outside our boundary. Their first release also had no import from outside sources: events were added by users. The outside-source import in our slice therefore has no counterpart in the comparable, so this fraction covers the browsing side only, and the analogous figure is likely low for as long as the import stays in the slice. |
+| Team size adjustment and why | Uplift of 25 to 35 percent. Upcoming was one person with no coordination cost at all. We are five, with 10 communication paths, so our effort per feature is higher than his. We did not scale from Fever's four founders, whose first release took about two years by our Part 1 worksheet (a figure the listed sources do not confirm), because that was a company rather than a side project and its effort already carries its own coordination. |
+| Adjusted effort in hours (low to high) | 630 × 0.50 to 0.70 = 315 to 441 hours. With the 1.25 to 1.35 uplift, 394 to 595 hours. Middle, at 60 percent and 1.30, is 491 hours. |
+| Confidence, and why | Medium. The comparable is the right shape, and the 19 September 2003 first release is grounded in Baio's own launch post on waxy.org. The January 2003 development start is secondhand, from one attendee's notes on a talk he gave in 2008, and we found nothing written by him giving that date. Beyond the dates, the 70 hours per person-month, the 50 to 70 percent fraction and the 25 to 35 percent uplift are all our modeling choices rather than recorded figures. The fraction moves the answer by about 40 percent across its range and the uplift by about 8 percent; the hours per person-month move it without limit: at 100 hours per person-month the range would be 563 to 851 hours, and at a full-time 160, 900 to 1,361. |
+
+### Step 4: the team-size check
+
+| Check | Yes or no | Why it matters |
+| --- | --- | --- |
+| Our team is five or six people at most. | Yes, a team of 5 | Beyond six, split into two teams. |
+| We counted our communication paths: n(n − 1) ÷ 2. | Yes, 10 paths | Five people share 10 paths; ten share 45. |
+| We added explicit work for integrating the pieces of the slice. | No; see the integration work below. | Breaking work into pieces hides the cost of putting it back together. |
+| We did not assume that more people means proportionally more output. | Yes | Coordination grows faster than headcount. |
+| We estimated for the team we have. | Yes | Not for a larger team we wish we had. |
+| We adjusted, not copied, timelines from much larger teams. | Not applicable. Our comparable was one person, smaller than our team, so we scaled its effort up (3D) rather than copying a larger team's timeline down. | Their effort includes their coordination costs. |
+
+**Integration work (row 3).** The answer stays No until the work below is priced. Coordination and technical integration are different things, and only the first is covered so far. The 25 to 35 percent uplift in the analogous estimate covers coordination among five people, and the 6 to 12 hour function point rate is an all-in rate from design through testing, but neither shows that the integration work was counted.
+
+- Connecting the outside event source and defining the import: assumed inside the 1 external interface file and the top of the function point rate.
+- Merging feeds and resolving straightforward duplicates, meaning the same event arriving twice in a recognisable form: assumed inside the external output already counted for the unified calendar.
+- Standardizing dates, times, locations and categories across sources, including the two cities: assumed inside the function point rate.
+- Stale, conflicting and unrecognisable duplicate listings, and recovery when a source fails: **not yet priced**. This is the one line with no home in the current numbers, and it cannot be priced until we fix how many sources the first release reads.
+- Wiring the calendar, detail page, ranked feed and saved events together: assumed inside the function point rate.
+- End-to-end tests, data-failure handling and deployment: assumed inside the function point rate.
+
+No separate hours have been added for any line, so nothing is counted twice. Because one line remains unpriced, the Step 6 range, expected hours, cost and schedule are provisional and must be revisited once the source boundary is fixed.
+
+### Step 5: the comparison
+
+| | Function points | Analogous |
+| --- | --- | --- |
+| Estimate in hours (low to high) | 498 to 996 | 394 to 595 |
+| Middle value in hours | 747 (83 FP × 9 h) | 491 |
+| Input that drives it most | Productivity rate (hours per function point) | Hours per person-month assumed for the comparable (70), then the fraction of the release matched |
+| Measured or assumed? | Assumed | Assumed |
+
+Gap: larger middle value ÷ smaller middle value = 747 ÷ 491 = 1.52, an absolute difference of 256 hours.
+
+1. **Do the two methods depend on the same assumption?** No, the function points method starts from our internal design counts (inputs, reports, results, etc.) in Step 1, multiplied by productivity rates. The analogous method starts from external market historical data scaled to our scope and adjusted for 5-person team coordination costs.
+2. **Which single input moves the answer most?** The productivity rate in function points moves the estimate by 498 hours, from 498 at 6 h/FP to 996 at 12. In the analogous method, holding the coordination uplift fixed at 30 percent and moving the matched-release fraction from 50 to 70 percent takes the estimate from 409.5 to 573.3 hours, a difference of 163.8 hours. The full 394 to 595 range varies the uplift as well, between 1.25 and 1.35, so that wider 201.6 hour spread cannot be attributed to the fraction alone. The analogous method's largest lever is the 70 hours per person-month assumed for Baio's side project: at 100 hours per person-month the range would be 563 to 851 hours, and at a full-time 160, 900 to 1,361 hours, more than the fraction or the uplift can move it.
+3. **What information would narrow the gap, and when could you get it?** Our first one or two actual software-development sprints would give early effort observations, but they would not establish a reliable rate. We need hours recorded against completed stories, and Slide 26 sets at least three completed sprints by the same team before velocity means anything. Course-portal documentation sprints do not count as GPI development velocity. More data should narrow the 6 to 12 hour range; it will not eliminate the uncertainty.
+
+**The team's explanation of the gap.** Function point yielded a middle value of 747 hours, whereas the Analogous method yielded a middle value of 491 hours, creating a gap of 1.52x (under 2.0x). The primary driver of the gap is that our Function point estimate assumes a wide productivity rate of 6 to 12 hours per point due to lack of sprint data. Meanwhile, the Analogous method relies on our assumed Fraction of their release our slice matches and a 70-hour per person month. Both methods start from completely independent information, so the gap is not a slip in the arithmetic; it is the distance between two assumptions we have never tested. Story points, which we completed as a cross-check, gave 463 to 925 hours for the current 37-point slice and sits between the two, but its velocity is an assumption as well, so it settles nothing. What would narrow the gap is real hours logged against finished stories, and Slide 26 sets three completed sprints as the minimum before that data means anything. On sensitivity: holding the coordination uplift at 30 percent and moving the feature match from 50 to 70 percent takes the analogous estimate from 409.5 to 573.3 hours, a swing of 163.8 hours. The wider 394 to 595 spread varies the uplift as well, so the fraction alone does not account for all of it.
+
+### Step 6: the estimate
+
+| Field | Our estimate |
+| --- | --- |
+| Slice estimated | User and event-goer features |
+| Range in hours (low to high) | 394 to 996 hours |
+| Expected hours: (O + 4M + P) ÷ 6, and why we chose M | (394 + 4 × 657 + 996) ÷ 6 = 669.67 expected hours. For M we took the midpoint of the lowest and highest ends of the range, which gave a first value M1 = 695, then the midpoint of the two methods' middle values, which gave M2 = 619. We settled on the midpoint of those two, M = 657. M = 657 is a planning judgment, not a measured value. We think an outcome near 657 hours is plausible because the function point inventory is complete and countable while its productivity rate is not ours, and the analogous figure rests on a comparable of the right shape but three assumed multipliers. 657 sits where neither method's weakness dominates. If the duplicate and conflict handling in Step 4 is priced separately, M should move up. |
+| Cost range and loaded rate used | Hourly rate: $51.36, ZipRecruiter's average for software engineers in Texas ([source](https://www.ziprecruiter.com/Salaries/It-Software-Engineer-Salary--in-Texas#TableView)). Overhead: 20 percent (assumption). Loaded hourly rate: $61.63. Low: 394 × 61.63 ≈ $24,282. Expected: 669.67 × 61.63 ≈ $41,272. High: 996 × 61.63 ≈ $61,383. |
+| Calendar estimate in weeks, and hours per week assumed | Expected: 13.39, about 14 weeks, at an assumed 10 productive hours per person per week. Low end: 394 ÷ 50 ≈ 7.9 weeks. High end: 996 ÷ 50 ≈ 19.9 weeks. This assumes all five people are available continuously at 10 productive hours a week. It is a production estimate for the slice, not a commitment that this team can deliver it inside the remaining Fall 2026 term. Part 1's 6 to 12 months is a rough comparator for a production-ready full first release; the 13.4 weeks here is the event-goer slice alone at the stated capacity, and neither is a Fall 2026 delivery promise. The Sprint 2 business case should reconcile its pilot scope and milestones against this rather than read it as a delivery date. |
+| Methods used | Analogous and function points. Story points (3C) were completed as a cross-check, not as a declared method. |
+| Key assumptions | Productivity rate: 6 to 12 hours per function point, from Part 2, Slide 15; with no sprint history it is not measured. Scope: as listed in Step 1. 70 hours per person-month for Baio's side-project effort on Upcoming, rather than a full-time 160. Our slice is 50 to 70 percent of Upcoming's first release. A 25 to 35 percent coordination uplift for five people. 20 percent overhead on the ZipRecruiter hourly figure. 10 productive hours per person per week, which drives every week figure. Velocities of 4, 6 and 8 points per sprint in the story point cross-check. Event supply: one outside source feeding the unified calendar, in addition to organizer posting; the number of sources Release 1 reads, if any, is not yet fixed. The seven story point values were drafted for this activity and have not been sized in a planning poker session by the whole team. |
+| Team size assumed | 5 team members |
+| What would change this estimate | Adding more productive hours per person. Pricing the stale-listing, conflict and source-failure handling left unpriced in Step 4, which would move M up. The event-supply decision: if Release 1 relies on organizer posting and team curation only, the external interface file and the merged-calendar output drop out, about 75 function points, 450 to 900 hours; each additional distinct outside source adds 7 function points, about 42 to 84 hours. Real productivity and velocity data after three completed sprints, which Slide 26 sets as the minimum. Scope changes. Team changes. |
+| Date of this estimate | 29 September 2026 |
+
+## What is still open
+
+- The event-supply decision for Release 1, and with it the interface-file count, the unpriced Step 4 line and the analogous fraction.
+- The team's confirmation of the seven story point values, and its own re-check of the wage figure's role and date against the linked page.
+- The Business Case, the ROI Analysis and the Change Log for Sprint 2, which build on this range.
