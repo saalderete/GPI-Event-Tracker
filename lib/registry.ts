@@ -138,20 +138,21 @@ export const documents: PortalDocument[] = [
     sprint: 2,
     title: "Estimation Appendix",
     kind: "appendix",
-    summary: "How the team is sizing Release 1: the methods, the ranges and the reasoning. Part 1 takes the outside view, from three similar products; Part 2 estimates the event-goer slice two ways and presents a provisional range of 394 to 996 hours.",
-    version: "0.2",
+    summary: "How the team is sizing Release 1: the methods, the ranges and the reasoning. Part 1 takes the outside view, from three similar products; Part 2 estimates the event-goer slice two ways and presents a provisional range of 394 to 852 hours.",
+    version: "0.3",
     status: "draft",
     owner: null,
     reviewers: [],
     revised: "2026-09-29",
     revisions: [
       { version: "0.1", date: "2026-09-24", note: "Part 1, the team's completed worksheet 'A First Look at Your Project's Size', carried onto the page as written. The evidence column cites the interview records each capability rests on, and each comparator date is matched to the listed source that states it. Part 2, the two estimates, to follow." },
-      { version: "0.2", date: "2026-09-29", note: "Part 2, the team's completed activity 'Estimate One Slice of Your Project', carried onto the page: the slice, the two methods, the story-point cross-check, the team-size check, the comparison and the presented range. Edits from the team's alignment review of 29 September: the source-of-events and personalization boundaries stated in Step 1; the sensitivity of the analogous estimate corrected, with the hours per person-month shown as its largest lever; two claims the Part 1 source checks mark unsupported reworded; the comparable's missing import work noted; the larger-teams check answered not applicable; the PERT display rounded to 669.67; the open decision on event supply recorded with what it changes; the story points noted as drafted, not sized by planning poker. No count, weight, rate, fraction, uplift, velocity or range changed." }
+      { version: "0.2", date: "2026-09-29", note: "Part 2, the team's completed activity 'Estimate One Slice of Your Project', carried onto the page: the slice, the two methods, the story-point cross-check, the team-size check, the comparison and the presented range. Edits from the team's alignment review of 29 September: the source-of-events and personalization boundaries stated in Step 1; the sensitivity of the analogous estimate corrected, with the hours per person-month shown as its largest lever; two claims the Part 1 source checks mark unsupported reworded; the comparable's missing import work noted; the larger-teams check answered not applicable; the PERT display rounded to 669.67; the open decision on event supply recorded with what it changes; the story points noted as drafted, not sized by planning poker. No count, weight, rate, fraction, uplift, velocity or range changed." },
+      { version: "0.3", date: "2026-09-29", note: "Items 1 to 4 of the team's final revision handoff. The outside-source import leaves the slice so both methods estimate the same functions, as the charter and the Business Strategy have the supply; the calendar counts as the same lookup as events by date, under the handoff's own rule; Steps 3A, 5 and 6 re-run from the team's unchanged counts, weights, rates, fraction, uplift and its documented procedure for M: 71 function points, 426 to 852 hours, a gap of 1.30, a range of 394 to 852 hours and 603.67 expected. The alternative-count sentence is now conditional with its arithmetic corrected, the story points are labelled unconfirmed pending the team's validation, and the wage listing carries its actual category. The slice boundary and the calendar classification are recorded as revisable by the team." }
     ],
     pdf: "sprint-2-estimation-appendix",
     delivered: [
       { label: "Team's PDF: Part 1", file: "sprint-2-estimation-starter.pdf", title: "Project Estimation Starter, Part 1: the team's worksheet as completed" },
-      { label: "Team's PDF: Part 2", file: "sprint-2-estimation-activity.pdf", title: "Estimate One Slice of Your Project, Part 2: the team's activity as completed, revised 29 September 2026" }
+      { label: "Team's PDF: Part 2", file: "sprint-2-estimation-activity.pdf", title: "Estimate One Slice of Your Project, Part 2: the team's activity as completed, revised 29 September 2026 (version 8)" }
     ]
   }
 ];

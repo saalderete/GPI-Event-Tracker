@@ -11,6 +11,10 @@ export const aiDisclosure = {
     {
       stage: "Grammar and clarity checks; restructuring content the team produced (§10, permitted)",
       use: "The team's completed Part 2 activity, 'Estimate One Slice of Your Project', edited at the portal lead's request following the team's own alignment review of 29 September 2026: boundaries stated for the source of events and for personalization, the analogous method's sensitivity corrected and shown, two claims the Part 1 source checks mark unsupported reworded, one check-row answer corrected, the PERT display rounded, the open event-supply decision recorded with what it changes, and the drafted story points noted. The revised activity was carried onto the page and published as the Team's PDF: Part 2. No count, weight, rate, fraction, uplift, velocity or range was changed."
+    },
+    {
+      stage: "Restructuring content the team produced; arithmetic re-run from the team's inputs (§10, permitted)",
+      use: "Items 1 to 4 of the team's final revision handoff of 29 September 2026, at the portal lead's direction: the outside-source import taken out of the slice so both methods estimate the same functions, the calendar counted as the same lookup as events by date under the handoff's rule, and Steps 3A, 5 and 6 re-run from the team's unchanged counts, weights, rates, fraction, uplift and its documented procedure for M (71 function points, 426 to 852 hours, a range of 394 to 852 hours, 603.67 expected). The alternative-count sentence made conditional with its arithmetic corrected, the story points labelled unconfirmed, the wage listing labelled by its actual category. No new estimate was produced; the slice boundary and the calendar classification are the team's to confirm or revise, the team validates the point values, and a team member dates the wage figure."
     }
   ],
   notUsedFor: [
