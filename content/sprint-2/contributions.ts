@@ -19,6 +19,10 @@ export const aiDisclosure = {
     {
       stage: "Restructuring content the team produced (§10, permitted)",
       use: "The team's verification of 29 September 2026 (the seven story point values confirmed, the base wage and its job category verified) entered in the activity and on the page in the wording the team supplied, and the story-point cross-check sentence corrected against the formal range. No calculation changed."
+    },
+    {
+      stage: "Restructuring content the team produced (§10, permitted)",
+      use: "The team's submitted version of the activity (30 September 2026) carried onto the page and published as the Team's PDF: Part 2 in place of version 9. The page text follows the team's final edits; no figure changed."
     }
   ],
   notUsedFor: [
