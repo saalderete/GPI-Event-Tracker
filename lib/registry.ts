@@ -167,10 +167,10 @@ export const documents: PortalDocument[] = [
     status: "final",
     owner: null,
     reviewers: [],
-    revised: "2026-10-06",
+    revised: "2026-10-05",
     revisions: [
       { version: "1.0", date: "2026-10-04", note: "The team's completed Session 11 activity, 'Building the Budget', carried onto the page as written, with the delivered file as the Team's PDF. The nine charts are redrawn from the team's figures in the portal's palette. Two things in the delivered file are not carried: a line left over from an earlier draft in the cost-baseline cell of the first table ($42,051, with $37,219 over three months and a $2,103 cushion), which the rest of the document supersedes, and two spacing slips in the figures $49,622 and $21,381. The template's Slice and Status fields, blank in the delivered file, are not shown. No figure changed." },
-      { version: "1.1", date: "2026-10-06", note: "The team's final file replaces the first as the Team's PDF: the Slice and Status fields are filled and the leftover line is gone, and the sheet at the top of the page now shows the slice and the status. The team's one-page budget summary of 6 October 2026 is added as the opening section, the sponsor's view, and as a second Team's PDF, with its effort-range chart redrawn in the portal's palette. The two spacing slips in the figures $49,622 and $21,381 remain in the ten-step file and are still written as figures here. No figure changed." }
+      { version: "1.1", date: "2026-10-05", note: "The team's final file replaces the first as the Team's PDF: the Slice and Status fields are filled and the leftover line is gone, and the sheet at the top of the page now shows the slice and the status. The team's one-page budget summary of 6 October 2026 is added as the opening section, the sponsor's view, and as a second Team's PDF, with its effort-range chart redrawn in the portal's palette. The two spacing slips in the figures $49,622 and $21,381 remain in the ten-step file and are still written as figures here. No figure changed." }
     ],
     pdf: "sprint-2-budget",
     delivered: [
