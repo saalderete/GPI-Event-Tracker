@@ -744,6 +744,24 @@ html[data-viewer="open"] { overflow: hidden; }
 .btn-primary { background: var(--accent); color: var(--on-accent); }
 .btn-primary:hover { background: var(--accent-hover); }
 .btn-ghost { border-color: var(--border); color: var(--ink); background: transparent; }
+
+/* ============ COUNTDOWN ============
+   Under the hero's buttons on Home: the time the sprint in progress has
+   left, ticking in the visitor's browser (components/Countdown.tsx). */
+.countdown { margin-top: 1.75rem; }
+.countdown .digits {
+  margin-top: 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  min-height: 1.1em;
+}
+.countdown .digits .unit { font-weight: 400; font-size: 0.6em; color: var(--ink-soft); margin: 0 0.4em 0 0.06em; }
+.countdown .meta { margin-top: 0.35rem; max-width: 40ch; }
 .btn-ghost:hover { border-color: var(--hover-border); background: var(--surface); }
 
 /* ============ DOCUMENT ROWS ============

@@ -7,6 +7,7 @@ import { ScrollHero, HeroWords } from "@/components/ScrollHero";
 import { BoardHero } from "@/components/BoardHero";
 import { BoardHome } from "@/components/BoardHome";
 import { PdfButtons } from "@/components/PdfButtons";
+import { Countdown } from "@/components/Countdown";
 import { site } from "@/lib/site";
 import { sprints, currentSprint, isPublished, statusWord } from "@/lib/sprints";
 import { documents } from "@/lib/registry";
@@ -18,8 +19,18 @@ export default function Home() {
   const latest = [...sprints].reverse().find((s) => isPublished(s) && documents.some((d) => d.sprint === s.number)) ?? current;
   const docs = documents.filter((d) => d.sprint === latest.number);
 
+  // The clock under the hero reads the whole schedule, so it stays right between builds.
+  const schedule = sprints.map(({ number, title, start, due }) => ({ number, title, start, due }));
   const words = (
-    <HeroWords eyebrow={site.courseLine} name={site.portalTitle} mark={site.short} tagline={site.portalTagline} primaryHref={`/${current.slug}/`} primaryLabel={`Open Sprint ${current.number}`} />
+    <HeroWords
+      eyebrow={site.courseLine}
+      name={site.portalTitle}
+      mark={site.short}
+      tagline={site.portalTagline}
+      primaryHref={`/${current.slug}/`}
+      primaryLabel={`Open Sprint ${current.number}`}
+      below={<Countdown schedule={schedule} timezone={site.timezone} />}
+    />
   );
 
   // One shot: the desk, then the whiteboard the rest of Home is written on.

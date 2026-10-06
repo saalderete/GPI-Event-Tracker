@@ -125,7 +125,7 @@ export function ScrollHero({ children }: { children: ReactNode }) {
 
 // The words that sit on the stage. Kept separate so Home can pass the same
 // content to either hero layout.
-export function HeroWords({ eyebrow, name, mark, tagline, primaryHref, primaryLabel }: { eyebrow: string; name: string; mark?: string; tagline: string; primaryHref: string; primaryLabel: string }) {
+export function HeroWords({ eyebrow, name, mark, tagline, primaryHref, primaryLabel, below }: { eyebrow: string; name: string; mark?: string; tagline: string; primaryHref: string; primaryLabel: string; below?: ReactNode }) {
   return (
     <>
       <p className="eyebrow" data-reveal>
@@ -146,6 +146,7 @@ export function HeroWords({ eyebrow, name, mark, tagline, primaryHref, primaryLa
           About the team
         </Link>
       </div>
+      {below}
     </>
   );
 }
