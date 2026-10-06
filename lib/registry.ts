@@ -168,15 +168,16 @@ export const documents: PortalDocument[] = [
     title: "Project Budget",
     kind: "document",
     summary: "The team's budget for the event-goer slice: the one-page summary a sponsor reads (603.67 hours, $58,868 requested, 12.1 weeks) and the ten steps behind it, from five cost-driving assumptions with owners through the staffing plan, labor at loaded cost and productive hours, a base build of $49,622 and two reserves to the time-phased request.",
-    version: "1.2",
+    version: "1.3",
     status: "final",
-    owner: null,
+    owner: "emmanuel",
     reviewers: [],
     revised: "2026-10-05",
     revisions: [
       { version: "1.0", date: "2026-10-04", note: "The team's completed Session 11 activity, 'Building the Budget', carried onto the page as written, with the delivered file as the Team's PDF. The nine charts are redrawn from the team's figures in the portal's palette. Two things in the delivered file are not carried: a line left over from an earlier draft in the cost-baseline cell of the first table ($42,051, with $37,219 over three months and a $2,103 cushion), which the rest of the document supersedes, and two spacing slips in the figures $49,622 and $21,381. The template's Slice and Status fields, blank in the delivered file, are not shown. No figure changed." },
       { version: "1.1", date: "2026-10-05", note: "The team's final file replaces the first as the Team's PDF: the Slice and Status fields are filled and the leftover line is gone, and the sheet at the top of the page now shows the slice and the status. The team's one-page budget summary of 6 October 2026 is added as the opening section, the sponsor's view, and as a second Team's PDF, with its effort-range chart redrawn in the portal's palette. The two spacing slips in the figures $49,622 and $21,381 remain in the ten-step file and are still written as figures here. No figure changed." },
-      { version: "1.2", date: "2026-10-05", note: "The closing note no longer announces a Business Case and an ROI Analysis for this sprint, after the sponsor's confirmation of 5 October 2026, and points to the change log. No figure changed." }
+      { version: "1.2", date: "2026-10-05", note: "The closing note no longer announces a Business Case and an ROI Analysis for this sprint, after the sponsor's confirmation of 5 October 2026, and points to the change log. No figure changed." },
+      { version: "1.3", date: "2026-10-05", note: "Owner assigned: Emmanuel Saenz, Project Manager, as the budget's own table has the cost baseline built by the project manager and the contingency under the project manager's control. No content change." }
     ],
     pdf: "sprint-2-budget",
     delivered: [
@@ -189,7 +190,7 @@ export const documents: PortalDocument[] = [
     sprint: 2,
     title: "Change Log",
     kind: "log",
-    summary: "What was revised from the prior sprint's version, why, and what it affected downstream: the Market Research restructured by its owner after the Sprint 1 deadline, the Estimation Appendix's seven revisions, the Project Budget's three, and the sprint's scope as the sponsor confirmed it.",
+    summary: "What was revised from the prior sprint's version, why, and what it affected downstream: the Market Research restructured by its owner after the Sprint 1 deadline, the Estimation Appendix's seven revisions, the Project Budget's four, and the sprint's scope as the sponsor confirmed it.",
     version: "1.1",
     status: "final",
     owner: "samuel",
@@ -197,7 +198,7 @@ export const documents: PortalDocument[] = [
     revised: "2026-10-05",
     revisions: [
       { version: "1.0", date: "2026-10-05", note: "First change log, written for the Sprint 2 submission from the documents' revision histories, the repository's commit record and the documents themselves. Entries cover 22 September to 5 October 2026." },
-      { version: "1.1", date: "2026-10-05", note: "Entry added for the Estimation Appendix 1.0: approved by the team and its owner assigned." }
+      { version: "1.1", date: "2026-10-05", note: "Entries added for the Estimation Appendix 1.0, approved by the team and its owner assigned, and for the Project Budget 1.3, its owner assigned." }
     ],
     pdf: "sprint-2-change-log"
   }
