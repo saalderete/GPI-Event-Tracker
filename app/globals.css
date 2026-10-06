@@ -898,6 +898,19 @@ html[data-viewer="open"] { overflow: hidden; }
   color: var(--label-ink);
 }
 .callout-draft { background: var(--accent-soft); border-color: transparent; color: var(--accent-ink); }
+
+/* A document's charts (components/BudgetChart.tsx): drawn from the team's
+   figures in the visitor's palette, so they read in both themes and in
+   print. Two can sit side by side on wide screens. */
+.prose-doc .chart { margin: 1.6em 0 0; max-width: 100%; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart figcaption { margin-top: 0.6em; max-width: 60ch; }
+.chart-row { display: grid; gap: 1.5rem; }
+@media (min-width: 640px) {
+  .chart-row { grid-template-columns: 1fr 1fr; align-items: end; }
+  .chart-row .chart { margin-top: 0; }
+}
+.print-root .chart, .print-root .chart-row, .print-root .figures { break-inside: avoid; }
 .callout-draft .callout-title { color: var(--accent-ink); }
 .callout-draft a { color: inherit; }
 .callout p + p { margin-top: 0.6em; }

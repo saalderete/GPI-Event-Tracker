@@ -156,6 +156,25 @@ export const documents: PortalDocument[] = [
       { label: "Team's PDF: Part 1", file: "sprint-2-estimation-starter.pdf", title: "Project Estimation Starter, Part 1: the team's worksheet as completed" },
       { label: "Team's PDF: Part 2", file: "sprint-2-estimation-activity.pdf", title: "Estimate One Slice of Your Project, Part 2: the team's activity as submitted, 30 September 2026" }
     ]
+  },
+  {
+    slug: "budget",
+    sprint: 2,
+    title: "Project Budget",
+    kind: "document",
+    summary: "The team's ten-step budget for the event-goer slice, from the Estimation Appendix's planning value of 603.67 hours: five cost-driving assumptions with owners, the work in packages, a staffing plan by role and month, labor priced at loaded cost and productive hours, a base build of $49,622, two reserves traced to named risks and policy, and a total request of $58,868.",
+    version: "1.0",
+    status: "final",
+    owner: null,
+    reviewers: [],
+    revised: "2026-10-04",
+    revisions: [
+      { version: "1.0", date: "2026-10-04", note: "The team's completed Session 11 activity, 'Building the Budget', carried onto the page as written, with the delivered file as the Team's PDF. The nine charts are redrawn from the team's figures in the portal's palette. Two things in the delivered file are not carried: a line left over from an earlier draft in the cost-baseline cell of the first table ($42,051, with $37,219 over three months and a $2,103 cushion), which the rest of the document supersedes, and two spacing slips in the figures $49,622 and $21,381. The template's Slice and Status fields, blank in the delivered file, are not shown. No figure changed." }
+    ],
+    pdf: "sprint-2-budget",
+    delivered: [
+      { label: "Team's PDF", file: "sprint-2-budget.pdf", title: "Building the Budget: the team's completed Session 11 activity, 4 October 2026" }
+    ]
   }
 ];
 

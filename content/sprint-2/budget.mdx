@@ -1,0 +1,294 @@
+## What this document is
+
+The course's Session 11 activity, "Building the Budget", turns an estimate into money in ten steps: the assumptions the cost depends on, the work in packages, effort from more than one method, hours converted to FTE-months, a staffing plan by month, a loaded labor rate, the labor and everything else, the cost of ownership, the risks and the two reserves, and the budget time-phased into a request. The team's budget starts from the [Estimation Appendix](/sprint-2/estimation-appendix/): the range of 394 to 852 hours for the event-goer slice, and the planning value of 603.67 hours.
+
+This page is the team's completed activity of 4 October 2026, carried as the team wrote it; the file the team delivered is the Team's PDF above. The charts are redrawn from the team's figures in the portal's palette, so they read in both themes and in print. The revision history at the foot of the page records the two places where the page and the delivered file differ.
+
+<Sheet rows={[["Team", "9, Gracias Por Invitar"], ["Project", "GPI: Gracias Por Invitar"], ["Activity", "Session 11, Part 1: Building the Budget"], ["Date", "4 October 2026"]]} />
+
+<div className="figures mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+  <Figure n="603.67" label="hours, the planning value" />
+  <Figure n="$49,622" label="base build estimate" />
+  <Figure n="$56,065" label="cost baseline" />
+  <Figure n="$58,868" label="total budget request" />
+</div>
+
+## Estimate, budget, baseline
+
+Three different things. The Session 9 estimate becomes a budget only when someone with authority approves it, and the baseline is the version the team is held to.
+
+| | Estimate | Budget | Cost baseline |
+| --- | --- | --- | --- |
+| What it is | A forecast of effort and cost, with a range | The money leadership approves, including a cushion for surprises | The approved month-by-month spending plan you measure against |
+| Set by | The project team | The sponsor (the executive who pays) | Built by the project manager, approved by the sponsor |
+| GPI | 394 to 852 hours = $32,377 to $70,014. Expected 603.67 hours = $49,607 (traced to Step 3 in this document) | Requested: $58,868. Baseline: $56,065. Cushion: $2,803 (Step 10) | $56,065: the $49,622 base build phased over 3 months (M1 $17,820, M2 $17,805, M3 $13,997), plus $6,443 contingency held back for named risks (Step 10) |
+
+## Two ways to start a budget
+
+| | Top-down | Bottom-up |
+| --- | --- | --- |
+| How it starts | From a number someone wants, such as a fixed date or a fixed dollar amount. | From the list of work that has to be done, priced piece by piece. |
+| GPI | [Project Charter](/sprint-1/project-charter/): 8 weeks × 50 team-hours = 400 hours × $82.18 (per productive hour) ≈ $32,870 | Seven work packages (37 points, 71 function points): 603.67 hours, $49,607 of labor plus $15 non-labor = $49,622 |
+| Use it for | A quick reality check. It tells you what leadership hopes for. | The budget you defend. It tells you what the work costs. |
+
+Build bottom-up, then set it beside the top-down number. The gap between the two is a finding, written up in Check 5 under Step 10.
+
+## Step 1: what the cost depends on
+
+A cost-driving assumption is a statement that, if it turned out wrong, would change the cost. The team lists five, each with an owner.
+
+| Assumption | Why it drives cost | Owner |
+| --- | --- | --- |
+| In the event-goer slice, we include 7 stories, which are 37 points and 71 function points. Any outside-source imports are out. | Everything outside the slice is unpriced. An import is 12 function points which equals about 108 hours. | Emmanuel Saenz, Project Manager (charter scope) |
+| Organizers post events into GPI-created catalogue, and the team curates it first, like how the charter and Business Strategy have it. | Rules out imported work in the build and sets the curation hours in the operating cost. | Oscar Vargas, Business Strategy Lead |
+| Five people contributing 10 productive hours a week each, 50 team-hours a week, alongside coursework, for the whole build. Delivery work is split across developer, QA, UX and DevOps roles (65/17/10/8 percent, 545.17 delivery hours), and project management at 0.15 FTE is carved out of the 603.67 hours (58.5 hours). See the notes below. | Sets the 12.1-week expectation and the monthly spend. Fewer hours contributed extends the calendar, but total hours remain the same. Pricing project management on top would add about 58.5 hours ($4,807). | Jazmin Huerta, Market Research Lead |
+| 6 to 12 hours per function point, 70 hours per person-month for the comparable, with a 50 to 70 percent match and a 25 to 35 percent uplift. We have not measured any of these yet. | Our whole range depends on these. After three sprints we'll replace them with our real numbers. | Christian Lopez, Research Documentation Lead (Appendix owner) |
+| Labor at $51.36 an hour (ZipRecruiter) = $106,829 a year. × 1.20 burden = $10,683 per FTE-month, or $82.18 per productive hour. Tools and hosting stay on free tiers, since the charter has no money for paid licenses. See the notes below. | Every dollar amount is the number of hours times this rate. A 1.4 burden would push labor up 17 percent, and paying to host the app would add a new cost. | Samuel Alderete, Portal Lead |
+
+<Callout title="Notes to rows 3 and 5">
+The 65/17/10/8 percentages are shares of the delivery hours (545.17), not of the full 603.67. The 0.15 is an FTE figure, not a percentage of hours. It means 15% of one full-time person each month, which is 0.15 × 130 = 19.5 hours a month, or 58.5 hours over 3 months. This is how the hours are carved out:
+
+1. Start with the total: 603.67 hours.
+2. Take the PM's share off first: 603.67 − 58.5 = 545.17 hours left for delivery.
+3. Split those 545.17 hours 65/17/10/8 among the delivery roles.
+
+The Session 9 estimate priced hours at $61.63, a loaded rate per paid hour; this budget prices them per productive hour, $82.18.
+</Callout>
+
+## Step 2: the work in packages
+
+| Work package | Role | Hours |
+| --- | --- | --- |
+| Unified El Paso-Juárez calendar (8 pts) | Developers, UX, QA, DevOps (environment setup) | 117.9 |
+| Upcoming events by date (5 pts) | Developers, UX, QA | 73.7 |
+| Event time, place and details (3 pts) | Developers, UX, QA | 44.2 |
+| Account and event categories (8 pts) | Developers, UX, QA | 117.9 |
+| Feed ranked to categories (5 pts) | Developers, QA | 73.7 |
+| Saving an event (3 pts) | Developers, QA | 44.2 |
+| Search by name or keyword (5 pts) | Developers, QA, DevOps (deployment) | 73.7 |
+| Project management (all packages) | Project manager (PM) | 58.5 |
+| **Total delivery effort** | 37 pts × 14.73 hrs + 58.5 PM | **603.67** |
+
+The rate becomes 545.17 ÷ 37 = 14.73 hours per point, because 58.5 of the 603.67 hours go to project management first.
+
+<Chart name="hours-by-package" />
+
+## Step 3: effort more than one way
+
+### Three-point (PERT)
+
+E = (O + 4M + P) ÷ 6. O, the optimistic case, is 394 hours, if everything goes well. M, the most likely, is 594 hours. P, the pessimistic case, is 852 hours, if real problems hit. E = 3,622 ÷ 6 = 603.67 hours.
+
+Why E is above M: the bad case is farther from most likely than the good case is, so it pulls the answer up. Spread = (P − O) ÷ 6 = (852 − 394) ÷ 6 = 76.33 hours: a typical miss. Step 9 reuses it.
+
+### The methods side by side
+
+| Method | Hours | What it starts from |
+| --- | --- | --- |
+| Bottom-up (the packages) | 603.67 | The seven work packages in Step 2 at 14.73 hours per story point across 37 points, plus 58.5 project management hours. The package hours were distributed from the PERT expected value, so this line is not an independent check on PERT. |
+| Three-point (PERT) | 603.67 | O 394 from the analogous low. P 852 from 71 function points at 12 hours each. M 594 from the midpoint of the two method ranges (623) and the midpoint of their two middles (565). |
+| Analogous | 491 | Upcoming.org: one person over about 9 months at an assumed 70 hours per person-month, so 630 hours, scaled by a 50 to 70 percent feature match and a 25 to 35 percent coordination uplift. Range 394 to 595. |
+| **Planning value** | **603.67** | The PERT expected value, which the bottom-up packages plus project management also sum to. This is the number carried into Step 4. |
+
+<Chart name="effort-estimates" />
+
+**Do the methods land within 25 percent of each other?** The rule of thumb: if they differ by more than 25 percent, find out why before pricing anything. The team's answer: not needed, the spread is 23 percent. The planning value of 603.67 hours sits 22.9 percent above the 491 hour analogous midpoint, inside the 25 percent rule. Bottom-up and PERT are identical because the package hours were distributed from the PERT expected value, so analogous is the only independent comparison in the table.
+
+## Step 4: hours to FTE-months
+
+| Role | Hours | FTE-months (hours ÷ 130) |
+| --- | --- | --- |
+| Developers | 354.4 | 2.73 |
+| Quality Assurance (QA) | 92.7 | 0.71 |
+| User Experience (UX) | 54.5 | 0.42 |
+| DevOps | 43.6 | 0.34 |
+| Delivery subtotal | 545.17 | 4.19 |
+| Project manager (0.15 × 3 months) | 58.5 | 0.45 |
+| **Total** | **603.67** | **4.64** |
+
+How to read it: one FTE-month is one person working full time for one month. About 80 percent of a month (130 of 160 hours) is productive project time; the rest goes to meetings, email, support and time off. The rate the team assumed: 130 productive hours per FTE-month.
+
+<Chart name="productive-month" />
+
+At 130 productive hours per FTE-month, 603.67 hours is 4.64 FTE-months of work. Our own Step 1 assumption is 10 productive hours per person per week, which is 50 team-hours a week, so those 4.64 FTE-months spread across about 12.1 weeks of calendar time. The role rows are rounded to two decimals; the total of 4.64 is taken from the unrounded values.
+
+Any of our five members may fill the defined roles. Delivery hours are split by 65 percent developers, 17 percent QA, 10 percent UX and 8 percent DevOps, a team assumption owned by Jazmin Huerta (Step 1, row 3). Project management is priced at 0.15 FTE for 3 months, about 4.5 hours a week, and is carved out of the 603.67-hour planning value.
+
+## Step 5: the staffing plan by month
+
+| Role | M1 | M2 | M3 | M4 | M5 | M6 | FTE-months |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Project manager | 0.15 | 0.15 | 0.15 | 0 | 0 | 0 | 0.45 |
+| Developers | 1.01 | 1.07 | 0.65 | 0 | 0 | 0 | 2.73 |
+| Quality assurance | 0.08 | 0.26 | 0.37 | 0 | 0 | 0 | 0.71 |
+| User experience | 0.28 | 0.14 | 0 | 0 | 0 | 0 | 0.42 |
+| DevOps | 0.15 | 0.05 | 0.14 | 0 | 0 | 0 | 0.34 |
+| **Total FTE** | **1.67** | **1.67** | **1.31** | 0 | 0 | 0 | **4.64** |
+
+#### Why the shape
+
+- For the UX, we have more hours dedicated to it in the beginning because the account, category, and calendar screens are designed first.
+- QA rises as features are finished and peaks in Month 3 for end-to-end testing.
+- DevOps peaks when the environment is set up in Month 1 and deployment in Month 3.
+- Developers carry out most of the work throughout, and the project manager keeps a steady 0.15 FTE.
+- Each month is capped at our capacity of 1.67 FTE (five people at 10 productive hours a week, 0.33 FTE each) and Month 3 is lighter because only about 0.8 of a month of work remains.
+
+#### Check the total
+
+All roles total 4.64 FTE-months, the same as Step 4's FTE-months.
+
+## Step 6: the loaded labor rate
+
+<div className="figures mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+  <Figure n="$106,829" label="blended base salary a year ($51.36 × 2,080 hours)" />
+  <Figure n="$8,902" label="a month (÷ 12)" />
+  <Figure n="× 1.2" label="burden factor" />
+  <Figure n="$10,683" label="per FTE-month" />
+</div>
+
+What is burden? Costs an employer pays on top of salary: benefits, payroll taxes, equipment and workspace. Commonly used factors run about 1.25 to 1.4. The 1.20 burden is a team assumption, below the 1.25 to 1.4 common range.
+
+| Rate | Value |
+| --- | --- |
+| Per nominal hour (÷ 160) | $66.77 |
+| Per productive hour (÷ 130) | $82.18 |
+
+Pricing at the nominal-hour rate understates labor, because only 130 of 160 hours are productive.
+
+## Steps 6 and 7 worked: price the labor and everything else
+
+### Labor: FTE-months × $10,683
+
+| Role | FTE-months | Cost |
+| --- | --- | --- |
+| Project manager | 0.45 | $4,807 |
+| Developers | 2.73 | $29,120 |
+| Quality assurance | 0.71 | $7,616 |
+| User experience | 0.42 | $4,480 |
+| DevOps | 0.34 | $3,584 |
+| **Labor total** | **4.64** | **$49,607** |
+
+### Non-labor: everything else you buy
+
+| Item | How computed | Cost |
+| --- | --- | --- |
+| Hosting: web service and database | Free tier during the build and the pilot (charter: no budget for paid licenses). A small tier would be about $25 a month, an assumption to price from the vendor's published rates. | $0 |
+| Domain name | One year, assumption | $15 |
+| Transactional email for sign-up | Free tier at pilot volumes | $0 |
+| Maps or geocoding for event places | Free tier at pilot volumes | $0 |
+| Repository, CI, design tools | Free tiers | $0 |
+| Organizer onboarding materials | Digital only: labor, not a purchase | $0 |
+| **Non-labor total** | | **$15** |
+
+**Base build estimate: $49,607 labor + $15 non-labor = $49,622.**
+
+## Step 8: the cost of ownership
+
+The build ends, but the system keeps costing money. It has to be hosted, fixed and supported every year.
+
+| Annual operating cost | How it was computed | Per year |
+| --- | --- | --- |
+| Support and maintenance | 5 team-hours a week × 52 × $82.18 | $21,366 |
+| Production hosting | Free tier plus the domain | $15 |
+| Licenses and services | Free tiers | $0 |
+| **Operating total** | Sum of annual operation items | **$21,381** |
+
+Why it belongs in the budget: over 1 year, operating cost ($21,381) compared to the build ($49,622). Total cost of ownership is $71,003.
+
+<Chart name="base-cost" />
+
+## Step 9: the risks and the two reserves
+
+### Price the risks: the contingency reserve
+
+| Risk | Chance | Impact | EMV |
+| --- | --- | --- | --- |
+| Effort lands near the pessimistic 852 hrs; our rates are not measured yet (+248.33 hrs) | 15% | $20,407 | $3,061 |
+| Organizers don't post, so we import events from outside sources (108 hrs) | 30% | $8,875 | $2,663 |
+| Uneven El Paso-Juárez event data needs a cleanup and review pass (35 hrs) | 25% | $2,876 | $719 |
+| **Contingency reserve** | | | **$6,443** |
+
+How to read it: expected monetary value (EMV) = chance × impact. It is an average, not a prediction: a risk either costs about its impact or nothing, and the reserve covers the expected total. The template asks for the top three risks at least.
+
+Cross-check: one PERT spread from Step 3 × the productive-hour rate = $6,273 (76.33 hrs × $82.18) of effort risk alone. Is the reserve at least that large? Yes, $6,443 is $170 more.
+
+<Chart name="emv-by-risk" />
+
+### Two reserves
+
+| | Contingency reserve | Management reserve |
+| --- | --- | --- |
+| Covers | Risks you have named (known unknowns) | Surprises nobody has named (unknown unknowns) |
+| Inside the cost baseline? | Yes | No |
+| Controlled by | Project manager | Sponsor or leadership |
+| Sized by | The risk table (sum of EMV) | Organizational policy, here 5 percent |
+| GPI | $6,443, contingency, inside the baseline | $2,803, management reserve: 5 percent of the $56,065 baseline |
+
+Baseline = base build + contingency: $56,065 = $49,622 + $6,443.
+
+<Callout title="A named risk happens">
+Organizers don't post and the team has to import events (risk 2, about $8,875). The project manager spends contingency without asking.
+</Callout>
+
+<Callout title="A surprise nobody listed">
+A teammate has to drop the course mid-build, and handing off their unfinished work costs hours nobody planned for. The project manager asks the sponsor to release management reserve.
+</Callout>
+
+## Step 10: the budget, phased and requested
+
+### Time-phase the budget
+
+| Month | Labor | Non-labor | Total | Cumulative |
+| --- | --- | --- | --- | --- |
+| 1 | $17,805 | $15 | $17,820 | $17,820 |
+| 2 | $17,805 | $0 | $17,805 | $35,625 |
+| 3 | $13,997 | $0 | $13,997 | $49,622 |
+| 4 | $0 | $0 | $0 | $49,622 |
+| 5 | $0 | $0 | $0 | $49,622 |
+| 6 | $0 | $0 | $0 | $49,622 |
+
+Time-phasing places each cost in the month it is spent. Labor = FTE that month × $10,683 per FTE-month (Step 6), using Step 5's unrounded FTE of 1.667, 1.667 and 1.310. The $15 domain is bought in month 1. Contingency is held back until a named risk occurs, so this shows the base build only.
+
+<Chart name="cumulative-spend" />
+
+### The full budget request
+
+| Line | Amount |
+| --- | --- |
+| Labor | $49,607 |
+| Non-labor | $15 |
+| Base build estimate | $49,622 |
+| Contingency reserve (EMV) | $6,443 |
+| Cost baseline | $56,065 |
+| Management reserve (5%) | $2,803 |
+| **Total budget request** | **$58,868** |
+| Operating cost (separate line) | $21,381 a year |
+
+How to read it: each line stacks on the last. Base build is what you expect. Contingency covers named risks. Management reserve covers the unnamed.
+
+<Chart name="building-the-request" />
+
+### Five sanity checks
+
+1. **Totals match.** Add the staffing plan by month and compare it to Step 4. Ours: 4.64 FTE-months by month (1.667 + 1.667 + 1.310) = 4.64 FTE-months in Step 4.
+2. **Labor share is plausible.** Divide labor by the base build. Ours: $49,607 ÷ $49,622 = 99.97 percent. Nearly all cost is people because every tool and service stays on a free tier.
+3. **Estimates agree.** Compare the effort estimates. Ours: 491 to 603.67 hours, within 23 percent.
+4. **Reserves trace to risks.** Every contingency dollar links to a named risk in the Step 9 table. Ours: $3,061 + $2,663 + $719 = $6,443, all three named in the Step 9 table.
+5. **Top-down comparison.** Put the sponsor's number next to yours and explain the gap. Sponsor's number: 400 hours (8 weeks × 50 team-hours), about $32,870 of labor. Ours: 603.67 hours, $49,607 of labor. The gap is 203.67 hours, or $16,737, about 51 percent more. Eight weeks at our 50 team-hours a week only fits 400 hours, but the seven stories in the slice price at 603.67 hours, which takes about 12.1 weeks at that pace. To close the gap either the slice gets smaller or the timeline gets longer.
+
+### Check 5 in action: the sponsor's number
+
+What did the sponsor ask for, in time or money? 8 weeks at 50 team-hours a week, so 400 hours (about $32,870). Our budget says the work is 4.64 FTE-months.
+
+<div className="chart-row">
+  <Chart name="people-needed" />
+  <Chart name="communication-paths" />
+</div>
+
+4.64 FTE-months ÷ 2.8 months = 1.66 people. 4.64 FTE-months ÷ 1.85 months (the sponsor's time) = 2.51 people. Every pair of people is a path where a misunderstanding can happen. 5 people means 10 of them.
+
+## What is still open
+
+- The rates behind every figure are assumed, not measured: hours per function point, hours per person-month for the comparable, the match and the uplift, the burden factor, and 130 productive hours per FTE-month. The team replaces them with its own numbers after three sprints, and the budget moves with them.
+- The sponsor's number and the team's differ by 203.67 hours, about $16,737. Either the slice gets smaller or the timeline gets longer; that decision is the team's, and the Business Case records it.
+- The Business Case, with its go/no-go recommendation, and the ROI Analysis follow on this sprint's page, and the change log records every revision to a published document.

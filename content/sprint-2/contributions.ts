@@ -23,11 +23,15 @@ export const aiDisclosure = {
     {
       stage: "Restructuring content the team produced (§10, permitted)",
       use: "The team's submitted version of the activity (30 September 2026) carried onto the page and published as the Team's PDF: Part 2 in place of version 9. The page text follows the team's final edits; no figure changed."
+    },
+    {
+      stage: "Restructuring content the team produced (§10, permitted)",
+      use: "The team's completed Session 11 activity, 'Building the Budget' (4 October 2026), carried onto the Project Budget page as written and its file published as the Team's PDF. The nine charts were redrawn from the team's figures in the portal's palette. Not carried: one line left over from an earlier draft in the first table, which the rest of the document supersedes, and two spacing slips, both noted in the page's revision history. No figure changed."
     }
   ],
   notUsedFor: [
     "The individual estimation memos, submitted separately (not permitted under §10).",
-    "The estimates themselves, the ranges, and any go/no-go reasoning, which are the team's (not permitted under §10)."
+    "The estimates themselves, the ranges, the budget's assumptions, rates, reserves and figures, and any go/no-go reasoning, which are the team's (not permitted under §10)."
   ],
   changedOrRejected: null as string | null
 };

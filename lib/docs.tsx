@@ -6,5 +6,6 @@ export const docModules: Record<string, () => Promise<{ default: ComponentType }
   "sprint-1/market-research": () => import("@/content/sprint-1/market-research.mdx"),
   "sprint-1/business-strategy": () => import("@/content/sprint-1/business-strategy.mdx"),
   "sprint-1/project-charter": () => import("@/content/sprint-1/project-charter.mdx"),
-  "sprint-2/estimation-appendix": () => import("@/content/sprint-2/estimation-appendix.mdx")
+  "sprint-2/estimation-appendix": () => import("@/content/sprint-2/estimation-appendix.mdx"),
+  "sprint-2/budget": () => import("@/content/sprint-2/budget.mdx")
 };
