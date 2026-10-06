@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { fmtDate } from "@/lib/format";
 import { memberById } from "@/lib/team";
-import type { PortalDocument } from "@/lib/registry";
+import { kindLabel, type PortalDocument } from "@/lib/registry";
 import type { Sprint } from "@/lib/sprints";
 import type { TocEntry } from "@/lib/toc";
 import { Toc } from "./Toc";
@@ -33,7 +33,7 @@ export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
     <article>
       <header className="mb-10 border-b border-border pb-8" data-reveal>
         <p className="eyebrow mb-3">
-          Sprint {sprint.number} · {doc.kind === "appendix" ? "Appendix" : "Document"}
+          Sprint {sprint.number} · {kindLabel[doc.kind]}
         </p>
         <h1 className="display text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem]">{doc.title}</h1>
         <p className="mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-ink-soft">{doc.summary}</p>

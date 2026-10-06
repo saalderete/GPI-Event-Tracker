@@ -80,11 +80,13 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
             <p>
               {s.status === "live"
                 ? "This sprint is in progress. Its documents are published here as the sprint concludes, and everything published before it stays exactly where it is."
-                : "This sprint has not started. Its page goes live when the sprint concludes, and everything published before it stays exactly where it is."}
+                : s.status === "delivered"
+                  ? "This sprint is delivered. Its documents are above, and everything published stays exactly where it is."
+                  : "This sprint has not started. Its page goes live when the sprint concludes, and everything published before it stays exactly where it is."}
             </p>
             {s.planned.length ? (
               <>
-                <h2 className="!mt-8 !border-0 !pt-0">Planned contents</h2>
+                <h2 className="!mt-8 !border-0 !pt-0">{s.status === "delivered" ? "Contents" : "Planned contents"}</h2>
                 <ul>
                   {s.planned.map((p) => (
                     <li key={p}>{p}</li>

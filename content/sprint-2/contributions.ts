@@ -31,6 +31,10 @@ export const aiDisclosure = {
     {
       stage: "Restructuring content the team produced (§10, permitted)",
       use: "The team's final budget file carried in place of the first, and the team's one-page budget summary (6 October 2026) carried onto the Project Budget page as its opening section and published as a second Team's PDF, its effort-range chart redrawn in the portal's palette. No figure changed."
+    },
+    {
+      stage: "Summarizing or restructuring content the team produced (§10, permitted)",
+      use: "The Sprint 2 change log drafted from the documents' revision histories, the repository's commit record and the documents themselves, and the sprint's scope note and the two documents' closing notes updated after the sponsor's confirmation of 5 October 2026. The reasons recorded are the ones the records state; the team reviews the log before submission."
     }
   ],
   notUsedFor: [

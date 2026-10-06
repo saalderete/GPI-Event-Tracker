@@ -4,7 +4,7 @@ import { IconDownload, IconPrint } from "./Icons";
 import { fmtDate } from "@/lib/format";
 import { withBase } from "@/lib/base";
 import { pdfLink, pdfTitle } from "@/lib/pdf";
-import type { PortalDocument } from "@/lib/registry";
+import { kindLabel, type PortalDocument } from "@/lib/registry";
 import type { Sprint } from "@/lib/sprints";
 
 // A sprint's documents as rows of a register: title, summary, status,
@@ -25,7 +25,7 @@ export function DocumentList({ sprint, docs }: { sprint: Sprint; docs: PortalDoc
             </div>
             <p className="mt-1.5 max-w-[62ch] text-[0.98rem] leading-relaxed text-ink-soft">{d.summary}</p>
             <p className="meta mt-2">
-              {d.kind === "appendix" ? "Appendix" : "Document"}, version {d.version}, revised {fmtDate(d.revised)}
+              {kindLabel[d.kind]}, version {d.version}, revised {fmtDate(d.revised)}
             </p>
           </div>
           <div className="flex flex-wrap items-start gap-2 sm:justify-end">

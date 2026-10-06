@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import { Spine } from "./Spine";
 import { StatusBadge } from "./StatusBadge";
 import { site } from "@/lib/site";
-import type { PortalDocument } from "@/lib/registry";
+import { kindLabel, type PortalDocument } from "@/lib/registry";
 import { statusWord, type Sprint } from "@/lib/sprints";
 import { interviews, candidates } from "@/lib/evidence";
 import { fmtDate } from "@/lib/format";
@@ -90,7 +90,7 @@ export function BoardHome({ current, latest, docs }: { current: Sprint; latest: 
               </div>
               <p>{d.summary}</p>
               <p className="meta">
-                {d.kind === "appendix" ? "Appendix" : "Document"}, version {d.version}, revised {fmtDate(d.revised)}
+                {kindLabel[d.kind]}, version {d.version}, revised {fmtDate(d.revised)}
               </p>
               <div className="note-links">
                 <Link href={`/${latest.slug}/${d.slug}/`}>Read</Link>

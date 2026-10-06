@@ -36,14 +36,14 @@ export const sprints: Sprint[] = [
   {
     number: 2,
     slug: "sprint-2",
-    title: "Business case, estimation, ROI",
+    title: "Estimation and budget",
     status: "live",
     start: "2026-09-22",
     due: "2026-10-05T23:59:00-06:00",
     demo: "2026-10-06",
     demoLabel: "Sprint demo",
-    planned: ["Business Case with go/no-go recommendation", "Estimation Appendix", "ROI Analysis", "Change Log"],
-    plannedNote: "Working draft in the course guidelines, subject to change."
+    planned: ["Estimation Appendix, Parts 1 and 2", "Project Budget", "Change Log", "Sprint Retrospective, private, Blackboard only"],
+    plannedNote: "Confirmed by the sponsor on 5 October 2026. The guidelines' working draft also listed a Business Case and an ROI Analysis; they are not Sprint 2 deliverables."
   },
   {
     number: 3,

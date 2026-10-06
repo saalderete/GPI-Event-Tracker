@@ -2,6 +2,9 @@
 // the PDF generator and the validator all read this list, which is how a
 // document can't exist on the web without its PDF, or the other way round.
 export type DocStatus = "draft" | "review" | "final";
+/** Document: a sprint deliverable. Appendix: evidence or method behind one. Log: the sprint's change log (guidelines §8). */
+export type DocKind = "document" | "appendix" | "log";
+export const kindLabel: Record<DocKind, string> = { document: "Document", appendix: "Appendix", log: "Change log" };
 /** Where a document lives. "site": written here as MDX and printed to its
  *  PDF by the ship step. "upload": delivered by its owner as a PDF in
  *  public/docs/; its MDX is a cover, and the ship step copies the file into
@@ -31,7 +34,7 @@ export interface PortalDocument {
   slug: string;
   sprint: number;
   title: string;
-  kind: "document" | "appendix";
+  kind: DocKind;
   /** One line for cards and the manifest. */
   summary: string;
   version: string;
@@ -139,17 +142,18 @@ export const documents: PortalDocument[] = [
     title: "Estimation Appendix",
     kind: "appendix",
     summary: "How the team is sizing Release 1: the methods, the ranges and the reasoning. Part 1 takes the outside view, from three similar products; Part 2 estimates the event-goer slice two ways and presents a provisional range of 394 to 852 hours.",
-    version: "0.5",
+    version: "0.6",
     status: "draft",
     owner: null,
     reviewers: [],
-    revised: "2026-09-30",
+    revised: "2026-10-05",
     revisions: [
       { version: "0.1", date: "2026-09-24", note: "Part 1, the team's completed worksheet 'A First Look at Your Project's Size', carried onto the page as written. The evidence column cites the interview records each capability rests on, and each comparator date is matched to the listed source that states it. Part 2, the two estimates, to follow." },
       { version: "0.2", date: "2026-09-29", note: "Part 2, the team's completed activity 'Estimate One Slice of Your Project', carried onto the page: the slice, the two methods, the story-point cross-check, the team-size check, the comparison and the presented range. Edits from the team's alignment review of 29 September: the source-of-events and personalization boundaries stated in Step 1; the sensitivity of the analogous estimate corrected, with the hours per person-month shown as its largest lever; two claims the Part 1 source checks mark unsupported reworded; the comparable's missing import work noted; the larger-teams check answered not applicable; the PERT display rounded to 669.67; the open decision on event supply recorded with what it changes; the story points noted as drafted, not sized by planning poker. No count, weight, rate, fraction, uplift, velocity or range changed." },
       { version: "0.3", date: "2026-09-29", note: "Items 1 to 4 of the team's final revision handoff. The outside-source import leaves the slice so both methods estimate the same functions, as the charter and the Business Strategy have the supply; the calendar counts as the same lookup as events by date, under the handoff's own rule; Steps 3A, 5 and 6 re-run from the team's unchanged counts, weights, rates, fraction, uplift and its documented procedure for M: 71 function points, 426 to 852 hours, a gap of 1.30, a range of 394 to 852 hours and 603.67 expected. The alternative-count sentence is now conditional with its arithmetic corrected, the story points are labelled unconfirmed pending the team's validation, and the wage listing carries its actual category. The slice boundary and the calendar classification are recorded as revisable by the team." },
       { version: "0.4", date: "2026-09-29", note: "The team's verification of 29 September 2026, 3:30 PM, recorded in the team's own wording: the seven story point values reviewed and confirmed (8, 5, 3, 8, 5, 3 and 5, total 37), and the $51.36 base wage and its job category verified on the ZipRecruiter listing. The story-point cross-check is now compared to the formal range correctly (its 925-hour end exceeds the 852-hour upper bound by 73 hours, a sign of upper-end uncertainty, not a change to the range), and the figures stay provisional only on the assumed rates. No calculation changed." },
-      { version: "0.5", date: "2026-09-30", note: "The team's submitted version of the activity replaces version 9 as the Team's PDF: Part 2, and the page follows its final edits: the source-of-events note shortened, the Step 4 closing paragraph and the term-length caveat dropped, the rationale for M and the gap paragraph tightened, and the import line under 'What would change this estimate' reduced to one sentence. No figure changed." }
+      { version: "0.6", date: "2026-09-30", note: "The team's submitted version of the activity replaces version 9 as the Team's PDF: Part 2, and the page follows its final edits: the source-of-events note shortened, the Step 4 closing paragraph and the term-length caveat dropped, the rationale for M and the gap paragraph tightened, and the import line under 'What would change this estimate' reduced to one sentence. No figure changed." },
+      { version: "0.6", date: "2026-10-05", note: "The closing note no longer announces a Business Case and an ROI Analysis for this sprint: the sponsor confirmed on 5 October 2026 that Sprint 2 requires the two estimation activities and the budget. It now points to the Project Budget and to the change log. No other change." }
     ],
     pdf: "sprint-2-estimation-appendix",
     delivered: [
@@ -163,20 +167,37 @@ export const documents: PortalDocument[] = [
     title: "Project Budget",
     kind: "document",
     summary: "The team's budget for the event-goer slice: the one-page summary a sponsor reads (603.67 hours, $58,868 requested, 12.1 weeks) and the ten steps behind it, from five cost-driving assumptions with owners through the staffing plan, labor at loaded cost and productive hours, a base build of $49,622 and two reserves to the time-phased request.",
-    version: "1.1",
+    version: "1.2",
     status: "final",
     owner: null,
     reviewers: [],
     revised: "2026-10-05",
     revisions: [
       { version: "1.0", date: "2026-10-04", note: "The team's completed Session 11 activity, 'Building the Budget', carried onto the page as written, with the delivered file as the Team's PDF. The nine charts are redrawn from the team's figures in the portal's palette. Two things in the delivered file are not carried: a line left over from an earlier draft in the cost-baseline cell of the first table ($42,051, with $37,219 over three months and a $2,103 cushion), which the rest of the document supersedes, and two spacing slips in the figures $49,622 and $21,381. The template's Slice and Status fields, blank in the delivered file, are not shown. No figure changed." },
-      { version: "1.1", date: "2026-10-05", note: "The team's final file replaces the first as the Team's PDF: the Slice and Status fields are filled and the leftover line is gone, and the sheet at the top of the page now shows the slice and the status. The team's one-page budget summary of 6 October 2026 is added as the opening section, the sponsor's view, and as a second Team's PDF, with its effort-range chart redrawn in the portal's palette. The two spacing slips in the figures $49,622 and $21,381 remain in the ten-step file and are still written as figures here. No figure changed." }
+      { version: "1.1", date: "2026-10-05", note: "The team's final file replaces the first as the Team's PDF: the Slice and Status fields are filled and the leftover line is gone, and the sheet at the top of the page now shows the slice and the status. The team's one-page budget summary of 6 October 2026 is added as the opening section, the sponsor's view, and as a second Team's PDF, with its effort-range chart redrawn in the portal's palette. The two spacing slips in the figures $49,622 and $21,381 remain in the ten-step file and are still written as figures here. No figure changed." },
+      { version: "1.2", date: "2026-10-05", note: "The closing note no longer announces a Business Case and an ROI Analysis for this sprint, after the sponsor's confirmation of 5 October 2026, and points to the change log. No figure changed." }
     ],
     pdf: "sprint-2-budget",
     delivered: [
       { label: "Team's PDF: Summary", file: "sprint-2-budget-summary.pdf", title: "One-Page Budget Summary: the team's summary as delivered, 6 October 2026" },
       { label: "Team's PDF: Ten steps", file: "sprint-2-budget.pdf", title: "Building the Budget: the team's completed Session 11 activity, final version of 4 October 2026" }
     ]
+  },
+  {
+    slug: "change-log",
+    sprint: 2,
+    title: "Change Log",
+    kind: "log",
+    summary: "What was revised from the prior sprint's version, why, and what it affected downstream: the Market Research restructured by its owner after the Sprint 1 deadline, the Estimation Appendix's six revisions, the Project Budget's three, and the sprint's scope as the sponsor confirmed it.",
+    version: "1.0",
+    status: "final",
+    owner: "samuel",
+    reviewers: [],
+    revised: "2026-10-05",
+    revisions: [
+      { version: "1.0", date: "2026-10-05", note: "First change log, written for the Sprint 2 submission from the documents' revision histories, the repository's commit record and the documents themselves. Entries cover 22 September to 5 October 2026." }
+    ],
+    pdf: "sprint-2-change-log"
   }
 ];
 

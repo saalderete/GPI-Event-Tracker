@@ -1,0 +1,134 @@
+## What this log is
+
+Section 8 of the course guidelines asks every sprint page after Sprint 1 for a change log: what was revised from the prior sprint's version, why, and what downstream pages or documents the change affected, kept the way an architecture decision record is kept, so that someone joining the project mid-semester could reconstruct the team's reasoning. This is Sprint 2's log. It covers 22 September to 5 October 2026.
+
+Each entry names what changed, the reason the record gives for it, and what it touched. Times are Mountain Time. Version numbers match the revision history at the foot of each document page, which carries the full note. The record line of each entry links the commit in the [portal's repository](https://github.com/saalderete/GPI-Event-Tracker-), where the exact text of every change can be read line by line.
+
+## A Sprint 1 document revised
+
+### Market Research, restructured by its owner, 22 September
+
+**What changed.** The [Market Research](/sprint-1/market-research/) page the portal served at the Sprint 1 deadline, 21 September at 11:59 PM, had five aggregate findings, a section on how the research was done, a paragraph on positioning, and a closing list of the open questions carried into the charter, in about 2,900 words. The owner's version, committed at 11:54 PM on 21 September and merged to the live site at 1:40 AM on 22 September, has the three numbered subsections the guidelines ask for: aggregating the findings, now three (the "finding out too late" and "questions produce opinions" findings are folded in or dropped), the top pick, and what did not work, with a new entry for the chosen candidate; about 1,700 words. The method section, the positioning paragraph, the open questions, and the sentence that the interviews alone do not establish Juárez as required came off the page. The structure now matches the owner's delivered PDF, the Team's PDF on that page. A second commit at 1:35 AM removed a header and a revision table the first had pasted into the page, which the portal already renders from its registry, and restated the page's revision notes in the owner's words: 1.1, "Reviewed and redefined some conclusions"; 1.2, "Restructured to the three required subsections". The note for version 1.3 was removed, while the version shown on the page still reads 1.3.
+
+**Why.** The owner's stated reason is the 1.2 note, "Restructured to the three required subsections": the three the guidelines list for the Market Research subpage, aggregate findings, the top pick in depth, and what did not work. The second commit is labelled "corrected discrepancies".
+
+**What it affected.** The [Business Strategy](/sprint-1/business-strategy/) and the [Project Charter](/sprint-1/project-charter/) cite the research by its substance, the Phase 2 counts and what the team heard in the interviews, not by section, so nothing they say changed and no link broke. The open questions the research used to carry into the charter now exist only as the charter's section 4 assumptions. The [interview evidence](/sprint-1/evidence/), which the Estimation Appendix cites record by record, was not touched. Open for the owner: a 1.3 note to match the version on the page, and the Juárez caveat, which the Business Strategy still carries as its own hedge.
+
+**Record.** [b941ee1](https://github.com/saalderete/GPI-Event-Tracker-/commit/b941ee1), [7b34129](https://github.com/saalderete/GPI-Event-Tracker-/commit/7b34129), merged in [6a6b073](https://github.com/saalderete/GPI-Event-Tracker-/commit/6a6b073).
+
+### The files the team delivered, beside each Sprint 1 document, 22 September
+
+**What changed.** At 12:07 AM on 22 September every Sprint 1 document page gained the file the team itself delivered, offered beside the portal's own printed PDF as a Team's PDF: the owner's copy of the Market Research, the project manager's signed charter, and the Phase 1 and Phase 2 interview sheets with referral names redacted. The build's validator checks that each listed file exists.
+
+**Why.** The guidelines require every public document as website text and as a PDF. The delivered files are the record of what the team submitted, and the portal's print is the record of what the page says; keeping both lets a reader compare them.
+
+**What it affected.** The four Sprint 1 document pages and the Sprint 1 overview, which list the files. No document text changed. The same mechanism carries the Sprint 2 files: the two estimation activities, the budget and its one-page summary.
+
+**Record.** [0eac5df](https://github.com/saalderete/GPI-Event-Tracker-/commit/0eac5df).
+
+## Estimation Appendix
+
+### 0.1, Part 1 published, 24 September
+
+**What changed.** The [Estimation Appendix](/sprint-2/estimation-appendix/) opened with Part 1, the team's completed worksheet "A First Look at Your Project's Size", carried onto the page as written: the eight capabilities Release 1 must deliver with their hidden work, the team's own experience as the outside view, and three comparable products.
+
+**Why.** It is the first estimation deliverable of the sprint. Two columns were tightened at the portal lead's request so the page can be checked: the evidence column cites the interview records each capability rests on, and each comparator date is matched to the listed source that states it, with the gaps marked.
+
+**What it affected.** The Sprint 1 interview evidence is now referenced record by record from Sprint 2; nothing changed there. The capabilities list is the scope the Part 2 slice was later cut from.
+
+**Record.** [7043ad3](https://github.com/saalderete/GPI-Event-Tracker-/commit/7043ad3).
+
+### 0.2, Part 2 published after the team's alignment review, 29 September
+
+**What changed.** Part 2, the team's activity "Estimate One Slice of Your Project", came onto the page: the event-goer slice, function points and the analogous method, story points as a cross-check, the team-size check, the comparison and the presented range. With it came the edits from the team's alignment review of the same day: the source of events and personalization stated as boundaries of the slice, the sensitivity of the analogous estimate corrected to show hours per person-month as its largest lever, two claims the Part 1 source checks had marked unsupported reworded, the comparable's missing import work noted, the larger-teams check answered as not applicable, the PERT display rounded, the open decision on event supply recorded with what it changes, and the story points marked as drafted rather than sized by planning poker.
+
+**Why.** The team's alignment review found places where the activity did not match Part 1, the charter and the Business Strategy, chiefly on where the events come from. No count, weight, rate, fraction, uplift, velocity or range changed.
+
+**What it affected.** Nothing downstream yet; the numbers stood. The open event-supply decision was the question the next revision answered.
+
+**Record.** [b123cdf](https://github.com/saalderete/GPI-Event-Tracker-/commit/b123cdf).
+
+### 0.3, both methods estimate the same slice, 29 September
+
+**What changed.** The outside-source import left the slice, so that function points and the analogous method estimate the same functions, and the calendar was counted as the same lookup as events by date. Steps 3A, 5 and 6 were re-run from the team's unchanged counts, weights, rates, fraction and uplift: 71 function points, 426 to 852 hours by function points, a gap of 1.30 between the methods, a presented range of 394 to 852 hours and 603.67 hours expected. The alternative-count sentence became conditional with its arithmetic corrected, the story points were labelled unconfirmed, and the wage listing was labelled by its actual job category.
+
+**Why.** Items 1 to 4 of the team's final revision handoff. The charter and the Business Strategy have organizers posting events, with the team curating at first, so the supply of events is not an import and both methods must price the same work.
+
+**What it affected.** This is where the range moved, and the decision it rests on is the Business Strategy's: event supply comes from organizers. The [Project Budget](/sprint-2/budget/) carries it as its first two assumptions, the slice boundary and the event supply, and prices the opposite case as a named risk, organizers not posting. The slice boundary and the calendar classification were recorded as revisable by the team.
+
+**Record.** [61397ad](https://github.com/saalderete/GPI-Event-Tracker-/commit/61397ad).
+
+### 0.4, the team's verification recorded, 29 September
+
+**What changed.** The seven story point values were reviewed and confirmed by the team at 3:30 PM (8, 5, 3, 8, 5, 3 and 5, total 37), and the $51.36 base wage and its job category were verified on the ZipRecruiter listing, both entered in the team's own wording. The story-point cross-check is now compared to the formal range correctly: its 925-hour end exceeds the 852-hour upper bound by 73 hours, a sign of upper-end uncertainty, not a change to the range.
+
+**Why.** The team's verification session of 29 September. The figures stay provisional only on the assumed rates.
+
+**What it affected.** The budget's labor rate rests on the verified $51.36 an hour. No calculation changed.
+
+**Record.** [c29e0e8](https://github.com/saalderete/GPI-Event-Tracker-/commit/c29e0e8).
+
+### 0.5, the team's submitted version, 30 September
+
+**What changed.** The team's submitted version of the activity replaced the working version as the Team's PDF, and the page followed its final edits: the source-of-events note shortened, the Step 4 closing paragraph and the term-length caveat dropped, the rationale for M and the gap paragraph tightened, the import line under "What would change this estimate" reduced to one sentence.
+
+**Why.** The submitted file is the record of what went to Blackboard; the page and the file must match.
+
+**What it affected.** Nothing downstream. No figure changed.
+
+**Record.** [dd18182](https://github.com/saalderete/GPI-Event-Tracker-/commit/dd18182).
+
+### 0.6, the closing note, 5 October
+
+**What changed.** The "What is still open" note no longer announces a Business Case and an ROI Analysis for this sprint. It points to the Project Budget, which prices the range, and to this log.
+
+**Why.** The sponsor's confirmation of the sprint's scope, recorded below.
+
+**What it affected.** The appendix page only.
+
+## Project Budget
+
+### 1.0, the team's budget published, 4 October
+
+**What changed.** A new document, the [Project Budget](/sprint-2/budget/): the team's completed Session 11 activity "Building the Budget", carried as written through its ten steps, from five cost-driving assumptions with owners to a time-phased request, with the team's file as the Team's PDF and its nine charts redrawn in the portal's palette. A line left over from an earlier draft in the first table and two spacing slips were not carried.
+
+**Why.** The Session 11 activity turns the appendix's estimate into money: it prices the event-goer slice at the planning value of 603.67 hours, at loaded cost and productive hours.
+
+**What it affected.** Two documents read differently once the budget exists. The [Project Charter](/sprint-1/project-charter/)'s eight weeks at 50 team-hours fit 400 hours, and the slice prices at 603.67 hours, 51 percent more, about 12.1 weeks at the same pace; the budget's own words are that either the slice gets smaller or the timeline gets longer, a decision still the team's. And the appendix's dollar figures, priced at $61.63 per paid hour, are superseded by the budget's, priced at $82.18 per productive hour; the budget states the difference in its Step 1 notes. When the course calls for a business case, this budget is its cost side.
+
+**Record.** [f6f3b95](https://github.com/saalderete/GPI-Event-Tracker-/commit/f6f3b95).
+
+### 1.1, the final file and the one-page summary, 5 October
+
+**What changed.** The team's final budget file replaced the first as the Team's PDF, with the Slice and Status fields filled and the leftover line gone, and the team's one-page budget summary opened the page as the sponsor's view, published as a second Team's PDF, with its effort-range chart redrawn.
+
+**Why.** The team finalized the file and produced the one-page budget the session asks for.
+
+**What it affected.** Nothing downstream. No figure changed; the two spacing slips remain in the delivered file and are written as figures on the page.
+
+**Record.** [fce8c6c](https://github.com/saalderete/GPI-Event-Tracker-/commit/fce8c6c), [9f60cfc](https://github.com/saalderete/GPI-Event-Tracker-/commit/9f60cfc).
+
+### 1.2, the closing note, 5 October
+
+**What changed.** The "What is still open" note no longer announces a Business Case and an ROI Analysis for this sprint, and points to this log.
+
+**Why.** The sponsor's confirmation of the sprint's scope, recorded next.
+
+**What it affected.** The budget page only.
+
+## The sprint's scope
+
+### Sprint 2 deliverables confirmed by the sponsor, 5 October
+
+**What changed.** The Sprint 2 page's title and planned contents. The guidelines' working draft listed a Business Case with a go/no-go recommendation, the Estimation Appendix, an ROI Analysis and this change log. The page now lists what the sprint requires: the Estimation Appendix, Parts 1 and 2; the Project Budget; this change log; and the sprint retrospective, which is private and goes to Blackboard only.
+
+**Why.** On 5 October the portal lead asked the sponsor what the Sprint 2 submission must contain, and the sponsor confirmed by email the same evening: the two estimation activities and the budget, plus the retrospective.
+
+**What it affected.** The Sprint 2 page; the closing notes of the appendix (0.6) and the budget (1.2). The Business Strategy's sentence that "the Sprint 2 business case tests those assumptions" now points to a later sprint; it is left as published, for its owner to revise when the business case is scheduled.
+
+## Open items from this log
+
+- **Market Research record.** The version on the page reads 1.3 and its history ends at 1.2; the owner writes the 1.3 note. The Juárez caveat that left the research page stays on the Business Strategy as that document's own hedge.
+- **The schedule gap.** The charter's eight weeks against the budget's 12.1: a smaller slice or a longer timeline, the team's decision, to be recorded here when it is made.
+- **The budget file.** Two spacing slips in the figures $49,622 and $21,381 in the delivered ten-step file.
+- **The Business Strategy's forward reference** to a Sprint 2 business case, for its owner.
