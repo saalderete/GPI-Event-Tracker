@@ -12,6 +12,12 @@ on:
     branches: ["main"]
   pull_request:
   workflow_dispatch:
+  schedule:
+    # Nightly at 07:30 UTC, 1:30 AM Mountain Daylight Time (12:30 AM once
+    # standard time returns), so each sprint's status follows the calendar
+    # without a commit: live on the first day of its block, delivered the
+    # night after its deadline once its documents are on the page.
+    - cron: "30 7 * * *"
 
 permissions:
   contents: write

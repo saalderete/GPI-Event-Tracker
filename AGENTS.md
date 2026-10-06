@@ -58,6 +58,7 @@ honest.
   approve: the portal lead for the site, the document's owner or the
   portal lead for a document. Nobody merges their own pull request.
 - Adding a sprint: MDX under `content/sprint-N/`, register the documents,
-  set the sprint to `live` in `lib/sprints.ts` when its block starts and to
-  `delivered` once its deadline has passed with its documents on the page, write the change log, run
+  leave the status alone (it follows the calendar at build time and the
+  site rebuilds nightly; set `status` in `lib/sprints.ts` only to override
+  it), write the change log, run
   `npm run ship`, push to `main`.

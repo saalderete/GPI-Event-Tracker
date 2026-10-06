@@ -84,7 +84,7 @@ in `public/pdf/` (gitignored, regenerated on every ship).
 
 1. Add the sprint's documents as MDX under `content/sprint-N/` and register
    them in `lib/registry.ts` and `lib/docs.tsx`.
-2. Flip the sprint to `status: "live"` in `lib/sprints.ts`.
+2. Nothing to flip: the status follows the calendar at build time (live from the first day of the block, delivered once the deadline has passed with documents on the page) and the deploy workflow rebuilds the site nightly. Set `status` in `lib/sprints.ts` only to override it.
 3. Write the change log for anything revised from the prior sprint.
 4. `npm run ship`, commit, push to `main`. The workflow deploys.
 
