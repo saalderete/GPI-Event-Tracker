@@ -35,6 +35,10 @@ export const aiDisclosure = {
     {
       stage: "Summarizing or restructuring content the team produced (§10, permitted)",
       use: "The Sprint 2 change log drafted from the documents' revision histories, the repository's commit record and the documents themselves, and the sprint's scope note and the two documents' closing notes updated after the sponsor's confirmation of 5 October 2026. The reasons recorded are the ones the records state; the team reviews the log before submission."
+    },
+    {
+      stage: "Grammar and clarity checks; restructuring content the team produced (§10, permitted)",
+      use: "The team's draft of the private Sprint 2 retrospective tightened into its final form and its project half checked against the portal's published figures, at the portal lead's direction. The retrospective is submitted on Blackboard only and is not on the portal; its reflections, decisions and commitments are the team's as drafted."
     }
   ],
   notUsedFor: [
