@@ -27,6 +27,10 @@ export const aiDisclosure = {
     {
       stage: "Restructuring content the team produced (§10, permitted)",
       use: "The team's completed Session 11 activity, 'Building the Budget' (4 October 2026), carried onto the Project Budget page as written and its file published as the Team's PDF. The nine charts were redrawn from the team's figures in the portal's palette. Not carried: one line left over from an earlier draft in the first table, which the rest of the document supersedes, and two spacing slips, both noted in the page's revision history. No figure changed."
+    },
+    {
+      stage: "Restructuring content the team produced (§10, permitted)",
+      use: "The team's final budget file carried in place of the first, and the team's one-page budget summary (6 October 2026) carried onto the Project Budget page as its opening section and published as a second Team's PDF, its effort-range chart redrawn in the portal's palette. No figure changed."
     }
   ],
   notUsedFor: [

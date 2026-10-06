@@ -910,7 +910,7 @@ html[data-viewer="open"] { overflow: hidden; }
   .chart-row { grid-template-columns: 1fr 1fr; align-items: end; }
   .chart-row .chart { margin-top: 0; }
 }
-.print-root .chart, .print-root .chart-row, .print-root .figures { break-inside: avoid; }
+.print-root .chart, .print-root .chart-row, .print-root .figures, .print-root .sheet { break-inside: avoid; }
 .callout-draft .callout-title { color: var(--accent-ink); }
 .callout-draft a { color: inherit; }
 .callout p + p { margin-top: 0.6em; }

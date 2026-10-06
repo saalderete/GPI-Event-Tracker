@@ -2,16 +2,92 @@
 
 The course's Session 11 activity, "Building the Budget", turns an estimate into money in ten steps: the assumptions the cost depends on, the work in packages, effort from more than one method, hours converted to FTE-months, a staffing plan by month, a loaded labor rate, the labor and everything else, the cost of ownership, the risks and the two reserves, and the budget time-phased into a request. The team's budget starts from the [Estimation Appendix](/sprint-2/estimation-appendix/): the range of 394 to 852 hours for the event-goer slice, and the planning value of 603.67 hours.
 
-This page is the team's completed activity of 4 October 2026, carried as the team wrote it; the file the team delivered is the Team's PDF above. The charts are redrawn from the team's figures in the portal's palette, so they read in both themes and in print. The revision history at the foot of the page records the two places where the page and the delivered file differ.
+This page carries the two documents the team delivered, as the team wrote them. First the one-page budget summary of 6 October 2026, the version a sponsor reads. Then the ten-step budget of 4 October 2026 that supports it, step by step. The files are the Team's PDFs above. The charts are redrawn from the team's figures in the portal's palette, so they read in both themes and in print, and the revision history at the foot of the page records where the page and the delivered files differ.
 
-<Sheet rows={[["Team", "9, Gracias Por Invitar"], ["Project", "GPI: Gracias Por Invitar"], ["Activity", "Session 11, Part 1: Building the Budget"], ["Date", "4 October 2026"]]} />
+<Sheet rows={[["Team", "9, Gracias Por Invitar"], ["Project", "GPI: Gracias Por Invitar"], ["Slice", "Event-goer features (7 stories, 37 points, 71 FP)"], ["Budget", "Session 11, Part 1: Building the Budget, 4 October 2026"], ["Summary", "One-page budget summary, 6 October 2026"], ["Status", "Final"]]} />
+
+## The budget on one page
 
 <div className="figures mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
-  <Figure n="603.67" label="hours, the planning value" />
-  <Figure n="$49,622" label="base build estimate" />
-  <Figure n="$56,065" label="cost baseline" />
-  <Figure n="$58,868" label="total budget request" />
+  <Figure n="603.67 h" label="Planning value: PERT expected effort" />
+  <Figure n="$58,868" label="Total budget request, both reserves included" />
+  <Figure n="12.1 weeks" label="Expected duration at 50 team-hours a week" />
 </div>
+
+### Cost-driving assumptions and owners
+
+| Cost-driving assumption | Owner |
+| --- | --- |
+| Slice boundary. Only the event-goer slice is priced: 7 stories, 37 points, 71 function points. Imports from outside sources are excluded; one import adds about 12 FP (108 h). | Emmanuel Saenz, Project Manager |
+| Event supply. Organizers post into a GPI catalogue that the team curates, as the charter and business strategy set out. No imported feeds in the build. | Oscar Vargas, Business Strategy Lead |
+| Team capacity. Five people at 10 productive hours a week (50 team-hours) alongside coursework. Project management at 0.15 FTE (58.5 h) sits inside the 603.67 h. | Jazmin Huerta, Market Research Lead |
+| Estimation rates. 6 to 12 h per function point; analogous at 70 h per person-month, 50 to 70 percent match, 25 to 35 percent uplift. None measured; replaced after three sprints. | Christian Lopez, Research Documentation Lead |
+| Labor and hosting price. $82.18 per productive hour from a $51.36 hourly base (ZipRecruiter), a 1.20 burden and 130 productive hours a month. Tools and hosting on free tiers. | Samuel Alderete, Portal Lead |
+
+### Effort: two methods and the planning value
+
+<Chart name="effort-ranges" />
+
+**Two independent methods.** Function points start from our own design count; analogous starts from Upcoming.org scaled to the slice. The planning value is the PERT expected value from O 394, M 594 and P 852. It sits inside the function point range, just above the analogous range, and the 491 h analogous estimate is within 23 percent of it.
+
+### Staffing by role and month
+
+| Role | M1 | M2 | M3 | FTE-months |
+| --- | --- | --- | --- | --- |
+| Project manager | 0.15 | 0.15 | 0.15 | 0.45 |
+| Developers | 1.01 | 1.07 | 0.65 | 2.73 |
+| Quality assurance | 0.08 | 0.26 | 0.37 | 0.71 |
+| User experience | 0.28 | 0.14 | 0.00 | 0.42 |
+| DevOps | 0.15 | 0.05 | 0.14 | 0.34 |
+| **Total FTE** | **1.67** | **1.67** | **1.31** | **4.64** |
+
+Months are rounded; unrounded totals of 1.667, 1.667 and 1.310 sum to 4.64. Months 4 to 6 carry no staff.
+
+<Callout title="Why the shape">
+Each month is capped at 1.67 FTE: five people at 10 productive hours a week. UX front-loads the account, category and calendar screens. QA peaks in Month 3 for end-to-end testing. DevOps peaks at environment setup in Month 1 and deployment in Month 3. Month 3 is lighter because only about 0.8 of a month of work remains.
+
+At 130 productive hours per FTE-month, 603.67 h is 4.64 FTE-months of effort, spread over about 12.1 calendar weeks at the team's part-time pace.
+</Callout>
+
+### Budget stack
+
+| Budget line | Amount |
+| --- | --- |
+| Labor: 603.67 h (4.64 FTE-months) at $82.18 per productive hour | $49,607 |
+| Non-labor: domain name; everything else on free tiers | $15 |
+| **Base build estimate** | **$49,622** |
+| + Contingency reserve: EMV of three named risks | $6,443 |
+| **Cost baseline** | **$56,065** |
+| + Management reserve: 5 percent of the baseline | $2,803 |
+| **Total budget request** | **$58,868** |
+| Annual operating cost, a separate line: support at 5 team-hours a week, plus the domain | $21,381 a year |
+
+Contingency sits inside the baseline and is controlled by the project manager. Management reserve sits outside it and is held by the sponsor for surprises nobody has named.
+
+### Top risks and the schedule gap
+
+| Top risk | Chance | Impact | EMV |
+| --- | --- | --- | --- |
+| Effort lands near the pessimistic 852 h (+248 h); our rates are not yet measured | 15% | $20,407 | $3,061 |
+| Organizers do not post, so the team imports outside events (108 h) | 30% | $8,875 | $2,663 |
+| Uneven El Paso and Juárez event data needs a cleanup pass (35 h) | 25% | $2,876 | $719 |
+| **Contingency reserve** | | | **$6,443** |
+
+Cross-check: one PERT spread of effort risk alone is 76.33 h × $82.18 = $6,273. The reserve covers it with $170 to spare.
+
+<Callout title="Schedule gap">
+The charter's top-down number is 8 weeks at 50 team-hours: 400 h, about $32,870 of labor. The bottom-up slice prices at 603.67 h and $49,607, which is 203.67 h or about 51 percent more, and takes roughly 12.1 weeks at the same pace. Closing the gap means a smaller slice or a longer timeline.
+</Callout>
+
+### Sources and sign-off
+
+Sources: GPI Session 11 Part 1 Budget, Steps 1 to 10 (the 11-page support document); budget figures are the final Step 10 values. Wage base: [ZipRecruiter, IT software engineer salary in Texas](https://www.ziprecruiter.com/Salaries/It-Software-Engineer-Salary--in-Texas#TableView). Analogous base: Upcoming.org history, sourced in the team's Session 9 estimation. Every other chosen number is a team assumption with the owner shown.
+
+Team sign-off: Team 9 approved all four items as written: the five assumptions and owners; the staffing split by month; the three risk chances and impacts; and the 5 percent management reserve.
+
+## The ten steps behind it
+
+The support document: the team's completed "Building the Budget" activity of 4 October 2026, carried step by step as the team wrote it. The summary above takes its figures from the final Step 10 values.
 
 ## Estimate, budget, baseline
 

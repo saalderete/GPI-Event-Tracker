@@ -349,6 +349,74 @@ function CumulativeSpend({ title }: { title: string }) {
   );
 }
 
+function Ranges({
+  title,
+  rows,
+  min,
+  max,
+  ticks,
+  marker,
+  xlabel,
+  w = 560
+}: {
+  title: string;
+  rows: { label: string; sub: string; from: number; to: number }[];
+  min: number;
+  max: number;
+  ticks: number[];
+  marker: { value: number; label: string };
+  xlabel?: string;
+  w?: number;
+}) {
+  const lw = 150;
+  const top = 34;
+  const rh = 46;
+  const bh = 18;
+  const right = 24;
+  const x0 = lw + 10;
+  const bw = w - x0 - right;
+  const base = top + rows.length * rh;
+  const h = base + (xlabel ? 46 : 28);
+  const sx = (v: number) => x0 + ((v - min) / (max - min)) * bw;
+  return (
+    <svg viewBox={`0 0 ${w} ${h}`} role="img">
+      <title>{title}</title>
+      {ticks.map((t) => (
+        <g key={t}>
+          <line x1={sx(t)} x2={sx(t)} y1={top - 6} y2={base} style={gridStyle} />
+          <text x={sx(t)} y={base + 16} textAnchor="middle" fontSize={11} style={tickStyle}>
+            {num(t)}
+          </text>
+        </g>
+      ))}
+      {rows.map((r, i) => {
+        const y = top + i * rh + (rh - bh) / 2;
+        return (
+          <g key={r.label}>
+            <text x={lw} y={y + 5} textAnchor="end" fontSize={12} style={labelStyle}>
+              {r.label}
+            </text>
+            <text x={lw} y={y + 19} textAnchor="end" fontSize={11} style={tickStyle}>
+              {r.sub}
+            </text>
+            <rect x={sx(r.from)} y={y} width={Math.max(0, sx(r.to) - sx(r.from))} height={bh} rx={9} style={tones.ink} />
+          </g>
+        );
+      })}
+      <line x1={sx(marker.value)} x2={sx(marker.value)} y1={top - 10} y2={base} style={{ stroke: "var(--accent)", strokeWidth: 2 }} />
+      <text x={sx(marker.value)} y={top - 16} textAnchor="middle" fontSize={11.5} style={{ ...mono, fill: "var(--accent)", fontWeight: 500 }}>
+        {marker.label}
+      </text>
+      <line x1={x0} x2={x0 + bw} y1={base} y2={base} style={axisStyle} />
+      {xlabel ? (
+        <text x={x0 + bw / 2} y={h - 8} textAnchor="middle" fontSize={11} style={tickStyle}>
+          {xlabel}
+        </text>
+      ) : null}
+    </svg>
+  );
+}
+
 const charts: Record<string, { caption: string; width: number; render: (title: string) => ReactNode }> = {
   "hours-by-package": {
     caption: "Hours by package: the seven packages at 14.73 hours per story point and the 58.5 project management hours carved out first, 603.67 hours in all.",
@@ -473,6 +541,24 @@ const charts: Record<string, { caption: string; width: number; render: (title: s
               { value: 2803, tone: "accent" }
             ]
           }
+        ]}
+      />
+    )
+  },
+  "effort-ranges": {
+    caption: "Effort, two methods and the planning value: function points give 426 to 852 hours, the analogous method 394 to 595 hours, and the PERT planning value of 603.67 hours sits inside the first range, just above the second.",
+    width: 560,
+    render: (title) => (
+      <Ranges
+        title={title}
+        min={350}
+        max={900}
+        ticks={[400, 500, 600, 700, 800]}
+        xlabel="team hours"
+        marker={{ value: 603.67, label: "Planning value 603.67 h" }}
+        rows={[
+          { label: "Function points", sub: "426 to 852 h", from: 426, to: 852 },
+          { label: "Analogous", sub: "394 to 595 h", from: 394, to: 595 }
         ]}
       />
     )
