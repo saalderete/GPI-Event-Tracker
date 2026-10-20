@@ -60,13 +60,13 @@ const schedule: SprintSeed[] = [
   {
     number: 3,
     slug: "sprint-3",
-    title: "To be released",
+    title: "Competitor field study",
     start: "2026-10-06",
     due: "2026-10-19T23:59:00-06:00",
     demo: "2026-10-20",
     demoLabel: "Sprint demo",
-    planned: [],
-    plannedNote: "Contents are released as the course block is finalized."
+    planned: ["Competitor Field Study: Team Deliverables", "Change Log", "Field Notes and Contradiction Memo, individual, Blackboard only", "Sprint Retrospective, private, Blackboard only"],
+    plannedNote: "The Session 13 field week: interviews outside the course, one teardown per competitor profiled, and the four team deliverables in one file. The individual deliverables, the retrospective and the peer evaluation go through Blackboard and are not on the portal."
   },
   {
     number: 4,

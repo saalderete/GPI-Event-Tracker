@@ -1,0 +1,52 @@
+## What this log is
+
+Section 8 of the course guidelines asks every sprint page after Sprint 1 for a change log: what was revised from the prior sprint's version, why, and what downstream pages or documents the change affected. This is Sprint 3's log. It covers 6 to 19 October 2026, the field-week sprint, and it is short: no Sprint 1 or Sprint 2 document was revised during it, and the sprint's one public document is new.
+
+Each entry names what changed, the reason the record gives for it, and what it touched. Times are Mountain Time. The record line of each entry links the commit in the [portal's repository](https://github.com/saalderete/GPI-Event-Tracker-), where the exact text of every change can be read line by line.
+
+## The Sprint 2 documents, closed out
+
+### Estimation Appendix 1.0 and Project Budget 1.3, 6 October
+
+**What changed.** On the first day of the sprint the [Estimation Appendix](/sprint-2/estimation-appendix/) went from 0.6 to 1.0, approved as final with Christian Lopez-Matulessy as its owner, and the [Project Budget](/sprint-2/budget/) from 1.2 to 1.3 with Emmanuel Saenz as its owner. The entries are in the [Sprint 2 change log](/sprint-2/change-log/), version 1.1, where they belong; they are noted here because they happened inside Sprint 3's dates.
+
+**Why.** The Sprint 2 retrospective's open item: a named owner for every document.
+
+**What it affected.** Nothing in the documents' text. The owner lines on both pages and on the Sprint 2 page.
+
+**Record.** [565e7d9](https://github.com/saalderete/GPI-Event-Tracker-/commit/565e7d9), [951511c](https://github.com/saalderete/GPI-Event-Tracker-/commit/951511c).
+
+## The portal
+
+### Sprint status from the calendar, and a countdown, 6 October
+
+**What changed.** The portal showed Sprint 2 as live and Sprint 3 as upcoming on the morning of 6 October, because each sprint's status was written into the site by hand. The status was switched by hand that day, and then replaced: a sprint's status now follows the course calendar at build time (upcoming until its first day, live until its due date, delivered once past it with documents published), the site rebuilds every night, and the home page carries a countdown to the next sprint change.
+
+**Why.** A hardcoded status fails on exactly the day it matters, and the sprint change falls at midnight, when nobody is editing the site.
+
+**What it affected.** The home page, every sprint page and the rail. No document changed. The sprint calendar in the site's source can still override a status when the course changes a date.
+
+**Record.** [747b740](https://github.com/saalderete/GPI-Event-Tracker-/commit/747b740), [fa2ffba](https://github.com/saalderete/GPI-Event-Tracker-/commit/fa2ffba), [45c5ad3](https://github.com/saalderete/GPI-Event-Tracker-/commit/45c5ad3).
+
+## Competitor Field Study: Team Deliverables
+
+### 1.0, the team's file as submitted, 19 October
+
+**What changed.** A new document: the Session 13 field week's four team deliverables (the evidence log, the competitive landscape, the change note and the candidate risk entries), delivered as a PDF with a cover page on the portal. Nine evidence rows: four interviews collected 12 to 16 October, three teardowns and two public pages of 18 and 19 October. This is the first document the portal carries as a delivered file rather than as page text; the cover carries the sheet and what the file contains, and the PDF is the document.
+
+**Why.** The field week's deliverable is the file, assembled by the whole team from each member's interviews and from Jazmin Huerta's teardowns, and submitted in the course's own template. Printing it as page text would have meant retyping nine pages of the team's tables on the deadline.
+
+**What it affected.** Three documents, each waiting on its owner. The change note proposes three changes to the [Business Strategy](/sprint-1/business-strategy/): the problem statement, the features in the slice and the validation plan, each tied to evidence E-02 and E-03; the Business Strategy stays at its current version until its owner revises it. The candidate risk entries are three rows for the Sprint 4 risk register, with proposed owners. And the [Project Budget](/sprint-2/budget/)'s uneven-data risk, priced at 25 percent, is the one the field evidence presses on; no figure changes until the evidence base is larger. The Sprint 2 slice boundary is unchanged.
+
+**Record.** [RECORD_HASH](https://github.com/saalderete/GPI-Event-Tracker-/commit/RECORD_HASH).
+
+## The sprint's scope
+
+Sprint 3 was the Session 13 field week: interviews outside the course, one teardown per competitor profiled, and the four team deliverables above. Each member's field notes and contradiction memo, the sprint retrospective and the peer evaluation are submitted through Blackboard and are never published here.
+
+## Open items from this log
+
+- The Business Strategy's revision from the change note, by its owner, with a new version number and a note in the next log.
+- The risk register, with the three candidate entries and their owners confirmed.
+- The competitor map's assumption row names tests for the teardowns (counting a weekend's events across DICE, Eventbrite and the Instagram roundup pages; checking whether ten events' details changed after posting); the teardowns of 18 October did not run them, so they stand as the next pass.
+- Carried from Sprint 2: the Market Research's 1.3 note, and the schedule gap between the charter's eight weeks and the 12.1 expected weeks for the slice.

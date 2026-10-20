@@ -8,6 +8,7 @@ import { SprintOneOverview } from "@/components/SprintOneOverview";
 import { DocumentList } from "@/components/DocumentList";
 import { AiDisclosure } from "@/components/AiDisclosure";
 import { aiDisclosure as sprintTwoDisclosure } from "@/content/sprint-2/contributions";
+import { aiDisclosure as sprintThreeDisclosure } from "@/content/sprint-3/contributions";
 import { IconArrow } from "@/components/Icons";
 import { sprints, sprintBySlug, isPublished, statusWord } from "@/lib/sprints";
 import { documentsForSprint } from "@/lib/registry";
@@ -106,6 +107,7 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
         </>
       )}
       {published && s.number === 2 ? <AiDisclosure disclosure={sprintTwoDisclosure} /> : null}
+      {published && s.number === 3 ? <AiDisclosure disclosure={sprintThreeDisclosure} /> : null}
 
       <nav className="mt-16 flex flex-wrap justify-between gap-3 border-t border-border pt-6 no-print" aria-label="Sprint navigation" data-reveal>
         {previous ? (

@@ -201,6 +201,40 @@ export const documents: PortalDocument[] = [
       { version: "1.1", date: "2026-10-05", note: "Entries added for the Estimation Appendix 1.0, approved by the team and its owner assigned, and for the Project Budget 1.3, its owner assigned." }
     ],
     pdf: "sprint-2-change-log"
+  },
+  {
+    slug: "competitor-field-study",
+    sprint: 3,
+    title: "Competitor Field Study: Team Deliverables",
+    kind: "document",
+    summary: "The Session 13 field week's four team deliverables, built from four interviews, three teardowns and two public pages: the evidence log, the competitive landscape with its map, comparison table and ranked switching triggers, the change note to the business case, and three candidate risk entries.",
+    version: "1.0",
+    status: "final",
+    owner: "samuel",
+    reviewers: [],
+    revised: "2026-10-19",
+    revisions: [
+      { version: "1.0", date: "2026-10-19", note: "The team's file as submitted on 19 October 2026, delivered as a PDF. Interviews I-01 to I-04 collected 12 to 16 October by Jazmin Huerta and Emmanuel Saenz, Samuel Alderete and Christian Lopez-Matulessy, and Oscar Vargas; the three teardowns and two public artifacts by Jazmin Huerta, 18 and 19 October; the change note's rationale and the risk entries written by the team. The portal lead compiled the file and ranked the switching triggers by the rule stated in it." }
+    ],
+    pdf: "sprint-3-competitor-field-study",
+    source: "upload",
+    file: "sprint-3-competitor-field-study.pdf"
+  },
+  {
+    slug: "change-log",
+    sprint: 3,
+    title: "Change Log",
+    kind: "log",
+    summary: "What changed between 6 and 19 October 2026 and what it affected: the Sprint 2 documents closed out with owners, the portal's status automation and countdown, and the Competitor Field Study delivered as the sprint's document, with the Business Strategy and the risk register as the documents it feeds.",
+    version: "1.0",
+    status: "final",
+    owner: "samuel",
+    reviewers: [],
+    revised: "2026-10-19",
+    revisions: [
+      { version: "1.0", date: "2026-10-19", note: "First Sprint 3 log, written for the submission from the repository's commit record and the document itself. Entries cover 6 to 19 October 2026." }
+    ],
+    pdf: "sprint-3-change-log"
   }
 ];
 
