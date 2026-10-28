@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ScrubFilm } from "../components/ScrubFilm.jsx";
 import { FocusedRail } from "../components/FocusedRail.jsx";
 import { Index } from "../components/Index.jsx";
-import { Steps } from "../components/Steps.jsx";
 import { SeenInApp } from "../components/Phone.jsx";
 import { Rail } from "../components/Rail.jsx";
 import { Rise, Stagger, item, motion } from "../components/motion.jsx";
@@ -12,7 +11,6 @@ const CHAPTERS = [
   { id: "week", label: "This week" },
   { id: "weekend", label: "This weekend" },
   { id: "calendar", label: "The calendar" },
-  { id: "current", label: "Stays current" },
   { id: "app", label: "In the app" },
   { id: "organizers", label: "For organizers" }
 ];
@@ -67,8 +65,6 @@ export function Home({ events, today, saved }) {
         </div>
       </section>
 
-      <Steps />
-
       <SeenInApp events={events} today={today} saved={saved} />
 
       <section id="organizers" data-rail="For organizers" className="section" aria-labelledby="org-title" data-theme="light" style={{ background: "var(--paper)", color: "var(--ink)" }}>
@@ -76,7 +72,7 @@ export function Home({ events, today, saved }) {
           <div>
             <Rise><h2 id="org-title" className="h-head">Post it once. <em>It stays yours.</em></h2></Rise>
             <Rise delay={0.08}><p className="lede mt-5">Your page is the source. GPI lists what you post, links back to you, and shows the date it was last confirmed. Change the place or call it off, and the listing says so the same hour.</p></Rise>
-            <Rise delay={0.14}><div className="mt-8 flex flex-wrap gap-3"><Link to="/post/" className="btn">Post an event</Link><a href="#current" className="btn btn-ghost">How it stays current</a></div></Rise>
+            <Rise delay={0.14}><div className="mt-8"><Link to="/post/" className="btn">Post an event</Link></div></Rise>
           </div>
           <Rise delay={0.1}>
             <dl className="grid grid-cols-2 gap-x-6 gap-y-5 text-sm">

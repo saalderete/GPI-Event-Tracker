@@ -260,20 +260,6 @@ textarea.field { min-height: 6rem; resize: vertical; }
 .phone .row__meta { font-size: 0.65rem; gap: 0.15rem 0.5rem; }
 .phone .row__side { display: none; }
 
-/* ---------- the steps (how it stays current) ---------- */
-.steps { position: relative; height: 320vh; }
-.steps__stage { position: sticky; top: 0; height: 100dvh; display: grid; align-items: center; overflow: hidden; }
-.steps__list { display: grid; gap: clamp(1rem, 3vh, 2rem); }
-.step { display: grid; grid-template-columns: 3.5rem 1fr; gap: 1rem; align-items: baseline; transition: opacity 400ms ease, transform 500ms var(--ease-out); }
-.step[data-on="false"] { opacity: 0.28; }
-.step[data-on="true"] { opacity: 1; }
-.step__num { font-family: var(--display); font-weight: 200; font-size: 2rem; color: var(--accent); line-height: 1; }
-.step h3 { font-size: clamp(1.5rem, 1rem + 2vw, 2.6rem); }
-.step p { margin-top: 0.4rem; color: var(--ink-soft); max-width: 46ch; }
-.steps--still { height: auto; }
-.steps--still .steps__stage { position: static; height: auto; padding-block: var(--section); }
-.steps--still .step { opacity: 1 !important; }
-
 /* ---------- footer ---------- */
 .foot__scene { position: relative; min-height: 80vh; display: grid; align-items: end; color: var(--film-ink); background: #0b0a09; isolation: isolate; }
 .foot__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; z-index: -1; }

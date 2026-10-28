@@ -34,7 +34,6 @@ export function Footer() {
             <nav aria-label="For organizers">
               <h3 className="foot__head">For organizers</h3>
               <Link className="foot__link" to="/post/">Post an event</Link>
-              <a className="foot__link" href="/mock/#current">How it stays current</a>
             </nav>
             <nav aria-label="About">
               <h3 className="foot__head">About</h3>
