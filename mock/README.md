@@ -67,27 +67,22 @@ set `default` in `palettes/roles.json` and build. The script runs before
 
 ## The device photos
 
-"What a listing looks like" on the organizers page is four device photos (two
-tablets held from the side, one in two hands, the iPhone duo on a fingertip),
-made for the team's KasaPro posts and rebuilt for GPI from their green-screen
-plates: each screen was generated as flat chroma green, so its four corners
-are found from the green and the capture shows only where the green was. The
-bezel, the device's rounded corners and the fingers stay in front, and the
-page meets the glass exactly. Each page is captured at its screen's own shape
-(the side-held tablets only show the left of their screen, so their pages are
-laid out for that part), warped on, lit by the plate's own light on the glass,
-softened and grained to match the photo. The backdrop is cut out with BiRefNet
-and the edges decontaminated, so the hands carry no orange onto the palette's
-colour. One tablet is mirrored so every device sits at the right. The files
-are `public/devices/*.webp` (1080x1350 with alpha); the plates and the scripts
-that build them are in `scripts/devices/` (its README says how to rebuild).
+"What a listing looks like" on the organizers page is the team's four
+KasaPro device photos (two tablets held from the side, one in two hands, the
+iPhone duo on a fingertip), re-dressed for GPI: the backdrop cut out, the
+screens replaced by captures of the mock's own pages in the dark Lab Rose
+theme. They are built from the photos' green-screen plates by
+`scripts/devices/` (see its README): the screen is found exactly from the
+green, the capture is taken at the screen's own shape and warped on, and the
+bezel, the rounded corners and any finger over the glass stay in front. The
+files are `public/devices/*.webp` (1080x1350 with alpha).
 
 `Showcase` lays the photos over the palette's accent with the wordmark and
 corner labels as live type, so the section follows the palette picker. The
 slides fade one into the next every 6.5 seconds; the chips pick one and say
 what its screen shows; the show stands still under the Pause switch or
 reduced motion. The screens are captures, so their dates are the day they
-were taken.
+were taken; rebuild them with the steps in `scripts/devices/README.md`.
 
 ## Build
 
