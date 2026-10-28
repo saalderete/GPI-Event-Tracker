@@ -156,7 +156,7 @@ textarea.field { min-height: 6rem; resize: vertical; }
 .rail__item:hover .rail__label, .rail__item:focus-visible .rail__label { opacity: 1; transform: none; }
 @media (max-width: 1100px), (max-height: 560px) { .rail { display: none; } }
 /* Where the rail shows, the page keeps clear of it. */
-@media (min-width: 1101px) and (min-height: 561px) { .with-rail .wrap { padding-left: max(var(--margin), env(safe-area-inset-left), 5.5rem); } }
+@media (min-width: 1101px) and (min-height: 561px) { .with-rail .wrap { padding-left: max(var(--margin), env(safe-area-inset-left), 5.5rem); } .with-rail .frail-label { left: max(var(--margin), 5.5rem); } }
 
 /* ---------- the hero film ---------- */
 .film { position: relative; height: 320vh; background: #0b0a09; color: var(--film-ink); }
