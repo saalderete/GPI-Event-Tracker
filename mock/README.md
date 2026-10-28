@@ -16,7 +16,8 @@ Free as a filter, a dated change line, the organizer's page as the source, and
 Vite, React 19, Tailwind v4 (`@tailwindcss/vite`), Motion (`motion/react`),
 React Router, Phosphor icons. Jura (the portal's face) for the name, headlines,
 dates and figures; Inter for everything read at small sizes; both OFL, from
-Fontsource. The palette is the portal's Bugambilia, day and night.
+Fontsource. The colours are one of the portal's seven palettes, day and night
+(see Palettes below).
 
 ## Pages
 
@@ -26,14 +27,40 @@ Fontsource. The palette is the portal's Bugambilia, day and night.
 | `/mock/events/` | The calendar: search, a day strip, Free, list or grid, "For you first" once interests are picked |
 | `/mock/events/tonight/`, `/tomorrow/`, `/weekend/`, `/week/` | One page per date, as Fever has them. Tonight, Tomorrow and a picked day open with DAYLIGHT's day scene: the time-lapse scrubbed to the minute as you move along the hours, the day's events on the track. The weekend page opens with KAGE's focused rail |
 | `/mock/events/music/` and the other seven categories | One page per category; the date chips narrow it |
-| `/mock/organizers/` | For organizers: the pitch, the six fields, what a listing looks like on a phone, the door to the form |
+| `/mock/organizers/` | For organizers: the pitch, the six fields, what a listing looks like on the team's iPhone duo (see The duo below), the door to the form |
 | `/mock/events/<slug>/` | One event: who it is for, what it costs, know before you go, where, the organizer, the change line, Save, Send to the group chat, Add to calendar (.ics) |
 | `/mock/saved/` | The plan: saved events by day, one share for the whole list |
 | `/mock/interests/` | Pick categories; the calendar leads with them; weekly subscriptions (a mock) |
 | `/mock/post/` | The organizer form: the six required fields, a live flyer, a review step |
 
-Saved events, interests, the theme and the Pause motion switch live in the
-visitor's browser only.
+Saved events, interests, the theme, the palette and the Pause motion switch
+live in the visitor's browser only.
+
+## Palettes
+
+While the team chooses, the mock can wear any of the portal's seven palettes.
+`scripts/palettes.mjs` reads `content/accents.json` and writes
+`src/styles/palettes.css` (one block per palette, day and night, in the
+mock's token names), `src/data/palettes.js` (the list for the switch) and the
+same CSS inline into `index.html` between the `<style id="palettes">` tags, so
+the opening screen already wears the chosen palette. It runs before `dev` and
+`build`; the outputs are committed too. The palette switch in the top bar
+(the palette icon) keeps the choice in the browser, and `?palette=<id>` in
+the address picks one for a link. The default is the one line in
+`index.html` that reads `pal || "bugambilia"`. When the team settles on one,
+set that line and the switch can go.
+
+## The duo
+
+`public/duo.webp` is the team's iPhone duo photo, cut from its orange backdrop
+(the backdrop keyed on hue and saturation, the hand below the phones dropped,
+the orange spill on the metal neutralized, the edge feathered; a one-off
+script, not in the repo). The screen is not a picture: `Duo` in
+`src/components/Phone.jsx` lays the real components out flat, 220 to 300 px
+wide by how large the photo renders, and one CSS `matrix3d` (a homography from
+the flat rectangle to the four screen corners in `src/data/duo.js`) puts them
+onto the front phone. The chips swap the view, the dates stay live, and the
+fit is recomputed on resize only.
 
 ## Data
 
@@ -75,8 +102,8 @@ rail is the landing's.
 
 ## House rules
 
-No em dashes in visible copy. One accent (the portal's magenta), used for
-actions and status only. 2 px corners on pictures and fields, pills for buttons
+No em dashes in visible copy. One accent (the palette's), used for actions
+and status only. 2 px corners on pictures and fields, pills for buttons
 and chips. Everything that moves honours reduced motion and the Pause switch.
 No invented reviews, counts or facts: every figure on the landing is counted
 from the sample data.

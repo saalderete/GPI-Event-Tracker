@@ -16,12 +16,13 @@ import { Post } from "./pages/Post.jsx";
 import { NotFound } from "./pages/NotFound.jsx";
 import { eventsFor, categoryById } from "./data/events.js";
 import { todayKey } from "./lib/dates.js";
-import { useInterests, useMotionPref, useSaved, useThemeMode } from "./lib/store.js";
+import { useInterests, useMotionPref, usePalette, useSaved, useThemeMode } from "./lib/store.js";
 
 export default function App() {
   const location = useLocation();
   const home = location.pathname === "/" || location.pathname === "";
   const [mode, setMode] = useThemeMode();
+  const [palette, setPalette] = usePalette();
   const motionPref = useMotionPref();
   const today = todayKey();
   const events = useMemo(() => eventsFor(today), [today]);
@@ -36,12 +37,14 @@ export default function App() {
     const apply = () => {
       const dark = mode === "dark" || (mode === "system" && (home || mq.matches));
       document.documentElement.dataset.theme = dark ? "dark" : "light";
-      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#241c1c" : "#f8f2f2");
+      document.documentElement.dataset.palette = palette;
+      const paper = getComputedStyle(document.documentElement).getPropertyValue("--paper").trim();
+      if (paper) document.querySelector('meta[name="theme-color"]')?.setAttribute("content", paper);
     };
     apply();
     mq.addEventListener("change", apply);
     return () => mq.removeEventListener("change", apply);
-  }, [mode, home]);
+  }, [mode, home, palette]);
 
   useEffect(() => {
     if (location.hash) { document.getElementById(location.hash.slice(1))?.scrollIntoView(); return; }
@@ -51,7 +54,7 @@ export default function App() {
   return (
     <MotionCtx.Provider value={{ paused: motionPref.paused, toggle: motionPref.toggle }}>
       <ReadLine />
-      <TopBar savedCount={saved.length} mode={mode} setMode={setMode} />
+      <TopBar savedCount={saved.length} mode={mode} setMode={setMode} palette={palette} setPalette={setPalette} />
       <main id="main">
         <Routes>
           <Route path="/" element={<Home events={events} today={today} saved={saved} />} />

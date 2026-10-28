@@ -15,8 +15,12 @@
       // on arrival from outside and on reload, never on back and forward and
       // never for a visitor who asked for less motion (after Benji's).
       (function () {
-        var d = document.documentElement, mode = "system";
-        try { mode = localStorage.getItem("gpi-theme") || "system"; } catch (e) {}
+        var d = document.documentElement, mode = "system", pal = "";
+        // The app keeps its settings as JSON strings; read them the same way.
+        function stored(k) { try { var v = JSON.parse(localStorage.getItem(k)); return typeof v === "string" ? v : ""; } catch (e) { return ""; } }
+        mode = stored("gpi-theme") || "system"; pal = stored("gpi-palette");
+        try { var q = new URLSearchParams(location.search).get("palette"); if (q) { pal = q; localStorage.setItem("gpi-palette", JSON.stringify(q)); } } catch (e) {}
+        d.dataset.palette = pal || "bugambilia";
         var home = location.pathname.replace(/\/+$/, "") === "/mock";
         var dark = mode === "dark" || (mode === "system" && (home || matchMedia("(prefers-color-scheme: dark)").matches));
         d.dataset.theme = dark ? "dark" : "light";
@@ -31,20 +35,34 @@
         } catch (e) {}
       })();
     </script>
+    <style id="palettes">
+:root[data-palette="bugambilia"] { --paper: #f8f2f2; --surface: #ffffff; --surface-2: #f3f0ea; --ink: #17140f; --ink-soft: #57534e; --muted: #6b6560; --line: #e7e2d9; --line-strong: #d3ccc0; --accent: #b3156c; --accent-hover: #8c1054; --accent-soft: #fbe3f0; --accent-ink: #7a0e49; --on-accent: #ffffff; }
+:root[data-palette="bugambilia"][data-theme="dark"] { --paper: #241c1c; --surface: #25211c; --surface-2: #2c2820; --ink: #f4f0ea; --ink-soft: #c4bdb2; --muted: #a39c92; --line: #38332b; --line-strong: #4a443b; --accent: #ff7fc8; --accent-hover: #ff9ad4; --accent-soft: #3a1a2d; --accent-ink: #ffb8de; --on-accent: #1b1815; }
+:root[data-palette="cielo"] { --paper: #f1f5fb; --surface: #ffffff; --surface-2: #e6ecf6; --ink: #0f1b33; --ink-soft: #3e4b66; --muted: #5a6785; --line: #d3dcea; --line-strong: #b7c4da; --accent: #1f4fd1; --accent-hover: #183fa8; --accent-soft: #dde6fb; --accent-ink: #163a99; --on-accent: #ffffff; }
+:root[data-palette="cielo"][data-theme="dark"] { --paper: #0c1424; --surface: #131e33; --surface-2: #1a2740; --ink: #e8eefb; --ink-soft: #b4c1dc; --muted: #8e9db9; --line: #24324d; --line-strong: #34456a; --accent: #8db0ff; --accent-hover: #a7c2ff; --accent-soft: #1a2a4d; --accent-ink: #bfd0ff; --on-accent: #0c1424; }
+:root[data-palette="desierto"] { --paper: #f6ecd9; --surface: #fdf7ec; --surface-2: #eee0c6; --ink: #2f1d0e; --ink-soft: #5e4630; --muted: #75593f; --line: #e2d0b0; --line-strong: #cdb691; --accent: #a8401a; --accent-hover: #853214; --accent-soft: #f7dfd0; --accent-ink: #7a2e12; --on-accent: #ffffff; }
+:root[data-palette="desierto"][data-theme="dark"] { --paper: #1e1610; --surface: #2a1f16; --surface-2: #33271c; --ink: #f3e7d3; --ink-soft: #cdbb9f; --muted: #a89478; --line: #3f3226; --line-strong: #55452f; --accent: #f0946a; --accent-hover: #f4a983; --accent-soft: #3d2419; --accent-ink: #f8bfa2; --on-accent: #1e1610; }
+:root[data-palette="nopal"] { --paper: #eef3ea; --surface: #f9fbf7; --surface-2: #e1eadb; --ink: #14231a; --ink-soft: #3f5446; --muted: #586c5e; --line: #cfdcc9; --line-strong: #b3c6ab; --accent: #1b6f34; --accent-hover: #145227; --accent-soft: #d9efdf; --accent-ink: #124a24; --on-accent: #ffffff; }
+:root[data-palette="nopal"][data-theme="dark"] { --paper: #0f1a13; --surface: #182620; --surface-2: #1f3027; --ink: #e9f1e9; --ink-soft: #b5c8b7; --muted: #8ea393; --line: #27392e; --line-strong: #38503f; --accent: #6fd693; --accent-hover: #8ae0a8; --accent-soft: #183825; --accent-ink: #a5e9bd; --on-accent: #0f1a13; }
+:root[data-palette="adobe"] { --paper: #f7e8e1; --surface: #fdf4f0; --surface-2: #efdbd1; --ink: #2c1410; --ink-soft: #5f3a33; --muted: #764f46; --line: #e5cbc0; --line-strong: #d3b0a2; --accent: #ad2d1a; --accent-hover: #872314; --accent-soft: #f9dcd5; --accent-ink: #7a2013; --on-accent: #ffffff; }
+:root[data-palette="adobe"][data-theme="dark"] { --paper: #1e110e; --surface: #2b1a16; --surface-2: #35221d; --ink: #f5e9e4; --ink-soft: #d1bbb3; --muted: #ab9088; --line: #43302a; --line-strong: #5a423b; --accent: #ff8a73; --accent-hover: #ffa08d; --accent-soft: #3f1f19; --accent-ink: #ffb8a8; --on-accent: #1e110e; }
+:root[data-palette="ciruela"] { --paper: #f2eef8; --surface: #fbf9fe; --surface-2: #e8e1f2; --ink: #1e1330; --ink-soft: #4d3f66; --muted: #66597d; --line: #d9d0e8; --line-strong: #bfb3d6; --accent: #6a2fc9; --accent-hover: #5223a0; --accent-soft: #eadff9; --accent-ink: #4c1f93; --on-accent: #ffffff; }
+:root[data-palette="ciruela"][data-theme="dark"] { --paper: #150f22; --surface: #1f172f; --surface-2: #281f3a; --ink: #efe9f8; --ink-soft: #c3b8d8; --muted: #9c8fb6; --line: #33284a; --line-strong: #473a62; --accent: #b995ff; --accent-hover: #c9adff; --accent-soft: #2c1f4d; --accent-ink: #d4bfff; --on-accent: #150f22; }
+:root[data-palette="periodico"] { --paper: #ffffff; --surface: #ffffff; --surface-2: #f0f0f0; --ink: #000000; --ink-soft: #333333; --muted: #555555; --line: #dedede; --line-strong: #bdbdbd; --accent: #c8102e; --accent-hover: #9c0c24; --accent-soft: #fbe0e4; --accent-ink: #8a0b20; --on-accent: #ffffff; }
+:root[data-palette="periodico"][data-theme="dark"] { --paper: #000000; --surface: #111111; --surface-2: #1a1a1a; --ink: #ffffff; --ink-soft: #cfcfcf; --muted: #9a9a9a; --line: #2a2a2a; --line-strong: #3d3d3d; --accent: #ff4d6d; --accent-hover: #ff6f89; --accent-soft: #3a0d16; --accent-ink: #ff9db0; --on-accent: #000000; }
+</style>
     <style>
-      /* The opening screen paints before the bundle arrives. */
+      /* The opening screen paints before the bundle arrives, in the chosen palette. */
       .loader { display: none; }
       html[data-loading] .loader { display: grid; }
       html[data-loading] body { overflow: hidden; }
-      .loader { position: fixed; inset: 0; z-index: 100; place-items: center; background: #241c1c; color: #f4f0ea; transition: transform 600ms cubic-bezier(0.77, 0, 0.175, 1); }
-      html[data-theme="light"] .loader { background: #f8f2f2; color: #17140f; }
+      .loader { position: fixed; inset: 0; z-index: 100; place-items: center; background: var(--paper, #241c1c); color: var(--ink, #f4f0ea); transition: transform 600ms cubic-bezier(0.77, 0, 0.175, 1); }
       .loader.is-out { transform: translateY(-100%); }
       .loader__in { display: grid; justify-items: center; gap: 22px; padding: 0 16px; text-align: center; }
       .loader__name { font: 300 clamp(2rem, 1rem + 3vw, 3.5rem) / 1 "Jura Variable", "Jura", "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.02em; }
       .loader__line { font: 500 0.6875rem / 1 system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; }
       .loader__bar { width: 220px; height: 3px; background: rgba(128, 128, 128, 0.25); overflow: hidden; }
-      .loader__bar span { display: block; height: 100%; background: #ff7fc8; transform: scaleX(var(--p, 0)); transform-origin: left; transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
-      html[data-theme="light"] .loader__bar span { background: #b3156c; }
+      .loader__bar span { display: block; height: 100%; background: var(--accent, #ff7fc8); transform: scaleX(var(--p, 0)); transform-origin: left; transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
       .loader__n { font: 300 1rem / 1 "Jura Variable", "Jura", "Helvetica Neue", Arial, sans-serif; font-variant-numeric: tabular-nums; opacity: 0.7; }
     </style>
   </head>

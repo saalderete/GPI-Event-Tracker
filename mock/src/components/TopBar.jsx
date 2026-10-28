@@ -2,8 +2,9 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Sun, Moon, Monitor, Pause, Play } from "@phosphor-icons/react";
 import { MotionCtx } from "./motion.jsx";
+import { PaletteSwitch } from "./PaletteSwitch.jsx";
 
-export function TopBar({ savedCount, mode, setMode }) {
+export function TopBar({ savedCount, mode, setMode, palette, setPalette }) {
   const { paused, toggle } = useContext(MotionCtx);
   const next = { system: "light", light: "dark", dark: "system" }[mode] || "system";
   const Icon = mode === "light" ? Sun : mode === "dark" ? Moon : Monitor;
@@ -23,6 +24,7 @@ export function TopBar({ savedCount, mode, setMode }) {
           <button type="button" className="icon-btn hide-sm" onClick={toggle} aria-pressed={paused} aria-label={paused ? "Play motion" : "Pause motion"} title={paused ? "Play motion" : "Pause motion"}>
             {paused ? <Play size={18} /> : <Pause size={18} />}
           </button>
+          <PaletteSwitch palette={palette} setPalette={setPalette} />
           <button type="button" className="icon-btn" onClick={() => setMode(next)} aria-label={`Theme: ${mode}. Switch to ${next}`} title={`Theme: ${mode}`}>
             <Icon size={18} />
           </button>
