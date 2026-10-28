@@ -66,8 +66,8 @@ honest.
   served at `/mock/`: the root build runs `npm run mock:build` first, which
   builds it into the gitignored `public/mock/` and copies `index.html` into
   every route folder. Its rules are the site's: Jura and Inter, a visitor-chosen palette
-  (Bugambilia by default, or any of the Nerrix design library's, each
-  derived to pass contrast in both themes), one accent, no em dashes, sample
-  data labeled as such, every motion behind the Pause switch and reduced
-  motion. See
+  (one of the nine from dopely.colors' Beauty Brand post, Lab Rose by
+  default, each derived to pass contrast in both themes), one accent, no em
+  dashes, sample data labeled as such, every motion behind the Pause switch
+  and reduced motion. See
   `mock/README.md`.

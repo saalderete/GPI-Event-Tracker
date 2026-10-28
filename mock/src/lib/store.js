@@ -54,5 +54,5 @@ export function useMotionPref() {
 /** The palette, one of the portal's seven; the landing and every page wear it in both themes. */
 export function usePalette() {
   // The default is the one the opening script put on <html>, so it lives in one place (index.html).
-  return useStored("gpi-palette", document.documentElement.dataset.palette || "bugambilia");
+  return useStored("gpi-palette", document.documentElement.dataset.palette || document.documentElement.dataset.paletteDefault || "lab-rose");
 }

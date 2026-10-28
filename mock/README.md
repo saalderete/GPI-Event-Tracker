@@ -38,28 +38,32 @@ live in the visitor's browser only.
 
 ## Palettes
 
-Visitors choose the site's colours. The palette icon in the top bar opens a
-picker with every palette in the Nerrix design library
-(`nerrix-digital/design-library/palettes`, 118 palettes from public
-dopely.colors and dyslove.design posts pulled on 2026-10-26, copied here as
-`palettes/library.json`) plus the portal's own Bugambilia, the default. The
-page changes as a row is picked, by day and by night, and the choice stays in
-the browser.
+Visitors choose the site's colours from the nine palettes of dopely.colors'
+[Beauty Brand Color Palettes](https://www.instagram.com/p/DexF1vwDfLH/) post
+(October 21, 2026), one per slide: Serum Blush, Pure Cream, Lab Rose, Spa
+Mist, Fragrance Night, Wine Tint, Pearl White, Bronze Base and Clinic White.
+The palette icon in the top bar opens the picker; the page changes as a row
+is picked, by day and by night, and the choice stays in the browser. Lab
+Rose is the default.
 
-`scripts/palettes.mjs` casts each library palette's own colours into roles
-(the dark anchor: night paper and day ink; the day accent; the night accent;
-the soft tint; the day paper), derives the mock's thirteen tokens for the day
-and the night in OKLab, and pushes every pairing until it meets its contrast
-(ink on paper 7, muted and accent-ink on paper 4.5, accent on paper 3, the
-label on a button 4.5). `palettes/roles.json` hand-picks the roles and a
-label for a few of them (Twilight, Marquee, Motel, Desert, Nori, Dusk, Aqua,
-Nitro) and holds Bugambilia's tokens. The output is `src/data/palettes.json`,
-loaded only when the picker opens or a palette other than the default is in
-play. No CSS is generated: the chosen palette is applied as inline custom
-properties on `<html>` (`src/lib/palette.js`), kept in the browser with its
-tokens, and put back on by the opening script before paint. `?palette=<id>`
-in the address picks one for a link. The script runs before `dev` and
-`build`; the output is committed too.
+`palettes/library.json` is the post as the Nerrix design library recorded it
+(`nerrix-digital/design-library/palettes/palettes.json`, pulled 2026-10-26):
+hex values as printed on the slides, or sampled from the swatch where the
+label was unreadable. `palettes/roles.json` says which of each slide's colours
+plays the dark anchor (night paper, day ink), the day accent, the night
+accent, the soft tint and the day paper, and names the default.
+`scripts/palettes.mjs` derives the mock's thirteen tokens for the day and
+the night in OKLab, pushes every pairing until it meets its contrast (ink on
+paper 7, muted and accent-ink on paper 4.5, accent on paper 3, the label on a
+button 4.5), and writes `src/data/palettes.json` (the picker's list, loaded
+only when it opens or a palette other than the default is in play),
+`src/styles/default-palette.css` (the default's tokens, the stylesheet's
+base) and the default's id into `index.html`. A chosen palette is applied as
+inline custom properties on `<html>` (`src/lib/palette.js`), kept in the
+browser with its tokens, and put back on by the opening script before paint.
+`?palette=<id>` in the address picks one for a link. To change the default,
+set `default` in `palettes/roles.json` and build. The script runs before
+`dev` and `build`; its outputs are committed too.
 
 ## The duo
 

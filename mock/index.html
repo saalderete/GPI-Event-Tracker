@@ -6,7 +6,7 @@
     <title>Gracias Por Invitar · Everything happening in El Paso</title>
     <meta name="description" content="One calendar for everything happening in El Paso and Juárez, by date and confirmed with the organizer. The Team 9 mock, Fall 2026." />
     <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#241c1c" />
+    <meta name="theme-color" content="#3D2730" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script>
       // Before first paint: the theme, and whether the opening screen shows.
@@ -20,7 +20,7 @@
         function stored(k) { try { var v = JSON.parse(localStorage.getItem(k)); return typeof v === "string" ? v : ""; } catch (e) { return ""; } }
         mode = stored("gpi-theme") || "system"; pal = stored("gpi-palette");
         try { var q = new URLSearchParams(location.search).get("palette"); if (q) { pal = q; localStorage.setItem("gpi-palette", JSON.stringify(q)); } } catch (e) {}
-        d.dataset.palette = pal || "bugambilia";
+        d.dataset.palette = pal || "lab-rose"; d.dataset.paletteDefault = "lab-rose";
         var home = location.pathname.replace(/\/+$/, "") === "/mock";
         var dark = mode === "dark" || (mode === "system" && (home || matchMedia("(prefers-color-scheme: dark)").matches));
         d.dataset.theme = dark ? "dark" : "light";

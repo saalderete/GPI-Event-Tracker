@@ -1,8 +1,9 @@
-// The visitor's palette: one of the design library's, or the portal's own
-// (the default, which lives in the stylesheet). A chosen palette is applied
-// as inline custom properties on <html> for the current theme and kept in the
-// browser with its tokens, so the opening script can put it on before paint.
-export const DEFAULT_PALETTE = "bugambilia";
+// The visitor's palette: one of the nine from dopely.colors' Beauty Brand
+// post. The default's tokens are the stylesheet's base; a chosen palette is
+// applied as inline custom properties on <html> for the current theme and
+// kept in the browser with its tokens, so the opening script can put it on
+// before paint. The opening script also names the default on <html>.
+export const DEFAULT_PALETTE = document.documentElement.dataset.paletteDefault || "lab-rose";
 export const TOKENS = ["paper", "surface", "surface-2", "ink", "ink-soft", "muted", "line", "line-strong", "accent", "accent-hover", "accent-soft", "accent-ink", "on-accent"];
 
 let all = null;

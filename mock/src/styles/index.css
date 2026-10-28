@@ -6,13 +6,11 @@
 @import "tailwindcss";
 @import "@fontsource-variable/jura";
 @import "@fontsource-variable/inter";
+@import "./default-palette.css";
 
 :root, [data-theme="light"] {
   color-scheme: light;
-  --paper: #f8f2f2; --surface: #ffffff; --surface-2: #f3f0ea;
-  --ink: #17140f; --ink-soft: #57534e; --muted: #6b6560;
-  --line: #e7e2d9; --line-strong: #d3ccc0;
-  --accent: #b3156c; --accent-hover: #8c1054; --accent-soft: #fbe3f0; --accent-ink: #7a0e49; --on-accent: #ffffff;
+  /* the colour tokens come from default-palette.css (the default palette) or the visitor's choice on <html> */
   --film-ink: #f6efe8;
   --display: "Jura Variable", "Jura", "Helvetica Neue", Arial, sans-serif;
   --sans: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -30,10 +28,6 @@
 }
 [data-theme="dark"] {
   color-scheme: dark;
-  --paper: #241c1c; --surface: #2a2321; --surface-2: #2c2820;
-  --ink: #f4f0ea; --ink-soft: #c4bdb2; --muted: #a39c92;
-  --line: #3b342f; --line-strong: #4a443b;
-  --accent: #ff7fc8; --accent-hover: #ff9ad4; --accent-soft: #3a1a2d; --accent-ink: #ffb8de; --on-accent: #1b1815;
 }
 
 @theme inline {
