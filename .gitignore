@@ -13,6 +13,9 @@ next-env.d.ts
 # regenerates it from content/accents.json every time.
 public/pdf/*.pdf
 
+# The mock website is built from mock/ into public/mock/ by the build.
+public/mock/
+
 # Sprint retrospectives and peer evaluations are private and go to
 # Blackboard only. Keep working copies here if you like: nothing in this
 # folder can be committed, and the validator refuses a build that mentions

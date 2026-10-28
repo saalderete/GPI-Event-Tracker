@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Gracias Por Invitar · Everything happening in El Paso</title>
+    <meta name="description" content="One calendar for everything happening in El Paso and Juárez, by date and confirmed with the organizer. The Team 9 mock, Fall 2026." />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#241c1c" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      // The theme before first paint: the landing opens at night unless the
+      // visitor chose a theme; every other page follows the system or the choice.
+      (function () {
+        var mode = "system";
+        try { mode = localStorage.getItem("gpi-theme") || "system"; } catch (e) {}
+        var home = location.pathname.replace(/\/+$/, "") === "/mock";
+        var dark = mode === "dark" || (mode === "system" && (home || matchMedia("(prefers-color-scheme: dark)").matches));
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -62,3 +62,10 @@ honest.
   site rebuilds nightly; set `status` in `lib/sprints.ts` only to override
   it), write the change log, run
   `npm run ship`, push to `main`.
+- The product mock lives in `mock/` (Vite, React, Tailwind, Motion) and is
+  served at `/mock/`: the root build runs `npm run mock:build` first, which
+  builds it into the gitignored `public/mock/` and copies `index.html` into
+  every route folder. Its rules are the site's: Jura and Inter, the Bugambilia
+  palette in both themes, one accent, no em dashes, sample data labeled as
+  such, every motion behind the Pause switch and reduced motion. See
+  `mock/README.md`.
