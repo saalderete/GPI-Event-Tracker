@@ -1,14 +1,17 @@
-// The palettes the mock can wear, from mock/palettes.json (the Nerrix design
-// library's hexes in five roles), written as CSS: one block per palette for
-// the day, one for the night, in the mock's token names. The remaining tones
-// are derived here in OKLab and every pairing is pushed until it meets the
-// contrast it needs. Runs before dev and build; the outputs are committed too,
-// and the same CSS is inlined into index.html so the opening screen already
-// wears the chosen palette.
+// The palettes a visitor can pick: every palette in the Nerrix design library
+// (palettes/library.json, public dopely.colors and dyslove.design posts) plus
+// the portal's own. Each library palette gives three to five colours; this
+// script casts them into roles (the dark anchor, the day accent, the night
+// accent, the soft tint, the day paper), derives the mock's thirteen tokens
+// for the day and the night in OKLab, pushes every pairing until it meets its
+// contrast, and writes src/data/palettes.json for the picker. The chosen
+// palette is applied as inline custom properties on <html>, so no CSS is
+// generated. Runs before dev and build; the output is committed too.
 import { readFile, writeFile } from "node:fs/promises";
 
 const here = new URL(".", import.meta.url);
-const spec = JSON.parse(await readFile(new URL("../palettes.json", here), "utf8"));
+const lib = JSON.parse(await readFile(new URL("../palettes/library.json", here), "utf8"));
+const roles = JSON.parse(await readFile(new URL("../palettes/roles.json", here), "utf8"));
 
 // ---- colour maths: sRGB <-> OKLab, WCAG contrast
 const clamp01 = (x) => Math.min(1, Math.max(0, x));
@@ -30,22 +33,33 @@ function fromLab([L, a, b]) {
 }
 const lum = (hex) => { const [r, g, b] = hexToRgb(hex).map(lin); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
 const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
-/** a toward b by t, in OKLab */
 const mix = (a, b, t) => { const A = toLab(a), B = toLab(b); return fromLab(A.map((v, i) => v + (B[i] - v) * t)); };
 const lighter = (hex, dL) => { const [L, a, b] = toLab(hex); return fromLab([clamp01(L + dL), a, b]); };
-/** move fg away from bg in lightness until the contrast holds (dir +1 lighter, -1 darker) */
-function ensure(fg, bg, target, dir) {
-  let c = fg, n = 0;
-  while (contrast(c, bg) < target && n++ < 80) c = lighter(c, 0.008 * dir);
-  return c;
-}
-const isLight = (hex) => lum(hex) > 0.4;
+function ensure(fg, bg, target, dir) { let c = fg, n = 0; while (contrast(c, bg) < target && n++ < 90) c = lighter(c, 0.008 * dir); return c; }
 
-// ---- the derivation, from the five roles
+// ---- roles from a library palette's own colours
+function autoRoles(colors) {
+  const cs = colors.map((c) => { const lab = toLab(c.hex); return { hex: c.hex, L: lab[0], C: Math.hypot(lab[1], lab[2]) }; });
+  const byL = [...cs].sort((a, b) => a.L - b.L);
+  const dark = byL[0];
+  let rest = cs.filter((c) => c !== dark);
+  const lightest = byL[byL.length - 1];
+  let light = null;
+  if (lightest !== dark && lightest.L > 0.92 && lightest.C < 0.07) { light = lightest; rest = rest.filter((c) => c !== light); }
+  const score = (c) => c.C * (c.L > 0.3 && c.L < 0.86 ? 1 : 0.5);
+  const brand = rest.length ? [...rest].sort((a, b) => score(b) - score(a))[0] : dark;
+  rest = rest.filter((c) => c !== brand);
+  const bright = rest.filter((c) => c.L > brand.L && c.C > 0.05).sort((a, b) => b.C - a.C)[0] || null;
+  if (bright) rest = rest.filter((c) => c !== bright);
+  const tint = rest.filter((c) => c.L > 0.75).sort((a, b) => b.L - a.L)[0] || null;
+  return { dark: dark.hex, brand: brand.hex, bright: bright?.hex, tint: tint?.hex, light: light?.hex };
+}
+
+// ---- the thirteen tokens, day and night, from the roles
 function derive(c) {
-  const dark = c.dark, inkDay = c.ink || c.dark, brand = c.brand, tint = c.tint || mix(brand, c.light || "#ffffff", 0.78);
+  const dark = c.dark, inkDay = c.ink || c.dark, brand = c.brand;
+  const tint = c.tint || mix(brand, c.light || "#ffffff", 0.78);
   const light = c.light || mix(tint, "#ffffff", 0.66);
-  // day
   const dPaper = light;
   const dSurface = lum(light) > 0.93 ? "#ffffff" : mix(light, "#ffffff", 0.55);
   const dSurface2 = mix(dPaper, tint, 0.42);
@@ -54,13 +68,11 @@ function derive(c) {
   const dMuted = ensure(mix(dInk, dPaper, 0.46), dPaper, 4.6, -1);
   const dLine = mix(dPaper, dInk, 0.1), dLineStrong = mix(dPaper, dInk, 0.2);
   let dAccent = ensure(brand, dPaper, 3.05, -1);
-  // the label on a button has to read too: darken the accent a touch until white or the ink does
   for (let n = 0; n < 40 && contrast("#ffffff", dAccent) < 4.5 && contrast(dInk, dAccent) < 4.5; n++) dAccent = lighter(dAccent, -0.006);
   const dAccentHover = lighter(dAccent, -0.07);
   const dAccentSoft = mix(dPaper, dAccent, 0.14);
   const dAccentInk = ensure(dAccent, dPaper, 4.6, -1);
   const dOn = contrast("#ffffff", dAccent) >= 4.5 ? "#ffffff" : contrast(dInk, dAccent) >= contrast("#ffffff", dAccent) ? dInk : "#ffffff";
-  // night
   let nPaper = dark;
   while (contrast(light, nPaper) < 11) nPaper = lighter(nPaper, -0.01);
   const nSurface = lighter(nPaper, 0.035), nSurface2 = lighter(nPaper, 0.07);
@@ -79,27 +91,38 @@ function derive(c) {
   };
 }
 
-// ---- write everything
-const order = ["paper", "surface", "surface-2", "ink", "ink-soft", "muted", "line", "line-strong", "accent", "accent-hover", "accent-soft", "accent-ink", "on-accent"];
-const block = (t) => order.map((k) => `--${k}: ${t[k]};`).join(" ");
-let css = `/* Generated by scripts/palettes.mjs from palettes.json. Do not edit. */\n`;
-const list = [];
+// ---- the list, in the order the picker shows it
+const SERIES = [
+  ["dyslove.design", "New Color Combos", "Dark and bright pairs"],
+  ["dyslove.design", "Summer Color Combos", "Summer pairs"],
+  ["dopely.colors", "Autumn Color Palettes", "Autumn"],
+  ["dopely.colors", "Beauty Brand Color Palettes", "Beauty brands"],
+  ["dopely.colors", "Color Combos (one color per slide)", "Colour combos"],
+  ["dopely.colors", "Fashion Brand Color Palettes", "Fashion brands"],
+  ["dopely.colors", "Food Brand Color Palettes", "Food brands"],
+  ["dopely.colors", "Gradient Color Palettes", "Gradients"],
+  ["dopely.colors", "Monochrome Color Palettes", "Monochrome"],
+  ["dopely.colors", "Neon Color Palettes", "Neon"],
+  ["dopely.colors", "Retro Color Palettes", "Retro"],
+  ["dopely.colors", "SaaS Landing Page Color Palettes", "Landing pages"],
+  ["dopely.colors", "Spring Color Palettes", "Spring"],
+  ["dopely.colors", "Winter Color Palettes", "Winter"],
+];
+const seriesIndex = (p) => SERIES.findIndex(([acc, s]) => acc === p.source && s === p.series);
+const list = roles.own.map((o) => ({ id: o.id, label: o.label, hint: o.hint, series: o.series, account: o.account, post: o.post, swatch: o.swatch, names: o.names, light: o.tokens.light, dark: o.tokens.dark }));
+const sorted = [...lib.palettes].sort((a, b) => seriesIndex(a) - seriesIndex(b) || a.name.localeCompare(b.name, undefined, { numeric: true }));
 const report = [];
-for (const p of spec.palettes) {
-  const t = p.tokens || derive(p.colors);
-  // :root[...] outranks the base tokens whatever the order of the sheets.
-  css += `:root[data-palette="${p.id}"] { ${block(t.light)} }\n`;
-  css += `:root[data-palette="${p.id}"][data-theme="dark"] { ${block(t.dark)} }\n`;
-  list.push({ id: p.id, label: p.label, hint: p.hint, source: p.source, light: { paper: t.light.paper, accent: t.light.accent, ink: t.light.ink }, dark: { paper: t.dark.paper, accent: t.dark.accent, ink: t.dark.ink } });
-  for (const [theme, tk] of Object.entries(t)) {
-    const checks = [["ink/paper", contrast(tk.ink, tk.paper), 7], ["muted/paper", contrast(tk.muted, tk.paper), 4.5], ["accent/paper", contrast(tk.accent, tk.paper), 3], ["accent-ink/paper", contrast(tk["accent-ink"], tk.paper), 4.5], ["on-accent/accent", contrast(tk["on-accent"], tk.accent), 4.5], ["ink/surface-2", contrast(tk.ink, tk["surface-2"]), 7]];
-    for (const [name, v, min] of checks) if (v < min) report.push(`${p.id} ${theme} ${name} ${v.toFixed(2)} < ${min}`);
-  }
+for (const p of sorted) {
+  const si = seriesIndex(p);
+  if (si < 0) { report.push(`unplaced series: ${p.source} ${p.series}`); continue; }
+  const cur = roles.curated[p.id];
+  const names = p.colors.map((c) => c.name);
+  const t = derive(cur ? cur.colors : autoRoles(p.colors));
+  list.push({ id: cur ? cur.id : p.id, label: cur ? cur.label : p.name, hint: cur ? cur.hint : names.join(", "), series: SERIES[si][2], account: p.source, post: p.post, swatch: p.colors.map((c) => c.hex), names, light: t.light, dark: t.dark });
 }
-await writeFile(new URL("../src/styles/palettes.css", here), css);
-await writeFile(new URL("../src/data/palettes.json", here), JSON.stringify(list, null, 2) + "\n");
-const htmlPath = new URL("../index.html", here);
-let html = await readFile(htmlPath, "utf8");
-html = html.replace(/(<style id="palettes">)[\s\S]*?(<\/style>)/, `$1\n${css.replace(/^\/\*.*\*\/\n/, "")}$2`);
-await writeFile(htmlPath, html);
-console.log(`palettes: ${spec.palettes.length} written${report.length ? "\ncontrast short:\n  " + report.join("\n  ") : ", every pairing meets its contrast"}`);
+for (const e of list) for (const [theme, tk] of Object.entries({ light: e.light, dark: e.dark })) {
+  const checks = [["ink/paper", contrast(tk.ink, tk.paper), 7], ["muted/paper", contrast(tk.muted, tk.paper), 4.5], ["accent/paper", contrast(tk.accent, tk.paper), 3], ["accent-ink/paper", contrast(tk["accent-ink"], tk.paper), 4.5], ["on-accent/accent", contrast(tk["on-accent"], tk.accent), 4.5], ["ink/surface-2", contrast(tk.ink, tk["surface-2"]), 7]];
+  for (const [name, v, min] of checks) if (v < min - 0.01) report.push(`${e.id} ${theme} ${name} ${v.toFixed(2)} < ${min}`);
+}
+await writeFile(new URL("../src/data/palettes.json", here), JSON.stringify(list) + "\n");
+console.log(`palettes: ${list.length} written${report.length ? "\n  " + report.join("\n  ") : ", every pairing meets its contrast"}`);

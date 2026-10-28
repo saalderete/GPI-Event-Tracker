@@ -38,25 +38,28 @@ live in the visitor's browser only.
 
 ## Palettes
 
-While the team chooses, the mock can wear any of eight palettes drawn from
-the Nerrix design library (`nerrix-digital/design-library/palettes`, public
-dopely.colors and dyslove.design posts pulled on 2026-10-26), plus the
-portal's Bugambilia as the baseline to compare against. `palettes.json` gives
-each one the library's own hexes in five roles: dark (the anchor: night paper,
-day ink), brand (the day accent), bright (the night accent), tint (soft
-surfaces) and light (day paper), with the source account, series and post, as
-the library asks. `scripts/palettes.mjs` derives the remaining tones in OKLab,
-pushes every pairing until it meets its contrast (ink on paper 7, muted and
-accent-ink on paper 4.5, accent on paper 3, the label on a button 4.5) and
-writes `src/styles/palettes.css` (one block per palette, day and night, in
-the mock's token names), `src/data/palettes.json` (the list for the switch)
-and the same CSS inline into `index.html` between the `<style id="palettes">`
-tags, so the opening screen already wears the chosen palette. It runs before
-`dev` and `build`; the outputs are committed too. The palette switch in the
-top bar (the palette icon) keeps the choice in the browser, and
-`?palette=<id>` in the address picks one for a link. The default is the one
-line in `index.html` that reads `pal || "bugambilia"`. When the team settles
-on one, set that line and the switch can go.
+Visitors choose the site's colours. The palette icon in the top bar opens a
+picker with every palette in the Nerrix design library
+(`nerrix-digital/design-library/palettes`, 118 palettes from public
+dopely.colors and dyslove.design posts pulled on 2026-10-26, copied here as
+`palettes/library.json`) plus the portal's own Bugambilia, the default. The
+page changes as a row is picked, by day and by night, and the choice stays in
+the browser.
+
+`scripts/palettes.mjs` casts each library palette's own colours into roles
+(the dark anchor: night paper and day ink; the day accent; the night accent;
+the soft tint; the day paper), derives the mock's thirteen tokens for the day
+and the night in OKLab, and pushes every pairing until it meets its contrast
+(ink on paper 7, muted and accent-ink on paper 4.5, accent on paper 3, the
+label on a button 4.5). `palettes/roles.json` hand-picks the roles and a
+label for a few of them (Twilight, Marquee, Motel, Desert, Nori, Dusk, Aqua,
+Nitro) and holds Bugambilia's tokens. The output is `src/data/palettes.json`,
+loaded only when the picker opens or a palette other than the default is in
+play. No CSS is generated: the chosen palette is applied as inline custom
+properties on `<html>` (`src/lib/palette.js`), kept in the browser with its
+tokens, and put back on by the opening script before paint. `?palette=<id>`
+in the address picks one for a link. The script runs before `dev` and
+`build`; the output is committed too.
 
 ## The duo
 

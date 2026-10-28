@@ -1,0 +1,154 @@
+{
+  "about": "Curated roles for a few of the design library's palettes (palettes/library.json): which of the library's own colours plays the dark anchor, the day accent (brand), the night accent (bright), the soft tint and the day paper, with a label and a line for the picker. Every other library palette gets its roles assigned by scripts/palettes.mjs. The last entry is the portal's own Bugambilia, with its tokens written out, the default.",
+  "curated": {
+    "dopely-gradient-05": {
+      "id": "twilight",
+      "label": "Twilight",
+      "hint": "Sunset orange and coral on twilight navy; warm white by day",
+      "colors": {
+        "dark": "#1E1B4B",
+        "brand": "#F97216",
+        "bright": "#FB7286",
+        "tint": "#FDE68A",
+        "light": "#FFF7ED"
+      }
+    },
+    "dopely-winter-08": {
+      "id": "marquee",
+      "label": "Marquee",
+      "hint": "Antique gold on a deep navy night; soft ivory by day",
+      "colors": {
+        "dark": "#111B3A",
+        "ink": "#050816",
+        "brand": "#C9A849",
+        "bright": "#E7D39B",
+        "tint": "#E7D39B",
+        "light": "#F9F3E7"
+      }
+    },
+    "dopely-retro-06": {
+      "id": "motel",
+      "label": "Motel",
+      "hint": "Motel clay and sunbaked orange, roadside black; desert cream by day",
+      "colors": {
+        "dark": "#2E2A24",
+        "brand": "#C55D3A",
+        "bright": "#E9A66A",
+        "tint": "#F4D6B5"
+      }
+    },
+    "dopely-desert-luxury-combo": {
+      "id": "desert",
+      "label": "Desert",
+      "hint": "Terracotta on deep walnut; desert sand and warm cream by day",
+      "colors": {
+        "dark": "#3A2A22",
+        "brand": "#B86F52",
+        "tint": "#D9BFA3",
+        "light": "#F3E7D8"
+      }
+    },
+    "dopely-food-brand-05": {
+      "id": "nori",
+      "label": "Nori",
+      "hint": "Tuna red on nori black; rice white and ice blue by day",
+      "colors": {
+        "dark": "#101820",
+        "brand": "#E63946",
+        "tint": "#A8DADC",
+        "light": "#F1FAEE"
+      }
+    },
+    "dopely-gradient-04": {
+      "id": "dusk",
+      "label": "Dusk",
+      "hint": "Lavender on dusk purple; bright purple on violet white by day",
+      "colors": {
+        "dark": "#120A2A",
+        "brand": "#7B3AEC",
+        "bright": "#C4B5FD",
+        "tint": "#C4B5FD",
+        "light": "#F5F3FF"
+      }
+    },
+    "dopely-gradient-03": {
+      "id": "aqua",
+      "label": "Aqua",
+      "hint": "Soft mint on deep aqua; flow teal on frost white by day",
+      "colors": {
+        "dark": "#053B36",
+        "brand": "#14B8A6",
+        "bright": "#99F6E4",
+        "tint": "#99F6E4",
+        "light": "#F8FAFC"
+      }
+    },
+    "dyslove-royal-blue-nitro-orange": {
+      "id": "nitro",
+      "label": "Nitro",
+      "hint": "Nitro orange on royal blue, the dark and bright pair; white by day",
+      "colors": {
+        "dark": "#191970",
+        "brand": "#FB5607",
+        "bright": "#FB5607",
+        "light": "#FFFFFF"
+      }
+    }
+  },
+  "own": [
+    {
+      "id": "bugambilia",
+      "label": "Bugambilia",
+      "hint": "The portal's own palette, the default",
+      "series": "Gracias Por Invitar",
+      "account": "Gracias Por Invitar",
+      "post": "",
+      "swatch": [
+        "#f8f2f2",
+        "#b3156c",
+        "#17140f",
+        "#241c1c",
+        "#ff7fc8"
+      ],
+      "names": [
+        "Paper",
+        "Bugambilia",
+        "Ink",
+        "Night",
+        "Bugambilia at night"
+      ],
+      "tokens": {
+        "light": {
+          "paper": "#f8f2f2",
+          "surface": "#ffffff",
+          "surface-2": "#f3f0ea",
+          "ink": "#17140f",
+          "ink-soft": "#57534e",
+          "muted": "#6b6560",
+          "line": "#e7e2d9",
+          "line-strong": "#d3ccc0",
+          "accent": "#b3156c",
+          "accent-hover": "#8c1054",
+          "accent-soft": "#fbe3f0",
+          "accent-ink": "#7a0e49",
+          "on-accent": "#ffffff"
+        },
+        "dark": {
+          "paper": "#241c1c",
+          "surface": "#25211c",
+          "surface-2": "#2c2820",
+          "ink": "#f4f0ea",
+          "ink-soft": "#c4bdb2",
+          "muted": "#a39c92",
+          "line": "#38332b",
+          "line-strong": "#4a443b",
+          "accent": "#ff7fc8",
+          "accent-hover": "#ff9ad4",
+          "accent-soft": "#3a1a2d",
+          "accent-ink": "#ffb8de",
+          "on-accent": "#1b1815"
+        }
+      }
+    }
+  ]
+}

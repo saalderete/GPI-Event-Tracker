@@ -1,0 +1,7109 @@
+{
+ "about": "Color palettes collected from public Instagram posts by dopely.colors and dyslove.design (pulled 2026-10-26). Hex values are the ones printed on the slides; hex_from \"sampled\" means the label was unreadable and the value was measured from the swatch pixels. Credit the source if a palette is shared as-is.",
+ "count": 118,
+ "palettes": [
+  {
+   "id": "dopely-retro-01",
+   "source": "dopely.colors",
+   "series": "Retro Color Palettes",
+   "name": "Retro 01",
+   "post": "https://www.instagram.com/p/Dd9l8f2DZcL/",
+   "date": "2026-10-01",
+   "likes": 293,
+   "colors": [
+    {
+     "name": "Lounge Brown",
+     "hex": "#4A2C1D",
+     "use": "Rich leather warmth",
+     "hex_from": "printed",
+     "rgb": [
+      74,
+      44,
+      29
+     ]
+    },
+    {
+     "name": "Vintage Rust",
+     "hex": "#A0522D",
+     "use": "Earthy retro tone",
+     "hex_from": "printed",
+     "rgb": [
+      160,
+      82,
+      45
+     ]
+    },
+    {
+     "name": "Retro Orange",
+     "hex": "#D98C3A",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      217,
+      140,
+      58
+     ]
+    },
+    {
+     "name": "Honey Gold",
+     "hex": "#F2C078",
+     "use": "Soft golden glow",
+     "hex_from": "printed",
+     "rgb": [
+      242,
+      192,
+      120
+     ]
+    },
+    {
+     "name": "Cream Vinyl",
+     "hex": "#F7E7C6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      247,
+      231,
+      198
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-retro-02",
+   "source": "dopely.colors",
+   "series": "Retro Color Palettes",
+   "name": "Retro 02",
+   "post": "https://www.instagram.com/p/Dd9l8f2DZcL/",
+   "date": "2026-10-01",
+   "likes": 293,
+   "colors": [
+    {
+     "name": "Cola Red",
+     "hex": "#7A1212",
+     "use": "Deep cola richness",
+     "hex_from": "printed",
+     "rgb": [
+      122,
+      18,
+      18
+     ]
+    },
+    {
+     "name": "Classic Red",
+     "hex": "#C62827",
+     "use": "Bold label accent",
+     "hex_from": "sampled",
+     "rgb": [
+      198,
+      40,
+      39
+     ]
+    },
+    {
+     "name": "Label Cream",
+     "hex": "#F2E2C4",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      242,
+      226,
+      196
+     ]
+    },
+    {
+     "name": "Bottle Black",
+     "hex": "#1D1D1B",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      29,
+      29,
+      27
+     ]
+    },
+    {
+     "name": "Vintage Tan",
+     "hex": "#8B6F47",
+     "use": "Aged leather tone",
+     "hex_from": "printed",
+     "rgb": [
+      139,
+      111,
+      71
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-retro-03",
+   "source": "dopely.colors",
+   "series": "Retro Color Palettes",
+   "name": "Retro 03",
+   "post": "https://www.instagram.com/p/Dd9l8f2DZcL/",
+   "date": "2026-10-01",
+   "likes": 293,
+   "colors": [
+    {
+     "name": "Terminal Navy",
+     "hex": "#101820",
+     "use": "Dark screen base",
+     "hex_from": "printed",
+     "rgb": [
+      16,
+      24,
+      32
+     ]
+    },
+    {
+     "name": "Screen Blue",
+     "hex": "#2E4057",
+     "use": "Cool digital glow",
+     "hex_from": "printed",
+     "rgb": [
+      46,
+      64,
+      87
+     ]
+    },
+    {
+     "name": "Pixel Green",
+     "hex": "#8FD694",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      143,
+      214,
+      148
+     ]
+    },
+    {
+     "name": "Glow Mint",
+     "hex": "#D6FFF6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      214,
+      255,
+      246
+     ]
+    },
+    {
+     "name": "Old Paper",
+     "hex": "#F5F0D8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      245,
+      240,
+      216
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-retro-04",
+   "source": "dopely.colors",
+   "series": "Retro Color Palettes",
+   "name": "Retro 04",
+   "post": "https://www.instagram.com/p/Dd9l8f2DZcL/",
+   "date": "2026-10-01",
+   "likes": 293,
+   "colors": [
+    {
+     "name": "Neon Pink",
+     "hex": "#FF4FA3",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      79,
+      163
+     ]
+    },
+    {
+     "name": "Roller Violet",
+     "hex": "#7A5CFF",
+     "use": "Bold skate purple",
+     "hex_from": "printed",
+     "rgb": [
+      122,
+      92,
+      255
+     ]
+    },
+    {
+     "name": "Disco Cyan",
+     "hex": "#3BD6FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      59,
+      214,
+      255
+     ]
+    },
+    {
+     "name": "Skate Yellow",
+     "hex": "#FFF275",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      242,
+      117
+     ]
+    },
+    {
+     "name": "Floor Black",
+     "hex": "#111111",
+     "use": "Dark floor anchor",
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      17,
+      17
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-retro-05",
+   "source": "dopely.colors",
+   "series": "Retro Color Palettes",
+   "name": "Retro 05",
+   "post": "https://www.instagram.com/p/Dd9l8f2DZcL/",
+   "date": "2026-10-01",
+   "likes": 293,
+   "colors": [
+    {
+     "name": "Vinyl Black",
+     "hex": "#222222",
+     "use": "Classic vinyl dark",
+     "hex_from": "printed",
+     "rgb": [
+      34,
+      34,
+      34
+     ]
+    },
+    {
+     "name": "Sleeve Orange",
+     "hex": "#F2641A",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      242,
+      100,
+      26
+     ]
+    },
+    {
+     "name": "Label Gold",
+     "hex": "#F6AE2D",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      246,
+      174,
+      45
+     ]
+    },
+    {
+     "name": "Dusty Blue",
+     "hex": "#86BBD8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      134,
+      187,
+      216
+     ]
+    },
+    {
+     "name": "Record Cream",
+     "hex": "#F5F1E6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      245,
+      241,
+      230
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-retro-06",
+   "source": "dopely.colors",
+   "series": "Retro Color Palettes",
+   "name": "Retro 06",
+   "post": "https://www.instagram.com/p/Dd9l8f2DZcL/",
+   "date": "2026-10-01",
+   "likes": 293,
+   "colors": [
+    {
+     "name": "Motel Clay",
+     "hex": "#C55D3A",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      197,
+      93,
+      58
+     ]
+    },
+    {
+     "name": "Sunbaked Orange",
+     "hex": "#E9A66A",
+     "use": "Golden sunlit tone",
+     "hex_from": "printed",
+     "rgb": [
+      233,
+      166,
+      106
+     ]
+    },
+    {
+     "name": "Desert Cream",
+     "hex": "#F4D6B5",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      244,
+      214,
+      181
+     ]
+    },
+    {
+     "name": "Pool Blue",
+     "hex": "#5D7A8A",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      93,
+      122,
+      138
+     ]
+    },
+    {
+     "name": "Roadside Black",
+     "hex": "#2E2A24",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      46,
+      42,
+      36
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-retro-07",
+   "source": "dopely.colors",
+   "series": "Retro Color Palettes",
+   "name": "Retro 07",
+   "post": "https://www.instagram.com/p/Dd9l8f2DZcL/",
+   "date": "2026-10-01",
+   "likes": 293,
+   "colors": [
+    {
+     "name": "Analog Green",
+     "hex": "#2B3A24",
+     "use": "Deep forest base",
+     "hex_from": "printed",
+     "rgb": [
+      43,
+      58,
+      36
+     ]
+    },
+    {
+     "name": "Olive Signal",
+     "hex": "#6B8E23",
+     "use": "Bold olive accent",
+     "hex_from": "printed",
+     "rgb": [
+      107,
+      142,
+      35
+     ]
+    },
+    {
+     "name": "Faded Khaki",
+     "hex": "#C2B280",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      194,
+      178,
+      128
+     ]
+    },
+    {
+     "name": "Manual Cream",
+     "hex": "#F0EAD2",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      240,
+      234,
+      210
+     ]
+    },
+    {
+     "name": "Warm Shadow",
+     "hex": "#3A2F2F",
+     "use": "4 Dark earth anchor",
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      47,
+      47
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-retro-08",
+   "source": "dopely.colors",
+   "series": "Retro Color Palettes",
+   "name": "Retro 08",
+   "post": "https://www.instagram.com/p/Dd9l8f2DZcL/",
+   "date": "2026-10-01",
+   "likes": 293,
+   "colors": [
+    {
+     "name": "Candy Pink",
+     "hex": "#F72586",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      247,
+      37,
+      134
+     ]
+    },
+    {
+     "name": "Bubblegum Magenta",
+     "hex": "#B5179F",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      181,
+      23,
+      159
+     ]
+    },
+    {
+     "name": "Arcade Purple",
+     "hex": "#7209B7",
+     "use": "Deep arcade glow",
+     "hex_from": "printed",
+     "rgb": [
+      114,
+      9,
+      183
+     ]
+    },
+    {
+     "name": "Deep Indigo",
+     "hex": "#3A0CA3",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      12,
+      163
+     ]
+    },
+    {
+     "name": "Sugar White",
+     "hex": "#F8F9FA",
+     "use": "Clean bright light",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      249,
+      250
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-01",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 01",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Maple Red",
+     "hex": "#9F2D20",
+     "use": "Deep warm seasonal red",
+     "hex_from": "printed",
+     "rgb": [
+      159,
+      45,
+      32
+     ]
+    },
+    {
+     "name": "Burnt Orange",
+     "hex": "#D96B35",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      217,
+      107,
+      53
+     ]
+    },
+    {
+     "name": "Golden Leaf",
+     "hex": "#E5A84F",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      229,
+      168,
+      79
+     ]
+    },
+    {
+     "name": "Cream Paper",
+     "hex": "#F4DFC0",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      244,
+      223,
+      192
+     ]
+    },
+    {
+     "name": "Dark Bark",
+     "hex": "#3A211A",
+     "use": "DARK BARK fry",
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      33,
+      26
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-02",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 02",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Dark Cinnamon",
+     "hex": "#3A241C",
+     "use": "Rich roasted base",
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      36,
+      28
+     ]
+    },
+    {
+     "name": "Roasted Brown",
+     "hex": "#7B4A35",
+     "use": "Warm café primary",
+     "hex_from": "printed",
+     "rgb": [
+      123,
+      74,
+      53
+     ]
+    },
+    {
+     "name": "Cinnamon Clay",
+     "hex": "#B8754D",
+     "use": "Cozy spiced accent",
+     "hex_from": "printed",
+     "rgb": [
+      184,
+      117,
+      77
+     ]
+    },
+    {
+     "name": "Warm Biscuit",
+     "hex": "#E8C5A5",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      232,
+      197,
+      165
+     ]
+    },
+    {
+     "name": "Cream Foam",
+     "hex": "#FFF0DF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      240,
+      223
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-03",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 03",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Deep Olive",
+     "hex": "#3F4A2F",
+     "use": "Dark earthy anchor",
+     "hex_from": "printed",
+     "rgb": [
+      63,
+      74,
+      47
+     ]
+    },
+    {
+     "name": "Harvest Green",
+     "hex": "#7A7F4E",
+     "use": "Natural field tone",
+     "hex_from": "printed",
+     "rgb": [
+      122,
+      127,
+      78
+     ]
+    },
+    {
+     "name": "Dry Wheat",
+     "hex": "#B8A86A",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      184,
+      168,
+      106
+     ]
+    },
+    {
+     "name": "Linen Cream",
+     "hex": "#E9D8B7",
+     "use": "Soft neu",
+     "hex_from": "printed",
+     "rgb": [
+      233,
+      216,
+      183
+     ]
+    },
+    {
+     "name": "Bark Brown",
+     "hex": "#4A3428",
+     "use": "Deep woody grounding",
+     "hex_from": "printed",
+     "rgb": [
+      74,
+      52,
+      40
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-04",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 04",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Pumpkin Orange",
+     "hex": "#C95F22",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      201,
+      95,
+      34
+     ]
+    },
+    {
+     "name": "Spiced Apricot",
+     "hex": "#E09146",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      224,
+      145,
+      70
+     ]
+    },
+    {
+     "name": "Soft Squash",
+     "hex": "#F3C27D",
+     "use": "Light golden highlight",
+     "hex_from": "printed",
+     "rgb": [
+      243,
+      194,
+      125
+     ]
+    },
+    {
+     "name": "Warm Cream",
+     "hex": "#FFF0D8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      240,
+      216
+     ]
+    },
+    {
+     "name": "Dark Roast",
+     "hex": "#2F241E",
+     "use": "Deep roasted anchor",
+     "hex_from": "printed",
+     "rgb": [
+      47,
+      36,
+      30
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-05",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 05",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Forest Shadow",
+     "hex": "#1F2D24",
+     "use": "Deep woodland base",
+     "hex_from": "printed",
+     "rgb": [
+      31,
+      45,
+      36
+     ]
+    },
+    {
+     "name": "Moss Gray",
+     "hex": "#50614B",
+     "use": "Cool muted green",
+     "hex_from": "printed",
+     "rgb": [
+      80,
+      97,
+      75
+     ]
+    },
+    {
+     "name": "Foggy Sage",
+     "hex": "#8A9779",
+     "use": "Soft atmospheric tone",
+     "hex_from": "printed",
+     "rgb": [
+      138,
+      151,
+      121
+     ]
+    },
+    {
+     "name": "Mist Beige",
+     "hex": "#D8D2C0",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      216,
+      210,
+      192
+     ]
+    },
+    {
+     "name": "Cloud Cream",
+     "hex": "#F3EEE2",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      243,
+      238,
+      226
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-06",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 06",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Deep Cranberry",
+     "hex": "#7A1F2B",
+     "use": "Rich berry anchor",
+     "hex_from": "printed",
+     "rgb": [
+      122,
+      31,
+      43
+     ]
+    },
+    {
+     "name": "Cranberry Rose",
+     "hex": "#B44B5A",
+     "use": "Warm romantic accent",
+     "hex_from": "printed",
+     "rgb": [
+      180,
+      75,
+      90
+     ]
+    },
+    {
+     "name": "Blush Berry",
+     "hex": "#D9A1A8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      217,
+      161,
+      168
+     ]
+    },
+    {
+     "name": "Warm Petal",
+     "hex": "#F3E3DC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      243,
+      227,
+      220
+     ]
+    },
+    {
+     "name": "Cocoa Shadow",
+     "hex": "#3C2926",
+     "use": "Deep earthy grounding",
+     "hex_from": "printed",
+     "rgb": [
+      60,
+      41,
+      38
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-07",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 07",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Burnt Umber",
+     "hex": "#8B4A1F",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      139,
+      74,
+      31
+     ]
+    },
+    {
+     "name": "Golden Orange",
+     "hex": "#C7782E",
+     "use": "Rich sunset accent",
+     "hex_from": "printed",
+     "rgb": [
+      199,
+      120,
+      46
+     ]
+    },
+    {
+     "name": "Sunlit Gold",
+     "hex": "#E8B460",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      232,
+      180,
+      96
+     ]
+    },
+    {
+     "name": "Pale Honey",
+     "hex": "#F7E4C2",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      247,
+      228,
+      194
+     ]
+    },
+    {
+     "name": "Deep Walnut",
+     "hex": "#33261D",
+     "use": "Dark woody anchor",
+     "hex_from": "printed",
+     "rgb": [
+      51,
+      38,
+      29
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-08",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 08",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Wool Brown",
+     "hex": "#5B382D",
+     "use": "Deep cozy warmth",
+     "hex_from": "printed",
+     "rgb": [
+      91,
+      56,
+      45
+     ]
+    },
+    {
+     "name": "Warm Mocha",
+     "hex": "#9B6A58",
+     "use": "Rich tactile tone",
+     "hex_from": "printed",
+     "rgb": [
+      155,
+      106,
+      88
+     ]
+    },
+    {
+     "name": "Soft Wool",
+     "hex": "#C8A996",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      200,
+      169,
+      150
+     ]
+    },
+    {
+     "name": "Oat Cream",
+     "hex": "#EFE0D3",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      239,
+      224,
+      211
+     ]
+    },
+    {
+     "name": "Muted Olive",
+     "hex": "#6F7658",
+     "use": "Earthy natural accent",
+     "hex_from": "printed",
+     "rgb": [
+      111,
+      118,
+      88
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-autumn-09",
+   "source": "dopely.colors",
+   "series": "Autumn Color Palettes",
+   "name": "Autumn 09",
+   "post": "https://www.instagram.com/p/Ddo_kbDjWrY/",
+   "date": "2026-09-23",
+   "likes": 281,
+   "colors": [
+    {
+     "name": "Orchard Black",
+     "hex": "#221A17",
+     "use": "Deep moody base",
+     "hex_from": "printed",
+     "rgb": [
+      34,
+      26,
+      23
+     ]
+    },
+    {
+     "name": "Dark Plum Brown",
+     "hex": "#5A2E25",
+     "use": "Rich harvest depth",
+     "hex_from": "printed",
+     "rgb": [
+      90,
+      46,
+      37
+     ]
+    },
+    {
+     "name": "Apple Skin",
+     "hex": "#8C3D2D",
+     "use": "Warm orchard accent",
+     "hex_from": "printed",
+     "rgb": [
+      140,
+      61,
+      45
+     ]
+    },
+    {
+     "name": "Copper Leaf",
+     "hex": "#B87946",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      184,
+      121,
+      70
+     ]
+    },
+    {
+     "name": "Dried Cream",
+     "hex": "#EBD3B2",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      235,
+      211,
+      178
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-winter-01",
+   "source": "dopely.colors",
+   "series": "Winter Color Palettes",
+   "name": "Winter 01",
+   "post": "https://www.instagram.com/p/DduJMHojbB4/",
+   "date": "2026-09-25",
+   "likes": 1188,
+   "colors": [
+    {
+     "name": "Frost Navy",
+     "hex": "#071629",
+     "use": "Deep frozen midnight",
+     "hex_from": "sampled",
+     "rgb": [
+      7,
+      22,
+      41
+     ]
+    },
+    {
+     "name": "Deep Winter Blue",
+     "hex": "#17345C",
+     "use": "Rich cold primary",
+     "hex_from": "printed",
+     "rgb": [
+      23,
+      52,
+      92
+     ]
+    },
+    {
+     "name": "Icy Steel",
+     "hex": "#9DB7D5",
+     "use": "Cool metallic",
+     "hex_from": "printed",
+     "rgb": [
+      157,
+      183,
+      213
+     ]
+    },
+    {
+     "name": "Frost Mist",
+     "hex": "#EAF4FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      234,
+      244,
+      255
+     ]
+    },
+    {
+     "name": "Snow White",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-winter-02",
+   "source": "dopely.colors",
+   "series": "Winter Color Palettes",
+   "name": "Winter 02",
+   "post": "https://www.instagram.com/p/DduJMHojbB4/",
+   "date": "2026-09-25",
+   "likes": 1188,
+   "colors": [
+    {
+     "name": "Pine Shadow",
+     "hex": "#12372A",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      18,
+      55,
+      42
+     ]
+    },
+    {
+     "name": "Evergreen",
+     "hex": "#2F6B4F",
+     "use": "Rich conifer tone",
+     "hex_from": "printed",
+     "rgb": [
+      47,
+      107,
+      79
+     ]
+    },
+    {
+     "name": "Snow Sage",
+     "hex": "#BFD8C2",
+     "use": "Soft frosted green",
+     "hex_from": "printed",
+     "rgb": [
+      191,
+      216,
+      194
+     ]
+    },
+    {
+     "name": "Pine Mist",
+     "hex": "#F3FAF4",
+     "use": "Light forest breath",
+     "hex_from": "printed",
+     "rgb": [
+      243,
+      250,
+      244
+     ]
+    },
+    {
+     "name": "Dark Wood",
+     "hex": "#392B22",
+     "use": "1 bark ancho",
+     "hex_from": "sampled",
+     "rgb": [
+      57,
+      43,
+      34
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-winter-03",
+   "source": "dopely.colors",
+   "series": "Winter Color Palettes",
+   "name": "Winter 03",
+   "post": "https://www.instagram.com/p/DduJMHojbB4/",
+   "date": "2026-09-25",
+   "likes": 1188,
+   "colors": [
+    {
+     "name": "Night Violet",
+     "hex": "#2B2540",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      43,
+      37,
+      64
+     ]
+    },
+    {
+     "name": "Winter Lavender",
+     "hex": "#7C6BAF",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      124,
+      107,
+      175
+     ]
+    },
+    {
+     "name": "Ice Lilac",
+     "hex": "#CFC8F8",
+     "use": "Soft frozen bloom",
+     "hex_from": "printed",
+     "rgb": [
+      207,
+      200,
+      248
+     ]
+    },
+    {
+     "name": "Pale Violet",
+     "hex": "#F1EEFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      241,
+      238,
+      255
+     ]
+    },
+    {
+     "name": "Snow White",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-winter-04",
+   "source": "dopely.colors",
+   "series": "Winter Color Palettes",
+   "name": "Winter 04",
+   "post": "https://www.instagram.com/p/DduJMHojbB4/",
+   "date": "2026-09-25",
+   "likes": 1188,
+   "colors": [
+    {
+     "name": "Nordic Charcoal",
+     "hex": "#1F2933",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      31,
+      41,
+      51
+     ]
+    },
+    {
+     "name": "Fjord Gray",
+     "hex": "#6B7280",
+     "use": "Cool slate midtone",
+     "hex_from": "printed",
+     "rgb": [
+      107,
+      114,
+      128
+     ]
+    },
+    {
+     "name": "Cloud Gray",
+     "hex": "#D1D5DB",
+     "use": "Soft overcast tone",
+     "hex_from": "printed",
+     "rgb": [
+      209,
+      213,
+      219
+     ]
+    },
+    {
+     "name": "Snow Cream",
+     "hex": "#F7F7F2",
+     "use": "Warm snowy surface",
+     "hex_from": "printed",
+     "rgb": [
+      247,
+      247,
+      242
+     ]
+    },
+    {
+     "name": "Warm Wood",
+     "hex": "#A68A64",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      166,
+      138,
+      100
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-winter-05",
+   "source": "dopely.colors",
+   "series": "Winter Color Palettes",
+   "name": "Winter 05",
+   "post": "https://www.instagram.com/p/DduJMHojbB4/",
+   "date": "2026-09-25",
+   "likes": 1188,
+   "colors": [
+    {
+     "name": "Deep Cranberry",
+     "hex": "#7F1D1D",
+     "use": "Rich berry ancho!",
+     "hex_from": "printed",
+     "rgb": [
+      127,
+      29,
+      29
+     ]
+    },
+    {
+     "name": "Winter Berry",
+     "hex": "#BE393A",
+     "use": "Bold seasonal red",
+     "hex_from": "sampled",
+     "rgb": [
+      190,
+      57,
+      58
+     ]
+    },
+    {
+     "name": "Berry Snow",
+     "hex": "#F4D6D6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      244,
+      214,
+      214
+     ]
+    },
+    {
+     "name": "Warm Snow",
+     "hex": "#FFF8F2",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      248,
+      242
+     ]
+    },
+    {
+     "name": "Dark Cocoa",
+     "hex": "#2A1C1C",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      42,
+      28,
+      28
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-winter-06",
+   "source": "dopely.colors",
+   "series": "Winter Color Palettes",
+   "name": "Winter 06",
+   "post": "https://www.instagram.com/p/DduJMHojbB4/",
+   "date": "2026-09-25",
+   "likes": 1188,
+   "colors": [
+    {
+     "name": "Arctic Night",
+     "hex": "#020617",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      2,
+      6,
+      23
+     ]
+    },
+    {
+     "name": "Deep Teal",
+     "hex": "#0F766E",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      15,
+      118,
+      110
+     ]
+    },
+    {
+     "name": "Ice Cyan",
+     "hex": "#66E8F8",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      102,
+      232,
+      248
+     ]
+    },
+    {
+     "name": "Frozen Blue",
+     "hex": "#E0F2FE",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      224,
+      242,
+      254
+     ]
+    },
+    {
+     "name": "Frost White",
+     "hex": "#F8FAFC",
+     "use": "Clear face",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-winter-07",
+   "source": "dopely.colors",
+   "series": "Winter Color Palettes",
+   "name": "Winter 07",
+   "post": "https://www.instagram.com/p/DduJMHojbB4/",
+   "date": "2026-09-25",
+   "likes": 1188,
+   "colors": [
+    {
+     "name": "Cashmere Brown",
+     "hex": "#332821",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      51,
+      40,
+      33
+     ]
+    },
+    {
+     "name": "Warm Taupe",
+     "hex": "#8C7563",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      140,
+      117,
+      99
+     ]
+    },
+    {
+     "name": "Soft Cashmere",
+     "hex": "#D8C5AD",
+     "use": "Light knit accent",
+     "hex_from": "printed",
+     "rgb": [
+      216,
+      197,
+      173
+     ]
+    },
+    {
+     "name": "Cream Knit",
+     "hex": "#F7EFE2",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      247,
+      239,
+      226
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": "Pure bright ground",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-winter-08",
+   "source": "dopely.colors",
+   "series": "Winter Color Palettes",
+   "name": "Winter 08",
+   "post": "https://www.instagram.com/p/DduJMHojbB4/",
+   "date": "2026-09-25",
+   "likes": 1188,
+   "colors": [
+    {
+     "name": "Midnight Black",
+     "hex": "#050816",
+     "use": "Deep starless dark",
+     "hex_from": "printed",
+     "rgb": [
+      5,
+      8,
+      22
+     ]
+    },
+    {
+     "name": "Deep Navy",
+     "hex": "#111B3A",
+     "use": "Rich night sky",
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      27,
+      58
+     ]
+    },
+    {
+     "name": "Antique Gold",
+     "hex": "#C9A849",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      201,
+      168,
+      73
+     ]
+    },
+    {
+     "name": "Pale Gold",
+     "hex": "#E7D39B",
+     "use": "Soft gilded accent",
+     "hex_from": "printed",
+     "rgb": [
+      231,
+      211,
+      155
+     ]
+    },
+    {
+     "name": "Soft Ivory",
+     "hex": "#F9F3E7",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      249,
+      243,
+      231
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-spring-01",
+   "source": "dopely.colors",
+   "series": "Spring Color Palettes",
+   "name": "Spring 01",
+   "post": "https://www.instagram.com/p/DdzSvtyDQxX/",
+   "date": "2026-09-27",
+   "likes": 194,
+   "colors": [
+    {
+     "name": "Garden Green",
+     "hex": "#7FB069",
+     "use": ". Lush garden base",
+     "hex_from": "printed",
+     "rgb": [
+      127,
+      176,
+      105
+     ]
+    },
+    {
+     "name": "Fresh Leaf",
+     "hex": "#B9D89F",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      185,
+      216,
+      159
+     ]
+    },
+    {
+     "name": "Spring Mist",
+     "hex": "#F3F8E8",
+     "use": "» Soft morning haze",
+     "hex_from": "printed",
+     "rgb": [
+      243,
+      248,
+      232
+     ]
+    },
+    {
+     "name": "Soft Blossom",
+     "hex": "#F6C6C6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      246,
+      198,
+      198
+     ]
+    },
+    {
+     "name": "Deep Stem",
+     "hex": "#3E4A32",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      62,
+      74,
+      50
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-spring-02",
+   "source": "dopely.colors",
+   "series": "Spring Color Palettes",
+   "name": "Spring 02",
+   "post": "https://www.instagram.com/p/DdzSvtyDQxX/",
+   "date": "2026-09-27",
+   "likes": 194,
+   "colors": [
+    {
+     "name": "Tulip Red",
+     "hex": "#EF476F",
+     "use": "Bold spring bloom",
+     "hex_from": "printed",
+     "rgb": [
+      239,
+      71,
+      111
+     ]
+    },
+    {
+     "name": "Rose Petal",
+     "hex": "#F88DA7",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      248,
+      141,
+      167
+     ]
+    },
+    {
+     "name": "Blush Pink",
+     "hex": "#FFD6E0",
+     "use": "Gentle petal was",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      214,
+      224
+     ]
+    },
+    {
+     "name": "Cream Petal",
+     "hex": "#FFF6EA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      246,
+      234
+     ]
+    },
+    {
+     "name": "Forest Floor",
+     "hex": "#344E41",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      52,
+      78,
+      65
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-spring-03",
+   "source": "dopely.colors",
+   "series": "Spring Color Palettes",
+   "name": "Spring 03",
+   "post": "https://www.instagram.com/p/DdzSvtyDQxX/",
+   "date": "2026-09-27",
+   "likes": 194,
+   "colors": [
+    {
+     "name": "Mint Fresh",
+     "hex": "#9BE7C1",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      155,
+      231,
+      193
+     ]
+    },
+    {
+     "name": "Pale Mint",
+     "hex": "#DDF8E8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      221,
+      248,
+      232
+     ]
+    },
+    {
+     "name": "Paper White",
+     "hex": "#F8FFF9",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      255,
+      249
+     ]
+    },
+    {
+     "name": "Sage Gray",
+     "hex": "#8A9A8F",
+     "use": "Muted green-gray",
+     "hex_from": "printed",
+     "rgb": [
+      138,
+      154,
+      143
+     ]
+    },
+    {
+     "name": "Deep Moss",
+     "hex": "#243C2F",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      36,
+      60,
+      47
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-spring-04",
+   "source": "dopely.colors",
+   "series": "Spring Color Palettes",
+   "name": "Spring 04",
+   "post": "https://www.instagram.com/p/DdzSvtyDQxX/",
+   "date": "2026-09-27",
+   "likes": 194,
+   "colors": [
+    {
+     "name": "Lilac Mist",
+     "hex": "#CDB4DB",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      205,
+      180,
+      219
+     ]
+    },
+    {
+     "name": "Cotton Candy",
+     "hex": "#FFC8DD",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      255,
+      200,
+      221
+     ]
+    },
+    {
+     "name": "Rose Quartz",
+     "hex": "#FFAFCC",
+     "use": "Warm pink accent",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      175,
+      204
+     ]
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#BDE0FE",
+     "use": "Light spring sky",
+     "hex_from": "printed",
+     "rgb": [
+      189,
+      224,
+      254
+     ]
+    },
+    {
+     "name": "Deep Indigo",
+     "hex": "#2B2D42",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      43,
+      45,
+      66
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-spring-05",
+   "source": "dopely.colors",
+   "series": "Spring Color Palettes",
+   "name": "Spring 05",
+   "post": "https://www.instagram.com/p/DdzSvtyDQxX/",
+   "date": "2026-09-27",
+   "likes": 194,
+   "colors": [
+    {
+     "name": "Lemon Zest",
+     "hex": "#FDE047",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      253,
+      224,
+      71
+     ]
+    },
+    {
+     "name": "Pale Lemon",
+     "hex": "#FEF3C6",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      254,
+      243,
+      198
+     ]
+    },
+    {
+     "name": "Sage Leaf",
+     "hex": "#A3B18A",
+     "use": "Muted green tone",
+     "hex_from": "printed",
+     "rgb": [
+      163,
+      177,
+      138
+     ]
+    },
+    {
+     "name": "Garden Green",
+     "hex": "#588157",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      88,
+      129,
+      87
+     ]
+    },
+    {
+     "name": "Dark Forest",
+     "hex": "#344E41",
+     "use": "Deep green anchor",
+     "hex_from": "printed",
+     "rgb": [
+      52,
+      78,
+      65
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-spring-06",
+   "source": "dopely.colors",
+   "series": "Spring Color Palettes",
+   "name": "Spring 06",
+   "post": "https://www.instagram.com/p/DdzSvtyDQxX/",
+   "date": "2026-09-27",
+   "likes": 194,
+   "colors": [
+    {
+     "name": "Peach Glow",
+     "hex": "#FFB4A1",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      255,
+      180,
+      161
+     ]
+    },
+    {
+     "name": "Dusty Rose",
+     "hex": "#E4989C",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      228,
+      152,
+      156
+     ]
+    },
+    {
+     "name": "Peach Cream",
+     "hex": "#FDE2D2",
+     "use": "Light warm bas",
+     "hex_from": "printed",
+     "rgb": [
+      253,
+      226,
+      210
+     ]
+    },
+    {
+     "name": "Spring Olive",
+     "hex": "#B6C59A",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      182,
+      197,
+      154
+     ]
+    },
+    {
+     "name": "Warm Bark",
+     "hex": "#5C4034",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      92,
+      64,
+      52
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-spring-07",
+   "source": "dopely.colors",
+   "series": "Spring Color Palettes",
+   "name": "Spring 07",
+   "post": "https://www.instagram.com/p/DdzSvtyDQxX/",
+   "date": "2026-09-27",
+   "likes": 194,
+   "colors": [
+    {
+     "name": "Rain Drop",
+     "hex": "#8FCDF4",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      143,
+      205,
+      244
+     ]
+    },
+    {
+     "name": "Misty Blue",
+     "hex": "#CFE8FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      207,
+      232,
+      255
+     ]
+    },
+    {
+     "name": "Cloud White",
+     "hex": "#F8FBFF",
+     "use": "Light airy base",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      251,
+      255
+     ]
+    },
+    {
+     "name": "Storm Gray",
+     "hex": "#8190A5",
+     "use": "Muted steel tone",
+     "hex_from": "printed",
+     "rgb": [
+      129,
+      144,
+      165
+     ]
+    },
+    {
+     "name": "Thunder Dark",
+     "hex": "#1E2A3A",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      30,
+      42,
+      58
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-spring-08",
+   "source": "dopely.colors",
+   "series": "Spring Color Palettes",
+   "name": "Spring 08",
+   "post": "https://www.instagram.com/p/DdzSvtyDQxX/",
+   "date": "2026-09-27",
+   "likes": 194,
+   "colors": [
+    {
+     "name": "Pistachio",
+     "hex": "#B7E4C7",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      183,
+      228,
+      199
+     ]
+    },
+    {
+     "name": "Mint Cream",
+     "hex": "#D7F3DC",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      215,
+      243,
+      220
+     ]
+    },
+    {
+     "name": "Rose Dew",
+     "hex": "#FAD2E1",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      250,
+      210,
+      225
+     ]
+    },
+    {
+     "name": "Warm Ivory",
+     "hex": "#FFF1E6",
+     "use": "Ligh se",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      241,
+      230
+     ]
+    },
+    {
+     "name": "Deep Green",
+     "hex": "#3A4A3F",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      58,
+      74,
+      63
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-saas-landing-page-01",
+   "source": "dopely.colors",
+   "series": "SaaS Landing Page Color Palettes",
+   "name": "SaaS Landing Page 01",
+   "post": "https://www.instagram.com/p/De7d28XjcoB/",
+   "date": "2026-10-25",
+   "likes": 113,
+   "colors": [
+    {
+     "name": "Trust Navy",
+     "hex": "#0F172A",
+     "use": "Deep trusted foundation",
+     "hex_from": "printed",
+     "rgb": [
+      15,
+      23,
+      42
+     ]
+    },
+    {
+     "name": "Action Blue",
+     "hex": "#2563EB",
+     "use": "Bold primar",
+     "hex_from": "printed",
+     "rgb": [
+      37,
+      99,
+      235
+     ]
+    },
+    {
+     "name": "Soft Sky",
+     "hex": "#93C5FD",
+     "use": "Light interface accent",
+     "hex_from": "printed",
+     "rgb": [
+      147,
+      197,
+      253
+     ]
+    },
+    {
+     "name": "Blue Tint",
+     "hex": "#EFF6FF",
+     "use": "Subtle section tint",
+     "hex_from": "printed",
+     "rgb": [
+      239,
+      246,
+      255
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-saas-landing-page-02",
+   "source": "dopely.colors",
+   "series": "SaaS Landing Page Color Palettes",
+   "name": "SaaS Landing Page 02",
+   "post": "https://www.instagram.com/p/De7d28XjcoB/",
+   "date": "2026-10-25",
+   "likes": 113,
+   "colors": [
+    {
+     "name": "Deep Teal",
+     "hex": "#052E2B",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      5,
+      46,
+      43
+     ]
+    },
+    {
+     "name": "Product Teal",
+     "hex": "#13B8A7",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      19,
+      184,
+      167
+     ]
+    },
+    {
+     "name": "Mint Highlight",
+     "hex": "#99F6E4",
+     "use": "Bright feature highlight",
+     "hex_from": "printed",
+     "rgb": [
+      153,
+      246,
+      228
+     ]
+    },
+    {
+     "name": "Soft Mint",
+     "hex": "#F0FDFA",
+     "use": "Light sectio",
+     "hex_from": "printed",
+     "rgb": [
+      240,
+      253,
+      250
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": "Pure canvas base",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-saas-landing-page-03",
+   "source": "dopely.colors",
+   "series": "SaaS Landing Page Color Palettes",
+   "name": "SaaS Landing Page 03",
+   "post": "https://www.instagram.com/p/De7d28XjcoB/",
+   "date": "2026-10-25",
+   "likes": 113,
+   "colors": [
+    {
+     "name": "Founder Night",
+     "hex": "#1E1233",
+     "use": "Deep creative anchor",
+     "hex_from": "printed",
+     "rgb": [
+      30,
+      18,
+      51
+     ]
+    },
+    {
+     "name": "Product Purple",
+     "hex": "#7C3AED",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      124,
+      58,
+      237
+     ]
+    },
+    {
+     "name": "Lavender Accent",
+     "hex": "#C4B5FD",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      196,
+      181,
+      253
+     ]
+    },
+    {
+     "name": "Pale Violet",
+     "hex": "#F5F3FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      245,
+      243,
+      255
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-saas-landing-page-04",
+   "source": "dopely.colors",
+   "series": "SaaS Landing Page Color Palettes",
+   "name": "SaaS Landing Page 04",
+   "post": "https://www.instagram.com/p/De7d28XjcoB/",
+   "date": "2026-10-25",
+   "likes": 113,
+   "colors": [
+    {
+     "name": "Productivity Black",
+     "hex": "#1F1F1D",
+     "use": "Dark focused ancho!",
+     "hex_from": "printed",
+     "rgb": [
+      31,
+      31,
+      29
+     ]
+    },
+    {
+     "name": "Action Amber",
+     "hex": "#F49E0B",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      244,
+      158,
+      11
+     ]
+    },
+    {
+     "name": "Soft Yellow",
+     "hex": "#FDE68A",
+     "use": "Warm interface tint",
+     "hex_from": "printed",
+     "rgb": [
+      253,
+      230,
+      138
+     ]
+    },
+    {
+     "name": "Warm Background",
+     "hex": "#FFFBEB",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      251,
+      235
+     ]
+    },
+    {
+     "name": "Cool White",
+     "hex": "#F9FAFC",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      249,
+      250,
+      252
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-saas-landing-page-05",
+   "source": "dopely.colors",
+   "series": "SaaS Landing Page Color Palettes",
+   "name": "SaaS Landing Page 05",
+   "post": "https://www.instagram.com/p/De7d28XjcoB/",
+   "date": "2026-10-25",
+   "likes": 113,
+   "colors": [
+    {
+     "name": "Ai Night",
+     "hex": "#020617",
+     "use": "AINIGHT paz",
+     "hex_from": "printed",
+     "rgb": [
+      2,
+      6,
+      23
+     ]
+    },
+    {
+     "name": "Panel Black",
+     "hex": "#111827",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      24,
+      39
+     ]
+    },
+    {
+     "name": "Model Blue",
+     "hex": "#3B82F6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      59,
+      130,
+      246
+     ]
+    },
+    {
+     "name": "Neural Violet",
+     "hex": "#A78BFA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      167,
+      139,
+      250
+     ]
+    },
+    {
+     "name": "Interface White",
+     "hex": "#F8FAFC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-saas-landing-page-06",
+   "source": "dopely.colors",
+   "series": "SaaS Landing Page Color Palettes",
+   "name": "SaaS Landing Page 06",
+   "post": "https://www.instagram.com/p/De7d28XjcoB/",
+   "date": "2026-10-25",
+   "likes": 113,
+   "colors": [
+    {
+     "name": "Finance Green",
+     "hex": "#0F2E24",
+     "use": "Deep stable",
+     "hex_from": "printed",
+     "rgb": [
+      15,
+      46,
+      36
+     ]
+    },
+    {
+     "name": "Growth Green",
+     "hex": "#22C55E",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      34,
+      197,
+      94
+     ]
+    },
+    {
+     "name": "Mint Profit",
+     "hex": "#BBF7D0",
+     "use": "Light s tint",
+     "hex_from": "printed",
+     "rgb": [
+      187,
+      247,
+      208
+     ]
+    },
+    {
+     "name": "Soft Green Bg",
+     "hex": "#F0FDF4",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      240,
+      253,
+      244
+     ]
+    },
+    {
+     "name": "Slate Text",
+     "hex": "#334155",
+     "use": "Neutral body text",
+     "hex_from": "printed",
+     "rgb": [
+      51,
+      65,
+      85
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-saas-landing-page-07",
+   "source": "dopely.colors",
+   "series": "SaaS Landing Page Color Palettes",
+   "name": "SaaS Landing Page 07",
+   "post": "https://www.instagram.com/p/De7d28XjcoB/",
+   "date": "2026-10-25",
+   "likes": 113,
+   "colors": [
+    {
+     "name": "Creator Navy",
+     "hex": "#111827",
+     "use": "Deep brand anchor",
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      24,
+      39
+     ]
+    },
+    {
+     "name": "Coral Cta",
+     "hex": "#FF6B6B",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      255,
+      107,
+      107
+     ]
+    },
+    {
+     "name": "Warm Highlight",
+     "hex": "#FFD7A6",
+     "use": "Soft feature glow",
+     "hex_from": "sampled",
+     "rgb": [
+      255,
+      215,
+      166
+     ]
+    },
+    {
+     "name": "Soft Cream",
+     "hex": "#FFF7ED",
+     "use": "Gentle",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      247,
+      237
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-saas-landing-page-08",
+   "source": "dopely.colors",
+   "series": "SaaS Landing Page Color Palettes",
+   "name": "SaaS Landing Page 08",
+   "post": "https://www.instagram.com/p/De7d28XjcoB/",
+   "date": "2026-10-25",
+   "likes": 113,
+   "colors": [
+    {
+     "name": "Enterprise Navy",
+     "hex": "#111827",
+     "use": "Dark corporate ancho!",
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      24,
+      39
+     ]
+    },
+    {
+     "name": "Slate Gray",
+     "hex": "#475569",
+     "use": "Neutral body tone",
+     "hex_from": "printed",
+     "rgb": [
+      71,
+      85,
+      105
+     ]
+    },
+    {
+     "name": "Border Silver",
+     "hex": "#CBD5E1",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      203,
+      213,
+      225
+     ]
+    },
+    {
+     "name": "Dashboard White",
+     "hex": "#F8FAFC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    },
+    {
+     "name": "Link Blue",
+     "hex": "#0EA6E9",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      14,
+      166,
+      233
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-neon-01",
+   "source": "dopely.colors",
+   "series": "Neon Color Palettes",
+   "name": "Neon 01",
+   "post": "https://www.instagram.com/p/DeCvjNHjfD6/",
+   "date": "2026-10-03",
+   "likes": 418,
+   "colors": [
+    {
+     "name": "Club Black",
+     "hex": "#0A0A0A",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      10,
+      10,
+      10
+     ]
+    },
+    {
+     "name": "Acid Lime",
+     "hex": "#C6FF00",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      198,
+      255,
+      0
+     ]
+    },
+    {
+     "name": "Neon Mint",
+     "hex": "#67FFDA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      103,
+      255,
+      218
+     ]
+    },
+    {
+     "name": "Glow White",
+     "hex": "#F8FFF0",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      255,
+      240
+     ]
+    },
+    {
+     "name": "Smoke Gray",
+     "hex": "#3D3D3D",
+     "use": "Urban haze tone",
+     "hex_from": "printed",
+     "rgb": [
+      61,
+      61,
+      61
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-neon-02",
+   "source": "dopely.colors",
+   "series": "Neon Color Palettes",
+   "name": "Neon 02",
+   "post": "https://www.instagram.com/p/DeCvjNHjfD6/",
+   "date": "2026-10-03",
+   "likes": 418,
+   "colors": [
+    {
+     "name": "Night Magenta",
+     "hex": "#120018",
+     "use": "Dark neon depth",
+     "hex_from": "printed",
+     "rgb": [
+      18,
+      0,
+      24
+     ]
+    },
+    {
+     "name": "Voltage Pink",
+     "hex": "#FF2EA3",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      255,
+      46,
+      163
+     ]
+    },
+    {
+     "name": "Electric Purple",
+     "hex": "#B518FF",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      181,
+      24,
+      255
+     ]
+    },
+    {
+     "name": "Neon Blush",
+     "hex": "#FFE6F6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      230,
+      246
+     ]
+    },
+    {
+     "name": "Club Violet",
+     "hex": "#2A1033",
+     "use": "Deep violet shadow",
+     "hex_from": "printed",
+     "rgb": [
+      42,
+      16,
+      51
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-neon-03",
+   "source": "dopely.colors",
+   "series": "Neon Color Palettes",
+   "name": "Neon 03",
+   "post": "https://www.instagram.com/p/DeCvjNHjfD6/",
+   "date": "2026-10-03",
+   "likes": 418,
+   "colors": [
+    {
+     "name": "Circuit Navy",
+     "hex": "#050B1A",
+     "use": "Digital darkness",
+     "hex_from": "printed",
+     "rgb": [
+      5,
+      11,
+      26
+     ]
+    },
+    {
+     "name": "Laser Blue",
+     "hex": "#0066FF",
+     "use": "Pure laser beam",
+     "hex_from": "printed",
+     "rgb": [
+      0,
+      102,
+      255
+     ]
+    },
+    {
+     "name": "Neon Cyan",
+     "hex": "#00D9FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      0,
+      217,
+      255
+     ]
+    },
+    {
+     "name": "Screen Ice",
+     "hex": "#DDF7FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      221,
+      247,
+      255
+     ]
+    },
+    {
+     "name": "Deep Signal",
+     "hex": "#1D2B53",
+     "use": "Midnight signal blue",
+     "hex_from": "printed",
+     "rgb": [
+      29,
+      43,
+      83
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-neon-04",
+   "source": "dopely.colors",
+   "series": "Neon Color Palettes",
+   "name": "Neon 04",
+   "post": "https://www.instagram.com/p/DeCvjNHjfD6/",
+   "date": "2026-10-03",
+   "likes": 418,
+   "colors": [
+    {
+     "name": "Poster Black",
+     "hex": "#111111",
+     "use": "Pure poster base",
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      17,
+      17
+     ]
+    },
+    {
+     "name": "Acid Yellow",
+     "hex": "#D7FF00",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      215,
+      255,
+      0
+     ]
+    },
+    {
+     "name": "Hot Orange",
+     "hex": "#FF6A00",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      106,
+      0
+     ]
+    },
+    {
+     "name": "Flash White",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "name": "Concrete Gray",
+     "hex": "#5A5A5A",
+     "use": "Urban conerete tone",
+     "hex_from": "printed",
+     "rgb": [
+      90,
+      90,
+      90
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-neon-05",
+   "source": "dopely.colors",
+   "series": "Neon Color Palettes",
+   "name": "Neon 05",
+   "post": "https://www.instagram.com/p/DeCvjNHjfD6/",
+   "date": "2026-10-03",
+   "likes": 418,
+   "colors": [
+    {
+     "name": "Laser Night",
+     "hex": "#080017",
+     "use": "Absolute dark violet",
+     "hex_from": "printed",
+     "rgb": [
+      8,
+      0,
+      23
+     ]
+    },
+    {
+     "name": "Electric Violet",
+     "hex": "#8A3DFF",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      138,
+      61,
+      255
+     ]
+    },
+    {
+     "name": "Neon Pink",
+     "hex": "#FF4FD8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      79,
+      216
+     ]
+    },
+    {
+     "name": "Violet Glow",
+     "hex": "#F2E8FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      242,
+      232,
+      255
+     ]
+    },
+    {
+     "name": "Deep Purple",
+     "hex": "#24113F",
+     "use": "Rich deep amethyst",
+     "hex_from": "printed",
+     "rgb": [
+      36,
+      17,
+      63
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-neon-06",
+   "source": "dopely.colors",
+   "series": "Neon Color Palettes",
+   "name": "Neon 06",
+   "post": "https://www.instagram.com/p/DeCvjNHjfD6/",
+   "date": "2026-10-03",
+   "likes": 418,
+   "colors": [
+    {
+     "name": "Mint Shadow",
+     "hex": "#06130F",
+     "use": "Dark mint base",
+     "hex_from": "printed",
+     "rgb": [
+      6,
+      19,
+      15
+     ]
+    },
+    {
+     "name": "Electric Mint",
+     "hex": "#00FFA3",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      0,
+      255,
+      163
+     ]
+    },
+    {
+     "name": "Soft Neon Mint",
+     "hex": "#8CFFDA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      140,
+      255,
+      218
+     ]
+    },
+    {
+     "name": "Mint Glow",
+     "hex": "#E8FFF7",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      232,
+      255,
+      247
+     ]
+    },
+    {
+     "name": "Deep Teal Gray",
+     "hex": "#34524A",
+     "use": "= Muted forest depth",
+     "hex_from": "printed",
+     "rgb": [
+      52,
+      82,
+      74
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-neon-07",
+   "source": "dopely.colors",
+   "series": "Neon Color Palettes",
+   "name": "Neon 07",
+   "post": "https://www.instagram.com/p/DeCvjNHjfD6/",
+   "date": "2026-10-03",
+   "likes": 418,
+   "colors": [
+    {
+     "name": "Signal Black",
+     "hex": "#0E0E0E",
+     "use": "Pure dark signal",
+     "hex_from": "printed",
+     "rgb": [
+      14,
+      14,
+      14
+     ]
+    },
+    {
+     "name": "Neon Orange",
+     "hex": "#FE4D00",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      254,
+      77,
+      0
+     ]
+    },
+    {
+     "name": "Warning Gold",
+     "hex": "#FFD166",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      209,
+      102
+     ]
+    },
+    {
+     "name": "Warm Glow",
+     "hex": "#FFF4DE",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      244,
+      222
+     ]
+    },
+    {
+     "name": "Burnt Shadow",
+     "hex": "#4A1C0D",
+     "use": "Burt ember tone",
+     "hex_from": "printed",
+     "rgb": [
+      74,
+      28,
+      13
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-neon-08",
+   "source": "dopely.colors",
+   "series": "Neon Color Palettes",
+   "name": "Neon 08",
+   "post": "https://www.instagram.com/p/DeCvjNHjfD6/",
+   "date": "2026-10-03",
+   "likes": 418,
+   "colors": [
+    {
+     "name": "Club Navy",
+     "hex": "#020617",
+     "use": "Deep club darkness",
+     "hex_from": "printed",
+     "rgb": [
+      2,
+      6,
+      23
+     ]
+    },
+    {
+     "name": "Cyan Light",
+     "hex": "#22D3EE",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      34,
+      211,
+      238
+     ]
+    },
+    {
+     "name": "Violet Beam",
+     "hex": "#A78BFA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      167,
+      139,
+      250
+     ]
+    },
+    {
+     "name": "Flash White",
+     "hex": "#F8FAFC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    },
+    {
+     "name": "Stage Black",
+     "hex": "#111827",
+     "use": "Dark stage tone",
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      24,
+      39
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-01",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 01",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "True Black",
+     "hex": "#111111",
+     "use": "Absolute depth",
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      17,
+      17
+     ]
+    },
+    {
+     "name": "Soft Graphite",
+     "hex": "#343434",
+     "use": "Warm shadow tone",
+     "hex_from": "printed",
+     "rgb": [
+      52,
+      52,
+      52
+     ]
+    },
+    {
+     "name": "Middle Gray",
+     "hex": "#777777",
+     "use": "Balanced neutral",
+     "hex_from": "printed",
+     "rgb": [
+      119,
+      119,
+      119
+     ]
+    },
+    {
+     "name": "Pale Silver",
+     "hex": "#D6D6D6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      214,
+      214,
+      214
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-02",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 02",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "Warm Ink",
+     "hex": "#171412",
+     "use": "Soft editorial base",
+     "hex_from": "printed",
+     "rgb": [
+      23,
+      20,
+      18
+     ]
+    },
+    {
+     "name": "Charcoal Brown",
+     "hex": "#3A332E",
+     "use": "Grounded anchor",
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      51,
+      46
+     ]
+    },
+    {
+     "name": "Taupe Gray",
+     "hex": "#8B8178",
+     "use": "Earthy mid-tone",
+     "hex_from": "printed",
+     "rgb": [
+      139,
+      129,
+      120
+     ]
+    },
+    {
+     "name": "Paper Beige",
+     "hex": "#DED6CC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      222,
+      214,
+      204
+     ]
+    },
+    {
+     "name": "Soft Cream",
+     "hex": "#FAF6EF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      250,
+      246,
+      239
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-03",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 03",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "Slate Navy",
+     "hex": "#0F172A",
+     "use": "Deep tech base",
+     "hex_from": "printed",
+     "rgb": [
+      15,
+      23,
+      42
+     ]
+    },
+    {
+     "name": "Deep Slate",
+     "hex": "#334155",
+     "use": "Cool anchor",
+     "hex_from": "printed",
+     "rgb": [
+      51,
+      65,
+      85
+     ]
+    },
+    {
+     "name": "Blue Gray",
+     "hex": "#94A3B8",
+     "use": "Calm mid-tone",
+     "hex_from": "printed",
+     "rgb": [
+      148,
+      163,
+      184
+     ]
+    },
+    {
+     "name": "Cool Mist",
+     "hex": "#E2E8F0",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      226,
+      232,
+      240
+     ]
+    },
+    {
+     "name": "Frost White",
+     "hex": "#F8FAFC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-04",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 04",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "Espresso Ink",
+     "hex": "#2A241F",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      42,
+      36,
+      31
+     ]
+    },
+    {
+     "name": "Warm Taupe",
+     "hex": "#6F6257",
+     "use": "Muted warmth",
+     "hex_from": "printed",
+     "rgb": [
+      111,
+      98,
+      87
+     ]
+    },
+    {
+     "name": "Soft Mushroom",
+     "hex": "#B8AA9B",
+     "use": "Quiet mid-tone",
+     "hex_from": "printed",
+     "rgb": [
+      184,
+      170,
+      155
+     ]
+    },
+    {
+     "name": "Linen Beige",
+     "hex": "#E8DDCF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      232,
+      221,
+      207
+     ]
+    },
+    {
+     "name": "Ivory Cream",
+     "hex": "#FFF8ED",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      248,
+      237
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-05",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 05",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "Blue Black",
+     "hex": "#101820",
+     "use": "Polished depth",
+     "hex_from": "printed",
+     "rgb": [
+      16,
+      24,
+      32
+     ]
+    },
+    {
+     "name": "Steel Navy",
+     "hex": "#2D3E50",
+     "use": "Corporate anchor",
+     "hex_from": "printed",
+     "rgb": [
+      45,
+      62,
+      80
+     ]
+    },
+    {
+     "name": "Cool Blue Gray",
+     "hex": "#7C8EA3",
+     "use": "Steady mid-tone",
+     "hex_from": "printed",
+     "rgb": [
+      124,
+      142,
+      163
+     ]
+    },
+    {
+     "name": "Pale Steel",
+     "hex": "#D8E1EA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      216,
+      225,
+      234
+     ]
+    },
+    {
+     "name": "Cloud White",
+     "hex": "#F7FAFC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      247,
+      250,
+      252
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-06",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 06",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "Olive Black",
+     "hex": "#1F261A",
+     "use": "Natural depth",
+     "hex_from": "printed",
+     "rgb": [
+      31,
+      38,
+      26
+     ]
+    },
+    {
+     "name": "Deep Olive",
+     "hex": "#4A543D",
+     "use": "Earthy anchor",
+     "hex_from": "printed",
+     "rgb": [
+      74,
+      84,
+      61
+     ]
+    },
+    {
+     "name": "Muted Sage",
+     "hex": "#8B9678",
+     "use": "Calm green-gray",
+     "hex_from": "printed",
+     "rgb": [
+      139,
+      150,
+      120
+     ]
+    },
+    {
+     "name": "Sage Mist",
+     "hex": "#D7DEC8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      215,
+      222,
+      200
+     ]
+    },
+    {
+     "name": "Garden White",
+     "hex": "#F5F7EF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      245,
+      247,
+      239
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-07",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 07",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "Dark Cocoa",
+     "hex": "#20140F",
+     "use": "Rich earth base",
+     "hex_from": "printed",
+     "rgb": [
+      32,
+      20,
+      15
+     ]
+    },
+    {
+     "name": "Coffee Brown",
+     "hex": "#4A3026",
+     "use": "Warm anchor",
+     "hex_from": "printed",
+     "rgb": [
+      74,
+      48,
+      38
+     ]
+    },
+    {
+     "name": "Soft Leather",
+     "hex": "#8A6454",
+     "use": ", Tactile mid-tone",
+     "hex_from": "printed",
+     "rgb": [
+      138,
+      100,
+      84
+     ]
+    },
+    {
+     "name": "Warm Clay",
+     "hex": "#D1B5A6",
+     "use": "Gentle terra",
+     "hex_from": "printed",
+     "rgb": [
+      209,
+      181,
+      166
+     ]
+    },
+    {
+     "name": "Cream Paper",
+     "hex": "#F7EAE1",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      247,
+      234,
+      225
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-08",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 08",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "Deep Plum",
+     "hex": "#181022",
+     "use": "Creative depth",
+     "hex_from": "printed",
+     "rgb": [
+      24,
+      16,
+      34
+     ]
+    },
+    {
+     "name": "Muted Purple",
+     "hex": "#3B2A4D",
+     "use": "Soft violet base",
+     "hex_from": "printed",
+     "rgb": [
+      59,
+      42,
+      77
+     ]
+    },
+    {
+     "name": "Dusty Violet",
+     "hex": "#806B99",
+     "use": "Moder mid-tone",
+     "hex_from": "printed",
+     "rgb": [
+      128,
+      107,
+      153
+     ]
+    },
+    {
+     "name": "Lavender Fog",
+     "hex": "#D9CDEA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      217,
+      205,
+      234
+     ]
+    },
+    {
+     "name": "Violet White",
+     "hex": "#FAF7FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      250,
+      247,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-monochrome-09",
+   "source": "dopely.colors",
+   "series": "Monochrome Color Palettes",
+   "name": "Monochrome 09",
+   "post": "https://www.instagram.com/p/DeXWF5oDU0x/",
+   "date": "2026-10-11",
+   "likes": 696,
+   "colors": [
+    {
+     "name": "Pure Black",
+     "hex": "#000000",
+     "use": "Absolute void",
+     "hex_from": "printed",
+     "rgb": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Ink Black",
+     "hex": "#252525",
+     "use": "Print darkness",
+     "hex_from": "printed",
+     "rgb": [
+      37,
+      37,
+      37
+     ]
+    },
+    {
+     "name": "Text Gray",
+     "hex": "#666666",
+     "use": "Readable mid-tone",
+     "hex_from": "printed",
+     "rgb": [
+      102,
+      102,
+      102
+     ]
+    },
+    {
+     "name": "Paper Warm",
+     "hex": "#EAE6DD",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      234,
+      230,
+      221
+     ]
+    },
+    {
+     "name": "Paper White",
+     "hex": "#FFFDF7",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      253,
+      247
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-gradient-01",
+   "source": "dopely.colors",
+   "series": "Gradient Color Palettes",
+   "name": "Gradient 01",
+   "post": "https://www.instagram.com/p/DecfgQuDaHF/",
+   "date": "2026-10-13",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Aurora Night",
+     "hex": "#0F172A",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      15,
+      23,
+      42
+     ]
+    },
+    {
+     "name": "Bright Blue",
+     "hex": "#3B82F6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      59,
+      130,
+      246
+     ]
+    },
+    {
+     "name": "Soft Violet",
+     "hex": "#A78BFA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      167,
+      139,
+      250
+     ]
+    },
+    {
+     "name": "Pink Glow",
+     "hex": "#F0ABFC",
+     "use": "Warm pink radiance",
+     "hex_from": "printed",
+     "rgb": [
+      240,
+      171,
+      252
+     ]
+    },
+    {
+     "name": "Frost White",
+     "hex": "#F8FAFC",
+     "use": "Clean icy finish",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-gradient-02",
+   "source": "dopely.colors",
+   "series": "Gradient Color Palettes",
+   "name": "Gradient 02",
+   "post": "https://www.instagram.com/p/DecfgQuDaHF/",
+   "date": "2026-10-13",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Cocoa Base",
+     "hex": "#3A1C1C",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      28,
+      28
+     ]
+    },
+    {
+     "name": "Peach Coral",
+     "hex": "#FF6B6B",
+     "use": "Radiant coral warmth",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      107,
+      107
+     ]
+    },
+    {
+     "name": "Apricot Glow",
+     "hex": "#FFB86B",
+     "use": "Soft orange radiance",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      184,
+      107
+     ]
+    },
+    {
+     "name": "Cream Light",
+     "hex": "#FFF1D6",
+     "use": "Warm cream tone",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      241,
+      214
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": "Pure clean finish",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-gradient-03",
+   "source": "dopely.colors",
+   "series": "Gradient Color Palettes",
+   "name": "Gradient 03",
+   "post": "https://www.instagram.com/p/DecfgQuDaHF/",
+   "date": "2026-10-13",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Deep Aqua",
+     "hex": "#053B36",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      5,
+      59,
+      54
+     ]
+    },
+    {
+     "name": "Flow Teal",
+     "hex": "#14B8A6",
+     "use": "Fresh fluid teal",
+     "hex_from": "printed",
+     "rgb": [
+      20,
+      184,
+      166
+     ]
+    },
+    {
+     "name": "Soft Mint",
+     "hex": "#99F6E4",
+     "use": "Light mint calm",
+     "hex_from": "printed",
+     "rgb": [
+      153,
+      246,
+      228
+     ]
+    },
+    {
+     "name": "Ice Mint",
+     "hex": "#ECFEFF",
+     "use": "Pale icy mint",
+     "hex_from": "printed",
+     "rgb": [
+      236,
+      254,
+      255
+     ]
+    },
+    {
+     "name": "Frost White",
+     "hex": "#F8FAFC",
+     "use": "Clean icy finish",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-gradient-04",
+   "source": "dopely.colors",
+   "series": "Gradient Color Palettes",
+   "name": "Gradient 04",
+   "post": "https://www.instagram.com/p/DecfgQuDaHF/",
+   "date": "2026-10-13",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Dusk Purple",
+     "hex": "#120A2A",
+     "use": "Deep night purple",
+     "hex_from": "printed",
+     "rgb": [
+      18,
+      10,
+      42
+     ]
+    },
+    {
+     "name": "Deep Violet",
+     "hex": "#4D1D95",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      77,
+      29,
+      149
+     ]
+    },
+    {
+     "name": "Bright Purple",
+     "hex": "#7B3AEC",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      123,
+      58,
+      236
+     ]
+    },
+    {
+     "name": "Lavender Glow",
+     "hex": "#C4B5FD",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      196,
+      181,
+      253
+     ]
+    },
+    {
+     "name": "Violet White",
+     "hex": "#F5F3FF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      245,
+      243,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-gradient-05",
+   "source": "dopely.colors",
+   "series": "Gradient Color Palettes",
+   "name": "Gradient 05",
+   "post": "https://www.instagram.com/p/DecfgQuDaHF/",
+   "date": "2026-10-13",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Twilight Navy",
+     "hex": "#1E1B4B",
+     "use": "Deep cinematic base",
+     "hex_from": "printed",
+     "rgb": [
+      30,
+      27,
+      75
+     ]
+    },
+    {
+     "name": "Sunset Orange",
+     "hex": "#F97216",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      249,
+      114,
+      22
+     ]
+    },
+    {
+     "name": "Coral Glass",
+     "hex": "#FB7286",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      251,
+      114,
+      134
+     ]
+    },
+    {
+     "name": "Soft Yellow",
+     "hex": "#FDE68A",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      253,
+      230,
+      138
+     ]
+    },
+    {
+     "name": "Warm White",
+     "hex": "#FFF7ED",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      247,
+      237
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-gradient-06",
+   "source": "dopely.colors",
+   "series": "Gradient Color Palettes",
+   "name": "Gradient 06",
+   "post": "https://www.instagram.com/p/DecfgQuDaHF/",
+   "date": "2026-10-13",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Ocean Depth",
+     "hex": "#082F49",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      8,
+      47,
+      73
+     ]
+    },
+    {
+     "name": "Sea Blue",
+     "hex": "#0369A1",
+     "use": "Rich blue",
+     "hex_from": "printed",
+     "rgb": [
+      3,
+      105,
+      161
+     ]
+    },
+    {
+     "name": "Bright Sky",
+     "hex": "#38BDF8",
+     "use": "Clear sky radiance",
+     "hex_from": "printed",
+     "rgb": [
+      56,
+      189,
+      248
+     ]
+    },
+    {
+     "name": "Pale Water",
+     "hex": "#BAE6FD",
+     "use": "Light water surface",
+     "hex_from": "printed",
+     "rgb": [
+      186,
+      230,
+      253
+     ]
+    },
+    {
+     "name": "Cloud White",
+     "hex": "#F0F9FF",
+     "use": "Soft cloud finish",
+     "hex_from": "printed",
+     "rgb": [
+      240,
+      249,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-gradient-07",
+   "source": "dopely.colors",
+   "series": "Gradient Color Palettes",
+   "name": "Gradient 07",
+   "post": "https://www.instagram.com/p/DecfgQuDaHF/",
+   "date": "2026-10-13",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Smoke Navy",
+     "hex": "#111827",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      17,
+      24,
+      39
+     ]
+    },
+    {
+     "name": "Fresh Lime",
+     "hex": "#84CC16",
+     "use": "Sharp modern greer",
+     "hex_from": "printed",
+     "rgb": [
+      132,
+      204,
+      22
+     ]
+    },
+    {
+     "name": "Lime Mist",
+     "hex": "#D9F99D",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      217,
+      249,
+      157
+     ]
+    },
+    {
+     "name": "Pale Citrus",
+     "hex": "#F7FEE7",
+     "use": "Light citrus glow",
+     "hex_from": "printed",
+     "rgb": [
+      247,
+      254,
+      231
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": "Pure clean finis!",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-gradient-08",
+   "source": "dopely.colors",
+   "series": "Gradient Color Palettes",
+   "name": "Gradient 08",
+   "post": "https://www.instagram.com/p/DecfgQuDaHF/",
+   "date": "2026-10-13",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Deep Rose",
+     "hex": "#3B0A24",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      59,
+      10,
+      36
+     ]
+    },
+    {
+     "name": "Berry Pink",
+     "hex": "#DA2778",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      218,
+      39,
+      120
+     ]
+    },
+    {
+     "name": "Soft Rose",
+     "hex": "#F9A8D4",
+     "use": "Gentle rose blush",
+     "hex_from": "printed",
+     "rgb": [
+      249,
+      168,
+      212
+     ]
+    },
+    {
+     "name": "Pink Fog",
+     "hex": "#FCE7F3",
+     "use": "Hazy pink softness",
+     "hex_from": "printed",
+     "rgb": [
+      252,
+      231,
+      243
+     ]
+    },
+    {
+     "name": "Blush White",
+     "hex": "#FFF7FB",
+     "use": "Delicate blush finish",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      247,
+      251
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-01",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 01",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Tomato Red",
+     "hex": "#8C1D18",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      140,
+      29,
+      24
+     ]
+    },
+    {
+     "name": "Sauce Orange",
+     "hex": "#D9472B",
+     "use": "Bold sauce warmth",
+     "hex_from": "printed",
+     "rgb": [
+      217,
+      71,
+      43
+     ]
+    },
+    {
+     "name": "Pasta Cream",
+     "hex": "#F6C6A8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      246,
+      198,
+      168
+     ]
+    },
+    {
+     "name": "Warm Plate",
+     "hex": "#FFF1E6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      241,
+      230
+     ]
+    },
+    {
+     "name": "Deli Brown",
+     "hex": "#2C211B",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      44,
+      33,
+      27
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-02",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 02",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Kitchen Olive",
+     "hex": "#354A2F",
+     "use": "Natural olive depth",
+     "hex_from": "printed",
+     "rgb": [
+      53,
+      74,
+      47
+     ]
+    },
+    {
+     "name": "Herb Green",
+     "hex": "#7A8A45",
+     "use": "Savory herb tone",
+     "hex_from": "printed",
+     "rgb": [
+      122,
+      138,
+      69
+     ]
+    },
+    {
+     "name": "Olive Oil",
+     "hex": "#D9C98E",
+     "use": "Golden oil warmth",
+     "hex_from": "printed",
+     "rgb": [
+      217,
+      201,
+      142
+     ]
+    },
+    {
+     "name": "Warm Plate",
+     "hex": "#F8F0D9",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      248,
+      240,
+      217
+     ]
+    },
+    {
+     "name": "Cutting Board",
+     "hex": "#4A3428",
+     "use": "Dark wood anchor",
+     "hex_from": "printed",
+     "rgb": [
+      74,
+      52,
+      40
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-03",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 03",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Crust Brown",
+     "hex": "#6B3F2A",
+     "use": "Warm baked crust",
+     "hex_from": "printed",
+     "rgb": [
+      107,
+      63,
+      42
+     ]
+    },
+    {
+     "name": "Golden Pastry",
+     "hex": "#C98A4B",
+     "use": "Rich pastry glow",
+     "hex_from": "printed",
+     "rgb": [
+      201,
+      138,
+      75
+     ]
+    },
+    {
+     "name": "Butter Dough",
+     "hex": "#EBCB9C",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      235,
+      203,
+      156
+     ]
+    },
+    {
+     "name": "Flour Cream",
+     "hex": "#FFF0D6",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      240,
+      214
+     ]
+    },
+    {
+     "name": "Oven Shadow",
+     "hex": "#2B1C15",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      43,
+      28,
+      21
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-04",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 04",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Orange Juice",
+     "hex": "#FF7A01",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      255,
+      122,
+      1
+     ]
+    },
+    {
+     "name": "Mango Yellow",
+     "hex": "#FFD23F",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      210,
+      63
+     ]
+    },
+    {
+     "name": "Green Apple",
+     "hex": "#9FD355",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      159,
+      211,
+      85
+     ]
+    },
+    {
+     "name": "Fresh Foam",
+     "hex": "#F7FFF0",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      247,
+      255,
+      240
+     ]
+    },
+    {
+     "name": "Leaf Shadow",
+     "hex": "#2F3E20",
+     "use": "Dark leaf anchor",
+     "hex_from": "printed",
+     "rgb": [
+      47,
+      62,
+      32
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-05",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 05",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Nori Black",
+     "hex": "#101820",
+     "use": "Clean nori dark",
+     "hex_from": "printed",
+     "rgb": [
+      16,
+      24,
+      32
+     ]
+    },
+    {
+     "name": "Tuna Red",
+     "hex": "#E63946",
+     "use": "Sharp tuna accent",
+     "hex_from": "printed",
+     "rgb": [
+      230,
+      57,
+      70
+     ]
+    },
+    {
+     "name": "Rice White",
+     "hex": "#F1FAEE",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      241,
+      250,
+      238
+     ]
+    },
+    {
+     "name": "Ice Blue",
+     "hex": "#A8DADC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      168,
+      218,
+      220
+     ]
+    },
+    {
+     "name": "Ceramic Blue",
+     "hex": "#457B9D",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      69,
+      123,
+      157
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-06",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 06",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Espresso Dark",
+     "hex": "#21120D",
+     "use": "Rich espresso base",
+     "hex_from": "printed",
+     "rgb": [
+      33,
+      18,
+      13
+     ]
+    },
+    {
+     "name": "Roast Brown",
+     "hex": "#5C3524",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      92,
+      53,
+      36
+     ]
+    },
+    {
+     "name": "Caramel Coffee",
+     "hex": "#A86F44",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      168,
+      111,
+      68
+     ]
+    },
+    {
+     "name": "Latte Foam",
+     "hex": "#E8C7A2",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      232,
+      199,
+      162
+     ]
+    },
+    {
+     "name": "Cream Top",
+     "hex": "#FFF3E2",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      243,
+      226
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-07",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 07",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Berry Jam",
+     "hex": "#5C1237",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      92,
+      18,
+      55
+     ]
+    },
+    {
+     "name": "Raspberry",
+     "hex": "#C0266A",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      192,
+      38,
+      106
+     ]
+    },
+    {
+     "name": "Yogurt Pink",
+     "hex": "#F9A8D4",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      249,
+      168,
+      212
+     ]
+    },
+    {
+     "name": "Cream Cup",
+     "hex": "#FFF1F8",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      255,
+      241,
+      248
+     ]
+    },
+    {
+     "name": "Berry Shadow",
+     "hex": "#3A2A30",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      42,
+      48
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-08",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 08",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Herb Shadow",
+     "hex": "#12372A",
+     "use": "Deep herb dark",
+     "hex_from": "printed",
+     "rgb": [
+      18,
+      55,
+      42
+     ]
+    },
+    {
+     "name": "Market Green",
+     "hex": "#4D7C3F",
+     "use": "— Fresh market tone",
+     "hex_from": "printed",
+     "rgb": [
+      77,
+      124,
+      63
+     ]
+    },
+    {
+     "name": "Fresh Herb",
+     "hex": "#A7C958",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      167,
+      201,
+      88
+     ]
+    },
+    {
+     "name": "Paper Wrap",
+     "hex": "#F2E8CF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      242,
+      232,
+      207
+     ]
+    },
+    {
+     "name": "Wood Crate",
+     "hex": "#6F4E37",
+     "use": "% © Warm wood anchor",
+     "hex_from": "printed",
+     "rgb": [
+      111,
+      78,
+      55
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-food-brand-09",
+   "source": "dopely.colors",
+   "series": "Food Brand Color Palettes",
+   "name": "Food Brand 09",
+   "post": "https://www.instagram.com/p/DehpEJBjRxj/",
+   "date": "2026-10-15",
+   "likes": 128,
+   "colors": [
+    {
+     "name": "Chocolate Black",
+     "hex": "#160B08",
+     "use": "Rich chocolate dark",
+     "hex_from": "printed",
+     "rgb": [
+      22,
+      11,
+      8
+     ]
+    },
+    {
+     "name": "Dark Cocoa",
+     "hex": "#3A1F18",
+     "use": "Deep cocoa base",
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      31,
+      24
+     ]
+    },
+    {
+     "name": "Cocoa Brown",
+     "hex": "#7B3F2A",
+     "use": "Warm cocoa tone",
+     "hex_from": "printed",
+     "rgb": [
+      123,
+      63,
+      42
+     ]
+    },
+    {
+     "name": "Caramel Dust",
+     "hex": "#D6A77B",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      214,
+      167,
+      123
+     ]
+    },
+    {
+     "name": "Vanilla Cream",
+     "hex": "#FFF0DF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      240,
+      223
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-fashion-brand-01",
+   "source": "dopely.colors",
+   "series": "Fashion Brand Color Palettes",
+   "name": "Fashion Brand 01",
+   "post": "https://www.instagram.com/p/Der8TYUjTaC/",
+   "date": "2026-10-19",
+   "likes": 139,
+   "colors": [
+    {
+     "name": "Runway Black",
+     "hex": "#050505",
+     "use": "Deep luxe darkness",
+     "hex_from": "printed",
+     "rgb": [
+      5,
+      5,
+      5
+     ]
+    },
+    {
+     "name": "Soft Black",
+     "hex": "#1F1F1F",
+     "use": "Muted elegant dark",
+     "hex_from": "printed",
+     "rgb": [
+      31,
+      31,
+      31
+     ]
+    },
+    {
+     "name": "Tailored Gold",
+     "hex": "#B8A27A",
+     "use": "Refined warm accent",
+     "hex_from": "printed",
+     "rgb": [
+      184,
+      162,
+      122
+     ]
+    },
+    {
+     "name": "Atelier Cream",
+     "hex": "#F4ECD8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      244,
+      236,
+      216
+     ]
+    },
+    {
+     "name": "Clean White",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-fashion-brand-02",
+   "source": "dopely.colors",
+   "series": "Fashion Brand Color Palettes",
+   "name": "Fashion Brand 02",
+   "post": "https://www.instagram.com/p/Der8TYUjTaC/",
+   "date": "2026-10-19",
+   "likes": 139,
+   "colors": [
+    {
+     "name": "Tailor Black",
+     "hex": "#2B2A27",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      43,
+      42,
+      39
+     ]
+    },
+    {
+     "name": "Wool Taupe",
+     "hex": "#827568",
+     "use": "Warm neutral tone",
+     "hex_from": "printed",
+     "rgb": [
+      130,
+      117,
+      104
+     ]
+    },
+    {
+     "name": "Soft Cashmere",
+     "hex": "#D4C3AF",
+     "use": "Light woven warmth",
+     "hex_from": "printed",
+     "rgb": [
+      212,
+      195,
+      175
+     ]
+    },
+    {
+     "name": "Atelier Cream",
+     "hex": "#F6EFE5",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      246,
+      239,
+      229
+     ]
+    },
+    {
+     "name": "Muted Leather",
+     "hex": "#A56A5A",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      165,
+      106,
+      90
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-fashion-brand-03",
+   "source": "dopely.colors",
+   "series": "Fashion Brand Color Palettes",
+   "name": "Fashion Brand 03",
+   "post": "https://www.instagram.com/p/Der8TYUjTaC/",
+   "date": "2026-10-19",
+   "likes": 139,
+   "colors": [
+    {
+     "name": "Street Black",
+     "hex": "#101010",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      16,
+      16,
+      16
+     ]
+    },
+    {
+     "name": "Drop Lime",
+     "hex": "#D7FF00",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      215,
+      255,
+      0
+     ]
+    },
+    {
+     "name": "Hype Violet",
+     "hex": "#7C3AED",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      124,
+      58,
+      237
+     ]
+    },
+    {
+     "name": "Flash White",
+     "hex": "#F8FAFC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    },
+    {
+     "name": "Concrete Gray",
+     "hex": "#525252",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      82,
+      82,
+      82
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-fashion-brand-04",
+   "source": "dopely.colors",
+   "series": "Fashion Brand Color Palettes",
+   "name": "Fashion Brand 04",
+   "post": "https://www.instagram.com/p/Der8TYUjTaC/",
+   "date": "2026-10-19",
+   "likes": 139,
+   "colors": [
+    {
+     "name": "Editorial Black",
+     "hex": "#111111",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      17,
+      17,
+      17
+     ]
+    },
+    {
+     "name": "Deep Rouge",
+     "hex": "#8B0000",
+     "use": "Rich dramatic depth",
+     "hex_from": "printed",
+     "rgb": [
+      139,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Statement Red",
+     "hex": "#D62829",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      214,
+      40,
+      41
+     ]
+    },
+    {
+     "name": "Paper Beige",
+     "hex": "#F5E6D3",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      245,
+      230,
+      211
+     ]
+    },
+    {
+     "name": "White (label Too Faint To Read)",
+     "hex": "#FFFFFF",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-fashion-brand-05",
+   "source": "dopely.colors",
+   "series": "Fashion Brand Color Palettes",
+   "name": "Fashion Brand 05",
+   "post": "https://www.instagram.com/p/Der8TYUjTaC/",
+   "date": "2026-10-19",
+   "likes": 139,
+   "colors": [
+    {
+     "name": "Dark Denim",
+     "hex": "#102A43",
+     "use": "Deep indigo",
+     "hex_from": "printed",
+     "rgb": [
+      16,
+      42,
+      67
+     ]
+    },
+    {
+     "name": "Washed Denim",
+     "hex": "#3E6A8F",
+     "use": "Faded blue classic",
+     "hex_from": "printed",
+     "rgb": [
+      62,
+      106,
+      143
+     ]
+    },
+    {
+     "name": "Pale Blue Jean",
+     "hex": "#A8C7DD",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      168,
+      199,
+      221
+     ]
+    },
+    {
+     "name": "Cream Cotton",
+     "hex": "#F4E7D3",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      244,
+      231,
+      211
+     ]
+    },
+    {
+     "name": "Leather Brown",
+     "hex": "#6B503F",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      107,
+      80,
+      63
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-fashion-brand-06",
+   "source": "dopely.colors",
+   "series": "Fashion Brand Color Palettes",
+   "name": "Fashion Brand 06",
+   "post": "https://www.instagram.com/p/Der8TYUjTaC/",
+   "date": "2026-10-19",
+   "likes": 139,
+   "colors": [
+    {
+     "name": "Label Brown",
+     "hex": "#3A2A2A",
+     "use": "Deep warm anchor",
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      42,
+      42
+     ]
+    },
+    {
+     "name": "Dusty Blush",
+     "hex": "#B98989",
+     "use": "Soft rose warmth.",
+     "hex_from": "printed",
+     "rgb": [
+      185,
+      137,
+      137
+     ]
+    },
+    {
+     "name": "Powder Rose",
+     "hex": "#E8C7C7",
+     "use": "Gentle pink glow",
+     "hex_from": "printed",
+     "rgb": [
+      232,
+      199,
+      199
+     ]
+    },
+    {
+     "name": "Silk White",
+     "hex": "#FFF1EF",
+     "use": "_ Deli",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      241,
+      239
+     ]
+    },
+    {
+     "name": "Soft Gold",
+     "hex": "#C9A46A",
+     "use": "Premium accent tone",
+     "hex_from": "printed",
+     "rgb": [
+      201,
+      164,
+      106
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-fashion-brand-07",
+   "source": "dopely.colors",
+   "series": "Fashion Brand Color Palettes",
+   "name": "Fashion Brand 07",
+   "post": "https://www.instagram.com/p/Der8TYUjTaC/",
+   "date": "2026-10-19",
+   "likes": 139,
+   "colors": [
+    {
+     "name": "Utility Black",
+     "hex": "#1F261A",
+     "use": "Deep rugged base",
+     "hex_from": "printed",
+     "rgb": [
+      31,
+      38,
+      26
+     ]
+    },
+    {
+     "name": "Field Olive",
+     "hex": "#566B30",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      86,
+      107,
+      48
+     ]
+    },
+    {
+     "name": "Washed Sage",
+     "hex": "#9AA07A",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      154,
+      160,
+      122
+     ]
+    },
+    {
+     "name": "Canvas Cream",
+     "hex": "#EAE3D0",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      234,
+      227,
+      208
+     ]
+    },
+    {
+     "name": "Gear Brown",
+     "hex": "#2E2A22",
+     "use": "Dark utility anchor",
+     "hex_from": "printed",
+     "rgb": [
+      46,
+      42,
+      34
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-fashion-brand-08",
+   "source": "dopely.colors",
+   "series": "Fashion Brand Color Palettes",
+   "name": "Fashion Brand 08",
+   "post": "https://www.instagram.com/p/Der8TYUjTaC/",
+   "date": "2026-10-19",
+   "likes": 139,
+   "colors": [
+    {
+     "name": "Future Black",
+     "hex": "#080808",
+     "use": "Ultra sleek dark",
+     "hex_from": "printed",
+     "rgb": [
+      8,
+      8,
+      8
+     ]
+    },
+    {
+     "name": "Graphite Gray",
+     "hex": "#4B5563",
+     "use": "Technical mid-tone",
+     "hex_from": "printed",
+     "rgb": [
+      75,
+      85,
+      99
+     ]
+    },
+    {
+     "name": "Chrome Silver",
+     "hex": "#CBD5E1",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      203,
+      213,
+      225
+     ]
+    },
+    {
+     "name": "Frost White",
+     "hex": "#F8FAFC",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    },
+    {
+     "name": "Electric Blue",
+     "hex": "#3B82F6",
+     "use": "Bold tech accent",
+     "hex_from": "printed",
+     "rgb": [
+      59,
+      130,
+      246
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-01",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 01",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Serum Blush",
+     "hex": "#F8D7DA",
+     "use": "Warm blush glow",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      215,
+      218
+     ]
+    },
+    {
+     "name": "Soft Rose Mist",
+     "hex": "#FBECEF",
+     "use": "Soft rose mist",
+     "hex_from": "printed",
+     "rgb": [
+      251,
+      236,
+      239
+     ]
+    },
+    {
+     "name": "Muted Rose",
+     "hex": "#C98C96",
+     "use": "Muted rose depth ~",
+     "hex_from": "printed",
+     "rgb": [
+      201,
+      140,
+      150
+     ]
+    },
+    {
+     "name": "Mauve Taupe",
+     "hex": "#7A5558",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      122,
+      85,
+      88
+     ]
+    },
+    {
+     "name": "Beauty Shadow",
+     "hex": "#3A2A2C",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      42,
+      44
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-02",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 02",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Pure Cream",
+     "hex": "#FFF8EF",
+     "use": "Minimal cre",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      248,
+      239
+     ]
+    },
+    {
+     "name": "Soft Beige",
+     "hex": "#E8D8C3",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      232,
+      216,
+      195
+     ]
+    },
+    {
+     "name": "Warm Sand",
+     "hex": "#BFA58A",
+     "use": "Warm sand warmth",
+     "hex_from": "printed",
+     "rgb": [
+      191,
+      165,
+      138
+     ]
+    },
+    {
+     "name": "Taupe Brown",
+     "hex": "#6F5A48",
+     "use": "Rich taupe depth",
+     "hex_from": "printed",
+     "rgb": [
+      111,
+      90,
+      72
+     ]
+    },
+    {
+     "name": "Deep Cocoa",
+     "hex": "#211A16",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      33,
+      26,
+      22
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-03",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 03",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Lab Rose",
+     "hex": "#F4C2C2",
+     "use": "Clinical rose glow",
+     "hex_from": "printed",
+     "rgb": [
+      244,
+      194,
+      194
+     ]
+    },
+    {
+     "name": "Serum Pink",
+     "hex": "#D88B95",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      216,
+      139,
+      149
+     ]
+    },
+    {
+     "name": "Deep Rose",
+     "hex": "#A64D63",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      166,
+      77,
+      99
+     ]
+    },
+    {
+     "name": "Clinic White",
+     "hex": "#FDF2F5",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      253,
+      242,
+      245
+     ]
+    },
+    {
+     "name": "Plum Shadow",
+     "hex": "#3D2730",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      61,
+      39,
+      48
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-04",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 04",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Spa Mist",
+     "hex": "#EAF3E7",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      234,
+      243,
+      231
+     ]
+    },
+    {
+     "name": "Soft Sage",
+     "hex": "#B8C9A9",
+     "use": "Natural sage tone",
+     "hex_from": "sampled",
+     "rgb": [
+      184,
+      201,
+      169
+     ]
+    },
+    {
+     "name": "Herbal Green",
+     "hex": "#7E9674",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      126,
+      150,
+      116
+     ]
+    },
+    {
+     "name": "Warm Towel",
+     "hex": "#F8F4EA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      244,
+      234
+     ]
+    },
+    {
+     "name": "Deep Leaf",
+     "hex": "#3D4A35",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      61,
+      74,
+      53
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-05",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 05",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Fragrance Night",
+     "hex": "#120915",
+     "use": "Moody night dark",
+     "hex_from": "printed",
+     "rgb": [
+      18,
+      9,
+      21
+     ]
+    },
+    {
+     "name": "Deep Plum",
+     "hex": "#3A183F",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      24,
+      63
+     ]
+    },
+    {
+     "name": "Velvet Orchid",
+     "hex": "#8D5A9F",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      141,
+      90,
+      159
+     ]
+    },
+    {
+     "name": "Soft Lilac",
+     "hex": "#D8B4E2",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      216,
+      180,
+      226
+     ]
+    },
+    {
+     "name": "Perfume Mist",
+     "hex": "#F8EEFF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      238,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-06",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 06",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Wine Tint",
+     "hex": "#7A1F2B",
+     "use": "Bold wine depth",
+     "hex_from": "printed",
+     "rgb": [
+      122,
+      31,
+      43
+     ]
+    },
+    {
+     "name": "Lip Berry",
+     "hex": "#C94A5B",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      201,
+      74,
+      91
+     ]
+    },
+    {
+     "name": "Soft Tint",
+     "hex": "#F2A3AD",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      242,
+      163,
+      173
+     ]
+    },
+    {
+     "name": "Blush Cream",
+     "hex": "#FFE6EA",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      230,
+      234
+     ]
+    },
+    {
+     "name": "Cocoa Liner",
+     "hex": "#2A171A",
+     "use": "Dark cocoa liner",
+     "hex_from": "printed",
+     "rgb": [
+      42,
+      23,
+      26
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-07",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 07",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Pearl White",
+     "hex": "#FFFFFF",
+     "use": "Luminous pearl white",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "name": "Glow Cream",
+     "hex": "#F3EDE4",
+     "use": "Warm cream",
+     "hex_from": "printed",
+     "rgb": [
+      243,
+      237,
+      228
+     ]
+    },
+    {
+     "name": "Soft Shell",
+     "hex": "#D8CABE",
+     "use": "Elegant shell tone",
+     "hex_from": "printed",
+     "rgb": [
+      216,
+      202,
+      190
+     ]
+    },
+    {
+     "name": "Pearl Taupe",
+     "hex": "#AFA099",
+     "use": "Pearl taupe depth",
+     "hex_from": "sampled",
+     "rgb": [
+      175,
+      160,
+      153
+     ]
+    },
+    {
+     "name": "Stone Shadow",
+     "hex": "#4A403C",
+     "use": "Dark hor",
+     "hex_from": "printed",
+     "rgb": [
+      74,
+      64,
+      60
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-08",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 08",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Bronze Base",
+     "hex": "#5B3825",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      91,
+      56,
+      37
+     ]
+    },
+    {
+     "name": "Golden Tan",
+     "hex": "#B67942",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      182,
+      121,
+      66
+     ]
+    },
+    {
+     "name": "Honey Glow",
+     "hex": "#E7B779",
+     "use": null,
+     "hex_from": "sampled",
+     "rgb": [
+      231,
+      183,
+      121
+     ]
+    },
+    {
+     "name": "Skin Cream",
+     "hex": "#FFE8C8",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      232,
+      200
+     ]
+    },
+    {
+     "name": "Soft Ivory",
+     "hex": "#FFF8EF",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      248,
+      239
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-beauty-brand-09",
+   "source": "dopely.colors",
+   "series": "Beauty Brand Color Palettes",
+   "name": "Beauty Brand 09",
+   "post": "https://www.instagram.com/p/DexF1vwDfLH/",
+   "date": "2026-10-21",
+   "likes": 243,
+   "colors": [
+    {
+     "name": "Clinic White",
+     "hex": "#F8FBFF",
+     "use": "Clean clinic white",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      251,
+      255
+     ]
+    },
+    {
+     "name": "Soft Blue Tint",
+     "hex": "#DCEBFF",
+     "use": "Soft blue tint",
+     "hex_from": "printed",
+     "rgb": [
+      220,
+      235,
+      255
+     ]
+    },
+    {
+     "name": "Medical Blue",
+     "hex": "#9DB7D5",
+     "use": "Medical blue tone",
+     "hex_from": "printed",
+     "rgb": [
+      157,
+      183,
+      213
+     ]
+    },
+    {
+     "name": "Slate Blue",
+     "hex": "#5B708A",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      91,
+      112,
+      138
+     ]
+    },
+    {
+     "name": "Trust Navy",
+     "hex": "#1E2A3A",
+     "use": null,
+     "hex_from": "printed",
+     "rgb": [
+      30,
+      42,
+      58
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-viral-pop-combo",
+   "source": "dopely.colors",
+   "series": "Color Combos (one color per slide)",
+   "name": "Viral Pop Combo",
+   "mood": "Bold, pop, cool",
+   "post": "https://www.instagram.com/p/Dd4cT-TjYnc/",
+   "date": "2026-09-29",
+   "likes": 121,
+   "colors": [
+    {
+     "name": "Glossy Black",
+     "hex": "#09090B",
+     "use": "Dark premium base, contrast anchor, glossy feed background",
+     "hex_from": "printed",
+     "rgb": [
+      9,
+      9,
+      11
+     ]
+    },
+    {
+     "name": "Hot Pink",
+     "hex": "#FF2FA3",
+     "use": "Viral accent, main pop color, emotional hook",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      47,
+      163
+     ]
+    },
+    {
+     "name": "Electric Blue",
+     "hex": "#2563EB",
+     "use": "Cool digital punch, link and action color, techy contrast",
+     "hex_from": "printed",
+     "rgb": [
+      37,
+      99,
+      235
+     ]
+    },
+    {
+     "name": "Acid Lime",
+     "hex": "#D7FF00",
+     "use": "Scroll stopper, highlight shock, meme-energy accent",
+     "hex_from": "printed",
+     "rgb": [
+      215,
+      255,
+      0
+     ]
+    },
+    {
+     "name": "Cream Flash",
+     "hex": "#FFF7E8",
+     "use": "Soft balance, readable surface, warm cleanup color",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      247,
+      232
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-founder-green-combo",
+   "source": "dopely.colors",
+   "series": "Color Combos (one color per slide)",
+   "name": "Founder Green Combo",
+   "mood": "Clean, calm, trustworthy",
+   "post": "https://www.instagram.com/p/De2UQMJjd4X/",
+   "date": "2026-10-23",
+   "likes": 127,
+   "colors": [
+    {
+     "name": "Founder Green",
+     "hex": "#12372A",
+     "use": "Primary brand color for trust and authority",
+     "hex_from": "printed",
+     "rgb": [
+      18,
+      55,
+      42
+     ]
+    },
+    {
+     "name": "Growth Green",
+     "hex": "#22C55E",
+     "use": "Main accent for CTAs and success states",
+     "hex_from": "printed",
+     "rgb": [
+      34,
+      197,
+      94
+     ]
+    },
+    {
+     "name": "Offer Mint",
+     "hex": "#BBF7D0",
+     "use": "Soft highlight for cards and feature sections",
+     "hex_from": "printed",
+     "rgb": [
+      187,
+      247,
+      208
+     ]
+    },
+    {
+     "name": "Soft Background",
+     "hex": "#F0FDF4",
+     "use": "Page background for clean, calm spacing",
+     "hex_from": "printed",
+     "rgb": [
+      240,
+      253,
+      244
+     ]
+    },
+    {
+     "name": "Text Navy",
+     "hex": "#1F2937",
+     "use": "Main text and headings for strong contrast",
+     "hex_from": "printed",
+     "rgb": [
+      31,
+      41,
+      55
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-desert-luxury-combo",
+   "source": "dopely.colors",
+   "series": "Color Combos (one color per slide)",
+   "name": "Desert Luxury Combo",
+   "mood": "Warm minimal",
+   "post": "https://www.instagram.com/p/DeH5HVdDQid/",
+   "date": "2026-10-05",
+   "likes": 151,
+   "colors": [
+    {
+     "name": "Deep Walnut",
+     "hex": "#3A2A22",
+     "use": "Luxury anchor, dark text, premium contrast",
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      42,
+      34
+     ]
+    },
+    {
+     "name": "Terracotta",
+     "hex": "#B86F52",
+     "use": "Hero accent, warm focal point",
+     "hex_from": "printed",
+     "rgb": [
+      184,
+      111,
+      82
+     ]
+    },
+    {
+     "name": "Desert Sand",
+     "hex": "#D9BFA3",
+     "use": "Neutral warmth, tactile background",
+     "hex_from": "printed",
+     "rgb": [
+      217,
+      191,
+      163
+     ]
+    },
+    {
+     "name": "Warm Cream",
+     "hex": "#F3E7D8",
+     "use": "Clean light base, soft negative space",
+     "hex_from": "printed",
+     "rgb": [
+      243,
+      231,
+      216
+     ]
+    },
+    {
+     "name": "Olive Dust",
+     "hex": "#8C8A68",
+     "use": "Earthy support, natural balance",
+     "hex_from": "printed",
+     "rgb": [
+      140,
+      138,
+      104
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-soft-beauty-combo",
+   "source": "dopely.colors",
+   "series": "Color Combos (one color per slide)",
+   "name": "Soft Beauty Combo",
+   "mood": "Warm minimal",
+   "post": "https://www.instagram.com/p/DeNCtbtjUfG/",
+   "date": "2026-10-07",
+   "likes": 316,
+   "colors": [
+    {
+     "name": "Serum Blush",
+     "hex": "#F8D7DA",
+     "use": "Soft hero color, beauty tone",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      215,
+      218
+     ]
+    },
+    {
+     "name": "Soft Rose Mist",
+     "hex": "#FBECEF",
+     "use": "Light background, clean negative space",
+     "hex_from": "printed",
+     "rgb": [
+      251,
+      236,
+      239
+     ]
+    },
+    {
+     "name": "Muted Rose",
+     "hex": "#C98C96",
+     "use": "Main rose accent, feminine brand tone",
+     "hex_from": "printed",
+     "rgb": [
+      201,
+      140,
+      150
+     ]
+    },
+    {
+     "name": "Mauve Taupe",
+     "hex": "#7A5558",
+     "use": "Secondary depth, mature contrast",
+     "hex_from": "printed",
+     "rgb": [
+      122,
+      85,
+      88
+     ]
+    },
+    {
+     "name": "Beauty Shadow",
+     "hex": "#3A2A2C",
+     "use": "Dark anchor, text color",
+     "hex_from": "printed",
+     "rgb": [
+      58,
+      42,
+      44
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-electric-product-combo",
+   "source": "dopely.colors",
+   "series": "Color Combos (one color per slide)",
+   "name": "Electric Product Combo",
+   "mood": "Cool tech",
+   "post": "https://www.instagram.com/p/DeSPY5nDT0s/",
+   "date": "2026-10-09",
+   "likes": 136,
+   "colors": [
+    {
+     "name": "Product Night",
+     "hex": "#020617",
+     "use": "Dark base, premium background, contrast anchor",
+     "hex_from": "printed",
+     "rgb": [
+      2,
+      6,
+      23
+     ]
+    },
+    {
+     "name": "Action Blue",
+     "hex": "#2563EB",
+     "use": "Main CTA, link color, product highlight",
+     "hex_from": "printed",
+     "rgb": [
+      37,
+      99,
+      235
+     ]
+    },
+    {
+     "name": "Electric Cyan",
+     "hex": "#06B6D4",
+     "use": "Glow accent, energy color",
+     "hex_from": "printed",
+     "rgb": [
+      6,
+      182,
+      212
+     ]
+    },
+    {
+     "name": "Interface White",
+     "hex": "#F8FAFC",
+     "use": "Light surface and text on dark",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      250,
+      252
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dopely-cafe-cream-combo",
+   "source": "dopely.colors",
+   "series": "Color Combos (one color per slide)",
+   "name": "Cafe Cream Combo",
+   "mood": "Warm minimal",
+   "post": "https://www.instagram.com/p/Demyl_gDQCj/",
+   "date": "2026-10-17",
+   "likes": 53,
+   "colors": [
+    {
+     "name": "Coffee Bean",
+     "hex": "#2D211B",
+     "use": "Dark anchor, logo color, headline color",
+     "hex_from": "printed",
+     "rgb": [
+      45,
+      33,
+      27
+     ]
+    },
+    {
+     "name": "Mocha",
+     "hex": "#7B5A48",
+     "use": "Secondary brown, warm supporting tone",
+     "hex_from": "printed",
+     "rgb": [
+      123,
+      90,
+      72
+     ]
+    },
+    {
+     "name": "Oat Milk",
+     "hex": "#E7D7C2",
+     "use": "Main soft neutral, warm background",
+     "hex_from": "printed",
+     "rgb": [
+      231,
+      215,
+      194
+     ]
+    },
+    {
+     "name": "Cream Foam",
+     "hex": "#F8F1E8",
+     "use": "Lightest background, negative space",
+     "hex_from": "printed",
+     "rgb": [
+      248,
+      241,
+      232
+     ]
+    },
+    {
+     "name": "Cinnamon",
+     "hex": "#B9784D",
+     "use": "Warm accent, CTA color, visual spice",
+     "hex_from": "printed",
+     "rgb": [
+      185,
+      120,
+      77
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-deep-navy-cyan",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Deep Navy + Cyan",
+   "post": "https://www.instagram.com/p/DcMLsEfiIcy/",
+   "date": "2026-08-18",
+   "likes": 14312,
+   "contrast": 7.66,
+   "colors": [
+    {
+     "name": "Deep Navy",
+     "hex": "#1C1C28",
+     "hex_from": "printed",
+     "rgb": [
+      28,
+      28,
+      40
+     ]
+    },
+    {
+     "name": "Cyan",
+     "hex": "#1EC1CB",
+     "hex_from": "printed",
+     "rgb": [
+      30,
+      193,
+      203
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-burgundy-blush-pink",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Burgundy + Blush Pink",
+   "post": "https://www.instagram.com/p/DcMLsEfiIcy/",
+   "date": "2026-08-18",
+   "likes": 14312,
+   "contrast": 15.92,
+   "colors": [
+    {
+     "name": "Burgundy",
+     "hex": "#1A0A0F",
+     "hex_from": "printed",
+     "rgb": [
+      26,
+      10,
+      15
+     ]
+    },
+    {
+     "name": "Blush Pink",
+     "hex": "#F6E6EA",
+     "hex_from": "printed",
+     "rgb": [
+      246,
+      230,
+      234
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-carbon-lime",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Carbon + Lime",
+   "post": "https://www.instagram.com/p/DZfUC06CL1z/",
+   "date": "2026-06-12",
+   "likes": 13522,
+   "contrast": 15.16,
+   "colors": [
+    {
+     "name": "Carbon",
+     "hex": "#171717",
+     "hex_from": "printed",
+     "rgb": [
+      23,
+      23,
+      23
+     ]
+    },
+    {
+     "name": "Lime",
+     "hex": "#C6FF34",
+     "hex_from": "printed",
+     "rgb": [
+      198,
+      255,
+      52
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-onyx-candy-blue",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Onyx + Candy Blue",
+   "post": "https://www.instagram.com/p/DZfUC06CL1z/",
+   "date": "2026-06-12",
+   "likes": 13522,
+   "contrast": 13.38,
+   "colors": [
+    {
+     "name": "Onyx",
+     "hex": "#020202",
+     "hex_from": "printed",
+     "rgb": [
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Candy Blue",
+     "hex": "#B2D5E5",
+     "hex_from": "printed",
+     "rgb": [
+      178,
+      213,
+      229
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-jet-black-orchid",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Jet Black + Orchid",
+   "post": "https://www.instagram.com/p/DaAgkipCKjC/",
+   "date": "2026-06-25",
+   "likes": 11284,
+   "contrast": 10.18,
+   "colors": [
+    {
+     "name": "Jet Black",
+     "hex": "#1D1D1D",
+     "hex_from": "printed",
+     "rgb": [
+      29,
+      29,
+      29
+     ]
+    },
+    {
+     "name": "Orchid",
+     "hex": "#E5BDDF",
+     "hex_from": "printed",
+     "rgb": [
+      229,
+      189,
+      223
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-wine-ash-turquoise",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Wine Ash + Turquoise",
+   "post": "https://www.instagram.com/p/DaAgkipCKjC/",
+   "date": "2026-06-25",
+   "likes": 11284,
+   "contrast": 9.46,
+   "colors": [
+    {
+     "name": "Wine Ash",
+     "hex": "#32292F",
+     "hex_from": "printed",
+     "rgb": [
+      50,
+      41,
+      47
+     ]
+    },
+    {
+     "name": "Turquoise",
+     "hex": "#99E1D9",
+     "hex_from": "printed",
+     "rgb": [
+      153,
+      225,
+      217
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-cosmic-vanilla",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Cosmic + Vanilla",
+   "post": "https://www.instagram.com/p/DaxM5E4iF97/",
+   "date": "2026-07-14",
+   "likes": 6735,
+   "contrast": 14.9,
+   "colors": [
+    {
+     "name": "Cosmic",
+     "hex": "#23212C",
+     "hex_from": "printed",
+     "rgb": [
+      35,
+      33,
+      44
+     ]
+    },
+    {
+     "name": "Vanilla",
+     "hex": "#F1FEC8",
+     "hex_from": "printed",
+     "rgb": [
+      241,
+      254,
+      200
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-violet-lavender",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Violet + Lavender",
+   "post": "https://www.instagram.com/p/DaxM5E4iF97/",
+   "date": "2026-07-14",
+   "likes": 6735,
+   "contrast": 8.17,
+   "colors": [
+    {
+     "name": "Violet",
+     "hex": "#36255C",
+     "hex_from": "printed",
+     "rgb": [
+      54,
+      37,
+      92
+     ]
+    },
+    {
+     "name": "Lavender",
+     "hex": "#D2C3F6",
+     "hex_from": "printed",
+     "rgb": [
+      210,
+      195,
+      246
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-black-iris-frozen",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Black Iris + Frozen",
+   "post": "https://www.instagram.com/p/DdrZ3CPCKGI/",
+   "date": "2026-09-24",
+   "likes": 5899,
+   "contrast": 10.24,
+   "colors": [
+    {
+     "name": "Black Iris",
+     "hex": "#080813",
+     "hex_from": "printed",
+     "rgb": [
+      8,
+      8,
+      19
+     ]
+    },
+    {
+     "name": "Frozen",
+     "hex": "#A0BDDB",
+     "hex_from": "printed",
+     "rgb": [
+      160,
+      189,
+      219
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-shadow-citrus",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Shadow + Citrus",
+   "post": "https://www.instagram.com/p/DdrZ3CPCKGI/",
+   "date": "2026-09-24",
+   "likes": 5899,
+   "contrast": 16.49,
+   "colors": [
+    {
+     "name": "Shadow",
+     "hex": "#141414",
+     "hex_from": "printed",
+     "rgb": [
+      20,
+      20,
+      20
+     ]
+    },
+    {
+     "name": "Citrus",
+     "hex": "#E4FD97",
+     "hex_from": "printed",
+     "rgb": [
+      228,
+      253,
+      151
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-royal-blue-nitro-orange",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Royal Blue + Nitro Orange",
+   "post": "https://www.instagram.com/p/DeZjXd3iAZD/",
+   "date": "2026-10-12",
+   "likes": 4417,
+   "contrast": 4.55,
+   "colors": [
+    {
+     "name": "Royal Blue",
+     "hex": "#191970",
+     "hex_from": "printed",
+     "rgb": [
+      25,
+      25,
+      112
+     ]
+    },
+    {
+     "name": "Nitro Orange",
+     "hex": "#FB5607",
+     "hex_from": "printed",
+     "rgb": [
+      251,
+      86,
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-blackstone-whiteout",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Blackstone + Whiteout",
+   "post": "https://www.instagram.com/p/DeZjXd3iAZD/",
+   "date": "2026-10-12",
+   "likes": 4417,
+   "contrast": 13.01,
+   "colors": [
+    {
+     "name": "Blackstone",
+     "hex": "#212529",
+     "hex_from": "printed",
+     "rgb": [
+      33,
+      37,
+      41
+     ]
+    },
+    {
+     "name": "Whiteout",
+     "hex": "#E9ECEF",
+     "hex_from": "printed",
+     "rgb": [
+      233,
+      236,
+      239
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-navy-blue-blush",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Navy Blue + Blush",
+   "post": "https://www.instagram.com/p/DbOOTP0iES7/",
+   "date": "2026-07-25",
+   "likes": 2803,
+   "contrast": 10.43,
+   "colors": [
+    {
+     "name": "Navy Blue",
+     "hex": "#062045",
+     "hex_from": "printed",
+     "rgb": [
+      6,
+      32,
+      69
+     ]
+    },
+    {
+     "name": "Blush",
+     "hex": "#F2C4CE",
+     "hex_from": "printed",
+     "rgb": [
+      242,
+      196,
+      206
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-teal-green-light-lime",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Teal Green + Light Lime",
+   "post": "https://www.instagram.com/p/DbOOTP0iES7/",
+   "date": "2026-07-25",
+   "likes": 2803,
+   "contrast": 12.64,
+   "colors": [
+    {
+     "name": "Teal Green",
+     "hex": "#022E21",
+     "hex_from": "printed",
+     "rgb": [
+      2,
+      46,
+      33
+     ]
+    },
+    {
+     "name": "Light Lime",
+     "hex": "#CDFC8A",
+     "hex_from": "printed",
+     "rgb": [
+      205,
+      252,
+      138
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-eclipse-volt",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Eclipse + Volt",
+   "post": "https://www.instagram.com/p/DdEit3LiDLc/",
+   "date": "2026-09-09",
+   "likes": 2007,
+   "contrast": 14.03,
+   "colors": [
+    {
+     "name": "Eclipse",
+     "hex": "#00272B",
+     "hex_from": "printed",
+     "rgb": [
+      0,
+      39,
+      43
+     ]
+    },
+    {
+     "name": "Volt",
+     "hex": "#E0FF4F",
+     "hex_from": "printed",
+     "rgb": [
+      224,
+      255,
+      79
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-mulberry-turquoise",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Mulberry + Turquoise",
+   "post": "https://www.instagram.com/p/DdEit3LiDLc/",
+   "date": "2026-09-09",
+   "likes": 2007,
+   "contrast": 9.46,
+   "colors": [
+    {
+     "name": "Mulberry",
+     "hex": "#32292F",
+     "hex_from": "printed",
+     "rgb": [
+      50,
+      41,
+      47
+     ]
+    },
+    {
+     "name": "Turquoise",
+     "hex": "#99E1D9",
+     "hex_from": "printed",
+     "rgb": [
+      153,
+      225,
+      217
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-mint-flamingo",
+   "source": "dyslove.design",
+   "series": "Summer Color Combos",
+   "name": "Mint + Flamingo",
+   "post": "https://www.instagram.com/p/DZuea-XiDpY/",
+   "date": "2026-06-18",
+   "likes": 551,
+   "contrast": 1.76,
+   "colors": [
+    {
+     "name": "Mint",
+     "hex": "#66D0BC",
+     "hex_from": "printed",
+     "rgb": [
+      102,
+      208,
+      188
+     ]
+    },
+    {
+     "name": "Flamingo",
+     "hex": "#FF3E9B",
+     "hex_from": "printed",
+     "rgb": [
+      255,
+      62,
+      155
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-cote-d-azur-matador",
+   "source": "dyslove.design",
+   "series": "Summer Color Combos",
+   "name": "Cote d'Azur + Matador",
+   "post": "https://www.instagram.com/p/DZuea-XiDpY/",
+   "date": "2026-06-18",
+   "likes": 551,
+   "contrast": 2.81,
+   "colors": [
+    {
+     "name": "Cote d'Azur",
+     "hex": "#98D2EB",
+     "hex_from": "printed",
+     "rgb": [
+      152,
+      210,
+      235
+     ]
+    },
+    {
+     "name": "Matador",
+     "hex": "#E12826",
+     "hex_from": "printed",
+     "rgb": [
+      225,
+      40,
+      38
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-royal-black-redline",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Royal Black + Redline",
+   "post": "https://www.instagram.com/p/De9gwATCCIy/",
+   "date": "2026-10-26",
+   "likes": 279,
+   "contrast": 4.1,
+   "colors": [
+    {
+     "name": "Royal Black",
+     "hex": "#121212",
+     "hex_from": "printed",
+     "rgb": [
+      18,
+      18,
+      18
+     ]
+    },
+    {
+     "name": "Redline",
+     "hex": "#E61E32",
+     "hex_from": "printed",
+     "rgb": [
+      230,
+      30,
+      50
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyslove-blacktop-fusion",
+   "source": "dyslove.design",
+   "series": "New Color Combos",
+   "name": "Blacktop + Fusion",
+   "post": "https://www.instagram.com/p/De9gwATCCIy/",
+   "date": "2026-10-26",
+   "likes": 279,
+   "contrast": 16.67,
+   "colors": [
+    {
+     "name": "Blacktop",
+     "hex": "#0A0A0A",
+     "hex_from": "printed",
+     "rgb": [
+      10,
+      10,
+      10
+     ]
+    },
+    {
+     "name": "Fusion",
+     "hex": "#D7EFFF",
+     "hex_from": "printed",
+     "rgb": [
+      215,
+      239,
+      255
+     ]
+    }
+   ]
+  }
+ ]
+}
