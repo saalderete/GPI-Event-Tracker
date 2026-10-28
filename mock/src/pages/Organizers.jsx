@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SeenInApp } from "../components/Phone.jsx";
+import { Showcase } from "../components/Showcase.jsx";
 import { Rise } from "../components/motion.jsx";
 
 // For organizers: the pitch, the six fields, what the listing looks like, and
@@ -24,7 +24,7 @@ export function Organizers({ events, today, saved }) {
           </dl>
         </Rise>
       </div>
-      <SeenInApp events={events} today={today} saved={saved} />
+      <Showcase />
       <div className="wrap measure pb-16">
         <Rise><div className="flex flex-wrap items-center gap-4"><Link to="/post/" className="btn">Post an event</Link><span className="text-sm text-muted">Listed within a day, confirmed against your page.</span></div></Rise>
       </div>

@@ -255,23 +255,32 @@ textarea.field { min-height: 6rem; resize: vertical; }
 .focus-grid:has(.piece a:focus-visible) .piece:not(:focus-within) { filter: blur(3px); opacity: 0.6; }
 
 /* ---------- the phone (the app seen in the page) ---------- */
-/* The duo: the team's iPhone photo, cut out, with the live screen put onto the front phone by one matrix3d. */
-.duo { position: relative; width: 100%; }
-.duo__img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; filter: drop-shadow(0 34px 50px rgba(0, 0, 0, 0.32)) drop-shadow(0 6px 12px rgba(0, 0, 0, 0.18)); }
-.duo__screen { position: absolute; left: 0; top: 0; z-index: 1; transform-origin: 0 0; border-radius: 42px; overflow: hidden; background: var(--paper); color: var(--ink); backface-visibility: hidden; -webkit-font-smoothing: antialiased; }
-.duo__screen::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(108deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 30%, transparent 46%, transparent 72%, rgba(255, 255, 255, 0.05) 100%); }
-.phone__screen { height: 100%; overflow: hidden; display: flex; flex-direction: column; }
-.phone__bar { padding: 1.4rem 1.25rem 0.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.6875rem; color: var(--muted); }
-.phone__body { padding: 0 1.1rem 1rem; overflow: hidden; flex: 1; }
-.phone__screen .row { grid-template-columns: 2.25rem 1fr; gap: 0.6rem; padding: 0.6rem 0; }
-.phone__screen .row__thumb { width: 2.25rem; }
-.phone__screen .row__name { font-size: 0.95rem; }
-.phone__screen .row__meta { font-size: 0.65rem; gap: 0.15rem 0.5rem; }
-.phone__screen .row__side { display: none; }
-.phone__screen .index__day { padding: 0.9rem 0 0.2rem; }
-.phone__screen .index__day h2 { font-size: 0.95rem; }
-.phone__screen .index__day span { font-size: 0.6rem; }
-@media (max-width: 1023px) { .duo { width: calc(100% + 2 * var(--margin)); margin-inline: calc(-1 * var(--margin)); } }
+/* ---------- what a listing looks like: the device photos over the accent ---------- */
+.show { position: relative; overflow: hidden; background: var(--accent); color: var(--on-accent); min-height: clamp(36rem, 92vh, 62rem); isolation: isolate; }
+.show::before { content: ""; position: absolute; inset: 0; background: radial-gradient(90% 70% at 62% 40%, rgba(255, 255, 255, 0.14), transparent 70%); pointer-events: none; }
+.show__mark { position: absolute; left: calc(var(--margin) - 0.04em); top: 4.5rem; display: grid; font-family: var(--display); font-weight: 700; font-size: clamp(4.5rem, 11.8vw, 13.5rem); line-height: 0.86; letter-spacing: -0.035em; text-transform: uppercase; color: rgba(0, 0, 0, 0.13); white-space: nowrap; user-select: none; pointer-events: none; }
+.show__corner { position: absolute; top: 1.4rem; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.02em; opacity: 0.85; }
+.show__corner--l { left: var(--margin); } .show__corner--r { right: var(--margin); }
+.show__slides { position: absolute; inset: 0; }
+.show__slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: right bottom; opacity: 0; transition: opacity 1100ms var(--ease-in-out); filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.22)); }
+.show__slide[data-pos="left"] { object-position: left bottom; }
+.show__slide[data-pos="center"] { object-position: center bottom; }
+.show__slide.is-on { opacity: 1; }
+.show.is-still .show__slide { transition: none; }
+.show__copy { position: absolute; left: 0; right: 0; bottom: clamp(2rem, 7vh, 4.5rem); max-width: 40rem; z-index: 1; }
+.show__copy .h-head, .show__copy .lede { color: inherit; }
+.show__copy .h-head em { color: inherit; opacity: 0.72; }
+.show__copy .lede { opacity: 0.9; max-width: 30rem; }
+.show .chip { border-color: color-mix(in oklab, var(--on-accent) 55%, transparent); color: var(--on-accent); background: transparent; }
+.show .chip:hover { background: color-mix(in oklab, var(--on-accent) 14%, transparent); }
+.show .chip[aria-pressed="true"] { background: var(--on-accent); color: var(--accent); border-color: var(--on-accent); }
+@media (max-width: 1023px) {
+  .show { min-height: 0; display: grid; grid-template-rows: auto 1fr; padding-top: 4.5rem; }
+  .show__mark { top: auto; bottom: calc(min(78vh, 36rem) - 1.2em); font-size: clamp(3rem, 15.5vw, 6rem); }
+  .show__slides { position: relative; height: min(78vh, 36rem); order: 2; }
+  .show__slide, .show__slide[data-pos="left"], .show__slide[data-pos="center"] { object-position: center bottom; }
+  .show__copy { position: relative; bottom: auto; order: 1; padding-bottom: 1.5rem; max-width: none; }
+}
 
 /* ---------- footer ---------- */
 .foot__scene { position: relative; min-height: 80vh; display: grid; align-items: end; color: var(--film-ink); background: #0b0a09; isolation: isolate; }

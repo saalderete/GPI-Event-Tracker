@@ -27,7 +27,7 @@ Fontsource. The colours are one of the portal's seven palettes, day and night
 | `/mock/events/` | The calendar: search, a day strip, Free, list or grid, "For you first" once interests are picked |
 | `/mock/events/tonight/`, `/tomorrow/`, `/weekend/`, `/week/` | One page per date, as Fever has them. Tonight, Tomorrow and a picked day open with DAYLIGHT's day scene: the time-lapse scrubbed to the minute as you move along the hours, the day's events on the track. The weekend page opens with KAGE's focused rail |
 | `/mock/events/music/` and the other seven categories | One page per category; the date chips narrow it |
-| `/mock/organizers/` | For organizers: the pitch, the six fields, what a listing looks like on the team's iPhone duo (see The duo below), the door to the form |
+| `/mock/organizers/` | For organizers: the pitch, the six fields, what a listing looks like on the team's device photos (see The device photos below), the door to the form |
 | `/mock/events/<slug>/` | One event: who it is for, what it costs, know before you go, where, the organizer, the change line, Save, Send to the group chat, Add to calendar (.ics) |
 | `/mock/saved/` | The plan: saved events by day, one share for the whole list |
 | `/mock/interests/` | Pick categories; the calendar leads with them; weekly subscriptions (a mock) |
@@ -65,35 +65,26 @@ browser with its tokens, and put back on by the opening script before paint.
 set `default` in `palettes/roles.json` and build. The script runs before
 `dev` and `build`; its outputs are committed too.
 
-## The duo
+## The device photos
 
-`public/duo.webp` is the team's iPhone duo photo, cut from its orange backdrop
-(the backdrop keyed on hue and saturation, the hand below the phones dropped,
-the orange spill on the metal neutralized, the edge feathered; a one-off
-script, not in the repo). The screen is not a picture: `Duo` in
-`src/components/Phone.jsx` lays the real components out flat, 220 to 300 px
-wide by how large the photo renders, and one CSS `matrix3d` (a homography from
-the flat rectangle to the four screen corners in `src/data/duo.js`) puts them
-onto the front phone. The chips swap the view, the dates stay live, and the
-fit is recomputed on resize only.
+"What a listing looks like" on the organizers page is the team's four
+KasaPro device photos (two tablets held from the side, one in two hands, the
+iPhone duo on a fingertip), re-dressed for GPI: the orange backdrop keyed to
+transparency (orange hue at very high saturation; the skin under that light
+is orange too but far less saturated), the printed labels and the Nerrix mark
+dropped (the mark on the forearm painted out), and the screens replaced by
+captures of the mock's own pages in the dark Lab Rose theme, warped to each
+screen's four corners with fingers and bezels kept in front, after the Nerrix
+kit's `place.py`. One tablet is mirrored so every device sits at the right.
+The files are `public/devices/*.webp` (1080x1350 with alpha); the scripts
+that made them are one-off, outside the repo.
 
-## Data
-
-`src/data/events.js`: 26 sample events placed by day offset from today, so
-the calendar always has something on tonight and this weekend. Organizers are
-fictional; venues are real kinds of places. Every page says it is sample data.
-
-## Flyer pictures
-
-Every sample event carries a generated picture in `public/flyers/`
-(`<slug>.webp` at 768x1024 and `<slug>-s.webp` at 384x512, listed in
-`src/data/flyers.json`). They were made with gpt-image-2.5 Sunburst through
-Monid, one prompt per event from its title, place and blurb under one house
-direction (35mm editorial photograph, borderland light, no text, no faces),
-at high quality, 1152x1536, about five cents each. `Flyer` shows the picture
-tinted toward the event's category and keeps the plain flyer for an event
-without one, such as the form's live preview. The footer says the pictures
-are generated illustrations; none shows a real event.
+`Showcase` lays the photos over the palette's accent with the wordmark and
+corner labels as live type, so the section follows the palette picker. The
+slides fade one into the next every 6.5 seconds; the chips pick one and say
+what its screen shows; the show stands still under the Pause switch or
+reduced motion. The screens are captures, so their dates are the day they
+were taken.
 
 ## Build
 
