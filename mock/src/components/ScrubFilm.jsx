@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useMotionOff } from "./motion.jsx";
+import { filmSrc } from "../lib/film.js";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -11,15 +12,17 @@ export function ScrubFilm({ tonight }) {
   const off = useMotionOff();
   const ref = useRef(null);
   const vid = useRef(null);
-  const [tall] = useState(() => typeof window !== "undefined" && window.matchMedia("(max-aspect-ratio: 3/4)").matches);
-  const src = tall ? `${BASE}film/elpaso-dusk-tall-640.mp4` : `${BASE}film/elpaso-dusk-1280.mp4`;
-  const poster = tall ? `${BASE}film/elpaso-dusk-poster-tall.webp` : `${BASE}film/elpaso-dusk-poster.webp`;
+  // The day clip, from golden hour to night: the same footage the day scene
+  // scrubs to the minute, so one file serves both.
+  const src = filmSrc(BASE, "elpaso-day-1280");
+  const poster = `${BASE}film/elpaso-dusk-poster.webp`;
+  const FROM = 12.5, TO = 24.6;
 
   useEffect(() => {
     const section = ref.current, v = vid.current;
     if (!section || !v || off) return;
-    let raf = 0, current = 0, ready = false, primed = false;
-    const onReady = () => { ready = true; };
+    let raf = 0, current = FROM, ready = false, primed = false;
+    const onReady = () => { ready = true; v.currentTime = FROM; };
     if (v.readyState >= 1) onReady(); else v.addEventListener("loadedmetadata", onReady, { once: true });
     // Safari loads nothing until the film has been asked to play once.
     const prime = () => { if (primed) return; primed = true; v.play().then(() => v.pause()).catch(() => {}); };
@@ -31,7 +34,7 @@ export function ScrubFilm({ tonight }) {
       const p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - window.innerHeight)));
       section.style.setProperty("--p", p.toFixed(4));
       if (!ready || !v.duration || v.seeking) return;
-      const target = p * Math.max(0, v.duration - 0.05);
+      const target = FROM + p * (Math.min(TO, v.duration - 0.05) - FROM);
       current += (target - current) * 0.14;
       if (Math.abs(current - v.currentTime) > 1 / 48) v.currentTime = current;
     };
@@ -45,7 +48,7 @@ export function ScrubFilm({ tonight }) {
         {off ? (
           <img className="film__media" src={poster} alt="El Paso from the Franklin Mountains at dusk, the city lights coming on." />
         ) : (
-          <video ref={vid} className="film__media" src={src} poster={poster} muted playsInline preload="auto" aria-hidden="true" />
+          <video ref={vid} className="film__media" src={src} poster={poster} muted playsInline preload="auto" aria-hidden="true" data-hero-film style={{ objectPosition: "58% 50%" }} />
         )}
         <div className="film__wash" />
         <div className="film__copy wrap measure" style={{ opacity: "clamp(0, calc((0.5 - var(--p)) * 5), 1)" }}>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 // The reading line along the top and the chapter rail down the left gutter,
 // after Mirada and 4D Resin. The rail folds open on arrival and then stays
@@ -8,20 +8,6 @@ const TILE = 38, STEP = 46;
 export function Rail({ chapters }) {
   const [open, setOpen] = useState(() => { try { return localStorage.getItem("gpi-rail") !== "0"; } catch { return true; } });
   const [current, setCurrent] = useState(null);
-  const lineRef = useRef(null);
-
-  useEffect(() => {
-    const line = lineRef.current;
-    if (!line || CSS.supports("animation-timeline: scroll()")) return;
-    let raf = 0;
-    const draw = () => {
-      raf = requestAnimationFrame(draw);
-      const max = document.documentElement.scrollHeight - innerHeight;
-      line.style.transform = `scaleX(${max > 0 ? Math.min(1, Math.max(0, scrollY / max)).toFixed(4) : 0})`;
-    };
-    raf = requestAnimationFrame(draw);
-    return () => cancelAnimationFrame(raf);
-  }, []);
 
   useEffect(() => {
     const els = chapters.map((c) => document.getElementById(c.id)).filter(Boolean);
@@ -36,7 +22,6 @@ export function Rail({ chapters }) {
   const stackH = TILE + chapters.length * STEP;
   return (
     <>
-      <div ref={lineRef} className="read-line" aria-hidden="true" />
       <aside className="rail" data-expanded={open}>
         <nav className="rail__stack" aria-label="Chapters" style={{ "--stack-h": `${stackH}px` }}>
           <button type="button" className="rail__item rail__toggle" aria-expanded={open} aria-label={open ? "Close the chapters" : "Open the chapters"} onClick={() => set(!open)}>

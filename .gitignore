@@ -21,3 +21,6 @@ public/mock/
 # folder can be committed, and the validator refuses a build that mentions
 # its sentinel.
 content/private/
+
+# VP9 proxies of the mock films, for browsers and test runs without H.264; the mp4 is the file that ships.
+mock/public/film/*.webm

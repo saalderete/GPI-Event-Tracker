@@ -1,6 +1,8 @@
 import { useEffect, useMemo } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { TopBar } from "./components/TopBar.jsx";
+import { ReadLine } from "./components/ReadLine.jsx";
+import { useLoader } from "./lib/loader.js";
 import { Footer } from "./components/Footer.jsx";
 import { MotionCtx } from "./components/motion.jsx";
 import { Home } from "./pages/Home.jsx";
@@ -25,6 +27,7 @@ export default function App() {
   const events = useMemo(() => eventsFor(today), [today]);
   const { saved, toggle: toggleSaved, clear } = useSaved();
   const { interests, subs, toggleInterest, toggleSub } = useInterests();
+  useLoader();
 
   // The theme: the landing opens at night when the mode is system; every
   // other page follows the system, or the visitor's choice.
@@ -47,6 +50,7 @@ export default function App() {
 
   return (
     <MotionCtx.Provider value={{ paused: motionPref.paused, toggle: motionPref.toggle }}>
+      <ReadLine />
       <TopBar savedCount={saved.length} mode={mode} setMode={setMode} />
       <main id="main">
         <Routes>

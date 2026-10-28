@@ -4,6 +4,7 @@ import { MagnifyingGlass, ListBullets, SquaresFour } from "@phosphor-icons/react
 import { Index } from "../components/Index.jsx";
 import { Flyer } from "../components/Flyer.jsx";
 import { FocusedRail } from "../components/FocusedRail.jsx";
+import { DayScene } from "../components/DayScene.jsx";
 import { Rise } from "../components/motion.jsx";
 import { CATEGORIES, categoryById, filterEvents, forYou } from "../data/events.js";
 import { addDays, weekendKeys, weekday, dayNumber, dayLabel, longDay } from "../lib/dates.js";
@@ -58,9 +59,12 @@ export function Calendar({ events, today, interests, preset = {} }) {
   const sub = cat && whenLabel ? whenLabel : null;
   const weekendEvents = when === "weekend" && !cat ? [...results.filter((e) => e.status !== "canceled")].sort((a, b) => Number(b.featured) - Number(a.featured)).slice(0, 7) : [];
   const anyFilter = cat || free || q || when !== "all";
+  const oneDay = !cat && days && days.length === 1 ? days[0] : null;
+  const dayEvents = oneDay ? events.filter((e) => e.date === oneDay && e.status !== "canceled") : [];
 
   return (
     <div className="pb-24">
+      {oneDay ? <DayScene key={oneDay} events={dayEvents} day={oneDay} today={today} /> : null}
       {weekendEvents.length > 1 ? (
         <FocusedRail events={weekendEvents} today={today} label={{ small: `${weekendEvents.length} on this weekend`, big: "Friday to Sunday, in one row." }} />
       ) : null}

@@ -24,7 +24,7 @@ Fontsource. The palette is the portal's Bugambilia, day and night.
 |---|---|
 | `/mock/` | The landing: the dusk film played by the scroll, this week in figures, the calendar's categories on LOW SUN's conveyor (by way of Inside Benji's), the next eight as a list, three doors, the footer |
 | `/mock/events/` | The calendar: search, a day strip, Free, list or grid, "For you first" once interests are picked |
-| `/mock/events/tonight/`, `/tomorrow/`, `/weekend/`, `/week/` | One page per date, as Fever has them; the weekend page opens with KAGE's focused rail |
+| `/mock/events/tonight/`, `/tomorrow/`, `/weekend/`, `/week/` | One page per date, as Fever has them. Tonight, Tomorrow and a picked day open with DAYLIGHT's day scene: the time-lapse scrubbed to the minute as you move along the hours, the day's events on the track. The weekend page opens with KAGE's focused rail |
 | `/mock/events/music/` and the other seven categories | One page per category; the date chips narrow it |
 | `/mock/organizers/` | For organizers: the pitch, the six fields, what a listing looks like on a phone, the door to the form |
 | `/mock/events/<slug>/` | One event: who it is for, what it costs, know before you go, where, the organizer, the change line, Save, Send to the group chat, Add to calendar (.ics) |
@@ -57,10 +57,21 @@ gitignored: only the source is committed.
 
 ## Film
 
-`public/film/`: the El Paso time-lapse from Nerrix Digital's booking calendar,
-cut from golden hour to night and re-encoded with a keyframe every four frames
-so the scroll can scrub it (12 s, 24 fps, H.264). A tall crop for phones, a
-poster for each, and two night stills for the footer.
+`public/film/`: the El Paso time-lapse from Nerrix Digital's booking calendar
+(DAYLIGHT), sunrise to night, re-encoded with a keyframe every four frames so
+it can be scrubbed (25 s, 12 fps, H.264, 8.8 MB). The hero plays its dusk
+segment under the scroll; the day scene scrubs the whole day to the minute. Six
+stills open the day scene on the right frame, one poster opens the hero, and
+two night stills close the footer. A VP9 proxy (`*.webm`, gitignored) stands
+in for browsers and test runs without H.264: add `?vext=webm` to the address.
+
+## Chrome
+
+The opening screen (after Benji's) shows on arrival from outside and on reload,
+never on back and forward and never with reduced motion; it counts the fonts,
+the eager pictures and the hero film, holds at least 1.1 s and lifts. The
+reading line along the top fills as you scroll, on every page. The chapter
+rail is the landing's.
 
 ## House rules
 

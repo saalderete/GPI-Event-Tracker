@@ -349,3 +349,37 @@ textarea.field { min-height: 6rem; resize: vertical; }
 .door span { color: var(--muted); font-size: var(--step-small); }
 .door i { font-style: normal; color: var(--accent); font-size: 1.5rem; }
 @media (hover: hover) and (pointer: fine) { .door:hover b { color: var(--accent); } }
+
+/* ---------- the day scene (DAYLIGHT's time-lapse, scrubbed to the minute) ---------- */
+.scene { position: relative; min-height: 78vh; display: grid; align-items: end; color: var(--film-ink); background: #0b0a09; overflow: hidden; isolation: isolate; }
+.scene__sky, .scene__still, .scene__film { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%; z-index: -1; }
+.scene__film { opacity: 0; transition: opacity 700ms ease; }
+.scene__film.is-on { opacity: 1; }
+.scene__wash { position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(11, 10, 9, 0.86) 0%, rgba(11, 10, 9, 0.35) 45%, rgba(11, 10, 9, 0.1) 100%); }
+.scene__in { padding-block: 6rem 2.5rem; display: grid; gap: 0.5rem; width: 100%; }
+.scene__day { font-family: var(--display); font-weight: 400; font-size: var(--step-small); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.85; }
+.scene__day span { display: block; letter-spacing: 0; text-transform: none; font-family: var(--sans); font-weight: 400; opacity: 0.75; margin-top: 0.25rem; }
+.scene__clock { font-family: var(--display); font-weight: 200; font-size: var(--step-figure); line-height: 0.9; letter-spacing: -0.03em; }
+.scene__track { position: relative; height: 7.5rem; margin-top: 1.25rem; border-top: 1px solid rgba(246, 239, 232, 0.35); cursor: crosshair; touch-action: pan-y; }
+.scene__hours { position: absolute; inset: 0; }
+.scene__hours span { position: absolute; top: 0; height: 100%; border-left: 1px solid rgba(246, 239, 232, 0.18); padding-left: 0.4rem; font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(246, 239, 232, 0.6); padding-top: 0.35rem; white-space: nowrap; }
+.scene__line { position: absolute; top: -1px; bottom: 0; width: 2px; margin-left: -1px; background: var(--accent); z-index: 2; pointer-events: none; }
+.scene__marks { position: absolute; inset: 1.6rem 0 0; z-index: 3; }
+.scene__marks li { position: absolute; top: calc(var(--row, 0) * 1.9rem); }
+.scene__marks button { display: inline-flex; align-items: center; gap: 0.4rem; max-width: 14rem; padding: 0.2rem 0.55rem 0.2rem 0.3rem; border-radius: 999px; border: 1px solid rgba(246, 239, 232, 0.25); background: rgba(11, 10, 9, 0.55); color: var(--film-ink); font-size: 0.75rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); cursor: pointer; transition: border-color 160ms ease, background-color 160ms ease, transform 160ms var(--ease-out); transform: translateX(-0.6rem); }
+.scene__marks button span { overflow: hidden; text-overflow: ellipsis; }
+.scene__marks button i { flex: none; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: oklch(0.72 0.14 var(--hue, 282)); }
+.scene__marks button:hover, .scene__marks button:focus-visible { border-color: var(--film-ink); background: rgba(11, 10, 9, 0.85); transform: translateX(-0.6rem) scale(1.04); }
+.scene__credit { position: absolute; right: var(--margin); bottom: 0.75rem; font-size: 0.7rem; color: rgba(246, 239, 232, 0.5); }
+@media (max-width: 47.99em) {
+  .scene { min-height: 70vh; }
+  .scene__in { padding-top: 4rem; }
+  .scene__track { height: 9rem; }
+  .scene__hours span { font-size: 0.6rem; }
+  .scene__hours span:nth-child(odd) { border-left-color: transparent; }
+  .scene__marks button span { display: none; }
+  .scene__marks button { padding: 0.3rem; }
+}
+
+/* The opening screen's lift, mirrored here so the bundle agrees with the head. */
+.loader.is-out { transform: translateY(-100%); }

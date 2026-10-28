@@ -9,18 +9,52 @@
     <meta name="theme-color" content="#241c1c" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script>
-      // The theme before first paint: the landing opens at night unless the
-      // visitor chose a theme; every other page follows the system or the choice.
+      // Before first paint: the theme, and whether the opening screen shows.
+      // The landing opens at night unless the visitor chose a theme; every
+      // other page follows the system or the choice. The opening screen shows
+      // on arrival from outside and on reload, never on back and forward and
+      // never for a visitor who asked for less motion (after Benji's).
       (function () {
-        var mode = "system";
+        var d = document.documentElement, mode = "system";
         try { mode = localStorage.getItem("gpi-theme") || "system"; } catch (e) {}
         var home = location.pathname.replace(/\/+$/, "") === "/mock";
         var dark = mode === "dark" || (mode === "system" && (home || matchMedia("(prefers-color-scheme: dark)").matches));
-        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        d.dataset.theme = dark ? "dark" : "light";
+        try {
+          var nav = performance.getEntriesByType ? performance.getEntriesByType("navigation")[0] : null;
+          var type = nav ? nav.type : "navigate", here = false;
+          try { here = !!document.referrer && new URL(document.referrer).host === location.host; } catch (e) {}
+          if ((type === "reload" || (type === "navigate" && !here)) && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            d.setAttribute("data-loading", "");
+            setTimeout(function () { d.removeAttribute("data-loading"); }, 8000);
+          }
+        } catch (e) {}
       })();
     </script>
+    <style>
+      /* The opening screen paints before the bundle arrives. */
+      .loader { display: none; }
+      html[data-loading] .loader { display: grid; }
+      html[data-loading] body { overflow: hidden; }
+      .loader { position: fixed; inset: 0; z-index: 100; place-items: center; background: #241c1c; color: #f4f0ea; transition: transform 600ms cubic-bezier(0.77, 0, 0.175, 1); }
+      html[data-theme="light"] .loader { background: #f8f2f2; color: #17140f; }
+      .loader.is-out { transform: translateY(-100%); }
+      .loader__in { display: grid; justify-items: center; gap: 22px; padding: 0 16px; text-align: center; }
+      .loader__name { font: 300 clamp(2rem, 1rem + 3vw, 3.5rem) / 1 "Jura Variable", "Jura", "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.02em; }
+      .loader__line { font: 500 0.6875rem / 1 system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; }
+      .loader__bar { width: 220px; height: 3px; background: rgba(128, 128, 128, 0.25); overflow: hidden; }
+      .loader__bar span { display: block; height: 100%; background: #ff7fc8; transform: scaleX(var(--p, 0)); transform-origin: left; transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+      html[data-theme="light"] .loader__bar span { background: #b3156c; }
+      .loader__n { font: 300 1rem / 1 "Jura Variable", "Jura", "Helvetica Neue", Arial, sans-serif; font-variant-numeric: tabular-nums; opacity: 0.7; }
+    </style>
   </head>
   <body>
+    <div class="loader" aria-hidden="true"><div class="loader__in">
+      <div class="loader__name">Gracias Por Invitar</div>
+      <div class="loader__line">El Paso and Juárez</div>
+      <div class="loader__bar"><span></span></div>
+      <div class="loader__n">0%</div>
+    </div></div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
