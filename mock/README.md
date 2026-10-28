@@ -67,17 +67,20 @@ set `default` in `palettes/roles.json` and build. The script runs before
 
 ## The device photos
 
-"What a listing looks like" on the organizers page is the team's four
-KasaPro device photos (two tablets held from the side, one in two hands, the
-iPhone duo on a fingertip), re-dressed for GPI: the orange backdrop keyed to
-transparency (orange hue at very high saturation; the skin under that light
-is orange too but far less saturated), the printed labels and the Nerrix mark
-dropped (the mark on the forearm painted out), and the screens replaced by
-captures of the mock's own pages in the dark Lab Rose theme, warped to each
-screen's four corners with fingers and bezels kept in front, after the Nerrix
-kit's `place.py`. One tablet is mirrored so every device sits at the right.
-The files are `public/devices/*.webp` (1080x1350 with alpha); the scripts
-that made them are one-off, outside the repo.
+"What a listing looks like" on the organizers page is four device photos (two
+tablets held from the side, one in two hands, the iPhone duo on a fingertip),
+made for the team's KasaPro posts and rebuilt for GPI from their green-screen
+plates: each screen was generated as flat chroma green, so its four corners
+are found from the green and the capture shows only where the green was. The
+bezel, the device's rounded corners and the fingers stay in front, and the
+page meets the glass exactly. Each page is captured at its screen's own shape
+(the side-held tablets only show the left of their screen, so their pages are
+laid out for that part), warped on, lit by the plate's own light on the glass,
+softened and grained to match the photo. The backdrop is cut out with BiRefNet
+and the edges decontaminated, so the hands carry no orange onto the palette's
+colour. One tablet is mirrored so every device sits at the right. The files
+are `public/devices/*.webp` (1080x1350 with alpha); the plates and the scripts
+that build them are in `scripts/devices/` (its README says how to rebuild).
 
 `Showcase` lays the photos over the palette's accent with the wordmark and
 corner labels as live type, so the section follows the palette picker. The

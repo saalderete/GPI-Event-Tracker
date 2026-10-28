@@ -1,0 +1,40 @@
+{
+  "_": "One entry per photo in public/devices/. plate: the green-screen photo in plates/; frame: how the plate becomes the 1080x1350 picture (scale = resized to fit, pano = the 2160x1344 panorama covered into 2160x1350 then its left half, mirrored first when mirror is true; only the left of a panorama screen is in the picture, so its page is laid out for that part plus overscan); page and viewport: what goes on the screen, captured at the screen's own shape (viewport height comes from the screen's measured aspect).",
+  "saved": [
+    "sunset-strings-san-jacinto",
+    "franklin-night-market",
+    "lucha-libre-ascarate",
+    "monday-open-mic-five-points",
+    "union-plaza-art-walk"
+  ],
+  "photos": {
+    "duo": {
+      "plate": "fold3",
+      "frame": "scale",
+      "page": "/mock/events/",
+      "width": 390
+    },
+    "tablet-left": {
+      "plate": "pano",
+      "frame": "pano",
+      "mirror": false,
+      "page": "/mock/saved/",
+      "width": 820,
+      "overscan": 0.1
+    },
+    "tablet-right": {
+      "plate": "pano",
+      "frame": "pano",
+      "mirror": true,
+      "page": "/mock/events/lucha-libre-ascarate/",
+      "width": 820,
+      "overscan": 0.1
+    },
+    "tablet-two": {
+      "plate": "orange",
+      "frame": "scale",
+      "page": "/mock/events/week/?view=grid",
+      "width": 1100
+    }
+  }
+}
