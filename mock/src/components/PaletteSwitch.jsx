@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Palette } from "@phosphor-icons/react";
-import { PALETTES } from "../data/palettes.js";
+import PALETTES from "../data/palettes.json";
 
 // The portal's seven palettes, to try on the mock: a swatch each (paper and
 // accent, day and night), the name and its line. The choice is kept in the

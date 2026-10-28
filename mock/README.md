@@ -38,17 +38,25 @@ live in the visitor's browser only.
 
 ## Palettes
 
-While the team chooses, the mock can wear any of the portal's seven palettes.
-`scripts/palettes.mjs` reads `content/accents.json` and writes
-`src/styles/palettes.css` (one block per palette, day and night, in the
-mock's token names), `src/data/palettes.js` (the list for the switch) and the
-same CSS inline into `index.html` between the `<style id="palettes">` tags, so
-the opening screen already wears the chosen palette. It runs before `dev` and
-`build`; the outputs are committed too. The palette switch in the top bar
-(the palette icon) keeps the choice in the browser, and `?palette=<id>` in
-the address picks one for a link. The default is the one line in
-`index.html` that reads `pal || "bugambilia"`. When the team settles on one,
-set that line and the switch can go.
+While the team chooses, the mock can wear any of eight palettes drawn from
+the Nerrix design library (`nerrix-digital/design-library/palettes`, public
+dopely.colors and dyslove.design posts pulled on 2026-10-26), plus the
+portal's Bugambilia as the baseline to compare against. `palettes.json` gives
+each one the library's own hexes in five roles: dark (the anchor: night paper,
+day ink), brand (the day accent), bright (the night accent), tint (soft
+surfaces) and light (day paper), with the source account, series and post, as
+the library asks. `scripts/palettes.mjs` derives the remaining tones in OKLab,
+pushes every pairing until it meets its contrast (ink on paper 7, muted and
+accent-ink on paper 4.5, accent on paper 3, the label on a button 4.5) and
+writes `src/styles/palettes.css` (one block per palette, day and night, in
+the mock's token names), `src/data/palettes.json` (the list for the switch)
+and the same CSS inline into `index.html` between the `<style id="palettes">`
+tags, so the opening screen already wears the chosen palette. It runs before
+`dev` and `build`; the outputs are committed too. The palette switch in the
+top bar (the palette icon) keeps the choice in the browser, and
+`?palette=<id>` in the address picks one for a link. The default is the one
+line in `index.html` that reads `pal || "bugambilia"`. When the team settles
+on one, set that line and the switch can go.
 
 ## The duo
 

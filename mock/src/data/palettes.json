@@ -1,0 +1,191 @@
+[
+  {
+    "id": "twilight",
+    "label": "Twilight",
+    "hint": "Sunset orange and coral on twilight navy; warm white by day",
+    "source": {
+      "account": "dopely.colors",
+      "series": "Gradient Color Palettes",
+      "name": "Gradient 05",
+      "post": "https://www.instagram.com/p/DecfgQuDaHF/"
+    },
+    "light": {
+      "paper": "#FFF7ED",
+      "accent": "#ea6300",
+      "ink": "#1E1B4B"
+    },
+    "dark": {
+      "paper": "#1E1B4B",
+      "accent": "#FB7286",
+      "ink": "#fff9f1"
+    }
+  },
+  {
+    "id": "marquee",
+    "label": "Marquee",
+    "hint": "Antique gold on a deep navy night; soft ivory by day",
+    "source": {
+      "account": "dopely.colors",
+      "series": "Winter Color Palettes",
+      "name": "Winter 08",
+      "post": "https://www.instagram.com/p/DduJMHojbB4/"
+    },
+    "light": {
+      "paper": "#F9F3E7",
+      "accent": "#a3891d",
+      "ink": "#050816"
+    },
+    "dark": {
+      "paper": "#111B3A",
+      "accent": "#E7D39B",
+      "ink": "#faf5ec"
+    }
+  },
+  {
+    "id": "motel",
+    "label": "Motel",
+    "hint": "Motel clay and sunbaked orange, roadside black; desert cream by day",
+    "source": {
+      "account": "dopely.colors",
+      "series": "Retro Color Palettes",
+      "name": "Retro 06",
+      "post": "https://www.instagram.com/p/Dd9l8f2DZcL/"
+    },
+    "light": {
+      "paper": "#fcf1e6",
+      "accent": "#bf5734",
+      "ink": "#2E2A24"
+    },
+    "dark": {
+      "paper": "#2E2A24",
+      "accent": "#E9A66A",
+      "ink": "#fdf4eb"
+    }
+  },
+  {
+    "id": "desert",
+    "label": "Desert",
+    "hint": "Terracotta on deep walnut; desert sand and warm cream by day",
+    "source": {
+      "account": "dopely.colors",
+      "series": "Color Combos",
+      "name": "Desert Luxury Combo",
+      "post": "https://www.instagram.com/p/DeH5HVdDQid/"
+    },
+    "light": {
+      "paper": "#F3E7D8",
+      "accent": "#ac6346",
+      "ink": "#3A2A22"
+    },
+    "dark": {
+      "paper": "#3A2A22",
+      "accent": "#d38164",
+      "ink": "#f5ece0"
+    }
+  },
+  {
+    "id": "nori",
+    "label": "Nori",
+    "hint": "Tuna red on nori black; rice white and ice blue by day",
+    "source": {
+      "account": "dopely.colors",
+      "series": "Food Brand Color Palettes",
+      "name": "Food Brand 05",
+      "post": "https://www.instagram.com/p/DehpEJBjRxj/"
+    },
+    "light": {
+      "paper": "#F1FAEE",
+      "accent": "#de303e",
+      "ink": "#101820"
+    },
+    "dark": {
+      "paper": "#101820",
+      "accent": "#ef424c",
+      "ink": "#f4fbf1"
+    }
+  },
+  {
+    "id": "dusk",
+    "label": "Dusk",
+    "hint": "Lavender on dusk purple; bright purple on violet white by day",
+    "source": {
+      "account": "dopely.colors",
+      "series": "Gradient Color Palettes",
+      "name": "Gradient 04",
+      "post": "https://www.instagram.com/p/DecfgQuDaHF/"
+    },
+    "light": {
+      "paper": "#F5F3FF",
+      "accent": "#7B3AEC",
+      "ink": "#120A2A"
+    },
+    "dark": {
+      "paper": "#120A2A",
+      "accent": "#C4B5FD",
+      "ink": "#f7f5ff"
+    }
+  },
+  {
+    "id": "aqua",
+    "label": "Aqua",
+    "hint": "Soft mint on deep aqua; flow teal on frost white by day",
+    "source": {
+      "account": "dopely.colors",
+      "series": "Gradient Color Palettes",
+      "name": "Gradient 03",
+      "post": "https://www.instagram.com/p/DecfgQuDaHF/"
+    },
+    "light": {
+      "paper": "#F8FAFC",
+      "accent": "#00847a",
+      "ink": "#053B36"
+    },
+    "dark": {
+      "paper": "#053B36",
+      "accent": "#99F6E4",
+      "ink": "#f9fbfd"
+    }
+  },
+  {
+    "id": "nitro",
+    "label": "Nitro",
+    "hint": "Nitro orange on royal blue, the dark and bright pair; white by day",
+    "source": {
+      "account": "dyslove.design",
+      "series": "New Color Combos",
+      "name": "Royal Blue + Nitro Orange",
+      "post": "https://www.instagram.com/p/DeZjXd3iAZD/"
+    },
+    "light": {
+      "paper": "#FFFFFF",
+      "accent": "#FB5607",
+      "ink": "#191970"
+    },
+    "dark": {
+      "paper": "#191970",
+      "accent": "#fe590f",
+      "ink": "#ffffff"
+    }
+  },
+  {
+    "id": "bugambilia",
+    "label": "Bugambilia (current)",
+    "hint": "The portal's own palette, the default so far, here to compare against",
+    "source": {
+      "account": "Gracias Por Invitar",
+      "series": "content/accents.json",
+      "name": "bugambilia",
+      "post": ""
+    },
+    "light": {
+      "paper": "#f8f2f2",
+      "accent": "#b3156c",
+      "ink": "#17140f"
+    },
+    "dark": {
+      "paper": "#241c1c",
+      "accent": "#ff7fc8",
+      "ink": "#f4f0ea"
+    }
+  }
+]
