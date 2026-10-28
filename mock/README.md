@@ -83,6 +83,18 @@ fit is recomputed on resize only.
 the calendar always has something on tonight and this weekend. Organizers are
 fictional; venues are real kinds of places. Every page says it is sample data.
 
+## Flyer pictures
+
+Every sample event carries a generated picture in `public/flyers/`
+(`<slug>.webp` at 768x1024 and `<slug>-s.webp` at 384x512, listed in
+`src/data/flyers.json`). They were made with gpt-image-2.5 Sunburst through
+Monid, one prompt per event from its title, place and blurb under one house
+direction (35mm editorial photograph, borderland light, no text, no faces),
+at high quality, 1152x1536, about five cents each. `Flyer` shows the picture
+tinted toward the event's category and keeps the plain flyer for an event
+without one, such as the form's live preview. The footer says the pictures
+are generated illustrations; none shows a real event.
+
 ## Build
 
 ```bash

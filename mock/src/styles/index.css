@@ -177,6 +177,12 @@ textarea.field { min-height: 6rem; resize: vertical; }
 .flyer { --hue: 282; position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; border-radius: var(--radius); color: #f6efe8; text-decoration: none; background: radial-gradient(130% 90% at 18% 8%, oklch(0.56 0.12 var(--hue) / 0.95), transparent 58%), linear-gradient(160deg, oklch(0.4 0.09 var(--hue)) 0%, oklch(0.24 0.06 var(--hue)) 62%, oklch(0.17 0.035 var(--hue)) 100%); box-shadow: inset 0 0 0 1px rgba(246, 239, 232, 0.08); isolation: isolate; }
 .flyer::before { content: ""; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"); mix-blend-mode: soft-light; opacity: 0.55; pointer-events: none; }
 .flyer::after { content: ""; position: absolute; inset: auto 0 0; height: 55%; background: linear-gradient(to top, rgba(11, 10, 9, 0.55), transparent); pointer-events: none; }
+.flyer__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92); }
+.flyer__tint { position: absolute; inset: 0; background: oklch(0.5 0.13 var(--hue)); mix-blend-mode: color; opacity: 0.28; pointer-events: none; }
+.flyer--photo::before { opacity: 0.3; }
+.flyer--photo::after { height: 72%; background: linear-gradient(to top, rgba(11, 10, 9, 0.82), rgba(11, 10, 9, 0.35) 55%, transparent); }
+.flyer--photo .flyer__in { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+.flyer--photo .flyer__top { background: linear-gradient(to bottom, rgba(11, 10, 9, 0.45), transparent); margin: -7% -7.5% 0; padding: 7% 7.5% 12%; }
 .flyer__in { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 7% 7.5%; }
 .flyer__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
 .flyer__cat { font-size: clamp(0.6rem, 0.55rem + 0.3cqi, 0.72rem); font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.85; }

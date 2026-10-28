@@ -43,7 +43,7 @@ export function Footer() {
             </nav>
           </div>
           <div className="foot__legal">
-            <span>© 2026 Team 9, Gracias Por Invitar. A mock for CS 4390/5388 at UTEP. Every event here is sample data.</span>
+            <span>© 2026 Team 9, Gracias Por Invitar. A mock for CS 4390/5388 at UTEP. Every event here is sample data, and its pictures are generated illustrations.</span>
             <span>Footage: Nerrix Digital, El Paso time-lapse.</span>
           </div>
         </Open>
