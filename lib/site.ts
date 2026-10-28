@@ -29,5 +29,9 @@ export const site = {
   term: "Fall 2026",
   timezone: "America/Denver",
   repo: "https://github.com/saalderete/GPI-Event-Tracker",
+  // The product itself, the event site: its own repository and deployment.
+  product: "https://gpi-j4aw.onrender.com/",
+  productHost: "gpi-j4aw.onrender.com",
+  productRepo: "https://github.com/saalderete/gpi",
   hosting: "Render"
 } as const;

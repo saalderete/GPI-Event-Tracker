@@ -62,12 +62,8 @@ honest.
   site rebuilds nightly; set `status` in `lib/sprints.ts` only to override
   it), write the change log, run
   `npm run ship`, push to `main`.
-- The product mock lives in `mock/` (Vite, React, Tailwind, Motion) and is
-  served at `/mock/`: the root build runs `npm run mock:build` first, which
-  builds it into the gitignored `public/mock/` and copies `index.html` into
-  every route folder. Its rules are the site's: Jura and Inter, a visitor-chosen palette
-  (one of the nine from dopely.colors' Beauty Brand post, Lab Rose by
-  default, each derived to pass contrast in both themes), one accent, no em
-  dashes, sample data labeled as such, every motion behind the Pause switch
-  and reduced motion. See
-  `mock/README.md`.
+- The product itself, the Gracias Por Invitar event site, lives in its own
+  repository (github.com/saalderete/gpi) and deploys on its own at
+  gpi-j4aw.onrender.com. This portal only links to it, in the footer and on
+  About us; nothing of it is built here. Its rules travel with it, in that
+  repository's AGENTS.md.

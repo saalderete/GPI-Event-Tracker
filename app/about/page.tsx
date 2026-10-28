@@ -19,6 +19,11 @@ export default function About() {
           Five students in {site.course} at {site.university}, running one project across a semester and keeping this portal as the
           record of how it was managed. Every member owns a piece of the portal and can explain every page of it.
         </p>
+        <p className="mt-3 max-w-[60ch] font-serif text-[1.1rem] leading-relaxed text-ink-soft">
+          The product the team is managing, the Gracias Por Invitar event site, runs on its own at{" "}
+          <a className="underline hover:text-ink" href={site.product} target="_blank" rel="noopener">{site.productHost}</a>, with its code in{" "}
+          <a className="underline hover:text-ink" href={site.productRepo} target="_blank" rel="noopener">its own repository</a>.
+        </p>
       </header>
 
       <ul className="border-t border-border">

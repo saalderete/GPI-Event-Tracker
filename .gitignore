@@ -13,8 +13,6 @@ next-env.d.ts
 # regenerates it from content/accents.json every time.
 public/pdf/*.pdf
 
-# The mock website is built from mock/ into public/mock/ by the build.
-public/mock/
 
 # Sprint retrospectives and peer evaluations are private and go to
 # Blackboard only. Keep working copies here if you like: nothing in this
@@ -22,5 +20,3 @@ public/mock/
 # its sentinel.
 content/private/
 
-# VP9 proxies of the mock films, for browsers and test runs without H.264; the mp4 is the file that ships.
-mock/public/film/*.webm

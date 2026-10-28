@@ -26,6 +26,13 @@ export function Footer() {
             <span>Sprint retrospectives and peer evaluations are submitted privately through Blackboard and are never published here.</span>
           </p>
           <p className="meta">
+            The product itself, the event site, runs on its own at{" "}
+            <a className="inline-flex items-center gap-1 underline hover:text-ink" href={site.product} target="_blank" rel="noopener">
+              {site.productHost} <IconExternal className="h-3 w-3" />
+            </a>
+            .
+          </p>
+          <p className="meta">
             {site.name}. {site.courseLine}.{" "}
             <a className="inline-flex items-center gap-1 underline hover:text-ink" href={site.repo} target="_blank" rel="noopener">
               Source on GitHub <IconExternal className="h-3 w-3" />
