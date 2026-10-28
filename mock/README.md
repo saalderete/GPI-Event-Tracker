@@ -22,8 +22,11 @@ Fontsource. The palette is the portal's Bugambilia, day and night.
 
 | Route | What it is |
 |---|---|
-| `/mock/` | The landing: the dusk film played by the scroll, this week in figures, this weekend as a focused rail, the calendar list, how a listing stays current, the app seen on a phone, the organizers' band, the footer |
-| `/mock/events/` | The calendar: search, Tonight / Tomorrow / This weekend / Next 7 days, a day strip, category chips and Free, list or grid, "For you first" once interests are picked |
+| `/mock/` | The landing: the dusk film played by the scroll, this week in figures, the calendar's categories on LOW SUN's conveyor (by way of Inside Benji's), the next eight as a list, three doors, the footer |
+| `/mock/events/` | The calendar: search, a day strip, Free, list or grid, "For you first" once interests are picked |
+| `/mock/events/tonight/`, `/tomorrow/`, `/weekend/`, `/week/` | One page per date, as Fever has them; the weekend page opens with KAGE's focused rail |
+| `/mock/events/music/` and the other seven categories | One page per category; the date chips narrow it |
+| `/mock/organizers/` | For organizers: the pitch, the six fields, what a listing looks like on a phone, the door to the form |
 | `/mock/events/<slug>/` | One event: who it is for, what it costs, know before you go, where, the organizer, the change line, Save, Send to the group chat, Add to calendar (.ics) |
 | `/mock/saved/` | The plan: saved events by day, one share for the whole list |
 | `/mock/interests/` | Pick categories; the calendar leads with them; weekly subscriptions (a mock) |

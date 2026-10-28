@@ -21,10 +21,10 @@ export function SeenInApp({ events, today, saved }) {
   ];
   const caption = views.find((v) => v[0] === view)[2];
   return (
-    <section id="app" data-rail="In the app" className="section" aria-labelledby="app-title">
+    <section id="app" className="section" aria-labelledby="app-title">
       <div className="wrap measure grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
         <div className="order-2 lg:order-1">
-          <Rise><h2 id="app-title" className="h-head">Seen in <em>the app</em>.</h2></Rise>
+          <Rise><h2 id="app-title" className="h-head">What a listing <em>looks like</em>.</h2></Rise>
           <Rise delay={0.08}><p className="lede mt-5" aria-live="polite">{caption}</p></Rise>
           <Rise delay={0.14}>
             <div className="chips mt-8" role="group" aria-label="Show the app with">

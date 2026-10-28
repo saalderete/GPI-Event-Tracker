@@ -1,25 +1,34 @@
 import { Link } from "react-router-dom";
 import { ScrubFilm } from "../components/ScrubFilm.jsx";
-import { FocusedRail } from "../components/FocusedRail.jsx";
+import { Conveyor } from "../components/Conveyor.jsx";
 import { Index } from "../components/Index.jsx";
-import { SeenInApp } from "../components/Phone.jsx";
 import { Rail } from "../components/Rail.jsx";
 import { Rise, Stagger, item, motion } from "../components/motion.jsx";
-import { addDays, weekendKeys, longDay } from "../lib/dates.js";
+import { CATEGORIES } from "../data/events.js";
+import { addDays, dayLabel, longDay } from "../lib/dates.js";
 
 const CHAPTERS = [
   { id: "week", label: "This week" },
-  { id: "weekend", label: "This weekend" },
-  { id: "calendar", label: "The calendar" },
-  { id: "app", label: "In the app" },
-  { id: "organizers", label: "For organizers" }
+  { id: "inside", label: "Inside the calendar" },
+  { id: "calendar", label: "The next eight" },
+  { id: "doors", label: "Where next" }
 ];
 
-export function Home({ events, today, saved }) {
+// One line per category, describing what the sample calendar holds.
+const NOTES = {
+  music: "Plaza concerts, a record fair, a porch show and the hangar's late sets.",
+  markets: "Night markets in the Union Plaza warehouse and the Saturday mercado in Segundo Barrio.",
+  cars: "Cars and coffee on the garage roof, lowriders on the Chamizal lawn, a sunrise cruise over the mountain.",
+  food: "Taco nights, food truck round ups, a bakery tour and one long table under the pecans.",
+  family: "A film in the park, a kids' hike, a mural day and trunk or treat.",
+  sports: "A sunrise run, a night ride, lucha libre and the match on a plaza screen.",
+  arts: "Art walks and gallery nights, downtown and in Kern Place.",
+  nightlife: "An open mic, a cumbia night and the sonidero until the lights come up."
+};
+
+export function Home({ events, today }) {
   const live = events.filter((e) => e.status !== "canceled");
   const tonight = live.filter((e) => e.date === today && e.start >= "17:00");
-  const weekend = weekendKeys(today);
-  const weekendEvents = [...live.filter((e) => weekend.includes(e.date))].sort((a, b) => Number(b.featured) - Number(a.featured)).slice(0, 7);
   const week = events.filter((e) => e.date >= today && e.date <= addDays(today, 6));
   const figures = [
     [week.length, "events", `${longDay(today)} to ${longDay(addDays(today, 6))}`],
@@ -28,6 +37,15 @@ export function Home({ events, today, saved }) {
     [week.filter((e) => e.status !== "confirmed").length, "changes", "Moved or called off, and dated"]
   ];
   const next = live.filter((e) => e.date >= today).slice(0, 8);
+  const frames = CATEGORIES.map((c, i) => {
+    const list = live.filter((e) => e.category === c.id && e.date >= today);
+    const areas = [...new Set(list.map((e) => e.area))].slice(0, 3).join(", ");
+    return {
+      key: c.id, label: `${String(i + 1).padStart(2, "0")} · ${c.name}`, title: c.name, meta: `${list.length} coming up`, caption: NOTES[c.id],
+      spec: [["Next", list[0] ? `${list[0].title}, ${dayLabel(list[0].date, today)}` : "Nothing yet"], ["Free", `${list.filter((e) => e.price === 0).length} of ${list.length}`], ["Where", areas || "El Paso"], ["Organizers", String(new Set(list.map((e) => e.organizer.name)).size)]],
+      event: list[0], detail: list[1], href: `/events/${c.id}/`, cta: `See all ${c.name.toLowerCase()}`
+    };
+  }).filter((f) => f.event);
 
   return (
     <div className="with-rail">
@@ -50,11 +68,9 @@ export function Home({ events, today, saved }) {
         </div>
       </section>
 
-      <div id="weekend" data-rail="This weekend">
-        <FocusedRail events={weekendEvents} today={today} label={{ small: `${weekendEvents.length} on this weekend`, big: "Friday to Sunday, in one row." }} />
-      </div>
+      <Conveyor title="Inside the calendar" frames={frames} today={today} />
 
-      <section id="calendar" data-rail="The calendar" className="section" aria-labelledby="calendar-title">
+      <section id="calendar" data-rail="The next eight" className="section" aria-labelledby="calendar-title">
         <div className="wrap measure">
           <Rise><h2 id="calendar-title" className="h-head">Every event <em>gets a page</em>.</h2></Rise>
           <Rise delay={0.08}><p className="lede mt-5">By date, with who it is for, what it costs, where to park, and whether it is still on. The next eight:</p></Rise>
@@ -65,22 +81,16 @@ export function Home({ events, today, saved }) {
         </div>
       </section>
 
-      <SeenInApp events={events} today={today} saved={saved} />
-
-      <section id="organizers" data-rail="For organizers" className="section" aria-labelledby="org-title" data-theme="light" style={{ background: "var(--paper)", color: "var(--ink)" }}>
-        <div className="wrap measure grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
-          <div>
-            <Rise><h2 id="org-title" className="h-head">Post it once. <em>It stays yours.</em></h2></Rise>
-            <Rise delay={0.08}><p className="lede mt-5">Your page is the source. GPI lists what you post, links back to you, and shows the date it was last confirmed. Change the place or call it off, and the listing says so the same hour.</p></Rise>
-            <Rise delay={0.14}><div className="mt-8"><Link to="/post/" className="btn">Post an event</Link></div></Rise>
-          </div>
-          <Rise delay={0.1}>
-            <dl className="grid grid-cols-2 gap-x-6 gap-y-5 text-sm">
-              {[["Who it is for", "Ages, who should come, who should not"], ["What it costs", "Free is a real answer"], ["Where, exactly", "Address, entrance, parking"], ["Your page", "The link people check anyway"], ["Still on", "Confirmed, changed or canceled, dated"], ["One listing", "Edited by you, not reposted by others"]].map(([t, d]) => (
-                <div key={t}><dt className="display text-lg">{t}</dt><dd className="mt-1 text-muted">{d}</dd></div>
-              ))}
-            </dl>
-          </Rise>
+      <section id="doors" data-rail="Where next" className="section pt-0" aria-labelledby="doors-title">
+        <div className="wrap measure">
+          <Rise><h2 id="doors-title" className="h-head">Where <em>next</em>.</h2></Rise>
+          <Stagger className="mt-10">
+            {[["/events/weekend/", "This weekend", "Friday to Sunday, one card at a time"], ["/events/tonight/", "Tonight", `${tonight.length} on after 5 PM`], ["/organizers/", "For organizers", "Post it once, and it stays yours"]].map(([to, t, d]) => (
+              <motion.div key={to} variants={item}>
+                <Link to={to} className="door"><b>{t}</b><span>{d} <i aria-hidden="true">→</i></span></Link>
+              </motion.div>
+            ))}
+          </Stagger>
         </div>
       </section>
     </div>

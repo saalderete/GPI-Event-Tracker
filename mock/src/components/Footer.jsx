@@ -26,13 +26,14 @@ export function Footer() {
             </div>
             <nav aria-label="The calendar">
               <h3 className="foot__head">The calendar</h3>
-              <Link className="foot__link" to="/events/?when=tonight">Tonight</Link>
-              <Link className="foot__link" to="/events/?when=weekend">This weekend</Link>
+              <Link className="foot__link" to="/events/tonight/">Tonight</Link>
+              <Link className="foot__link" to="/events/weekend/">This weekend</Link>
               <Link className="foot__link" to="/events/?free=1">Free</Link>
               <Link className="foot__link" to="/interests/">Your interests</Link>
             </nav>
             <nav aria-label="For organizers">
               <h3 className="foot__head">For organizers</h3>
+              <Link className="foot__link" to="/organizers/">For organizers</Link>
               <Link className="foot__link" to="/post/">Post an event</Link>
             </nav>
             <nav aria-label="About">

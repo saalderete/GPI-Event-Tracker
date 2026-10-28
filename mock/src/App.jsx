@@ -4,13 +4,15 @@ import { TopBar } from "./components/TopBar.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { MotionCtx } from "./components/motion.jsx";
 import { Home } from "./pages/Home.jsx";
-import { Calendar } from "./pages/Calendar.jsx";
+import { Calendar, WHEN_IDS } from "./pages/Calendar.jsx";
+import { Organizers } from "./pages/Organizers.jsx";
+import { useParams } from "react-router-dom";
 import { Event } from "./pages/Event.jsx";
 import { Saved } from "./pages/Saved.jsx";
 import { Interests } from "./pages/Interests.jsx";
 import { Post } from "./pages/Post.jsx";
 import { NotFound } from "./pages/NotFound.jsx";
-import { eventsFor } from "./data/events.js";
+import { eventsFor, categoryById } from "./data/events.js";
 import { todayKey } from "./lib/dates.js";
 import { useInterests, useMotionPref, useSaved, useThemeMode } from "./lib/store.js";
 
@@ -50,7 +52,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home events={events} today={today} saved={saved} />} />
           <Route path="/events" element={<Calendar events={events} today={today} interests={interests} />} />
-          <Route path="/events/:slug" element={<Event events={events} today={today} saved={saved} toggleSaved={toggleSaved} />} />
+          <Route path="/events/:slug" element={<EventsSlug events={events} today={today} saved={saved} toggleSaved={toggleSaved} interests={interests} />} />
+          <Route path="/organizers" element={<Organizers events={events} today={today} saved={saved} />} />
           <Route path="/saved" element={<Saved events={events} today={today} saved={saved} clear={clear} />} />
           <Route path="/interests" element={<Interests interests={interests} toggleInterest={toggleInterest} subs={subs} toggleSub={toggleSub} />} />
           <Route path="/post" element={<Post />} />
@@ -60,4 +63,14 @@ export default function App() {
       <Footer />
     </MotionCtx.Provider>
   );
+}
+
+// /events/<slug>/ is a date page (tonight, weekend...), a category page
+// (music, markets...) or one event, decided by the slug, as Fever's city
+// pages do with "/when/this-weekend" and "/music-events".
+function EventsSlug({ events, today, saved, toggleSaved, interests }) {
+  const { slug } = useParams();
+  if (WHEN_IDS.includes(slug)) return <Calendar events={events} today={today} interests={interests} preset={{ when: slug }} />;
+  if (categoryById(slug)) return <Calendar events={events} today={today} interests={interests} preset={{ cat: slug }} />;
+  return <Event events={events} today={today} saved={saved} toggleSaved={toggleSaved} />;
 }
