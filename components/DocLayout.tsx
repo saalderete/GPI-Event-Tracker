@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { fmtDate } from "@/lib/format";
-import { memberById } from "@/lib/team";
+import { ownerNames } from "@/lib/team";
 import { kindLabel, type PortalDocument } from "@/lib/registry";
 import type { Sprint } from "@/lib/sprints";
 import type { TocEntry } from "@/lib/toc";
@@ -25,7 +25,6 @@ interface Props {
 // table of contents, then the revision history. Sprint 2's change log will
 // hang off that history.
 export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
-  const owner = memberById(doc.owner);
   const printHref = withBase(`/print/${sprint.slug}/${doc.slug}/`);
   const link = pdfLink(doc, printHref);
   const upload = doc.source === "upload";
@@ -50,7 +49,7 @@ export function DocLayout({ sprint, doc, toc, wide = false, children }: Props) {
             </div>
             <div className="flex gap-1.5">
               <dt>Owner</dt>
-              <dd className="text-ink">{owner ? owner.name : "To be assigned"}</dd>
+              <dd className="text-ink">{ownerNames(doc.owner)}</dd>
             </div>
             {upload ? (
               <div className="flex gap-1.5">

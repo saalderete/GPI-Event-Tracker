@@ -39,8 +39,8 @@ export interface PortalDocument {
   summary: string;
   version: string;
   status: DocStatus;
-  /** Team member id, or null until assigned. */
-  owner: string | null;
+  /** Team member id, several for a document written together, or null until assigned. */
+  owner: string | string[] | null;
   reviewers: string[];
   revised: string;
   revisions: Revision[];
@@ -244,7 +244,7 @@ export const documents: PortalDocument[] = [
     summary: "Two service levels for the product, each with a definition, a tool, a schedule, an owner and a target: event data quality, 95% of 20 sampled listings real and current each week, and website availability, 99% of the sprint's 336 hours up. With the measurement plan, the five-rule check and the share-out tests.",
     version: "1.0",
     status: "final",
-    owner: null,
+    owner: "oscar",
     reviewers: [],
     revised: "2026-11-02",
     revisions: [
@@ -262,7 +262,7 @@ export const documents: PortalDocument[] = [
     summary: "What the team does when a target is missed: each objective's budget as a count (1 inaccurate listing a week, about 3 hours 20 minutes of downtime a sprint), the policy when it is spent, three severity levels, this sprint's incident roles, and a blameless review of a Sprint 3 evidence-ID mismatch.",
     version: "1.0",
     status: "final",
-    owner: null,
+    owner: ["emmanuel", "jazmin"],
     reviewers: [],
     revised: "2026-11-02",
     revisions: [
@@ -280,7 +280,7 @@ export const documents: PortalDocument[] = [
     summary: "Four hand-drawn screens of the product, one a page: the landing's hero with its chapter rail and the line \"Everything happening, before it happens,\" the Post an Event form with its flyer preview, the Interests page's eight categories, and the event feed by day with filters and a heart to save.",
     version: "1.0",
     status: "final",
-    owner: null,
+    owner: "christian",
     reviewers: [],
     revised: "2026-11-02",
     revisions: [
@@ -295,7 +295,7 @@ export const documents: PortalDocument[] = [
     sprint: 4,
     title: "Change Log",
     kind: "log",
-    summary: "What changed between 20 October and 2 November 2026 and what it affected: the event site built and moved to its own repository with the portal linking to it, and the Service Level Indicators, the Error Budget and Policy and the Sketches delivered as the sprint's documents, with the measurements, the document owners and the risk register as open items.",
+    summary: "What changed between 20 October and 2 November 2026 and what it affected: the event site built and moved to its own repository with the portal linking to it, and the Service Level Indicators, the Error Budget and Policy and the Sketches delivered as the sprint's documents, with the measurements and the risk register as open items.",
     version: "1.0",
     status: "final",
     owner: "samuel",

@@ -4,7 +4,7 @@ import { sprints, sprintBySlug } from "@/lib/sprints";
 import { documents, findDocument, statusLabel } from "@/lib/registry";
 import { docModules } from "@/lib/docs";
 import { site } from "@/lib/site";
-import { team, memberById } from "@/lib/team";
+import { team, ownerNames } from "@/lib/team";
 import { fmtDate } from "@/lib/format";
 import { publicUrl } from "@/lib/base";
 import { candidates, interviews } from "@/lib/evidence";
@@ -20,7 +20,6 @@ export default async function PrintPage({ params }: { params: Promise<{ sprint: 
   const s = sprintBySlug(sprint);
   const d = s ? findDocument(s.number, doc) : undefined;
   if (!s || !d) notFound();
-  const owner = memberById(d.owner);
   const pagePath = `/${s.slug}/${d.slug}/`;
 
   let body: React.ReactNode;
@@ -106,7 +105,7 @@ export default async function PrintPage({ params }: { params: Promise<{ sprint: 
             {d.version}, {statusLabel[d.status]}, revised {fmtDate(d.revised)}
           </dd>
           <dt>Owner</dt>
-          <dd>{owner ? owner.name : "To be assigned"}</dd>
+          <dd>{ownerNames(d.owner)}</dd>
           <dt>Team</dt>
           <dd>{team.map((m) => m.name).join(", ")}</dd>
           <dt>Course</dt>
