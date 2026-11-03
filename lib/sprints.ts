@@ -76,7 +76,7 @@ const schedule: SprintSeed[] = [
     due: "2026-11-02T23:59:00-07:00",
     demo: "2026-11-03",
     demoLabel: "Sprint demo",
-    planned: ["Service Level Indicators", "Error Budget and Policy", "Sketches", "Sprint Retrospective, private, Blackboard only"],
+    planned: ["Service Level Indicators", "Error Budget and Policy", "Sketches", "Change Log", "Sprint Retrospective, private, Blackboard only"],
     plannedNote: "The first sprint of the performance block: two service levels for the product, their error budgets, policies, escalation path and incident roles, one blameless incident review, and the team's sketches of the product's screens. The retrospective and the peer evaluation go through Blackboard and are not on the portal."
   },
   {

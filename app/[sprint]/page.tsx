@@ -9,9 +9,8 @@ import { DocumentList } from "@/components/DocumentList";
 import { AiDisclosure } from "@/components/AiDisclosure";
 import { aiDisclosure as sprintTwoDisclosure } from "@/content/sprint-2/contributions";
 import { aiDisclosure as sprintThreeDisclosure } from "@/content/sprint-3/contributions";
+import { aiDisclosure as sprintFourDisclosure } from "@/content/sprint-4/contributions";
 import { IconArrow } from "@/components/Icons";
-import { DocViewer } from "@/components/DocViewer";
-import { withBase } from "@/lib/base";
 import { sprints, sprintBySlug, isPublished, statusWord } from "@/lib/sprints";
 import { documentsForSprint } from "@/lib/registry";
 import { fmtDate, fmtDateTime } from "@/lib/format";
@@ -76,11 +75,6 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
                 Documents
               </h2>
               <DocumentList sprint={s} docs={docs} />
-              {s.number === 4 ? (
-                <div className="doc-open">
-                  <DocViewer href={withBase("/docs/sprint-4-sketches.pdf")} title="Sprint 4 Sketches, Team 9" label="Sketches (PDF)" download="sprint-4-sketches.pdf" />
-                </div>
-              ) : null}
             </section>
           ) : null}
         <section className="max-w-[64ch]">
@@ -115,6 +109,7 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
       )}
       {published && s.number === 2 ? <AiDisclosure disclosure={sprintTwoDisclosure} /> : null}
       {published && s.number === 3 ? <AiDisclosure disclosure={sprintThreeDisclosure} /> : null}
+      {published && s.number === 4 ? <AiDisclosure disclosure={sprintFourDisclosure} /> : null}
 
       <nav className="mt-16 flex flex-wrap justify-between gap-3 border-t border-border pt-6 no-print" aria-label="Sprint navigation" data-reveal>
         {previous ? (

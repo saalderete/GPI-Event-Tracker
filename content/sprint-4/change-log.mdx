@@ -1,0 +1,70 @@
+## What this log is
+
+Section 8 of the course guidelines asks every sprint page after Sprint 1 for a change log: what was revised from the prior sprint's version, why, and what downstream pages or documents the change affected. This is Sprint 4's log. It covers 20 October to 2 November 2026, the first sprint of the performance block. No Sprint 1, 2 or 3 document was revised during it; the sprint's three public documents are new, and the portal itself changed once, in a way the team should know about.
+
+Each entry names what changed, the reason the record gives for it, and what it touched. Times are Mountain Time. The record line of each entry links the commit in the [portal's repository](https://github.com/saalderete/GPI-Event-Tracker-), where the exact text of every change can be read line by line.
+
+## The earlier documents, carried
+
+The three changes the Sprint 3 change note proposed to the [Business Strategy](/sprint-1/business-strategy/) still wait on its owner, and the Business Strategy stays at its current version. The [Competitor Field Study](/sprint-3/competitor-field-study/) is unchanged. The risk register that the Sprint 3 log expected in Sprint 4 was not among this sprint's deliverables, so its three candidate entries still wait as well.
+
+## The portal
+
+### The event site, built and moved to its own repository, 28 October to 2 November
+
+**What changed.** The portal lead built the product's website as a working mock, first inside this repository and served at the portal's `/mock/` path: the landing with the dusk film, the calendar with a page for each date and each category, the event pages, the plan, the interests, the organizer pages and the form, a palette picker, and generated pictures for the sample events. On 2 November the site moved to its own repository, [github.com/saalderete/gpi](https://github.com/saalderete/gpi), where it deploys on its own at [gpi-j4aw.onrender.com](https://gpi-j4aw.onrender.com/). The portal stopped carrying a copy and now links to the site from the footer and from About us.
+
+**Why.** This repository deploys the portal. A second site inside it would have made every nightly rebuild install and build the product as well, and two copies of the site would have drifted within days.
+
+**What it affected.** The footer and the About page, which gained the link. No document changed. The site's sample data and pictures are labeled as such, and its use of AI is recorded in the AI log.
+
+**Record.** [837ec1f](https://github.com/saalderete/GPI-Event-Tracker-/commit/837ec1f) to [d32adb2](https://github.com/saalderete/GPI-Event-Tracker-/commit/d32adb2), then [bec97e9](https://github.com/saalderete/GPI-Event-Tracker-/commit/bec97e9).
+
+## Service Level Indicators
+
+### 1.0, the team's file as submitted, 2 November
+
+**What changed.** A new document, delivered as a PDF with a cover page on the portal: two service levels for the product, event data quality and website availability, each with a definition, a tool, a schedule, an owner and a target; a measurement plan repeatable by any teammate; the five-rule check on the targets; and the share-out tests, with the two changes the share-out brought, a written "Good to go" checklist for the audit and an automated uptime monitor in place of manual checks.
+
+**Why.** The performance block asks each team to name the service levels its product is held to and to commit to measurable targets. The targets, 95 percent of sampled listings real and current each week and the site up 99 percent of each sprint, were set by the team for a student-run site, not copied from a current score.
+
+**What it affected.** The [Error Budget and Policy](/sprint-4/error-budget-policy/), which turns each target into a budget. And the team's routine from here on: a Thursday audit of 20 listings and an uptime monitor on the live site, each with a log.
+
+**Record.** [d75b915](https://github.com/saalderete/GPI-Event-Tracker-/commit/d75b915), [ec777c6](https://github.com/saalderete/GPI-Event-Tracker-/commit/ec777c6).
+
+## Error Budget and Policy
+
+### 1.0, the team's file as submitted, 2 November
+
+**What changed.** A new document, delivered as a PDF: each objective's error budget as a count, one inaccurate listing a week and about three hours twenty minutes of downtime a sprint; the policy when a budget is spent; three severity levels with a time to start fixing and a time to tell the instructor; this sprint's incident roles; and a blameless review of a Sprint 3 incident, in which the team's evidence log and an individual contradiction memo gave the same evidence IDs to different interviews.
+
+**Why.** A target without a policy for missing it is a wish. The review is the course's blameless-review practice applied to the first incident the team found in its own work.
+
+**What it affected.** The individual contradiction memos of Sprint 3 are Blackboard submissions and are not on the portal, and the team's evidence log on the portal is unchanged: the review found the mismatch in a memo, and no business case number changed because of it. The review's causes, evidence IDs assigned in two places and no cross-check between the team log and the individual memos, are open items below.
+
+**Record.** [d75b915](https://github.com/saalderete/GPI-Event-Tracker-/commit/d75b915), [ec777c6](https://github.com/saalderete/GPI-Event-Tracker-/commit/ec777c6).
+
+## Sketches
+
+### 1.0, the team's file as submitted, 2 November
+
+**What changed.** A new document, delivered as a PDF: four hand-drawn screens of the product, the landing's hero section, the creating-event form with its flyer preview, the interests page with its eight categories, and the event feed by day.
+
+**Why.** The sprint asked for the team's sketches of the product's screens.
+
+**What it affected.** Nothing in the documents. The event site carries the same four screens.
+
+**Record.** [ec777c6](https://github.com/saalderete/GPI-Event-Tracker-/commit/ec777c6).
+
+## The sprint's scope
+
+Sprint 4 was the first sprint of the performance block: two service levels for the product, their error budgets, policies, escalation path and incident roles, one blameless incident review, and the team's sketches of the product's screens. The sprint retrospective and the peer evaluation are submitted through Blackboard and are never published here.
+
+## Open items from this log
+
+- A named owner for each of the three Sprint 4 documents, as the team's own rule from the Sprint 2 retrospective asks.
+- The first Thursday audit of 20 listings and the uptime monitor on the live site, with the log the measurement plan names, so the error budgets have numbers to report against.
+- One place for evidence IDs, and a cross-check between the team log and the individual memos before either is submitted: the incident review's two contributing causes.
+- The Business Strategy's revision from the Sprint 3 change note, by its owner, with a new version number and a note in the next log.
+- The risk register, with the three candidate entries from the field study and their owners confirmed.
+- Carried from Sprint 2: the Market Research's 1.3 note, and the schedule gap between the charter's eight weeks and the 12.1 expected weeks for the slice.

@@ -248,7 +248,7 @@ export const documents: PortalDocument[] = [
     reviewers: [],
     revised: "2026-11-02",
     revisions: [
-      { version: "1.0", date: "2026-11-02", note: "The team's file, as delivered." }
+      { version: "1.0", date: "2026-11-02", note: "The team's file as submitted on 2 November 2026, delivered as a PDF through Jazmin Huerta's pull request. The measurement owners it names: Emmanuel Saenz for event data quality and Samuel Alderete for website availability." }
     ],
     pdf: "sprint-4-service-level-indicators",
     source: "upload",
@@ -266,11 +266,45 @@ export const documents: PortalDocument[] = [
     reviewers: [],
     revised: "2026-11-02",
     revisions: [
-      { version: "1.0", date: "2026-11-02", note: "The team's file, as delivered." }
+      { version: "1.0", date: "2026-11-02", note: "The team's file as submitted on 2 November 2026, delivered as a PDF through Jazmin Huerta's pull request. The incident roles it names for this sprint: Emmanuel Saenz as incident leader, Samuel Alderete and Christian Lopez-Matulessy as site fixers, Jazmin Huerta as communicator, Oscar Vargas for everything else." }
     ],
     pdf: "sprint-4-error-budget-policy",
     source: "upload",
     file: "sprint-4-error-budget-policy.pdf"
+  },
+  {
+    slug: "sketches",
+    sprint: 4,
+    title: "Sketches",
+    kind: "document",
+    summary: "Four hand-drawn screens of the product, one a page: the landing's hero with its chapter rail and the line \"Everything happening, before it happens,\" the Post an Event form with its flyer preview, the Interests page's eight categories, and the event feed by day with filters and a heart to save.",
+    version: "1.0",
+    status: "final",
+    owner: null,
+    reviewers: [],
+    revised: "2026-11-02",
+    revisions: [
+      { version: "1.0", date: "2026-11-02", note: "The team's sketches as submitted on 2 November 2026, scanned into one PDF, delivered through Jazmin Huerta's pull request." }
+    ],
+    pdf: "sprint-4-sketches",
+    source: "upload",
+    file: "sprint-4-sketches.pdf"
+  },
+  {
+    slug: "change-log",
+    sprint: 4,
+    title: "Change Log",
+    kind: "log",
+    summary: "What changed between 20 October and 2 November 2026 and what it affected: the event site built and moved to its own repository with the portal linking to it, and the Service Level Indicators, the Error Budget and Policy and the Sketches delivered as the sprint's documents, with the measurements, the document owners and the risk register as open items.",
+    version: "1.0",
+    status: "final",
+    owner: "samuel",
+    reviewers: [],
+    revised: "2026-11-03",
+    revisions: [
+      { version: "1.0", date: "2026-11-03", note: "First Sprint 4 log, written from the repository's commit record and the documents. Entries cover 20 October to 2 November 2026." }
+    ],
+    pdf: "sprint-4-change-log"
   }
 ];
 
