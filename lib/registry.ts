@@ -235,6 +235,60 @@ export const documents: PortalDocument[] = [
       { version: "1.0", date: "2026-10-19", note: "First Sprint 3 log, written for the submission from the repository's commit record and the document itself. Entries cover 6 to 19 October 2026." }
     ],
     pdf: "sprint-3-change-log"
+  },
+  {
+    slug: "service-level-indicators",
+    sprint: 4,
+    title: "Service Level Indicators",
+    kind: "document",
+    summary: "Two service levels for the product, each with a definition, a tool, a schedule, an owner and a target: event data quality, 95% of 20 sampled listings real and current each week, and website availability, 99% of the sprint's 336 hours up. With the measurement plan, the five-rule check and the share-out tests.",
+    version: "1.0",
+    status: "final",
+    owner: null,
+    reviewers: [],
+    revised: "2026-11-02",
+    revisions: [
+      { version: "1.0", date: "2026-11-02", note: "The team's file, as delivered." }
+    ],
+    pdf: "sprint-4-service-level-indicators",
+    source: "upload",
+    file: "sprint-4-service-level-indicators.pdf"
+  },
+  {
+    slug: "error-budget-policy",
+    sprint: 4,
+    title: "Error Budget and Policy",
+    kind: "document",
+    summary: "What the team does when a target is missed: each objective's budget as a count (1 inaccurate listing a week, about 3 hours 20 minutes of downtime a sprint), the policy when it is spent, three severity levels, this sprint's incident roles, and a blameless review of a Sprint 3 evidence-ID mismatch.",
+    version: "1.0",
+    status: "final",
+    owner: null,
+    reviewers: [],
+    revised: "2026-11-02",
+    revisions: [
+      { version: "1.0", date: "2026-11-02", note: "The team's file, as delivered." }
+    ],
+    pdf: "sprint-4-error-budget-policy",
+    source: "upload",
+    file: "sprint-4-error-budget-policy.pdf"
+  },
+  {
+    slug: "sketches",
+    sprint: 4,
+    title: "Sketches",
+    kind: "document",
+    summary: "The team's sketches of the product's screens, as delivered.",
+    version: "1.0",
+    status: "final",
+    owner: null,
+    reviewers: [],
+    revised: "2026-11-02",
+    revisions: [
+      { version: "1.0", date: "2026-11-02", note: "The team's file, as delivered." }
+    ],
+    pdf: "sprint-4-sketches",
+    source: "upload",
+    file: "sprint-4-sketches.pdf"
   }
 ];
 

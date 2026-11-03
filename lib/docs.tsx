@@ -10,5 +10,8 @@ export const docModules: Record<string, () => Promise<{ default: ComponentType }
   "sprint-2/budget": () => import("@/content/sprint-2/budget.mdx"),
   "sprint-2/change-log": () => import("@/content/sprint-2/change-log.mdx"),
   "sprint-3/competitor-field-study": () => import("@/content/sprint-3/competitor-field-study.mdx"),
-  "sprint-3/change-log": () => import("@/content/sprint-3/change-log.mdx")
+  "sprint-3/change-log": () => import("@/content/sprint-3/change-log.mdx"),
+  "sprint-4/service-level-indicators": () => import("@/content/sprint-4/service-level-indicators.mdx"),
+  "sprint-4/error-budget-policy": () => import("@/content/sprint-4/error-budget-policy.mdx"),
+  "sprint-4/sketches": () => import("@/content/sprint-4/sketches.mdx")
 };
