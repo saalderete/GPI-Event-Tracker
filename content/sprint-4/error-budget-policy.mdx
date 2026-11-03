@@ -1,21 +1,46 @@
-## What this document is
+Team 9 | Date: 11/2/2026
 
-The second half of Sprint 4's service levels work: what the team does when a target is missed. The file takes the two objectives from the [Service Level Indicators](/sprint-4/service-level-indicators/), expresses each as an error budget of allowed misses, writes the policy for when a budget is spent, sets the escalation path and this sprint's incident roles, and reviews one real problem from the earlier sprints without blame. This is Team 9's file, dated 2 November 2026, as the team wrote it. The PDF is the document; this page is its cover.
+<OpenDocument file="sprint-4-error-budget-policy.pdf" title="Error Budget and Policy, Team 9, 2 November 2026" label="Open the PDF" />
 
-<Sheet rows={[["Team", "9, Gracias Por Invitar"], ["Project", "GPI: Gracias Por Invitar"], ["Objective 1 budget", "5% of 20 verified listings: 1 inaccurate listing per week"], ["Objective 2 budget", "1% of 336 hours: about 3 hours 20 minutes of downtime per sprint"], ["Incident roles", "Emmanuel Saenz, incident leader; Samuel Alderete and Christian Lopez-Matulessy, site fixers; Jazmin Huerta, communicator"], ["Status", "Final, 2 November 2026"]]} />
+## 1. Targets
 
-## What it contains
+| Indicator | Target | Window (time) | Who measures |
+| --- | --- | --- | --- |
+| **Accurate/up to date event data** | 95% of the event details are real and current | Each week | Emmanuel – Data Analysis |
+| **Website should be up and running** | 99% of the time, the website should be up and running | Each sprint (every two weeks) | Samuel – Website manager |
 
-The file has five parts, in the document's own words:
+## 2. Budgets
 
-1. **Targets.** Each indicator with its target, its window and who measures it.
-2. **Budgets.** For each objective, the budget as a count, the "policy action" when it is spent, its owner, and "who we tell, and when."
-3. **Escalation.** Three severity levels, each with an example on the portal, when fixing starts and when the instructor is told.
-4. **Incident roles.** The person holding each role this sprint.
-5. **Incident review.** A blameless review of a problem from Sprint 3, in which the same evidence ID pointed to different evidence in two submitted documents: its summary, its impact, its timeline from 12 October to 2 November 2026, and its contributing causes, each a gap in the process rather than in a person.
+| Field | Objective 1 | Objective 2 |
+| --- | --- | --- |
+| **Objective** | 95% of the event details should be accurate and up to date, this will be ensured | 99% of the time the site should be up and running every sprint (2 weeks). |
+| **Budget** | 5% of 20 verified event listings = 1 inaccurate listing per week | 1% of 336 hours ~ 3 hours and 20 minutes of downtime per sprint |
+| **Policy Action** | If budget is spent, halt event listing. Correct every incorrect listing and double the audit sample to 40 for the next week | If the budget is spent, freeze feature implementations for the rest of the sprint. Fix the issue and write a note of the issue and fix |
+| **Owner** | Emmanuel, Oscar : Own the fixing through curation | Samuel – Site manager |
+| **Who we tell, and when** | The team in the weekly meetings. The instructor if the budget is spent two weeks in a row. | The team immediately in the group chat. The instructor if the budget is spent |
 
-<OpenDocument file="sprint-4-error-budget-policy.pdf" title="Error Budget and Policy, Team 9, 2 November 2026" label="Open the document" />
+## 3. Escalation
 
-## What it feeds
+| Level | Example on our portal | Start fixing | Tell the instructor |
+| --- | --- | --- | --- |
+| **Severity 1** | Portal is down within 48 hours of deadline | immediately | Within 1 hour |
+| **Severity 2** | A required page is broken, or event details are not real or inaccurate | Within 12 hours | In the weekly update |
+| **Severity 3** | UI issues, slow pages, typos, misaligned layout | Within the current sprint | Only if it persists |
 
-The incident review concerns the evidence IDs of the [Competitor Field Study](/sprint-3/competitor-field-study/); the individual memos it compares are submitted through Blackboard and are not on the portal.
+## 4. Incident Roles
+
+| Role | Person this sprint |
+| --- | --- |
+| **Incident Leader** | Emmanuel |
+| **Site Fixers** | Samuel & Christian |
+| **Communicator** | Jazmin |
+| **Everyone else** | Oscar |
+
+## 5. Incident Review
+
+| Section | Content |
+| --- | --- |
+| **Summary** | The team evidence log gave each interview one ID. Ex. E01 for I-01, E-02 for I-02, etc.) A contradiction memo used E-01 to E-02. An individual contradiction memo used three notes from I-01 alone. The same ID therefore pointed to different evidence in two submitted documents. |
+| **Impact** | Following E-02 or E-03 from the memo to the team log lands on a different interview, so the memo's claims couldn't be traced to their source. The memo also included a cost figure of $925 that doesn't come from the budget or the estimate. Both were caught before ethe class demo, and no business case number was changed because of them. |
+| **Timeline** | 12 to 16 of October, interviews I-01 to I-04 were recorded. October 19, team log finalized and switched triggers ranked; individuals memos submitted the same day with their own Ids. October 31 mismatched found while preparing the demo. Date fixed: November 2nd. |
+| **Contributing Causes** | Evidence IDs were assigned in two places. The team log and individual memos were finished on the same day, so the memos couldn't reference the final log. No step was taken to cross check IDs and figures between team and individual documents. |

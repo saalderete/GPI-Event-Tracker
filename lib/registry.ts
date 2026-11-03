@@ -271,24 +271,6 @@ export const documents: PortalDocument[] = [
     pdf: "sprint-4-error-budget-policy",
     source: "upload",
     file: "sprint-4-error-budget-policy.pdf"
-  },
-  {
-    slug: "sketches",
-    sprint: 4,
-    title: "Sketches",
-    kind: "document",
-    summary: "The team's sketches of the product's screens, as delivered.",
-    version: "1.0",
-    status: "final",
-    owner: null,
-    reviewers: [],
-    revised: "2026-11-02",
-    revisions: [
-      { version: "1.0", date: "2026-11-02", note: "The team's file, as delivered." }
-    ],
-    pdf: "sprint-4-sketches",
-    source: "upload",
-    file: "sprint-4-sketches.pdf"
   }
 ];
 

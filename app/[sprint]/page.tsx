@@ -10,6 +10,8 @@ import { AiDisclosure } from "@/components/AiDisclosure";
 import { aiDisclosure as sprintTwoDisclosure } from "@/content/sprint-2/contributions";
 import { aiDisclosure as sprintThreeDisclosure } from "@/content/sprint-3/contributions";
 import { IconArrow } from "@/components/Icons";
+import { DocViewer } from "@/components/DocViewer";
+import { withBase } from "@/lib/base";
 import { sprints, sprintBySlug, isPublished, statusWord } from "@/lib/sprints";
 import { documentsForSprint } from "@/lib/registry";
 import { fmtDate, fmtDateTime } from "@/lib/format";
@@ -74,6 +76,11 @@ export default async function SprintPage({ params }: { params: Promise<{ sprint:
                 Documents
               </h2>
               <DocumentList sprint={s} docs={docs} />
+              {s.number === 4 ? (
+                <div className="doc-open">
+                  <DocViewer href={withBase("/docs/sprint-4-sketches.pdf")} title="Sprint 4 Sketches, Team 9" label="Sketches (PDF)" download="sprint-4-sketches.pdf" />
+                </div>
+              ) : null}
             </section>
           ) : null}
         <section className="max-w-[64ch]">

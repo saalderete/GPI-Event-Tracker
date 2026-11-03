@@ -1,20 +1,39 @@
-## What this document is
+Team 9 | Date: 11/2/2026
 
-Sprint 4 opens the course's performance block, and its first team deliverable says what "working" means for the product: two service level indicators, each with a precise definition, a measurement tool, a schedule, an owner and a target. This is Team 9's file, dated 2 November 2026, as the team wrote it. The PDF is the document; this page is its cover.
+<OpenDocument file="sprint-4-service-level-indicators.pdf" title="Service Level Indicators (SLI), Team 9, 2 November 2026" label="Open the PDF" />
 
-<Sheet rows={[["Team", "9, Gracias Por Invitar"], ["Project", "GPI: Gracias Por Invitar"], ["SLI 1", "Event data quality: 95% of 20 sampled listings real and current, each week"], ["SLI 2", "Website availability: 99% of the sprint's 336 hours up, each sprint"], ["Measurement owners", "Emmanuel Saenz (event data), Samuel Alderete (availability)"], ["Status", "Final, 2 November 2026"]]} />
+## 1. SLI specification
 
-## What it contains
+| Field | SLI 1: Event data quality | SLI 2: Website availability |
+| --- | --- | --- |
+| **Definition (one precise sentence)** | The share of the 20 event listings sampled each week whose details are real and current when checked against the organizer's source. | The share of the sprint's 336 hours during which the website responds successfully to a check. |
+| **Measurement: tool** | Spreadsheet with a checklist that helps us verify the event data against its source. "Good to go" checklist. | A free uptime monitor such as UptimeRobot. Restricting it to the free plans they might offer. |
+| **Measurement: schedule** | Every week, on Thursdays. | Automatic checks every 5 mins. |
+| **Measurement: owner** | Emmanuel (Data Analysis) | Samuel (Website manager) |
+| **SLO (target and time window)** | 95% of sampled listings real and current, each week | 99% of the time up and running, each sprint (two weeks) |
+| **Rule check (which of the five rules it follows)** | Avoids absolutes (95%, not 100%); simple to compute (correct listings ÷ 20); perfection can wait (one bad listing per week is tolerated). | Avoids absolutes (99%, not 100%); simple to compute (hours up ÷ 336); perfection can wait (about 3 hours 20 minutes of downtime per sprint is tolerated). |
+| **Who would notice** | People using the portal to find events, who would act on a wrong or outdated listing, and the instructor reviewing the content. | Visitors trying to open the site, and the instructor at review time. |
 
-The file has four parts, in the document's own words:
+## 2. Measurement plan
 
-1. **SLI specification.** For each indicator, a "definition (one precise sentence)", the measurement tool, schedule and owner, the SLO "target and time window", the rules it follows, and who would notice a miss.
-2. **Measurement plan.** A method "repeatable by any teammate" for each indicator, with its owner, its schedule and where the results are logged.
-3. **Five-rule check on our targets.** Each SLO held against the five rules: don't copy today's numbers, keep it simple, avoid absolutes, as few SLOs as possible, perfection can wait.
-4. **Share-out tests.** Whether any teammate would get the same number, whether each target is realistic and what it costs, and what the team changed as a result: a written "Good to go" checklist for the listing audit, and an automated uptime monitor checking every 5 minutes in place of manual checks.
+| SLI | Method (repeatable by any teammate) | Owner | Schedule | Where results are logged |
+| --- | --- | --- | --- | --- |
+| **Event data quality** | Each week the owner picks 20 listings from the current list using a using a random number generator on the listing numbers, checks each against the organizer's source (existence, date, time, location), and counts how many are real and current. | Emmanuel | Every week, on Thursdays. | Spreadsheet/checklist |
+| **Website availability** | An uptime monitor checks the site automatically. At the end of each sprint the owner totals the hours the site responded successfully out of 336. | Samuel | Automatic checks every 5 mins. | Spreadsheet/checklist |
 
-<OpenDocument file="sprint-4-service-level-indicators.pdf" title="Service Level Indicators (SLI), Team 9, 2 November 2026" label="Open the document" />
+## 3. Five-rule check on our targets
 
-## What it feeds
+| Rule | SLO 1 (event data) | SLO 2 (availability) |
+| --- | --- | --- |
+| **1. Don't copy today's numbers** | We set 95% so one bad listing a week is allowed while the audit is new; it was not copied from another site or from a current score. | 99% was set from what a student-run site can sustain. |
+| **2. Keep it simple** | Correct listings divided by 20. | Hours up divided by 336. |
+| **3. Avoid absolutes** | 95%, not 100%. | 99%, not 100%. |
+| **4. As few SLOs as possible** | Two SLOs cover what users depend on: right listings and a working site. One number covers both accuracy and freshness. | See SLO 1. |
+| **5. Perfection can wait** | One bad listing per week is tolerated. We can tighten the target once the weekly audit is routine. | About 3 hours 20 minutes of downtime per sprint is tolerated. We can tighten later. |
 
-The two targets are the objectives the [Error Budget and Policy](/sprint-4/error-budget-policy/) turns into budgets, policies and an escalation path.
+## 4. Share-out tests
+
+| Item | Measurable the same way? (Would any teammate get the same number?) | Realistic, not copied? (What would it cost, and who would notice?) | What we changed |
+| --- | --- | --- | --- |
+| **SLI 1 / SLO 1** | Yes, if the sample is chosen by a fixed rule and "real and current" is scored with the written checklist. Without the checklist, teammates could judge "current" differently. | 95% allows one bad listing in 20. Cost: 45-60 minutes each week. Users and the instructor would notice wrong or outdated events. | Added a written "Good to go" checklist so every teammate can keep track of the events the same way. |
+| **SLI 2 / SLO 2** | Yes, if an automated monitor does the checking. Manual spot checks could give different numbers for different teammates. | 99% allows about 3 hours 20 minutes of downtime per sprint. Cost: free, using the monitor's free plan. Visitors and the instructor would notice an outage. | Switched from manual checks to an automated uptime monitor (UptimeRobot) checking every 5 minutes. |
