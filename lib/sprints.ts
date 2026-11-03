@@ -71,13 +71,13 @@ const schedule: SprintSeed[] = [
   {
     number: 4,
     slug: "sprint-4",
-    title: "To be released",
+    title: "Service levels and sketches",
     start: "2026-10-20",
     due: "2026-11-02T23:59:00-07:00",
     demo: "2026-11-03",
     demoLabel: "Sprint demo",
-    planned: [],
-    plannedNote: "Contents are released as the course block is finalized."
+    planned: ["Service Level Indicators", "Error Budget and Policy", "Sketches", "Change Log", "Sprint Retrospective, private, Blackboard only"],
+    plannedNote: "The first sprint of the performance block: two service levels for the product, their error budgets, policies, escalation path and incident roles, one blameless incident review, and the team's sketches of the product's screens. The retrospective and the peer evaluation go through Blackboard and are not on the portal."
   },
   {
     number: 5,

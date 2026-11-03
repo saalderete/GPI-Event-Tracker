@@ -1,0 +1,22 @@
+## What this document is
+
+Sprint 4 is the first sprint of the course's performance block: each team names the service levels its product is held to, how each one is measured, by whom and how often, and the target it commits to. This is Team 9's Service Level Indicators file for Gracias Por Invitar, submitted on 2 November 2026 as the team wrote it. The PDF is the document; this page is its cover.
+
+<Sheet rows={[["Team", "9, Gracias Por Invitar"], ["Project", "GPI: Gracias Por Invitar"], ["Service levels", "2: event data quality, website availability"], ["Measurement owners", "Emmanuel Saenz, event data; Samuel Alderete, website"], ["Submitted", "2 November 2026"], ["Status", "Final, 2 November 2026"]]} />
+
+## What it contains
+
+Four tables, in the document's own words:
+
+1. **SLI specification.** Two indicators, each with its "definition (one precise sentence)": event data quality, "the share of the 20 event listings sampled each week whose details are real and current when checked against the organizer's source," and website availability, "the share of the sprint's 336 hours during which the website responds successfully to a check." For each, the measurement tool, schedule and owner, the SLO with its time window, "which of the five rules it follows," and "who would notice."
+2. **Measurement plan.** For each indicator a method "repeatable by any teammate," its owner, its schedule and where the results are logged: a weekly audit of 20 listings picked by a random number generator and checked against the organizer's source, and an uptime monitor checking the site every five minutes with the hours totalled at the end of each sprint.
+3. **Five-rule check on our targets.** Each target against the five rules: "don't copy today's numbers," "keep it simple," "avoid absolutes," "as few SLOs as possible," and "perfection can wait."
+4. **Share-out tests.** For each level, "measurable the same way?" and "realistic, not copied?", with the cost and who would notice, and "what we changed" after the share-out: a written "Good to go" checklist so every teammate scores a listing the same way, and an automated uptime monitor in place of manual checks.
+
+The targets: 95 percent of sampled listings real and current, each week, and the site up 99 percent of the time, each sprint.
+
+<OpenDocument file="sprint-4-service-level-indicators.pdf" title="Service Level Indicators, Team 9, submitted 2 November 2026" label="Open the document" />
+
+## What it feeds
+
+The [Error Budget and Policy](/sprint-4/error-budget-policy/) turns each target into a budget, a policy for when the budget is spent, an escalation path and incident roles. The measurements themselves begin with the first Thursday audit and the monitor on the live site; the [Sprint 4 change log](/sprint-4/change-log/) records what the file affects downstream.

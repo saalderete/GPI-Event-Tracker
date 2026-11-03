@@ -69,6 +69,21 @@ export const initials = (name: string) =>
 
 export const memberById = (id: string | null) => (id ? team.find((m) => m.id === id) ?? null : null);
 
+/** The members an owner field names: one id, several for a document written together, or none. */
+export const membersById = (ids: string | string[] | null) =>
+  (ids === null ? [] : Array.isArray(ids) ? ids : [ids]).flatMap((id) => {
+    const m = memberById(id);
+    return m ? [m] : [];
+  });
+
+/** The owner line of a document: "Emmanuel Saenz and Jazmin Huerta", or the placeholder until someone is named. */
+export const ownerNames = (ids: string | string[] | null) => {
+  const names = membersById(ids).map((m) => m.name);
+  if (names.length === 0) return "To be assigned";
+  if (names.length < 3) return names.join(" and ");
+  return `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
+};
+
 /** Sheets on record for a member, by phase, counted from the evidence. */
 export function interviewCounts(memberId: string) {
   const mine = interviews.filter((i) => i.interviewer === memberId);
