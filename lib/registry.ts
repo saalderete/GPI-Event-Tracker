@@ -305,6 +305,76 @@ export const documents: PortalDocument[] = [
       { version: "1.0", date: "2026-11-03", note: "First Sprint 4 log, written from the repository's commit record and the documents. Entries cover 20 October to 2 November 2026." }
     ],
     pdf: "sprint-4-change-log"
+  },
+  {
+    slug: "crisis-response-memo",
+    sprint: 5,
+    title: "Crisis Response Memo",
+    kind: "document",
+    summary: "The team's memo to the CEO on the course's crisis scenario, three emergencies at once: the triage, six logged decisions, the first governance response for the personalized feed, the service level the incident breached, three new risk entries, a ten-day handoff for the departing lead developer and one recommendation, signed by all five members.",
+    version: "1.0",
+    status: "final",
+    owner: ["emmanuel", "samuel", "jazmin", "christian", "oscar"],
+    reviewers: [],
+    revised: "2026-11-12",
+    revisions: [
+      { version: "1.0", date: "2026-11-12", note: "The team's memo of 12 November 2026, signed by all five members, in the six-page version made that evening at the portal lead's direction: typos corrected, the layout tightened and repeated passages condensed. No figure, decision or recommendation changed in that pass." }
+    ],
+    pdf: "sprint-5-crisis-response-memo",
+    source: "upload",
+    file: "sprint-5-crisis-response-memo.pdf"
+  },
+  {
+    slug: "wireframes",
+    sprint: 5,
+    title: "Wireframes",
+    kind: "document",
+    summary: "The event site's screens as wireframes, drawn in Lucidchart: a map of the screens and the links between them, seven desktop screens with numbered notes, and the phone's home with its menu open and its calendar.",
+    version: "1.0",
+    status: "final",
+    owner: "samuel",
+    reviewers: [],
+    revised: "2026-11-03",
+    revisions: [
+      { version: "1.0", date: "2026-11-03", note: "Drawn in Lucidchart from the event site as it stood on 3 November 2026 and exported one board a page, by Claude at the portal lead's direction. Placed in Sprint 5 on 13 November 2026." }
+    ],
+    pdf: "sprint-5-wireframes",
+    source: "upload",
+    file: "sprint-5-wireframes.pdf"
+  },
+  {
+    slug: "mockups",
+    sprint: 5,
+    title: "Mockups",
+    kind: "document",
+    summary: "Every screen of the event site at full fidelity, desktop at 1440 wide and phone at 390, in the order of the wireframes, after four boards on the step from wireframe to mockup, colour, type and components.",
+    version: "1.0",
+    status: "final",
+    owner: "samuel",
+    reviewers: [],
+    revised: "2026-11-11",
+    revisions: [
+      { version: "1.0", date: "2026-11-11", note: "Made from stills of the live site, with motion paused and the clock set to Thursday 12 November, by Claude at the portal lead's direction. Placed in Sprint 5 on 13 November 2026. The portal's copy has its photographs saved again at a lower resolution, from 17 MB to 8.8 MB; its text and drawings are unchanged." }
+    ],
+    pdf: "sprint-5-mockups",
+    source: "upload",
+    file: "sprint-5-mockups.pdf"
+  },
+  {
+    slug: "change-log",
+    sprint: 5,
+    title: "Change Log",
+    kind: "log",
+    summary: "What changed between 3 and 13 November 2026 and what it affected: the Crisis Response Memo, the wireframes and the mockups delivered as the sprint's documents, no earlier document revised, and the Sprint 4 open items carried.",
+    version: "1.0",
+    status: "final",
+    owner: "samuel",
+    reviewers: [],
+    revised: "2026-11-13",
+    revisions: [
+      { version: "1.0", date: "2026-11-13", note: "First Sprint 5 log, written from the repository's record and the documents. Entries cover 3 to 13 November 2026." }
+    ],
+    pdf: "sprint-5-change-log"
   }
 ];
 
