@@ -13,7 +13,7 @@ export const aiDisclosure = {
     },
     {
       stage: "Grammar and clarity checks; restructuring content the team produced (§10)",
-      use: "Crisis Response Memo: a review of the first draft and one of the completed memo, each checking the figures against the portal's documents and listing what disagreed for the team to settle; then, at the portal lead's direction, the six-page version: typos corrected, the layout tightened and passages the memo repeats elsewhere condensed. No figure, decision or recommendation changed."
+      use: "Crisis Response Memo: a review of the first draft and one of the completed memo, each checking the figures against the portal's documents and listing what disagreed for the team to settle; then, at the portal lead's direction, the six-page version: typos corrected, one of them in Appendix B, the team's own AI disclosure, the layout tightened and passages the memo repeats elsewhere condensed. No figure, decision or recommendation changed."
     },
     {
       stage: "Website construction (§5)",
