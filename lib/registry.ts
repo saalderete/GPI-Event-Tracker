@@ -347,14 +347,15 @@ export const documents: PortalDocument[] = [
     sprint: 5,
     title: "Mockups",
     kind: "document",
-    summary: "Every screen of the event site at full fidelity, desktop at 1440 wide and phone at 390, in the order of the wireframes, after four boards on the step from wireframe to mockup, colour, type and components.",
-    version: "1.0",
+    summary: "Each screen of the wireframes in the site's colour and type, with placeholders where the pictures go: a style page, seven desktop screens at 1440 wide with notes, and the phone's home and calendar at 390.",
+    version: "2.0",
     status: "final",
     owner: "samuel",
     reviewers: [],
-    revised: "2026-11-11",
+    revised: "2026-11-16",
     revisions: [
-      { version: "1.0", date: "2026-11-11", note: "Made from stills of the live site, with motion paused and the clock set to Thursday 12 November, by Claude at the portal lead's direction. Placed in Sprint 5 on 13 November 2026. The portal's copy has its photographs saved again at a lower resolution, from 17 MB to 8.8 MB; its text and drawings are unchanged." }
+      { version: "1.0", date: "2026-11-11", note: "Made from stills of the live site, with motion paused and the clock set to Thursday 12 November, by Claude at the portal lead's direction. Placed in Sprint 5 on 13 November 2026. The portal's copy has its photographs saved again at a lower resolution, from 17 MB to 8.8 MB; its text and drawings are unchanged." },
+      { version: "2.0", date: "2026-11-16", note: "Redrawn from the wireframes by Claude at the portal lead's direction, with placeholder pictures and the wireframes' sample content, because the course places mockups before the build and version 1.0 was stills of the site already built. Ten pages in place of fifteen. Approved by the portal lead before it replaced 1.0." }
     ],
     pdf: "sprint-5-mockups",
     source: "upload",
@@ -365,14 +366,15 @@ export const documents: PortalDocument[] = [
     sprint: 5,
     title: "Change Log",
     kind: "log",
-    summary: "What changed between 3 and 13 November 2026 and what it affected: the Crisis Response Memo, the wireframes and the mockups delivered as the sprint's documents, no earlier document revised, and the Sprint 4 open items carried.",
-    version: "1.0",
+    summary: "What changed between 3 and 16 November 2026 and what it affected: the Crisis Response Memo, the wireframes and the mockups delivered as the sprint's documents, the mockups redrawn before the sprint closed, no earlier document revised, and the Sprint 4 open items carried.",
+    version: "1.1",
     status: "final",
     owner: "samuel",
     reviewers: [],
-    revised: "2026-11-13",
+    revised: "2026-11-16",
     revisions: [
-      { version: "1.0", date: "2026-11-13", note: "First Sprint 5 log, written from the repository's record and the documents. Entries cover 3 to 13 November 2026." }
+      { version: "1.0", date: "2026-11-13", note: "First Sprint 5 log, written from the repository's record and the documents. Entries cover 3 to 13 November 2026." },
+      { version: "1.1", date: "2026-11-16", note: "The mockups' version 2.0 recorded. Entries now cover 3 to 16 November 2026." }
     ],
     pdf: "sprint-5-change-log"
   }

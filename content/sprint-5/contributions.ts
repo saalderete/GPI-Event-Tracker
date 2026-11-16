@@ -17,11 +17,11 @@ export const aiDisclosure = {
     },
     {
       stage: "Website construction (§5)",
-      use: "The wireframes, drawn in Lucidchart on 3 November 2026 from the screens of the live event site, and the mockups, made on 11 November from stills of the live site, both at the portal lead's direction. The mockups' pictures are the site's generated illustrations."
+      use: "The wireframes, drawn in Lucidchart on 3 November 2026 from the screens of the live event site, and the mockups, made on 11 November from stills of the live site and redrawn on 16 November from the wireframes with placeholder pictures, all at the portal lead's direction."
     },
     {
       stage: "Website construction (§5); summarizing content the team produced (§10)",
-      use: "The cover pages of the memo, the wireframes and the mockups, written from the files and describing them rather than restating them; the mockups' photographs saved again at a lower resolution for the web; the Sprint 5 change log, from the repository and the documents; the registry entries, the sprint page and this disclosure."
+      use: "The cover pages of the memo, the wireframes and the mockups, written from the files and describing them rather than restating them; the first mockups' photographs saved again at a lower resolution for the web; the Sprint 5 change log, from the repository and the documents; the registry entries, the sprint page and this disclosure."
     }
   ],
   notUsedFor: [
