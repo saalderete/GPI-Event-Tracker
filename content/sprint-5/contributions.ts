@@ -17,7 +17,7 @@ export const aiDisclosure = {
     },
     {
       stage: "Website construction (§5)",
-      use: "The wireframes, drawn in Lucidchart on 3 November 2026 from the screens of the live event site, and the mockups, made on 11 November from stills of the live site and redrawn on 16 November from the wireframes with placeholder pictures and placeholder events, all at the portal lead's direction."
+      use: "The wireframes, drawn in Lucidchart on 3 November 2026 from the screens of the live event site, and the mockups, made on 11 November from stills of the live site and redrawn on 16 November from the wireframes, with placeholder events and stand-in pictures, all at the portal lead's direction."
     },
     {
       stage: "Website construction (§5); summarizing content the team produced (§10)",

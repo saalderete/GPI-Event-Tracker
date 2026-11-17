@@ -347,8 +347,8 @@ export const documents: PortalDocument[] = [
     sprint: 5,
     title: "Mockups",
     kind: "document",
-    summary: "Each screen of the wireframes in the site's colour and type, with placeholders where the pictures and the events go: a style page, seven desktop screens at 1440 wide with notes, and the phone's home and calendar at 390.",
-    version: "2.1",
+    summary: "Each screen of the wireframes in the site's colour and type, with stand-in pictures and placeholder events: a style page, seven desktop screens at 1440 wide with notes, and the phone's home and calendar at 390.",
+    version: "2.2",
     status: "final",
     owner: "samuel",
     reviewers: [],
@@ -356,7 +356,8 @@ export const documents: PortalDocument[] = [
     revisions: [
       { version: "1.0", date: "2026-11-11", note: "Made from stills of the live site, with motion paused and the clock set to Thursday 12 November, by Claude at the portal lead's direction. Placed in Sprint 5 on 13 November 2026. The portal's copy has its photographs saved again at a lower resolution, from 17 MB to 8.8 MB; its text and drawings are unchanged." },
       { version: "2.0", date: "2026-11-16", note: "Redrawn from the wireframes by Claude at the portal lead's direction, with placeholder pictures and the wireframes' sample content, because the course places mockups before the build and version 1.0 was stills of the site already built. Ten pages in place of fifteen. Approved by the portal lead before it replaced 1.0." },
-      { version: "2.1", date: "2026-11-16", note: "The wireframes' sample events replaced by numbered placeholders, Event 1 to Event 10, each at a placeholder venue and neighborhood, at the portal lead's direction; the categories, times and prices stay to show the layout. Approved by the portal lead before it replaced 2.0." }
+      { version: "2.1", date: "2026-11-16", note: "The wireframes' sample events replaced by numbered placeholders, Event 1 to Event 10, each at a placeholder venue and neighborhood, at the portal lead's direction; the categories, times and prices stay to show the layout. Approved by the portal lead before it replaced 2.0." },
+      { version: "2.2", date: "2026-11-16", note: "Stand-in pictures in place of the placeholder boxes, at the portal lead's direction: the site's own generated pictures of each kind of event, reused, a drawn skyline at dusk for the hero film, and the mockups' own screens on a drawn tablet and phone for the device photo. None shows a real event. Approved by the portal lead before it replaced 2.1." }
     ],
     pdf: "sprint-5-mockups",
     source: "upload",
@@ -386,7 +387,7 @@ export const documents: PortalDocument[] = [
     title: "Change Log",
     kind: "log",
     summary: "What changed between 3 and 16 November 2026 and what it affected: the Crisis Response Memo, the wireframes, the mockups and the wireframe feedback write-up delivered as the sprint's documents, the mockups redrawn before the sprint closed, no earlier document revised, and the Sprint 4 open items carried.",
-    version: "1.3",
+    version: "1.4",
     status: "final",
     owner: "samuel",
     reviewers: [],
@@ -395,7 +396,8 @@ export const documents: PortalDocument[] = [
       { version: "1.0", date: "2026-11-13", note: "First Sprint 5 log, written from the repository's record and the documents. Entries cover 3 to 13 November 2026." },
       { version: "1.1", date: "2026-11-16", note: "The mockups' version 2.0 recorded. Entries now cover 3 to 16 November 2026." },
       { version: "1.2", date: "2026-11-16", note: "The mockups' version 2.1 recorded." },
-      { version: "1.3", date: "2026-11-16", note: "The Wireframe Feedback write-up recorded." }
+      { version: "1.3", date: "2026-11-16", note: "The Wireframe Feedback write-up recorded." },
+      { version: "1.4", date: "2026-11-16", note: "The mockups' version 2.2 recorded." }
     ],
     pdf: "sprint-5-change-log"
   }
