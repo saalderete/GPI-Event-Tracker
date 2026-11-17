@@ -370,7 +370,7 @@ export const documents: PortalDocument[] = [
     summary: "The team's one-page write-up of the wireframes' class demo on 5 November: four comments from other teams, what each told the team and what changed in the mockups, three more changes tied to the Sprint 3 field study, and two open questions.",
     version: "1.0",
     status: "final",
-    owner: null,
+    owner: "samuel",
     reviewers: [],
     revised: "2026-11-16",
     revisions: [
