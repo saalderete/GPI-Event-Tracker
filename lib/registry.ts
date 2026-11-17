@@ -332,7 +332,7 @@ export const documents: PortalDocument[] = [
     summary: "The event site's screens as wireframes, drawn in Lucidchart: a map of the screens and the links between them, seven desktop screens with numbered notes, and the phone's home with its menu open and its calendar.",
     version: "1.0",
     status: "final",
-    owner: "samuel",
+    owner: ["jazmin", "oscar"],
     reviewers: [],
     revised: "2026-11-03",
     revisions: [
@@ -350,7 +350,7 @@ export const documents: PortalDocument[] = [
     summary: "Each screen of the wireframes in the site's colour and type, with stand-in pictures and placeholder events: a style page, seven desktop screens at 1440 wide with notes, and the phone's home and calendar at 390.",
     version: "2.2",
     status: "final",
-    owner: "samuel",
+    owner: ["emmanuel", "samuel", "jazmin", "christian", "oscar"],
     reviewers: [],
     revised: "2026-11-16",
     revisions: [
@@ -371,7 +371,7 @@ export const documents: PortalDocument[] = [
     summary: "The team's one-page write-up of the wireframes' class demo on 5 November: four comments from other teams, what each told the team and what changed in the mockups, three more changes tied to the Sprint 3 field study, and two open questions.",
     version: "1.0",
     status: "final",
-    owner: "samuel",
+    owner: ["emmanuel", "samuel", "jazmin", "christian", "oscar"],
     reviewers: [],
     revised: "2026-11-16",
     revisions: [
@@ -387,9 +387,9 @@ export const documents: PortalDocument[] = [
     title: "Change Log",
     kind: "log",
     summary: "What changed between 3 and 16 November 2026 and what it affected: the Crisis Response Memo, the wireframes, the mockups and the wireframe feedback write-up delivered as the sprint's documents, the mockups redrawn before the sprint closed, no earlier document revised, and the Sprint 4 open items carried.",
-    version: "1.4",
+    version: "1.5",
     status: "final",
-    owner: "samuel",
+    owner: ["emmanuel", "samuel", "jazmin", "christian", "oscar"],
     reviewers: [],
     revised: "2026-11-16",
     revisions: [
@@ -397,7 +397,8 @@ export const documents: PortalDocument[] = [
       { version: "1.1", date: "2026-11-16", note: "The mockups' version 2.0 recorded. Entries now cover 3 to 16 November 2026." },
       { version: "1.2", date: "2026-11-16", note: "The mockups' version 2.1 recorded." },
       { version: "1.3", date: "2026-11-16", note: "The Wireframe Feedback write-up recorded." },
-      { version: "1.4", date: "2026-11-16", note: "The mockups' version 2.2 recorded." }
+      { version: "1.4", date: "2026-11-16", note: "The mockups' version 2.2 recorded." },
+      { version: "1.5", date: "2026-11-16", note: "The new owners of the Sprint 5 documents recorded." }
     ],
     pdf: "sprint-5-change-log"
   }
