@@ -18,5 +18,6 @@ export const docModules: Record<string, () => Promise<{ default: ComponentType }
   "sprint-5/crisis-response-memo": () => import("@/content/sprint-5/crisis-response-memo.mdx"),
   "sprint-5/wireframes": () => import("@/content/sprint-5/wireframes.mdx"),
   "sprint-5/mockups": () => import("@/content/sprint-5/mockups.mdx"),
+  "sprint-5/wireframe-feedback": () => import("@/content/sprint-5/wireframe-feedback.mdx"),
   "sprint-5/change-log": () => import("@/content/sprint-5/change-log.mdx")
 };

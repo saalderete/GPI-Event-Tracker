@@ -21,7 +21,7 @@ export const aiDisclosure = {
     },
     {
       stage: "Website construction (§5); summarizing content the team produced (§10)",
-      use: "The cover pages of the memo, the wireframes and the mockups, written from the files and describing them rather than restating them; the first mockups' photographs saved again at a lower resolution for the web; the Sprint 5 change log, from the repository and the documents; the registry entries, the sprint page and this disclosure."
+      use: "The cover pages of the memo, the wireframes, the mockups and the wireframe feedback write-up, written from the files and describing them rather than restating them; the first mockups' photographs saved again at a lower resolution for the web; the Sprint 5 change log, from the repository and the documents; the registry entries, the sprint page and this disclosure."
     }
   ],
   notUsedFor: [

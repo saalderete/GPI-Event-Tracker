@@ -363,12 +363,30 @@ export const documents: PortalDocument[] = [
     file: "sprint-5-mockups.pdf"
   },
   {
+    slug: "wireframe-feedback",
+    sprint: 5,
+    title: "Wireframe Feedback",
+    kind: "document",
+    summary: "The team's one-page write-up of the wireframes' class demo on 5 November: four comments from other teams, what each told the team and what changed in the mockups, three more changes tied to the Sprint 3 field study, and two open questions.",
+    version: "1.0",
+    status: "final",
+    owner: null,
+    reviewers: [],
+    revised: "2026-11-16",
+    revisions: [
+      { version: "1.0", date: "2026-11-16", note: "The team's write-up of 16 November 2026, delivered as a PDF at the portal lead's direction." }
+    ],
+    pdf: "sprint-5-wireframe-feedback",
+    source: "upload",
+    file: "sprint-5-wireframe-feedback.pdf"
+  },
+  {
     slug: "change-log",
     sprint: 5,
     title: "Change Log",
     kind: "log",
-    summary: "What changed between 3 and 16 November 2026 and what it affected: the Crisis Response Memo, the wireframes and the mockups delivered as the sprint's documents, the mockups redrawn before the sprint closed, no earlier document revised, and the Sprint 4 open items carried.",
-    version: "1.2",
+    summary: "What changed between 3 and 16 November 2026 and what it affected: the Crisis Response Memo, the wireframes, the mockups and the wireframe feedback write-up delivered as the sprint's documents, the mockups redrawn before the sprint closed, no earlier document revised, and the Sprint 4 open items carried.",
+    version: "1.3",
     status: "final",
     owner: "samuel",
     reviewers: [],
@@ -376,7 +394,8 @@ export const documents: PortalDocument[] = [
     revisions: [
       { version: "1.0", date: "2026-11-13", note: "First Sprint 5 log, written from the repository's record and the documents. Entries cover 3 to 13 November 2026." },
       { version: "1.1", date: "2026-11-16", note: "The mockups' version 2.0 recorded. Entries now cover 3 to 16 November 2026." },
-      { version: "1.2", date: "2026-11-16", note: "The mockups' version 2.1 recorded." }
+      { version: "1.2", date: "2026-11-16", note: "The mockups' version 2.1 recorded." },
+      { version: "1.3", date: "2026-11-16", note: "The Wireframe Feedback write-up recorded." }
     ],
     pdf: "sprint-5-change-log"
   }

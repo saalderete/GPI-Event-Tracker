@@ -87,7 +87,7 @@ const schedule: SprintSeed[] = [
     due: "2026-11-16T23:59:00-07:00",
     demo: "2026-11-17",
     demoLabel: "Sprint demo",
-    planned: ["Crisis Response Memo", "Wireframes", "Mockups", "Change Log"],
+    planned: ["Crisis Response Memo", "Wireframes", "Mockups", "Wireframe Feedback write-up", "Change Log"],
     plannedNote: "The crisis exercise, three emergencies in the course's scenario answered in one memo to the CEO, and the event site's wireframes and mockups, placed in this sprint at the portal lead's direction on 13 November 2026. Retrospectives and peer evaluations go through Blackboard and are not on the portal."
   },
   {
